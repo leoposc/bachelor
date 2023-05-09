@@ -1,29 +1,51 @@
 
 
-	WETTER & SONSTIGE FAKTOREN
+	WEATHER & OTHER FACTORS
 
-+ Stunde (Zeit)
-+ Kalenderwoche
-+ Sonneneinstrahlung
-+ Temperatur
-+ Bewölkung
-+ Relative/ Absolute Feuchtigkeit (mehr Teilchen streuen die Sonneneinstrahlung)
-+ Luftdruck (mehr Teilchen stören die Sonneneinstrahlung)
-+ Wind  (könnte als natürlicher Ventilator dienen)
++ hour (time)
++ calendar week
++ solar radiation
++ temperature
++ cloud coverage
++ Relative/ absolute humidity (more particles diffuse the solar radiation)
++ air pressure (more particles disturb solar radiation)
++ Wind  (could serve as natural fan)
 
- 
 
-	WETTER APIS 
+	SOLAR PARAMETERS USED FOR METEOMATICS SOLAR MODEL FORECAST
+
+SOLAR PARAMETERRS DOWNSCALED
++ radiation data for the site
++ direct, diffuse and global radiation
++ cumulative sunshine duration
++ sunrise/ sunset
++ relative sunshine duration
++ uv index
++ sun azimuth angle
++ sun elevation angle
++ clear sky radiation
+
+SOLAR SYSTEM CONDITIONS
++ panel orientations
++ size of the solar system in m²
++ module inclination
++ efficiency
+
+
+	WEATHER APIS 
+
++ https://www.meteomatics.com/en/api/
+
+	- detailed description for their solar energy model prediction
+
 
 + openweathermap api: one call api 3.0
 	
 	- historical weather data (40 years back), Please note that the one API response contains historical weather data for only one specified timestamp.
 	- 1.000 calls per day for free
-	- required parameters: lat, lon, api ke
-	
 
 
-	HISTORISCHE WETTER DATEN 
+	HISTORICAL WEATHER DATA 
 
 + dwd.de
 	- 
@@ -31,14 +53,16 @@
 
 + visualcrossing.com
 
-	- historische und aktuelle Daten
+	- historical and current data
 	- Freemium-Plan (1000 calls/ day)
-	- enthält sämtliche Daten: check
-	- datetimeEpoch: check
+	- contains all necessary data
 	- 
 
 
 
 	DATENBANK
 
-+ SQL: 
++ SQL:  postgre and psycopg2
+
+
+
