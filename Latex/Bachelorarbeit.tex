@@ -1,7 +1,76 @@
-\documentclass{article}
- 
+\documentclass[12pt, a4paper]{article}
+
+% Pakete
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{helvet} % Schriftart "Arial" 
+\usepackage{setspace} % 1,5-zeiliger Zeilenabstand
+\usepackage{titlesec} % Für Anpassungen an den Überschriften
+\usepackage{geometry} % Für Anpassungen an den Rändern
+\usepackage{hyperref} % Für Verlinkungen im Dokument
+\usepackage{tocloft} % Für Anpassungen an das Inhaltsverzeichnis
+\usepackage{apacite} % Für Zitate im APA-Stil
+
+% Formatierung
+\renewcommand{\familydefault}{\sfdefault} % Schriftart "Arial"
+\geometry{left=3cm,right=3cm,top=2.5cm,bottom=2.5cm} % Ränder
+\setlength{\parskip}{0.5em} % Abstand zwischen Absätzen
+\setstretch{1.5} % 1,5-zeiliger Zeilenabstand
+\setcounter{tocdepth}{3} % Inhaltsverzeichnis bis Ebene 3
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % Punkte im Inhaltsverzeichnis
+\hypersetup{ % Einstellungen für Verlinkungen
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\titleformat{\section} % Anpassungen an Überschriftenebene 1
+    {\fontsize{14}{16}\bfseries}{\thesection}{0.5em}{}
+\titleformat{\subsection} % Anpassungen an Überschriftenebene 2
+    {\fontsize{12}{14}\bfseries}{\thesubsection}{0.5em}{}
+\titleformat{\subsubsection} % Anpassungen an Überschriftenebene 3
+    {\fontsize{12}{14}\itshape}{\thesubsubsection}{0.5em}{}
+
+% Dokumentenanfang
 \begin{document}
 
-Bachelorarbeit
+% Titelseite
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        
+        \textbf{\LARGE{Prognose über die Stromerzeugung einer Photovoltaikanlage mittlels maschinellem Lernen}}
+        
+        \vspace{0.5cm}
+        \Large{Bachelorarbeit}
+        
+        \vspace{1.5cm}
+        \Large{Vorgelegt von}
+        
+        \vspace{0.5cm}
+        \Large{Leopold Schmid}
+        
+        \vspace{1.5cm}
+        \Large{Matrikelnummer:79776}
+        
+        \vfill
+        
+        \Large{Fakultät für Elektronik und Informatik}
+        
+        \vspace{0.5cm}
+        \Large{Hochschule Aalen}
+        
+        \vspace{1.5cm}
+        \Large{Datum}
+        
+    \end{center}
+\end{titlepage}
+
+% Inhaltsverzeichnis
+
+
 
 \end{document}
+
+

@@ -58,6 +58,12 @@ SOLAR SYSTEM CONDITIONS
 	- contains all necessary data
 	- 
 
++ nsrdb.nrel.gov
+
+	- detailed information about solar radiation
+	- huge database
+
+
 
 
 	DATENBANK
