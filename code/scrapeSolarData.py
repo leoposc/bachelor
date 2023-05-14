@@ -1,4 +1,3 @@
-#%%
 import requests
 import csv
 from bs4 import BeautifulSoup
@@ -6,62 +5,66 @@ from statistics import mean
 from datetime import datetime
 from geopy.geocoders import Nominatim
 
-# initialize geolocator
-geolocation = Nominatim(user_agent="leopldSchmid")
 
-# Set the year you want to download data for
-year = "2022"
+def scrape_solar_data(start: str, end: str, id: int):
+    # initialize geolocator
+    geolocation = Nominatim(user_agent="leopldSchmid")
+    # Set the year you want to download data for
+    # calculate the number of days between start and end
+    days = int((datetime.strptime(end, '%Y-%m-%d') - datetime.strptime(start, '%Y-%m-%d')).days) + 1
+    records_total = days * 24
+    start = start.split('-')
+    end = end.split('-')
+    year_start = int(start[0])
+    month_start = int(start[1])
+    day_start = int(start[2])
+    year_end = int(end[0])
+    month_end = int(end[1])
+    day_end = int(end[2])
 
-# Set the number of objects to download data for
-# system_ids = [10,1199,1200,1201,1202,1203,1204,1207,1209]
-system_ids = [10]
+    # Set the number of objects to download data for
+    # system_ids = [10,1199,1200,1201,1202,1203,1204,1207,1209]
 
-# find the location of the solar systems
-url = 'https://oedi-data-lake.s3.amazonaws.com/pvdaq/csv/systems.csv'
+    # find the location of the solar systems
+    url = 'https://oedi-data-lake.s3.amazonaws.com/pvdaq/csv/systems.csv'
 
-# Make the website request and parse the response using BeautifulSoup
-response = requests.get(url)
-soup = BeautifulSoup(response.content, "html.parser")
+    # Make the website request and parse the response using BeautifulSoup
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, "html.parser")
 
-systems_metadata = dict()
+    lines = str(soup).strip().split("\n")
 
-lines = str(soup).strip().split("\n")
-print(lines[0])
+    # get the city name of the solar system
+    for line in lines[1:]:
+        # split elements of the row by comma
+        values = line.split(",")        
+        system_id = values[0].strip('"')
 
-for line in lines:
-    # split elements of the row by comma
-    values = line.split(",")
+        if int(system_id) != id:
+            continue
+
+        latitude = (values[5].strip('"'))
+        longitude = (values[6].strip('"'))
+        location = geolocation.reverse(f"{latitude}, {longitude}")
+        # get city name
+        try:
+            city = location.raw['address']['city']
+        except KeyError:
+            try:
+                city = location.raw['address']['town']
+            except KeyError:
+                city = location.raw['address'].get('village', 'Unknown')
+
+    # initialize list for solar data
+    solar_data = [[0, 0] for i in range(records_total)]
+    data_idx = 0 
     
-    system_id = values[0].strip('"')
-    print(system_id)
-    print(system_id not in system_ids)
-
-    if system_id not in system_ids:
-        continue
-
-    latitude = values[5].strip('"')
-    longitude = values[6].strip('"')
-    location = geolocation.reverse(f"{latitude, longitude}")
-    systems_metadata[system_id] = location.raw['address']['city']
-
-
-
-
-#%%
-
-
-for system_id in system_ids:
-    # Create a CSV file to write the data to
-    filename = f"pvdata_{system_id}_{year}.csv"
-    with open(filename, mode="w", newline="") as csvfile:
-        csvwriter = csv.writer(csvfile, delimiter=",")
-
-        # Write the headers to the CSV file
-        csvwriter.writerow(["Timestamp", "Global Horizontal Irradiance (W/m²)", "Direct Normal Irradiance (W/m²)", "Diffuse Horizontal Irradiance (W/m²)", "Air Temperature (C)", "Wind Speed (m/s)", "Relative Humidity (%)", "Ac Power (W)"])
-
+    # loop through each year
+    for year in range(year_start, year_end+1):
+        
         #loop through each month
-        for month in range(1,2):
-            url = f"https://data.openei.org/s3_viewer?bucket=oedi-data-lake&prefix=pvdaq%2Fcsv%2Fpvdata%2Fsystem_id%3D{system_id}%2Fyear%3D{year}%2Fmonth%3D{month}%2F"
+        for month in range(month_start, month_end+1):
+            url = f"https://data.openei.org/s3_viewer?bucket=oedi-data-lake&prefix=pvdaq%2Fcsv%2Fpvdata%2Fsystem_id%3D{id}%2Fyear%3D{year}%2Fmonth%3D{month}%2F"
 
             # Make the website request and parse the response using BeautifulSoup
             response = requests.get(url)
@@ -69,10 +72,9 @@ for system_id in system_ids:
 
             # find the amount of entries for the month. Look at class="dataTables_info" and split the text by spaces. The second to last word is the number of entries
             entries = soup.find("div", class_="dataTables_info").text.split()[-2]
-            # print(soup)
             
-            for entry in range(1, 2):#int(entries)):
-                csv_link = f"https://oedi-data-lake.s3.amazonaws.com/pvdaq/csv/pvdata/system_id={system_id}/year={year}/month={month}/day={entry}/system_{system_id}__date_{year}_{month:02d}_{entry:02d}.csv"
+            for entry in range(day_start, min(int(entries), day_end+1)):
+                csv_link = f"https://oedi-data-lake.s3.amazonaws.com/pvdaq/csv/pvdata/system_id={id}/year={year}/month={month}/day={entry}/system_{id}__date_{year}_{month:02d}_{entry:02d}.csv"
                 response = requests.get(csv_link)
                 data = response.content.decode("utf-8")
                 csvreader = csv.reader(data.splitlines())
@@ -84,21 +86,13 @@ for system_id in system_ids:
                 # Write the data rows to the CSV file
                 # loop through every sixty rows and get the mean value for each hour
                 data = list(csvreader)
-                for idx in range(0,len(data),60):
-                    insert_row = [0,0]
-                    time = data[idx][0]
-                    # convert '2022-01-29 23:00:00' to unix timestamp
-                    insert_row[0] = int(datetime.strptime(data[idx][0], '%Y-%m-%d %H:%M:%S').timestamp())
-
+                for idx in range(0,len(data),60):                  
+                    solar_data[data_idx][0] = int(datetime.strptime(data[idx][0], '%Y-%m-%d %H:%M:%S').timestamp())
                     val =  mean([int(float(x[9])) for x in data[idx:idx+60]])
-                    insert_row[1] = val if val > 0 else 0
-                    print(insert_row)
-
-                    csvwriter.writerow(insert_row)
-                    
-
-#%%
+                    solar_data[data_idx][1] = val if val > 0 else 0
+                    data_idx += 1
+                
+    return solar_data, city
 
 
-
-
+# print(scrape_solar_data('2022-01-01', '2022-01-10', 10))
