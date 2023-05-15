@@ -123,6 +123,7 @@ class DBManager():
 
             # convert start to timestamp
             start_timestamp_requested = int(datetime.strptime(start, '%Y-%m-%d').timestamp())
+            print(start_timestamp_requested)
             # convert end to timestamp from this day at 23:00:00
             end_timestamp_requested = int(datetime.strptime(end, '%Y-%m-%d').replace(hour=23, minute=0, second=0).timestamp())
 
@@ -141,6 +142,7 @@ class DBManager():
 
             #check if beginning of requested time range is in the database, but not the end
             elif start_timestamp_requested > start_timestamp_database and end_timestamp_requested > end_timestamp_database:
+                print(start_timestamp_requested, start_timestamp_database, end_timestamp_requested, end_timestamp_database)
                 # set start_timestamp_requested to one day after the end_timestamp_database
                 start_timestamp_requested = end_timestamp_database + 86400
                 # set start to one day after the end
@@ -155,7 +157,7 @@ class DBManager():
 
         csv_data = result.text.split('\n')
         csv_reader = csv.reader(csv_data, delimiter=',')
-        csv_header = next(csv_reader)
+        next(csv_reader)
                                                                                         #  csv_header = ['datetime',
                                                                                         #  'temp',
                                                                                         #  'humidity',
@@ -165,7 +167,9 @@ class DBManager():
                                                                                         #  'solarradiation',
                                                                                         #  'solarenergy',
                                                                                         #  'uvindex']
-        print(csv_header)
+
+        print(start, end)
+        print(csv_data)                                                                                                   
         for row in csv_reader:
 
             if not row:        
@@ -185,16 +189,16 @@ class DBManager():
                 else:
                     insert_row[i+2] = int(float(row[i]))
 
-            print("Row:        ", row)
-            print("Insert_row: ", insert_row)
+            # print("Row:        ", row)
+            # print("Insert_row: ", insert_row)
 
             # insert row into db    
-            # cur.execute("""
-            #     INSERT INTO %s (timeepoch, 
-            #     hour, calendarweek, temperature, humidity, wind,
-            #     cloudcoverage, solarradiation)
-            #     VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
-            # """, (AsIs(table_name), *insert_row))
+            cur.execute("""
+                INSERT INTO %s (timeepoch, 
+                hour, calendarweek, temperature, humidity, wind,
+                cloudcoverage, solarradiation)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+            """, (AsIs(table_name), *insert_row))
 
 
     @connect
@@ -258,5 +262,5 @@ class DBManager():
 manager = DBManager()
 # manager.fetch_solar_data("2022-01-05", "2022-01-06", 10)
 # print(manager.select_solar_data("applewood", "10"))s
-manager.fetch_weather_data("applewood", "2022-01-05", "2022-01-06")
+manager.fetch_weather_data("applewood", "2022-01-07", "2022-01-31")
 # print(manager.select_weather_data("applewood"))
