@@ -4,13 +4,50 @@ import requests
 import psycopg2
 from psycopg2.extensions import AsIs
 from scrapeSolarData import scrape_solar_data
+from geopy.geocoders import Nominatim
+from timezonefinder import TimezoneFinder
 import csv
 
 # ,user="leoposc",password="4xhm!zMY@dAVNQ7"
 # database="weatherData"
 
-def get_solar_data():
-    return None
+
+def get_timezone(location: str):
+    # initialize geolocator
+    geolocation = Nominatim(user_agent="leopldSchmid")
+    # get timezone for location
+    location = geolocation.geocode(location)
+    tzfinder = TimezoneFinder()
+    timezone = tzfinder.timezone_at(lng=location.longitude, lat=location.latitude)
+    return timezone
+
+
+def validate_time_range(start: str, end: str, start_timestamp_database: int, end_timestamp_database: int):
+    # convert start to timestamp, timezone is local time
+    start_timestamp_requested = int(datetime.strptime(start, '%Y-%m-%d').replace(hour=0, minute=0, second=0).timestamp())
+    # convert end to timestamp from this day at 23:00:00
+    end_timestamp_requested = int(datetime.strptime(end, '%Y-%m-%d').replace(hour=23, minute=0, second=0).timestamp())
+
+    # check if the requested time range is already in the database
+    if start_timestamp_requested >= start_timestamp_database and end_timestamp_requested <= end_timestamp_database:
+        raise Exception("The requested time range is already in the database.")
+    
+    # check if the ending of the requested time range is in the database, but not the beginning
+    elif start_timestamp_requested < start_timestamp_database and end_timestamp_requested > start_timestamp_database:
+        # set end_timestamp_requested to one day before the start_timestamp_database
+        end_timestamp_requested = start_timestamp_database - 86400
+        # set end to one day before the start (UTC)
+        end = datetime.fromtimestamp(end_timestamp_requested).strftime('%Y-%m-%d')
+        print("The ending of the requested time range is already in the database.")
+
+    #check if beginning of requested time range is in the database, but not the end
+    elif start_timestamp_requested < end_timestamp_database and end_timestamp_requested > end_timestamp_database:
+        # set start_timestamp_requested to one day after the end_timestamp_database
+        start_timestamp_requested = end_timestamp_database + 86400
+        # set start to one day after the end
+        start = datetime.fromtimestamp(start_timestamp_requested).strftime('%Y-%m-%d')
+        print("The beginning of the requested time range is already in the database.")
+    return start, end
 
 
 def connect(func):
@@ -66,9 +103,7 @@ class DBManager():
     @connect
     def fetch_solar_data(cur, self, start: str, end: str, solarsystem_id: int):
 
-        solar_data, location = scrape_solar_data(start, end, solarsystem_id)
-
-        table_name = ("solardata_"+location.strip()+"_"+str(solarsystem_id)).lower()
+        # table_name = ("solardata_"+location.strip()+"_"+str(solarsystem_id)).lower()
 
         # find existing tables in database
         cur.execute("""
@@ -77,10 +112,29 @@ class DBManager():
         """)
         tables = cur.fetchall()
 
+        table_name = 'Unknown'
+        for table in tables:            
+            if table[0].split('_')[-1] == str(solarsystem_id):
+                table_name = table[0]
+                break                
+
         # check if table already exists
         if (table_name,) not in tables:
             # create table
-            self.create_table(location, "SOLAR", solarsystem_id)        
+            self.create_table(location, "SOLAR", solarsystem_id)
+
+        # sort the table by timeEpoch
+        cur.execute("""
+            SELECT timeepoch FROM %s ORDER BY timeepoch ASC
+        """, (AsIs(table_name),))
+        sorted_table = cur.fetchall()
+
+        if len(sorted_table) != 0:
+            start_timestamp_database = sorted_table[0][0]
+            end_timestamp_database   = sorted_table[-1][0]
+            start, end = validate_time_range(start, end, start_timestamp_database, end_timestamp_database)
+
+        solar_data, location = scrape_solar_data(start, end, solarsystem_id)
 
         for row in solar_data:
 
@@ -121,34 +175,8 @@ class DBManager():
             start_timestamp_database = sorted_table[0][0]
             end_timestamp_database   = sorted_table[-1][0]
 
-            # convert start to timestamp
-            start_timestamp_requested = int(datetime.strptime(start, '%Y-%m-%d').timestamp())
-            print(start_timestamp_requested)
-            # convert end to timestamp from this day at 23:00:00
-            end_timestamp_requested = int(datetime.strptime(end, '%Y-%m-%d').replace(hour=23, minute=0, second=0).timestamp())
-
-            # check if the requested time range is already in the database
-            if start_timestamp_requested >= start_timestamp_database and end_timestamp_requested <= end_timestamp_database:
-                print("The requested time range is already in the database.")
-                return None
+            start, end = validate_time_range(start, end, start_timestamp_database, end_timestamp_database)
             
-            # check if the ending of the requested time range is in the database, but not the beginning
-            elif start_timestamp_requested < start_timestamp_database and end_timestamp_requested < end_timestamp_database:
-                # set end_timestamp_requested to one day before the start_timestamp_database
-                end_timestamp_requested = start_timestamp_database - 86400
-                # set end to one day before the start
-                end = datetime.fromtimestamp(end_timestamp_requested).strftime('%Y-%m-%d')
-                print("The ending of the requested time range is already in the database.")
-
-            #check if beginning of requested time range is in the database, but not the end
-            elif start_timestamp_requested > start_timestamp_database and end_timestamp_requested > end_timestamp_database:
-                print(start_timestamp_requested, start_timestamp_database, end_timestamp_requested, end_timestamp_database)
-                # set start_timestamp_requested to one day after the end_timestamp_database
-                start_timestamp_requested = end_timestamp_database + 86400
-                # set start to one day after the end
-                start = datetime.fromtimestamp(start_timestamp_requested).strftime('%Y-%m-%d')
-                print("The beginning of the requested time range is already in the database.")
-
         key = "4MZDYZUR9MG5MTY4K8WJVT8K6"
 
         url = f'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{location}/{start}/{end}?unitGroup=metric&elements=datetime%2CdatetimeEpoch%2Ctemp%2Chumidity%2Cwindspeed%2Ccloudcover%2Csolarradiation%2Csolarenergy%2Cuvindex&include=hours%2Cobs%2Cremote&key={key}&contentType=csv'
@@ -167,9 +195,7 @@ class DBManager():
                                                                                         #  'solarradiation',
                                                                                         #  'solarenergy',
                                                                                         #  'uvindex']
-
-        print(start, end)
-        print(csv_data)                                                                                                   
+                                                                                               
         for row in csv_reader:
 
             if not row:        
@@ -177,7 +203,8 @@ class DBManager():
 
             insert_row = [None] * 8
             # convert 2023-02-01T00:00:00 to timestamp
-            insert_row[0] = datetime.strptime(row[0], '%Y-%m-%dT%H:%M:%S').timestamp()
+            insert_row[0] = int(datetime.strptime(row[0], '%Y-%m-%dT%H:%M:%S').timestamp())
+
             # get hour from timestamp
             insert_row[1] = datetime.fromtimestamp(insert_row[0]).hour
             # get calendar week from timestamp
@@ -260,7 +287,7 @@ class DBManager():
 # manager.fetch_weather_data('Stuttgart','2023-02-01','2023-02-01')
 
 manager = DBManager()
-# manager.fetch_solar_data("2022-01-05", "2022-01-06", 10)
-# print(manager.select_solar_data("applewood", "10"))s
-manager.fetch_weather_data("applewood", "2022-01-07", "2022-01-31")
+manager.fetch_solar_data("2022-01-07", "2022-01-31", 10)
+# print(manager.select_solar_data("applewood", "10"))
+# manager.fetch_weather_data("applewood", "2022-01-06", "2022-01-06")
 # print(manager.select_weather_data("applewood"))
