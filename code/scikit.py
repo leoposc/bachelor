@@ -14,23 +14,23 @@ class ScikitManager():
     y_train : np.ndarray
     X_test : np.ndarray
     y_test : np.ndarray 
-    location: str
-    solarsystem_id: int
-    start: str
-    end: str
+    # location: str
+    # solarsystem_id: int
+    # start: str
+    # end: str
 
 
-    def __init__(self, location: str, solarsystem_id: int, start: str, end: str):
-        self.location = location
-        self.solarsystem_id = solarsystem_id
-        self.start = start
-        self.end = end
+    # def __init__(self, location: str, solarsystem_id: int, start: str, end: str):
+    #     self.location = location
+    #     self.solarsystem_id = solarsystem_id
+    #     self.start = start
+    #     self.end = end
 
 
-    def fetch_data(self):
-        dm = DataManager()
-        dm.fetch_weather_data(self.location, self.start, self.end)
-        dm.fetch_solar_data(self.location, self.solarsystem_id, self.start, self.end)
+    # def fetch_data(self):
+    #     dm = DataManager()
+    #     dm.fetch_weather_data(self.location, self.start, self.end)
+    #     dm.fetch_solar_data(self.location, self.solarsystem_id, self.start, self.end)
 
 
     def get_data(self):
