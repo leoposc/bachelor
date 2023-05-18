@@ -1,0 +1,10 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Erklärung}{2}{section.1}%
+\contentsline {section}{\numberline {2}Verzeichnis häufig verwendeter Symbole und Abkürzungen}{3}{section.2}%
+\contentsline {section}{\numberline {3}Einführung}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Schwankungen im Stromnetz}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Maschinelles Lernen}{5}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Stand der Technik}{5}{section.4}%
+\contentsline {section}{\numberline {5}Wichtige Faktoren bei der Stromerzeugung durch Solarenergie}{6}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Wetter-unabhängige Faktoren}{6}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Wetter-abhängige Faktoren}{6}{subsection.5.2}%
