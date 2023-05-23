@@ -1,4 +1,4 @@
-from db import DataManager 
+from db import DBManager 
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
@@ -14,15 +14,15 @@ class ScikitManager():
     y_train : np.ndarray
     X_test : np.ndarray
     y_test : np.ndarray 
-    # location: str
-    # solarsystem_id: int
+    location: str
+    solarsystem_id: int
     # start: str
     # end: str
 
 
-    # def __init__(self, location: str, solarsystem_id: int, start: str, end: str):
-    #     self.location = location
-    #     self.solarsystem_id = solarsystem_id
+    def __init__(self, location: str, solarsystem_id: int):
+        self.location = location
+        self.solarsystem_id = solarsystem_id
     #     self.start = start
     #     self.end = end
 
@@ -34,9 +34,9 @@ class ScikitManager():
 
 
     def get_data(self):
-        dm = DataManager()
+        dm = DBManager()
         solar_df = dm.select_solar_data(self.location, self.solarsystem_id)
-        weather_df = dm.select_weather_data(self.location)
+        weather_df = dm.select_weather_data(self.location)     
         # merge data on timeepoch
         data_df = weather_df.merge(solar_df, on='timeepoch')        
 
@@ -46,6 +46,25 @@ class ScikitManager():
         self.X_train = data_df.iloc[:, 1:-1].values
         self.y_train = data_df.iloc[:, -1].values.reshape(-1,1)
         # warning: check the diminsions of y
+
+
+    def filter_low_radiation(self):
+        # filter out rows with low radiation
+        self.XY_df   = self.XY_df[self.XY_df['solarradiation'] > 10]
+        self.X_df    = self.XY_df.iloc[:, 1:-1]
+        self.y_df    = self.XY_df.iloc[:, -1]
+        self.X_train = self.XY_df.iloc[:, 1:-1].values
+        self.y_train = self.XY_df.iloc[:, -1].values.reshape(-1,1)
+
+
+    def compare_similar_radiation(self, lower_limit: int, upper_limit: int):
+        # filter out rows with similar radiation
+        self.XY_df   = self.XY_df[self.XY_df['solarradiation'] > lower_limit]
+        self.XY_df   = self.XY_df[self.XY_df['solarradiation'] < upper_limit]
+        self.X_df    = self.XY_df.iloc[:, 1:-1]
+        self.y_df    = self.XY_df.iloc[:, -1]
+        self.X_train = self.XY_df.iloc[:, 1:-1].values
+        self.y_train = self.XY_df.iloc[:, -1].values.reshape(-1,1)
 
 
     def standardise(self):
@@ -67,7 +86,7 @@ class ScikitManager():
 
     def visualize_pairwise_correlation(self):
         cols = ['energyoutput', 'solarradiation', 'hour', 'temperature', 'wind', 'cloudcoverage']
-        sns.pairplot(self.XY_df[cols], size=2.5)
+        sns.pairplot(self.XY_df[cols], height=2.5)
         plt.tight_layout()
         plt.show()
 
@@ -78,6 +97,9 @@ class ScikitManager():
         sns.set(font_scale=1.5)
         hm = sns.heatmap(cm, cbar=True, annot=True, square=True, fmt='.2f', annot_kws={'size': 15}, yticklabels=cols, xticklabels=cols)
         plt.show()
+
+
+    
 
     
     

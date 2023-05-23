@@ -74,6 +74,7 @@ class DBManager():
     def create_table(cur, self, location: str,table_type: str, solarsystem_id=None):
 
         assert(len(location) < 30)
+        print(location)
 
         if table_type=="WEATHER":
             name = ("weatherdata_"+location.strip()).lower()
@@ -101,7 +102,7 @@ class DBManager():
 
 
     @connect
-    def fetch_solar_data(cur, self, start: str, end: str, solarsystem_id: int):
+    def fetch_solar_data(cur, self, solarsystem_id: int, start: str, end: str):
 
         # table_name = ("solardata_"+location.strip()+"_"+str(solarsystem_id)).lower()
 
@@ -120,33 +121,45 @@ class DBManager():
 
         # check if table already exists
         if (table_name,) not in tables:
+            solar_data, location = scrape_solar_data(start, end, solarsystem_id)
             # create table
             self.create_table(location, "SOLAR", solarsystem_id)
 
-        # sort the table by timeEpoch
-        cur.execute("""
-            SELECT timeepoch FROM %s ORDER BY timeepoch ASC
-        """, (AsIs(table_name),))
-        sorted_table = cur.fetchall()
+        else:
+            # sort the table by timeEpoch
+            cur.execute("""
+                SELECT timeepoch FROM %s ORDER BY timeepoch ASC
+            """, (AsIs(table_name),))
+            sorted_table = cur.fetchall()
 
-        if len(sorted_table) != 0:
-            start_timestamp_database = sorted_table[0][0]
-            end_timestamp_database   = sorted_table[-1][0]
-            start, end = validate_time_range(start, end, start_timestamp_database, end_timestamp_database)
+            if len(sorted_table) != 0:
+                start_timestamp_database = sorted_table[0][0]
+                end_timestamp_database   = sorted_table[-1][0]
+                start, end = validate_time_range(start, end, start_timestamp_database, end_timestamp_database)
 
-        solar_data, location = scrape_solar_data(start, end, solarsystem_id)
+            solar_data, location = scrape_solar_data(start, end, solarsystem_id)
+
+
 
         for row in solar_data:
 
-            if not row:
+            if not row or row[0] == 0:
                 continue
 
-            # insert row into db
-            cur.execute("""
-                INSERT INTO %s (timeepoch, energyoutput)
-                VALUES (%s, %s)
-            """, (AsIs(table_name), row[0], row[1]))
-
+            try:
+                # insert row into db
+                cur.execute("""
+                    INSERT INTO %s (timeepoch, energyoutput)
+                    VALUES (%s, %s)
+                """, (AsIs(table_name), row[0], row[1]))
+            except psycopg2.errors.UniqueViolation:
+                print(f"Data for timestamp {row[0]} already exists in the database.")
+                # handle psycopg2.errors.UniqueViolation. Most likely because of time change 
+                # in march and october.
+                conn = cur.connection
+                conn.rollback()
+                continue
+            
 
     @connect
     def fetch_weather_data(cur, self,location: str,start: str, end: str):
@@ -163,7 +176,7 @@ class DBManager():
         # check if table already exists
         if (table_name,) not in tables:
             # create table
-            self.create_table(location, "WEATHER")
+            self.create_table(location=location,table_type="WEATHER")
 
         # sort the table by timeEpoch
         cur.execute("""
@@ -214,18 +227,23 @@ class DBManager():
                     # change missing values to None or 0 if it is the solar radiation
                     insert_row[i+2] = None if i != len(row)-2 else 0
                 else:
-                    insert_row[i+2] = int(float(row[i]))
+                    insert_row[i+2] = int(float(row[i]))          
 
-            # print("Row:        ", row)
-            # print("Insert_row: ", insert_row)
-
-            # insert row into db    
-            cur.execute("""
-                INSERT INTO %s (timeepoch, 
-                hour, calendarweek, temperature, humidity, wind,
-                cloudcoverage, solarradiation)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
-            """, (AsIs(table_name), *insert_row))
+            try:
+                # insert row into db    
+                cur.execute("""
+                    INSERT INTO %s (timeepoch, 
+                    hour, calendarweek, temperature, humidity, wind,
+                    cloudcoverage, solarradiation)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                """, (AsIs(table_name), *insert_row))
+            except psycopg2.errors.UniqueViolation:
+                print(f"Data for timestamp {insert_row[0]} already exists in the database.")
+                # handle psycopg2.errors.UniqueViolation. Most likely because of time change 
+                # in march and october.
+                conn = cur.connection
+                conn.rollback()
+                continue
 
 
     @connect
@@ -276,7 +294,7 @@ class DBManager():
         weather_data = cur.fetchall()
 
         #convert to pandas dataframe
-        df = pd.DataFrame(weather_data, columns=['timeepoch', 'hour', 'calendarweek', 'temperature', 'humidity', 'wind', 'cloudcoverage', 'solarradiation'])
+        df = pd.DataFrame(weather_data, columns=['timeepoch', 'hour', 'calendarweek', 'solarradiation', 'temperature', 'cloudcoverage', 'humidity', 'wind',])
         return df
 
 
@@ -286,8 +304,10 @@ class DBManager():
 # manager.select_weather_data('Stuttgart')
 # manager.fetch_weather_data('Stuttgart','2023-02-01','2023-02-01')
 
-manager = DBManager()
-manager.fetch_solar_data("2022-01-07", "2022-01-31", 10)
+# manager = DBManager()
+# manager.fetch_solar_data(10, "2022-01-07", "2022-01-31")
 # print(manager.select_solar_data("applewood", "10"))
 # manager.fetch_weather_data("applewood", "2022-01-06", "2022-01-06")
+
+
 # print(manager.select_weather_data("applewood"))

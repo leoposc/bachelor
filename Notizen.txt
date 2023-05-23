@@ -72,3 +72,39 @@ SOLAR SYSTEM CONDITIONS
 
 
 
+	GLIEDERUNG
+
++ Einführung
+		Klimawandel
+		Debatte 
+		Reaktionen
+		Herausforderungen
+
++ Stand der Technik
+	- Strombedarf in Deutschland
+		aktueller Strombedarf
+		politische Ziele/ Erwartungen
+		Aussagen von der Industrie
+	- Schwankungen im Stromnetz
+		Wie ist das Stromnetz aufgebaut? 
+		stetiges Gleichgewicht halten 
+		unterschiedliche Stromerzeuger 
+		Vergangenheit - Zukunft
+		unternommene Maßnahmen
+	- Aktuelle Methoden um eingespeiste Solarenergie zu prognostizieren
+
+	- Maschinelles Lernen
+
++ Wichtige Faktoren bei der Stromerzeugung durch Solarenergie
+
+	- Wetter unabhängige Faktoren
+	- Wetter abhängige Faktoren
+
+
+
+
+
+
+
+
+
