@@ -74,8 +74,7 @@ class DBManager():
     def create_table(cur, self, location: str,table_type: str, solarsystem_id=None):
 
         assert(len(location) < 30)
-        print(location)
-
+        
         if table_type=="WEATHER":
             name = ("weatherdata_"+location.strip()).lower()
 
@@ -84,6 +83,7 @@ class DBManager():
             hour SMALLINT,
             calendarweek SMALLINT,
             solarradiation SMALLINT,
+            solarenergy SMALLINT,
             temperature SMALLINT,
             cloudcoverage SMALLINT,
             humidity SMALLINT,
@@ -120,7 +120,7 @@ class DBManager():
                 break                
 
         # check if table already exists
-        if (table_name,) not in tables:
+        if table_name == 'Unknown':
             solar_data, location = scrape_solar_data(start, end, solarsystem_id)
             # create table
             self.create_table(location, "SOLAR", solarsystem_id)
@@ -138,8 +138,6 @@ class DBManager():
                 start, end = validate_time_range(start, end, start_timestamp_database, end_timestamp_database)
 
             solar_data, location = scrape_solar_data(start, end, solarsystem_id)
-
-
 
         for row in solar_data:
 
@@ -199,6 +197,8 @@ class DBManager():
         csv_data = result.text.split('\n')
         csv_reader = csv.reader(csv_data, delimiter=',')
         next(csv_reader)
+
+        
                                                                                         #  csv_header = ['datetime',
                                                                                         #  'temp',
                                                                                         #  'humidity',
@@ -214,7 +214,7 @@ class DBManager():
             if not row:        
                 continue
 
-            insert_row = [None] * 8
+            insert_row = [None] * 9
             # convert 2023-02-01T00:00:00 to timestamp
             insert_row[0] = int(datetime.strptime(row[0], '%Y-%m-%dT%H:%M:%S').timestamp())
 
@@ -222,20 +222,23 @@ class DBManager():
             insert_row[1] = datetime.fromtimestamp(insert_row[0]).hour
             # get calendar week from timestamp
             insert_row[2] = datetime.fromtimestamp(insert_row[0]).isocalendar()[1]
-            for i in range(1, len(row)-2):
+            for i in range(1, len(row)-1):
                 if row[i] == '':
                     # change missing values to None or 0 if it is the solar radiation
-                    insert_row[i+2] = None if i != len(row)-2 else 0
+                    insert_row[i+2] = None if (i != len(row)-3 and i != len(row)-2) else 0
                 else:
-                    insert_row[i+2] = int(float(row[i]))          
-
+                    if i == len(row)-2:
+                        # scale solar energy to 100
+                        insert_row[i+2] = int(float(row[i])*100)
+                    else:
+                        insert_row[i+2] = int(float(row[i]))          
             try:
                 # insert row into db    
                 cur.execute("""
                     INSERT INTO %s (timeepoch, 
                     hour, calendarweek, temperature, humidity, wind,
-                    cloudcoverage, solarradiation)
-                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                    cloudcoverage, solarradiation, solarenergy)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
                 """, (AsIs(table_name), *insert_row))
             except psycopg2.errors.UniqueViolation:
                 print(f"Data for timestamp {insert_row[0]} already exists in the database.")
@@ -247,18 +250,31 @@ class DBManager():
 
 
     @connect
-    def select_solar_data(cur, self, location: str, solarsystem_id: str):
+    def select_solar_data(cur, self, solarsystem_id: str):
         
-        table_name = ("solardata_"+location.strip()+"_"+str(solarsystem_id)).lower()
-
-        # check if table even exists
         cur.execute("""
             SELECT table_name FROM information_schema.tables
             WHERE table_schema = 'public'
         """)
         tables = cur.fetchall()
 
-        assert (table_name,) in tables, f"The table '{table_name}' does not exist."
+        table_name = 'Unknown'
+        for table in tables:            
+            if table[0].split('_')[-1] == str(solarsystem_id):
+                table_name = table[0]
+                break
+
+        # table_name = ("solardata_"+location.strip()+"_"+str(solarsystem_id)).lower()
+
+        # # check if table even exists
+        # cur.execute("""
+        #     SELECT table_name FROM information_schema.tables
+        #     WHERE table_schema = 'public'
+        # """)
+        # tables = cur.fetchall()
+
+        # assert (table_name,) in tables, f"The table '{table_name}' does not exist."
+        assert table_name != 'Unknown', f"The table '{table_name}' does not exist."
 
         # get data from db
         cur.execute("""
@@ -294,7 +310,7 @@ class DBManager():
         weather_data = cur.fetchall()
 
         #convert to pandas dataframe
-        df = pd.DataFrame(weather_data, columns=['timeepoch', 'hour', 'calendarweek', 'solarradiation', 'temperature', 'cloudcoverage', 'humidity', 'wind',])
+        df = pd.DataFrame(weather_data, columns=['timeepoch', 'hour', 'calendarweek', 'solarradiation', 'solarenergy', 'temperature', 'cloudcoverage', 'humidity', 'wind',])
         return df
 
 
@@ -302,7 +318,7 @@ class DBManager():
 # manager.create_table('Stuttgart',"WEATHER")
 # manager.select_solar_data('Stuttgart', '1')
 # manager.select_weather_data('Stuttgart')
-# manager.fetch_weather_data('Stuttgart','2023-02-01','2023-02-01')
+# manager.fetch_weather_data('karlsruhe','2023-02-03','2023-02-03')
 
 # manager = DBManager()
 # manager.fetch_solar_data(10, "2022-01-07", "2022-01-31")
@@ -310,4 +326,4 @@ class DBManager():
 # manager.fetch_weather_data("applewood", "2022-01-06", "2022-01-06")
 
 
-# print(manager.select_weather_data("applewood"))
+# print(manager.select_weather_data("karlsruhe"))
