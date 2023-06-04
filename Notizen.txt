@@ -72,6 +72,87 @@ SOLAR SYSTEM CONDITIONS
 
 
 
+	MACHINE LEARNING - MODELLE
+
+
++ Linear Model - Ridge Regression
+
+	+ Gut bei hoher Multikollinearität der Merkmale
+
+Wenn unabhängige Merkmale einen hohen Korrelationswert haben, sagt der Ridge-Regressionsalgorithmus die Zielvariable voraus. 
+Dies liegt daran, dass die kleinste Quadratzahl bei nicht kollinearen Variablen eine unverzerrte Antwort schätzt. Bei starker
+Kollinearität kann jedoch eine Verzerrungskomponente vorhanden sein. Infolgedessen wird in der Gleichung der Ridge-Regression 
+ein Verzerrungsgitter induziert. Durch diese leistungsfähige Regressionsmethode wird die Wahrscheinlichkeit einer Überanpassung 
+des konstruierten Modells erheblich verringert.
+
+
++ Linear Model - Lasso Regression
+
+Ein Regressionsmodell, das in Lernalgorithmen angewendet wird, die Merkmalsauswahl und Normalisierungsverfahren integrieren, 
+wird Lasso-Regression genannt. Der absolute Wert des Regressionskoeffizienten wird nicht berücksichtigt. Im Gegensatz zur 
+Ridge-Regression liegt der Koeffizientenwert der unabhängigen Merkmale nahe bei Null.
+Die Lasso-Regression beinhaltet eine Merkmalsauswahl. Dieser Prozess ermöglicht die Auswahl einer Gruppe von Variablen aus 
+dem gegebenen Datensatz, die mehr Veränderungen im Modell verursachen als andere Variablen. Bei der Lasso-Regression werden 
+alle anderen Merkmale auf Null gesetzt, außer den Merkmalen, die für gute Vorhersagen erforderlich sind. Dieser Schritt trägt 
+dazu bei, eine Überanpassung des Modells zu verhindern. Wenn der Kollinearitätswert der unabhängigen Faktoren des Datensatzes
+ hoch ist, wählt die Lasso-Regression nur eine Variable aus und reduziert die Koeffizienten der anderen Variablen auf Null.
+
+
++ Linear Model - Polynomial Regression
+
+Eine weitere Methode der Regressionsanalyse, die in Lernalgorithmen verwendet wird, ist die polynomiale Regression. Diese Methode
+ähnelt der multiplen linearen Regression mit einigen kleinen Anpassungen. Der n-te Grad in der polynomialen Regression definiert
+die Verbindung zwischen den unabhängigen und abhängigen Merkmalen, X und Y.
+Als Prädiktor wird ein lineares Modell für die Regression verwendet; wir skalieren die Merkmale mit einer polynomialen Skalierungsfunktion
+von sklearn. Der Algorithmus der polynomialen Regression verwendet wie die lineare Regression die Methode der gewöhnlichen kleinsten 
+Quadrate, um die Fehler der Linien zu vergleichen. Bei der polynomialen Regression ist die beste Anpassungslinie keine gerade Linie,
+sondern eine Kurve, die je nach Potenz von X oder dem Wert von n die Datenpunkte kreuzt.
+Bei dem Versuch, den niedrigsten Wert der OLS-Gleichung zu erreichen und die bestpassende Kurve zu finden, neigt das polynomiale 
+Regressionsmodell zu einer Überanpassung. Es ist ratsam, die verschiedenen Regressionskurven zu bewerten, da die Extrapolation höherer 
+Polynome zu merkwürdigen Ergebnissen führen kann.
+
+
+# Linear Model - Bayesian Ridge
+
+Die Bayes'sche Regression ist eine statistische Methode, die auf dem Bayes'schen Theorem und der Bayes'schen Statistik basiert. Sie 
+bietet einen probabilistischen Ansatz zur Modellierung und Vorhersage von Zusammenhängen zwischen Variablen. Im Gegensatz zur 
+traditionellen (klassischen) linearen Regression betrachtet die Bayes'sche Regression nicht nur einen einzigen Schätzwert für die 
+Regressionskoeffizienten, sondern betrachtet diese als Zufallsvariablen mit einer zugrunde liegenden Wahrscheinlichkeitsverteilung. 
+Dies ermöglicht es, Unsicherheiten in den Schätzungen zu berücksichtigen und Aussagen über die Wahrscheinlichkeit verschiedener Werte 
+für die Koeffizienten zu treffen.
+Der Bayes'sche Ansatz basiert auf dem Aktualisieren von Wissen (a priori) durch die Verwendung von Beobachtungen (a posteriori) unter 
+Verwendung des Bayes'schen Theorems. Dabei wird die a priori-Verteilung der Koeffizienten mit den Beobachtungen kombiniert, um die a 
+posteriori-Verteilung zu erhalten. Diese a posteriori-Verteilung gibt an, wie sich unsere Unsicherheit über die Koeffizienten nach 
+Berücksichtigung der Beobachtungen ändert.
+Um die Bayes'sche Regression durchzuführen, müssen a priori-Verteilungen für die Regressionskoeffizienten definiert werden. Dies 
+kann entweder subjektiv auf der Grundlage des Vorwissens des Modellierers erfolgen oder objektiv unter Verwendung von vorherigen 
+Daten oder Expertenmeinungen. Durch die Kombination der a priori-Verteilung mit den Daten werden die a posteriori-Verteilung und 
+Schätzungen der Koeffizienten gewonnen.
+Die Bayes'sche Regression bietet mehr Flexibilität als die klassische lineare Regression und kann mit komplexeren Modellen umgehen. 
+Sie ermöglicht auch die Berücksichtigung von Unsicherheiten in den Schätzungen und die Quantifizierung der Unsicherheit in den 
+Vorhersagen. Die Bayes'sche Regression findet Anwendung in verschiedenen Bereichen wie beispielsweise der Ökonometrie, der 
+medizinischen Forschung, der Finanzanalyse und anderen Gebieten, in denen probabilistische Modellierung und die Berücksichtigung 
+von Unsicherheiten von Bedeutung sind.
+
+
++ Linear Model - Elastic Net Regression
+
+Die elastische Netzregression ist ein regularisierter Ansatz für die lineare Regression. Sie fügt während des Trainings die L1- und 
+L2-Kosten in die Verlustfunktion ein, indem sie beide linear kombiniert. Sie verbindet Lasso- und Ridge-Regression, indem sie jeder 
+Strafe das richtige Gewicht gibt und so die Vorhersagegenauigkeit erhöht.
+Alpha und Lambda sind die beiden konfigurierbaren Hyperparameter für elastische Netze. Lambda steuert den Anteil der gewichteten Summe
+der beiden Strafen, der die Wirksamkeit des Modells bestimmt. Im Gegensatz dazu steuert der Alpha-Parameter das Gewicht, das jeder 
+einzelnen Strafe zugewiesen wird.
+
+
+
+(https://www.javatpoint.com/sklearn-regression-models)
+
+
+
+
+
+
 	GLIEDERUNG
 
 + Einführung
