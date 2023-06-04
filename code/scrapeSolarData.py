@@ -69,9 +69,11 @@ def scrape_solar_data(start: str, end: str, id: int):
             # Make the website request and parse the response using BeautifulSoup
             response = requests.get(url)
             soup = BeautifulSoup(response.content, "html.parser")
-
-            # find the amount of entries for the month. Look at class="dataTables_info" and split the text by spaces. The second to last word is the number of entries
-            entries = soup.find("div", class_="dataTables_info").text.split()[-2]
+            try:
+                # find the amount of entries for the month. Look at class="dataTables_info" and split the text by spaces. The second to last word is the number of entries
+                entries = soup.find("div", class_="dataTables_info").text.split()[-2]
+            except AttributeError:
+                raise Exception(f"Could not find any data for system {id} in {year}-{month:02d}")
             
             for entry in range(day_start, min(int(entries), day_end+1)):
                 csv_link = f"https://oedi-data-lake.s3.amazonaws.com/pvdaq/csv/pvdata/system_id={id}/year={year}/month={month}/day={entry}/system_{id}__date_{year}_{month:02d}_{entry:02d}.csv"
@@ -81,15 +83,20 @@ def scrape_solar_data(start: str, end: str, id: int):
 
                 # Skip the headers row
                 header = next(csvreader)
-                assert header[9] == "dc_power__422", "dc_power__422 is not in the 10th column"
+                TARGET_INDEX = 2
+                # assert header[9] == "dc_power__422", "dc_power__422 is not in the 10th column"
+                assert header[TARGET_INDEX] == "ac_power_metered_kw__4197", "ac_power_metered_kw__4197 is not in the 2nd column"
 
                 # Write the data rows to the CSV file
                 # loop through every sixty rows and get the mean value for each hour
                 data = list(csvreader)
-                for idx in range(0,len(data),60):                  
+                # calculate time interval between each entry (in minutes)
+                minutes_passed_till_second_entry = datetime.strptime(data[1][0], '%Y-%m-%d %H:%M:%S').minute
+                time_interval = 60 // minutes_passed_till_second_entry
+                for idx in range(0,len(data),time_interval):                  
                     solar_data[data_idx][0] = int(datetime.strptime(data[idx][0], '%Y-%m-%d %H:%M:%S').timestamp())
-                    val =  mean([int(float(x[9])) for x in data[idx:idx+60]])
-                    solar_data[data_idx][1] = val if val > 0 else 0
+                    val =  mean([int(float(x[TARGET_INDEX])) for x in data[idx:idx+time_interval]])
+                    solar_data[data_idx][1] = val if val > 30 else 0
                     data_idx += 1
                 
     return solar_data, city
