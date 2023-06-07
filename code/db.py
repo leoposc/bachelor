@@ -190,7 +190,7 @@ class DBManager():
             
         key = "4MZDYZUR9MG5MTY4K8WJVT8K6"
 
-        url = f'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{location}/{start}/{end}?unitGroup=metric&elements=datetime%2CdatetimeEpoch%2Ctemp%2Chumidity%2Cwindspeed%2Ccloudcover%2Csolarradiation%2Csolarenergy%2Cuvindex&include=hours%2Cobs%2Cremote&key={key}&contentType=csv'
+        url = f'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{location}/{start}/{end}?unitGroup=metric&elements=datetime%2CdatetimeEpoch%2Ctemp%2Chumidity%2Cwindspeed%2Ccloudcover%2Csolarradiation%2Cuvindex&include=hours%2Cobs%2Cremote&key={key}&contentType=csv'
                 
         result = requests.get(url)
 
@@ -214,7 +214,7 @@ class DBManager():
             if not row:        
                 continue
 
-            insert_row = [None] * 9
+            insert_row = [None] * 8
             # convert 2023-02-01T00:00:00 to timestamp
             insert_row[0] = int(datetime.strptime(row[0], '%Y-%m-%dT%H:%M:%S').timestamp())
 
@@ -225,20 +225,20 @@ class DBManager():
             for i in range(1, len(row)-1):
                 if row[i] == '':
                     # change missing values to None or 0 if it is the solar radiation
-                    insert_row[i+2] = None if (i != len(row)-3 and i != len(row)-2) else 0
+                    insert_row[i+2] = None if i != len(row)-2 else 0
                 else:
-                    if i == len(row)-2:
-                        # scale solar energy to 100
-                        insert_row[i+2] = int(float(row[i])*100)
-                    else:
-                        insert_row[i+2] = int(float(row[i]))          
+                    # if i == len(row)-2:
+                    #     # scale solar energy to 100
+                    #     insert_row[i+2] = int(float(row[i])*100)
+                    # else:
+                    insert_row[i+2] = int(float(row[i]))          
             try:
                 # insert row into db    
                 cur.execute("""
                     INSERT INTO %s (timeepoch, 
                     hour, calendarweek, temperature, humidity, wind,
-                    cloudcoverage, solarradiation, solarenergy)
-                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    cloudcoverage, solarradiation)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
                 """, (AsIs(table_name), *insert_row))
             except psycopg2.errors.UniqueViolation:
                 print(f"Data for timestamp {insert_row[0]} already exists in the database.")
@@ -310,20 +310,10 @@ class DBManager():
         weather_data = cur.fetchall()
 
         #convert to pandas dataframe
-        df = pd.DataFrame(weather_data, columns=['timeepoch', 'hour', 'calendarweek', 'solarradiation', 'solarenergy', 'temperature', 'cloudcoverage', 'humidity', 'wind',])
+        df = pd.DataFrame(weather_data, columns=['timeepoch', 'hour', 'calendarweek', 'solarradiation', 'temperature', 'cloudcoverage', 'humidity', 'wind',])
         return df
 
 
-# manager = DBManager()
-# manager.create_table('Stuttgart',"WEATHER")
-# manager.select_solar_data('Stuttgart', '1')
-# manager.select_weather_data('Stuttgart')
-# manager.fetch_weather_data('karlsruhe','2023-02-03','2023-02-03')
 
 # manager = DBManager()
-# manager.fetch_solar_data(10, "2022-01-07", "2022-01-31")
-# print(manager.select_solar_data("applewood", "10"))
-# manager.fetch_weather_data("applewood", "2022-01-06", "2022-01-06")
-
-
-# print(manager.select_weather_data("karlsruhe"))
+# manager.fetch_solar_data(10, "2022-05-30", "2022-06-13")

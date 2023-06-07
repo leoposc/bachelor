@@ -8,6 +8,20 @@ import pandas as pd
 import numpy as np
 
 
+def consider_wind(ds: pd.Series):  
+    # filter temperature values above 20, since only then
+    # wind as natural fan could have an effect on the energy output
+    if ds['temperature'] > 20:    
+        return ds['temperature'] - (ds['wind'] * 1.0)
+    else:
+        return ds['temperature']
+
+
+def consider_temperature(df: pd.DataFrame):
+    energyoutput_index = df['solarradiation'] - (df['temperature'] * 5.0)
+    return energyoutput_index
+    
+
 class ScikitManager():
     XY_df : pd.DataFrame
     X_train : np.ndarray
@@ -33,13 +47,21 @@ class ScikitManager():
         self.end = end
 
 
+    def calculate_energyoutput_index(self):
+        self.XY_df['temperature'] = self.XY_df.apply(consider_wind, axis=1)
+        self.XY_df['energyoutput_index'] = self.XY_df.apply(consider_temperature, axis=1)
+
     # def fetch_data(self):
     #     dm = DataManager()
     #     dm.fetch_weather_data(self.location, self.start, self.end)
     #     dm.fetch_solar_data(self.location, self.solarsystem_id, self.start, self.end)
 
 
-    def update_numpy_arrays(self):
+    def update_numpy_arrays(self):        
+        column_order = list(self.XY_df.columns)  # Get the current column order
+        column_order.remove('energyoutput')  # Remove 'energyoutput' from the column order
+        column_order.append('energyoutput')  # Append 'energyoutput' at the end
+        self.XY_df = self.XY_df.reindex(columns=column_order)  # Reindex the DataFrame with the new column order
         self.X_train = self.XY_df.iloc[:, :-1].values
         self.y_train = self.XY_df.iloc[:,  -1].values.reshape(-1,1)
 
@@ -54,27 +76,27 @@ class ScikitManager():
         self.XY_df   = self.XY_df.drop(columns=['timeepoch'])
         # print size of dataset
         print(f"Dataset size: {self.XY_df.shape}")
-        self.update_numpy_arrays()
 
 
     def filter_low_radiation(self):
         # filter out rows with low radiation
         self.XY_df   = self.XY_df[self.XY_df['solarradiation'] > 10]
-        self.update_numpy_arrays()
+
+
+    def filter_low_energyoutput(self):
+        # filter out rows with low energy output
+        self.XY_df   = self.XY_df[self.XY_df['energyoutput'] > 10]
 
 
     def compare_similar_radiation(self, lower_limit: int, upper_limit: int):
         # filter out rows with similar radiation
         self.XY_df   = self.XY_df[self.XY_df['solarradiation'] > lower_limit]
         self.XY_df   = self.XY_df[self.XY_df['solarradiation'] < upper_limit]
-        self.update_numpy_arrays()
 
 
     def choose_features(self, features: list):
         self.features = features
         self.XY_df = self.XY_df[features]
-        self.update_numpy_arrays()
-        # print(self.XY_df.head())
 
 
     def standardise(self):
@@ -94,15 +116,16 @@ class ScikitManager():
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.X_train, self.y_train, test_size=test_size, random_state=0)
 
 
-    def transform_features(self):
-        # perform log transformation on solarradiation
-        self.X_df['solarradiation'] = np.log(self.X_df['solarradiation'])
-        # get square root of energyoutput
-        self.y_df['energyoutput'] = np.sqrt(self.y_df['energyoutput'])
-        # self.y_df['energyoutput'] = self.y_df['energyoutput'].apply(np.sqrt)
-        # update numpy arrays
-        self.X_train = self.X_df.values
-        self.y_train = self.y_df.values.reshape(-1,1)
+
+    # def transform_features(self):
+    #     # perform log transformation on solarradiation
+    #     self.X_df['solarradiation'] = np.log(self.X_df['solarradiation'])
+    #     # get square root of energyoutput
+    #     self.y_df['energyoutput'] = np.sqrt(self.y_df['energyoutput'])
+    #     # self.y_df['energyoutput'] = self.y_df['energyoutput'].apply(np.sqrt)
+    #     # update numpy arrays
+    #     self.X_train = self.X_df.values
+    #     self.y_train = self.y_df.values.reshape(-1,1)
 
 
     def visualize_pairwise_correlation(self):
@@ -185,7 +208,3 @@ class ScikitManager():
         plt.legend(loc='upper left')
         plt.hlines(y=0, lw=2, color='black')
         plt.show()
-    
-
-    
-
