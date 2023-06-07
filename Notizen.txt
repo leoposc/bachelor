@@ -161,6 +161,7 @@ einzelnen Strafe zugewiesen wird.
 		Reaktionen
 		Herausforderungen
 
+
 + Stand der Technik
 	- Strombedarf in Deutschland
 		aktueller Strombedarf
@@ -176,10 +177,24 @@ einzelnen Strafe zugewiesen wird.
 
 	- Maschinelles Lernen
 
++ Eigene Fragestellung und methodisches Vorgehen
+		
+
+
+
 + Wichtige Faktoren bei der Stromerzeugung durch Solarenergie
 
 	- Wetter unabhängige Faktoren
 	- Wetter abhängige Faktoren
+
+
++ Zusammenhänge der Merkmale
+
+
++ Datenvorverarbeitung
+
+
++ Maschinelles Lernen - Auswahl des Modells
 
 
 
