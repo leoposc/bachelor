@@ -3,9 +3,11 @@ from db import DBManager
 
 # fetch data from servers
 manager = DBManager()
-# manager.fetch_solar_data(10, "2022-04-01", "2022-04-30")
 
-manager.fetch_solar_data(1200, "2019-01-01", "2019-03-01")
+manager.fetch_solar_data(10, "2022-05-30", "2022-07-10")
+# manager.fetch_weather_data("applewood", "2022-05-30", "2022-07-10")
+
+# manager.fetch_solar_data(1200, "2019-01-01", "2019-03-01")
 # manager.fetch_weather_data("linthicum", "2019-02-01", "2019-02-15")
 
 
@@ -13,16 +15,23 @@ manager.fetch_solar_data(1200, "2019-01-01", "2019-03-01")
 
 from scikit import ScikitManager
 
-# sci = ScikitManager(location='applewood', solarsystem_id=10)
-sci = ScikitManager(location='linthicum', solarsystem_id=1200)
+sci = ScikitManager(location='applewood', solarsystem_id=10)
+# sci = ScikitManager(location='linthicum', solarsystem_id=1200)
 sci.get_data()
-sci.choose_features(['solarradiation', 'temperature', 'wind', 'energyoutput'])
+sci.calculate_energyoutput_index()
+sci.choose_features(['solarradiation',
+                     'energyoutput_index',
+                    #  'temperature',
+                    #  'wind',
+                    #  'humidity',
+                     'energyoutput'
+                     ])
 # sci.choose_features(['solarradiation', 'temperature', 'energyoutput'])
 # sci.choose_features(['solarradiation', 'energyoutput'])
 # sci.compare_similar_radiation(470, 550)
 # sci.filter_low_radiation()
-sci.split_data(0.5)
-
+# sci.split_data(0.1)
+sci.update_numpy_arrays()
 #%%
 # sci.choose_features(['solarradiation', 'temperature', 'wind', 'energyoutput'])
 # %%
@@ -73,3 +82,4 @@ for i in range(len(sci.y_test)):
 sci.predict()
 sci.evaluate()
 # %%
+

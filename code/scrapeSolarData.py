@@ -20,7 +20,7 @@ def scrape_solar_data(start: str, end: str, id: int):
     day_start = int(start[2])
     year_end = int(end[0])
     month_end = int(end[1])
-    day_end = int(end[2])
+    
 
     # Set the number of objects to download data for
     # system_ids = [10,1199,1200,1201,1202,1203,1204,1207,1209]
@@ -57,15 +57,14 @@ def scrape_solar_data(start: str, end: str, id: int):
 
     # initialize list for solar data
     solar_data = [[0, 0] for i in range(records_total)]
+    target_feature = None
     data_idx = 0 
     
     # loop through each year
     for year in range(year_start, year_end+1):
-        
         #loop through each month
         for month in range(month_start, month_end+1):
             url = f"https://data.openei.org/s3_viewer?bucket=oedi-data-lake&prefix=pvdaq%2Fcsv%2Fpvdata%2Fsystem_id%3D{id}%2Fyear%3D{year}%2Fmonth%3D{month}%2F"
-
             # Make the website request and parse the response using BeautifulSoup
             response = requests.get(url)
             soup = BeautifulSoup(response.content, "html.parser")
@@ -74,18 +73,26 @@ def scrape_solar_data(start: str, end: str, id: int):
                 entries = soup.find("div", class_="dataTables_info").text.split()[-2]
             except AttributeError:
                 raise Exception(f"Could not find any data for system {id} in {year}-{month:02d}")
-            
+            # check if the month is the last month of the requested time span
+            day_end = int(end[2]) if month == month_end else int(entries)
+
             for entry in range(day_start, min(int(entries), day_end+1)):
                 csv_link = f"https://oedi-data-lake.s3.amazonaws.com/pvdaq/csv/pvdata/system_id={id}/year={year}/month={month}/day={entry}/system_{id}__date_{year}_{month:02d}_{entry:02d}.csv"
                 response = requests.get(csv_link)
                 data = response.content.decode("utf-8")
                 csvreader = csv.reader(data.splitlines())
-
                 # Skip the headers row
                 header = next(csvreader)
-                TARGET_INDEX = 2
-                # assert header[9] == "dc_power__422", "dc_power__422 is not in the 10th column"
-                assert header[TARGET_INDEX] == "ac_power_metered_kw__4197", "ac_power_metered_kw__4197 is not in the 2nd column"
+                # check for consistency
+                if target_feature is None:
+                    # numerate header
+                    numerated_header = [f'{idx}: {x}\n' for idx, x in enumerate(header)]
+                    text = '\n\nChoose target variable by specifing the index. \nFollowing colums are available: \n\n' + ''.join(numerated_header) + '\n\n'
+                    print(text)
+                    target_index =  int(input())
+                    target_feature = header[target_index]
+                else:
+                    assert header[target_index] == target_feature, f'{target_feature} is not consistent.'
 
                 # Write the data rows to the CSV file
                 # loop through every sixty rows and get the mean value for each hour
@@ -95,11 +102,13 @@ def scrape_solar_data(start: str, end: str, id: int):
                 time_interval = 60 // minutes_passed_till_second_entry
                 for idx in range(0,len(data),time_interval):                  
                     solar_data[data_idx][0] = int(datetime.strptime(data[idx][0], '%Y-%m-%d %H:%M:%S').timestamp())
-                    val =  mean([int(float(x[TARGET_INDEX])) for x in data[idx:idx+time_interval]])
+                    val =  mean([int(float(x[target_index])) for x in data[idx:idx+time_interval]])
                     solar_data[data_idx][1] = val if val > 30 else 0
                     data_idx += 1
+            day_start = 1
+
                 
     return solar_data, city
 
 
-# print(scrape_solar_data('2022-01-01', '2022-01-10', 10))
+# print(scrape_solar_data('2022-05-01', '2022-06-01', 10))
