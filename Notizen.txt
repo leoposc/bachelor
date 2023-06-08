@@ -176,10 +176,15 @@ einzelnen Strafe zugewiesen wird.
 	- Aktuelle Methoden um eingespeiste Solarenergie zu prognostizieren
 
 	- Maschinelles Lernen
+	
 
 + Eigene Fragestellung und methodisches Vorgehen
-		
+		Problemstellung und Zielsetzung
+		Weshalb Prognose für individuelle Solaranlagen?
+		Verfügbarkeit der Daten - Bestandsdaten verwenden 
+		Evaluierung der Literaturrecherche - Korrelation vieler Merkmale
 
+		
 
 
 + Wichtige Faktoren bei der Stromerzeugung durch Solarenergie
