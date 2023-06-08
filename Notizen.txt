@@ -183,6 +183,7 @@ einzelnen Strafe zugewiesen wird.
 		Weshalb Prognose für individuelle Solaranlagen?
 		Verfügbarkeit der Daten - Bestandsdaten verwenden 
 		Evaluierung der Literaturrecherche - Korrelation vieler Merkmale
+		Veränderung der Input Daten über den Lebenslauf der Solaranlage 
 
 		
 

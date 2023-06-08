@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.23)  24 MAY 2023 10:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.9)  8 JUN 2023 12:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -411,27 +411,27 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
  [3] [4] [5] [6]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 124.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 122.
  [7] [8] [9]
-[10] (./Bachelorarbeit.aux)
+[10] [11] [12] (./Bachelorarbeit.aux)
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: EEA234065A70CC7F91A593B976798791;2379.
+(rerunfilecheck)             Checksum: 0866138A7E77B91CCBB1423E0E15F94E;2384.
  ) 
 Here is how much of TeX's memory you used:
- 11073 strings out of 476047
- 174381 string characters out of 5791252
- 1857248 words of memory out of 5000000
+ 11075 strings out of 476047
+ 174395 string characters out of 5791252
+ 1858248 words of memory out of 5000000
  31345 multiletter control sequences out of 15000+600000
  535503 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,76p,1078b,457s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,5n,76p,1862b,457s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr
 /local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/
 texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Bachelorarbeit.pdf (11 pages, 41565 bytes).
+Output written on Bachelorarbeit.pdf (13 pages, 46105 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
+ 146 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 500000)
  97 words of extra memory for PDF output out of 10000 (max. 10000000)
 
