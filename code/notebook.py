@@ -4,8 +4,8 @@ from db import DBManager
 # fetch data from servers
 manager = DBManager()
 
-manager.fetch_solar_data(10, "2022-05-30", "2022-07-10")
-# manager.fetch_weather_data("applewood", "2022-05-30", "2022-07-10")
+# manager.fetch_solar_data(10, "2022-05-30", "2022-07-10")
+manager.fetch_weather_data("applewood", "2022-07-11", "2022-08-20")
 
 # manager.fetch_solar_data(1200, "2019-01-01", "2019-03-01")
 # manager.fetch_weather_data("linthicum", "2019-02-01", "2019-02-15")

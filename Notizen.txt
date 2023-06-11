@@ -176,7 +176,7 @@ einzelnen Strafe zugewiesen wird.
 	- Aktuelle Methoden um eingespeiste Solarenergie zu prognostizieren
 
 	- Maschinelles Lernen
-	
+
 
 + Eigene Fragestellung und methodisches Vorgehen
 		Problemstellung und Zielsetzung
@@ -191,7 +191,20 @@ einzelnen Strafe zugewiesen wird.
 + Wichtige Faktoren bei der Stromerzeugung durch Solarenergie
 
 	- Wetter unabhängige Faktoren
+		Quantität und Qualität der Solarpanele
+		Ausrichtung der Solarmodule/ Himmelsrichtung 
+		Einstrahlungswinkel
+		Umgebungsfaktoren, Schatten durch umliegende Gebäude, Bäume oder Berge
+			-> beide Faktoren sollen über die Uhrzeit und die Jahreszeit (Kalenderwoche) repräsentiert werden
+			
+
 	- Wetter abhängige Faktoren
+		Sonneneinstrahlung - solar radiation
+		Temperatur
+		wind - natürlicher Ventilator
+		Bewölkung
+		Luftfeuchtigkeit -> mehr Teilchen in der Atmosphäre -> mehr Streuung 
+		Luftdruck
 
 
 + Zusammenhänge der Merkmale
