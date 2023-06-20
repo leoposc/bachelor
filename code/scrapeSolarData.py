@@ -96,13 +96,13 @@ def scrape_solar_data(start: str, end: str, id: int):
 
                 # Write the data rows to the CSV file
                 # loop through every sixty rows and get the mean value for each hour
-                data = list(csvreader)
+                data = list(csvreader)                
                 # calculate time interval between each entry (in minutes)
                 minutes_passed_till_second_entry = datetime.strptime(data[1][0], '%Y-%m-%d %H:%M:%S').minute
                 time_interval = 60 // minutes_passed_till_second_entry
                 for idx in range(0,len(data),time_interval):                  
                     solar_data[data_idx][0] = int(datetime.strptime(data[idx][0], '%Y-%m-%d %H:%M:%S').timestamp())
-                    val =  mean([int(float(x[target_index])) for x in data[idx:idx+time_interval]])
+                    val =  mean([int(float(x[target_index])) if x[target_index] != '' else 0 for x in data[idx:idx+time_interval]])
                     solar_data[data_idx][1] = val if val > 30 else 0
                     data_idx += 1
             day_start = 1
@@ -111,4 +111,8 @@ def scrape_solar_data(start: str, end: str, id: int):
     return solar_data, city
 
 
-# print(scrape_solar_data('2022-05-01', '2022-06-01', 10))
+# # print(scrape_solar_data('2022-05-01', '2022-06-01', 10))
+# def test():
+#     val = mean([int(float(x[target_index])) if x[target_index] != '' else 0 for x in data[idx:idx+time_interval]])
+#     solar_data[data_idx][1] = val if val > 30 else 0
+#     data_idx += 1

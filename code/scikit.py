@@ -3,6 +3,7 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
+from itertools import product
 import seaborn as sns
 import pandas as pd
 import numpy as np
@@ -75,6 +76,8 @@ class ScikitManager():
         # drop timeepoch column
         self.XY_df   = self.XY_df.drop(columns=['timeepoch'])
         # print size of dataset
+        print(f"Solar dataset size: {solar_df.shape}")
+        print(f"Weather dataset size: {weather_df.shape}")
         print(f"Dataset size: {self.XY_df.shape}")
 
 
@@ -141,6 +144,67 @@ class ScikitManager():
         plt.show()
 
 
+    def make_sets(self):
+        c = 0.001
+        gamma = 1e-10
+        param_grid = {
+            "C": [c*(10**i) for i in range(1, 14)],
+            "gamma": [gamma*(10**i) for i in range(1, 14)]
+        }
+
+        sets = list()
+        all_hps_vals = [lst for lst in param_grid.values()]
+        hp_keys = [hp for hp in param_grid.keys()]
+        val_sets = product(*all_hps_vals)
+        for val in val_sets:
+            hp_set = dict()
+            for idx, hp_key in enumerate(hp_keys):
+                hp_set[hp_key] = val[idx]
+            sets.append(hp_set)
+
+        self.hp_sets = sets
+
+
+    def grid_search(self,model_type='LinearRegression'):
+        self.make_sets()
+        best_score = 0
+        best_params = None
+        for hp_set in self.hp_sets:
+            
+            self.fit(model_type)            
+            if self.score > best_score:
+                best_score = self.score
+                best_params = hp_set
+        print(f"Best score: {best_score}")
+        print(f"Best params: {best_params}")
+
+
+    def grid_search_v2(self):
+        self.make_sets()
+        logs = list()
+        best_hp_set = {
+            "best_test_score": 0.0
+        }
+        for hp_set in self.hp_sets:
+            log = dict()
+            self.model = self.model(**hp_set)
+            self.model.fit(self.X_train, self.y_train.flatten())
+            train_score = self.model.score(self.X_train, self.y_train)
+            test_score = self.model.score(self.X_test, self.y_test)
+
+            log["hp"] = hp_set
+            log["train_score"] = train_score
+            log["test_score"] = test_score
+
+            if test_score > best_hp_set["best_test_score"]:
+                best_hp_set["best_test_score"] = test_score
+                best_hp_set["best_hp"] = hp_set
+
+            logs.append(log)
+
+
+
+
     def fit(self, model_type='LinearRegression'):
         if model_type == 'LinearRegression':
             from sklearn.linear_model import LinearRegression
@@ -181,7 +245,8 @@ class ScikitManager():
             print('Invalid model type')
             return
 
-        self.model.fit(self.X_train, self.y_train)
+        self.model.fit(self.X_train, self.y_train.flatten())
+        # self.score = self.model.score(self.X_test, self.y_test)
 
     
     def predict(self):

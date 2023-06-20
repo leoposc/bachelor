@@ -4,10 +4,10 @@ from db import DBManager
 # fetch data from servers
 manager = DBManager()
 
-# manager.fetch_solar_data(10, "2022-05-30", "2022-07-10")
-manager.fetch_weather_data("applewood", "2022-07-11", "2022-08-20")
+manager.fetch_solar_data(10, "2022-11-23", "2022-12-20")
+# manager.fetch_weather_data("applewood", "2022-11-11", "2022-12-20")
 
-# manager.fetch_solar_data(1200, "2019-01-01", "2019-03-01")
+# manager.fetch_solar_data(1200, "2019-01-01", "2019-01-02")
 # manager.fetch_weather_data("linthicum", "2019-02-01", "2019-02-15")
 
 
@@ -16,41 +16,52 @@ manager.fetch_weather_data("applewood", "2022-07-11", "2022-08-20")
 from scikit import ScikitManager
 
 sci = ScikitManager(location='applewood', solarsystem_id=10)
+sci.make_sets()
+
+
+# %%
+
 # sci = ScikitManager(location='linthicum', solarsystem_id=1200)
 sci.get_data()
-sci.calculate_energyoutput_index()
+# sci.calculate_energyoutput_index()
 sci.choose_features(['solarradiation',
-                     'energyoutput_index',
-                    #  'temperature',
+                    #  'energyoutput_index',
+                     'calendarweek',
+                     'hour',
+                     'temperature',
                     #  'wind',
-                    #  'humidity',
+                     'humidity',
                      'energyoutput'
                      ])
+# sci.choose_features(['solarradiation', 'temperature', 'wind', 'energyoutput'])
 # sci.choose_features(['solarradiation', 'temperature', 'energyoutput'])
 # sci.choose_features(['solarradiation', 'energyoutput'])
-# sci.compare_similar_radiation(470, 550)
-# sci.filter_low_radiation()
-# sci.split_data(0.1)
 sci.update_numpy_arrays()
 #%%
-# sci.choose_features(['solarradiation', 'temperature', 'wind', 'energyoutput'])
+sci.filter_low_energyoutput()
+sci.compare_similar_radiation(400, 900)
+# sci.filter_low_radiation()
 # %%
-# sci.standardise()11
-# sci.normalise()
 
 sci.visualize_pairwise_correlation()
 
 sci.visualize_heatmap()
 
 
-# %%
+#%%
+sci.split_data(0.1)
+
+sci.standardise()
+# sci.normalise()
+
+#%%
 
 # sci.fit('LinearRegression')
 # sci.fit('Ridge')
 # sci.fit('Lasso')
-# sci.fit('ElasticNet')
+sci.fit('ElasticNet')
 # sci.fit('SVR')
-sci.fit('DecisionTreeRegressor')
+# sci.fit('DecisionTreeRegressor')
 sci.predict()
 sci.evaluate()
 
