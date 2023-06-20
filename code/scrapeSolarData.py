@@ -88,7 +88,8 @@ def scrape_solar_data(start: str, end: str, id: int):
                     # numerate header
                     numerated_header = [f'{idx}: {x}\n' for idx, x in enumerate(header)]
                     text = '\n\nChoose target variable by specifing the index. \nFollowing colums are available: \n\n' + ''.join(numerated_header) + '\n\n'
-                    print(text)
+                    print(text, flush=True)
+                    
                     target_index =  int(input())
                     target_feature = header[target_index]
                 else:

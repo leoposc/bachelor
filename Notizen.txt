@@ -149,6 +149,12 @@ einzelnen Strafe zugewiesen wird.
 (https://www.javatpoint.com/sklearn-regression-models)
 
 
+INTERESSANTE ARTIKEL/ LINKS:
+
+	+ https://zeitung.faz.net/fas/wert-wohnen/2023-06-11/billigstrom-fuer-die-waermepumpe/902453.html 
+	  -> Änderung Wärmepumpen-Stromtarif-Gesetz aus Angst vor Strommangel
+
+
 
 
 
@@ -170,7 +176,9 @@ einzelnen Strafe zugewiesen wird.
 	- Schwankungen im Stromnetz
 		Wie ist das Stromnetz aufgebaut? 
 		stetiges Gleichgewicht halten 
-		unterschiedliche Stromerzeuger 
+		unterschiedliche Stromerzeuger
+		ohne Akkumulator im Keller erreicht eine Solaranlage nur 30% Autarkie, mit Akku ca. 70% 
+			-> folglich werden ohne Batterie 70% der Energie eingespeist
 		Vergangenheit - Zukunft
 		unternommene Maßnahmen
 	- Aktuelle Methoden um eingespeiste Solarenergie zu prognostizieren
@@ -192,6 +200,7 @@ einzelnen Strafe zugewiesen wird.
 
 	- Wetter unabhängige Faktoren
 		Quantität und Qualität der Solarpanele
+		Wirkungsgrad Wechselrichter
 		Ausrichtung der Solarmodule/ Himmelsrichtung 
 		Einstrahlungswinkel
 		Umgebungsfaktoren, Schatten durch umliegende Gebäude, Bäume oder Berge

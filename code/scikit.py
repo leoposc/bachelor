@@ -67,6 +67,14 @@ class ScikitManager():
         self.y_train = self.XY_df.iloc[:,  -1].values.reshape(-1,1)
 
 
+    def update_panda_dataframe(self):        
+        features = self.features.copy()
+        # drop energyoutput column
+        features.remove('energyoutput')
+        self.XY_df = pd.DataFrame(self.X_train, columns=features)
+        self.XY_df['energyoutput'] = self.y_train
+
+
     def get_data(self):
         dm = DBManager()
         solar_df = dm.select_solar_data(self.solarsystem_id)
@@ -142,6 +150,14 @@ class ScikitManager():
         sns.set(font_scale=1.5)
         hm = sns.heatmap(cm, cbar=True, annot=True, square=True, fmt='.2f', annot_kws={'size': 15}, yticklabels=self.features, xticklabels=self.features)
         plt.show()
+
+
+    def visualize_data_range(self):
+        data = self.XY_df[self.features]
+        # drop energyoutput
+        data = data.drop(columns=['energyoutput'])
+        g = sns.boxplot(data=data, linewidth=2.5)
+        # g.set_yscale("log")
 
 
     def make_sets(self):
@@ -247,6 +263,13 @@ class ScikitManager():
 
         self.model.fit(self.X_train, self.y_train.flatten())
         # self.score = self.model.score(self.X_test, self.y_test)
+
+
+    def analyze_feature_importance(self):
+        feat_importances = self.model.feature_importances_
+        indices = self.features.remove('energyoutput')
+        feat_importances = pd.Series(feat_importances, index=indices)
+        plt.show()
 
     
     def predict(self):
