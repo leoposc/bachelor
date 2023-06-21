@@ -15,8 +15,8 @@ manager.fetch_solar_data(1200, "2019-01-01", "2019-03-25")
 
 from scikit import ScikitManager
 
-# sci = ScikitManager(location='applewood', solarsystem_id=10)
-sci = ScikitManager(location='linthicum', solarsystem_id=1200)
+sci = ScikitManager(location='applewood', solarsystem_id=10)
+# sci = ScikitManager(location='linthicum', solarsystem_id=1200)
 
 
 
@@ -69,7 +69,9 @@ sci.visualize_data_range()
 # sci.fit('Lasso')
 # sci.fit('ElasticNet')
 # sci.fit('SVR')
-sci.fit('DecisionTreeRegressor')
+sci.model_selection('DecisionTreeRegressor')
+sci.fit()
+# sci.grid_search()
 sci.predict()
 sci.evaluate()
 

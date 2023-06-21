@@ -2,11 +2,23 @@ from db import DBManager
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.model_selection import GridSearchCV
+from datetime import datetime
 import matplotlib.pyplot as plt
 from itertools import product
 import seaborn as sns
 import pandas as pd
 import numpy as np
+
+
+def timer(start_time=None):
+    if not start_time:
+        start_time=datetime.now()
+        return start_time
+    elif start_time:
+        thour,temp_sec=divmod((datetime.now()-start_time).total_seconds(),3600)
+        tmin,tsec=divmod(temp_sec,60)
+        print(thour,":",tmin,':',round(tsec,2))
 
 
 def consider_wind(ds: pd.Series):  
@@ -160,12 +172,40 @@ class ScikitManager():
         # g.set_yscale("log")
 
 
+    def fit(self):
+        # {'max_depth': 5, 'max_features': 'log2', 'max_leaf_nodes': 16, 'min_samples_leaf': 1, 'min_weight_fraction_leaf': 0.1, 'splitter': 'best'}
+        {'max_depth': 9, 'max_features': 'log2', 'max_leaf_nodes': 64, 'min_samples_leaf': 3, 'min_weight_fraction_leaf': 0.1, 'splitter': 'best'}
+        self.model.fit(self.X_train, self.y_train)
+        self.model.fit(**p)
+
+    def grid_search(self):
+        parameters={
+                    "splitter":["best","random"],
+                    "max_depth" : [5,7,9,11,12],
+                    "min_samples_leaf":[1,2,3,4,5],
+                    "min_weight_fraction_leaf":[0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9],
+                    "max_features":["auto","log2","sqrt",None],
+                    "max_leaf_nodes":[None,8,16,32,64,128,256,512]
+                    }
+
+        start_time = timer(None)
+        self.tuning_model = GridSearchCV(self.model, param_grid=parameters,scoring='neg_mean_squared_error',cv=3,verbose=2)
+        self.tuning_model.fit(self.X_train,self.y_train)
+        print(self.tuning_model.best_params_)
+        timer(start_time=start_time)
+
+
+    def fit(self):
+        {'max_depth': 5, 'max_features': 'log2', 'max_leaf_nodes': 16, 'min_samples_leaf': 1, 'min_weight_fraction_leaf': 0.1, 'splitter': 'best'}
+
+
     def make_sets(self):
         c = 0.001
         gamma = 1e-10
         param_grid = {
-            "C": [c*(10**i) for i in range(1, 14)],
-            "gamma": [gamma*(10**i) for i in range(1, 14)]
+            "C": [c*(10**i) for i in range(1, 10)],
+            "gamma": [gamma*(10**i) for i in range(1, 10)],
+            "max_depth" : [i for i in range(1, 10)]            
         }
 
         sets = list()
@@ -181,18 +221,19 @@ class ScikitManager():
         self.hp_sets = sets
 
 
-    def grid_search(self,model_type='LinearRegression'):
-        self.make_sets()
-        best_score = 0
-        best_params = None
-        for hp_set in self.hp_sets:
+    # def grid_search(self,model_type='LinearRegression'):
+    #     self.make_sets()
+    #     best_score = 0
+    #     best_params = None
+    #     for hp_set in self.hp_sets:
             
-            self.fit(model_type)            
-            if self.score > best_score:
-                best_score = self.score
-                best_params = hp_set
-        print(f"Best score: {best_score}")
-        print(f"Best params: {best_params}")
+    #         self.model.fit(self.X_train, self.y_train.flatten())
+    #         score = self.model.score(self.X_test, self.y_test)          
+    #         if score > best_score:
+    #             best_score = score
+    #             best_params = hp_set
+    #     print(f"Best score: {best_score}")
+    #     print(f"Best params: {best_params}")
 
 
     def grid_search_v2(self):
@@ -221,7 +262,7 @@ class ScikitManager():
 
 
 
-    def fit(self, model_type='LinearRegression'):
+    def model_selection(self, model_type='LinearRegression'):
         if model_type == 'LinearRegression':
             from sklearn.linear_model import LinearRegression
             self.model = LinearRegression()
@@ -261,7 +302,7 @@ class ScikitManager():
             print('Invalid model type')
             return
 
-        self.model.fit(self.X_train, self.y_train.flatten())
+        # self.model.fit(self.X_train, self.y_train.flatten())
         # self.score = self.model.score(self.X_test, self.y_test)
 
 
