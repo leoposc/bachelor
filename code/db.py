@@ -102,9 +102,29 @@ class DBManager():
 
 
     @connect
+    def create_hp_table(cur, self):
+
+        cur.execute(f"""
+            CREATE TABLE IF NOT EXISTS hyperparameters_machinelearning (
+            solarsystem_id SERIAL PRIMARY KEY,
+            power_index SMALLINT,
+            model_type VARCHAR(50),
+            max_depth SMALLINT,
+            max_features VARCHAR(20),
+            min_samples_leaf SMALLINT, 
+            max_leaf_nodes INTEGER,
+            min_weight_fraction_leaf FLOAT,
+            gamma FLOAT,
+            learning_rate FLOAT
+        );""")
+
+
+    @connect
     def fetch_solar_data(cur, self, solarsystem_id: int, start: str, end: str):
 
         # table_name = ("solardata_"+location.strip()+"_"+str(solarsystem_id)).lower()
+
+        power_index = self.get_power_index(solarsystem_id)
 
         # find existing tables in database
         cur.execute("""
@@ -121,7 +141,7 @@ class DBManager():
 
         # check if table already exists
         if table_name == 'Unknown':
-            solar_data, location = scrape_solar_data(start, end, solarsystem_id)
+            solar_data, location, power_index = scrape_solar_data(start, end, solarsystem_id, power_index)
             # create table
             self.create_table(location, "SOLAR", solarsystem_id)
 
@@ -137,7 +157,10 @@ class DBManager():
                 end_timestamp_database   = sorted_table[-1][0]
                 start, end = validate_time_range(start, end, start_timestamp_database, end_timestamp_database)
 
-            solar_data, location = scrape_solar_data(start, end, solarsystem_id)
+            solar_data, location, power_index = scrape_solar_data(start, end, solarsystem_id, power_index)
+
+        if power_index is not None:
+            self.save_power_index(solarsystem_id, power_index)
 
         for row in solar_data:
 
@@ -314,6 +337,174 @@ class DBManager():
         return df
 
 
+    @connect
+    def save_hypterparameters(cur, self, solarsystem_id: int, hyperparameters: dict, model_type: str):
+
+        self.create_hp_table()
+
+        model_type = model_type.split('.')[-1].split("'")[0].lower()
+
+        # unpack keys and values of dict
+        keys = list(hyperparameters.keys())
+        values = list(hyperparameters.values())
+        # convert None to -123
+        values = [-123 if value is None else value for value in values]
+        keys.append('solarsystem_id')
+        values.append(solarsystem_id)
+        keys.append('model_type')
+        values.append(model_type)
+    
+        # check if hyperparameters for solarsystem already exist
+        cur.execute(f"""
+            SELECT solarsystem_id FROM hyperparameters_machinelearning
+            WHERE solarsystem_id = {solarsystem_id}
+        """)
+        result = cur.fetchall()
+
+        # if not insert hyperparameters into solarsystem
+        if not result:
+
+            clause = ', '.join(['%s']*len(keys))
+
+            print(clause)
+            print(keys)
+            print(values)
+            
+            cur.execute(f"""
+                INSERT INTO hyperparameters_machinelearning ({', '.join(keys)})
+                VALUES ({clause})
+            """, values)            
+        
+        # else update hyperparameters
+        else:
+
+            # set_clause = ', '.join([f'{key} = %s' for key in keys])
+
+            # get power index from solarsystem
+            cur.execute(f"""
+                SELECT power_index FROM hyperparameters_machinelearning
+                WHERE solarsystem_id = {solarsystem_id}
+            """)
+            power_index = cur.fetchall()[0][0]
+            keys.append('power_index')
+            values.append(power_index)
+
+            # delete row 
+            cur.execute(f"""
+                DELETE FROM hyperparameters_machinelearning
+                WHERE solarsystem_id = {solarsystem_id}
+            """)
+            print(keys)
+            print(values)
+
+            cur.execute(f"""
+                INSERT INTO hyperparameters_machinelearning ({', '.join(keys)})
+                VALUES ({', '.join(['%s']*len(keys))})
+            """, values)
+
+
+    @connect
+    def save_power_index(cur, self, solarsystem_id: int, power_index: int):
+
+        self.create_hp_table()
+
+        # check if row already exists
+        cur.execute(f"""
+            SELECT solarsystem_id FROM hyperparameters_machinelearning
+            WHERE solarsystem_id = {solarsystem_id}
+        """)
+        result = cur.fetchall()
+
+        # if not insert row
+        if not result:
+            cur.execute(f"""
+                INSERT INTO hyperparameters_machinelearning (solarsystem_id, power_index)
+                VALUES ({solarsystem_id}, {power_index})
+            """)
+
+        # else update row
+        else:
+            
+            # insert power index into solarsystem
+            cur.execute(f"""
+                UPDATE hyperparameters_machinelearning
+                SET power_index = {power_index}
+                WHERE solarsystem_id = {solarsystem_id}
+            """)
+        
+
+
+    @connect
+    def get_power_index(cur, self, solarsystem_id: int):
+               
+        # get power index from solarsystem
+        cur.execute(f"""
+            SELECT power_index FROM hyperparameters_machinelearning
+            WHERE solarsystem_id = {solarsystem_id}
+        """)
+        
+        try:
+            power_index = cur.fetchone()[0]
+        except TypeError:
+            power_index = None
+
+        return power_index
+    
+
+    @connect
+    def get_hyperparameters(cur, self, solarsystem_id: int):
+            
+            # check if table exists
+            # cur.execute("""
+            #     SELECT hyperparameters_machinelearning FROM information_schema.tables
+            #     WHERE table_schema = 'public'
+            # """)
+            # table = cur.fetchall()
+
+
+            # get hyperparameters from db
+            cur.execute(f"""
+                SELECT * FROM hyperparameters_machinelearning
+                WHERE solarsystem_id = {solarsystem_id}
+            """)
+            hyperparameters = cur.fetchone()
+            # fetch column names from db, sorted by ordinal position
+            cur.execute("""
+                SELECT column_name FROM information_schema.columns
+                WHERE table_name = 'hyperparameters_machinelearning'
+                ORDER BY ordinal_position
+            """)
+
+            keys = cur.fetchall()
+            keys = [key[0] for key in keys]
+
+            if hyperparameters is None:
+                return None
+            
+            # create dict from column names and hyperparameters
+            hyperparameters = dict(zip(keys, hyperparameters))
+            # drop solarsystem_id and power_index
+            hyperparameters.pop('solarsystem_id')
+            hyperparameters.pop('power_index')
+            # pop None values
+            hyperparameters = {key: value for key, value in \
+                hyperparameters.items() if value is not None}
+            # convert values with -123 to None
+            hyperparameters = {key: None if value == -123 or value == '-123' else \
+                value for key, value in hyperparameters.items()}
+
+            return hyperparameters
+    
+
+    
+
+
+
+        
+
 
 # manager = DBManager()
+# manager.create_hp_table()
 # manager.fetch_solar_data(10, "2022-05-30", "2022-06-13")
+# manager.save_hypterparameters(1200, p)
+# print(manager.get_hyperparameters(1200))

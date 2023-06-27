@@ -18,7 +18,7 @@ def timer(start_time=None):
     elif start_time:
         thour,temp_sec=divmod((datetime.now()-start_time).total_seconds(),3600)
         tmin,tsec=divmod(temp_sec,60)
-        print(thour,":",tmin,':',round(tsec,2))
+        print("Computation time of optimal hyperparameter grid search: ", thour,":",tmin,':',round(tsec,2))
 
 
 def consider_wind(ds: pd.Series):  
@@ -33,6 +33,17 @@ def consider_wind(ds: pd.Series):
 def consider_temperature(df: pd.DataFrame):
     energyoutput_index = df['solarradiation'] - (df['temperature'] * 5.0)
     return energyoutput_index
+
+
+# get index of local maxima within a range of 7 entries
+def get_local_maxima_index(np_series: np.array):
+    local_maxima = []
+    for i in range(3, len(np_series)-3):
+        if np_series[i] > np_series[i-3] and np_series[i] > np_series[i-2] \
+            and np_series[i] > np_series[i-1] and np_series[i] > np_series[i+1] \
+            and np_series[i] > np_series[i+2] and np_series[i] > np_series[i+3]:
+            local_maxima.append(i)
+    return local_maxima
     
 
 class ScikitManager():
@@ -43,6 +54,8 @@ class ScikitManager():
     y_test : np.ndarray
     y_train_pred : np.ndarray
     y_test_pred : np.ndarray
+    timeepoch_train: np.ndarray
+    timeepoch_test: np.ndarray
 
     model: None
     features: list
@@ -72,11 +85,14 @@ class ScikitManager():
 
     def update_numpy_arrays(self):        
         column_order = list(self.XY_df.columns)  # Get the current column order
-        column_order.remove('energyoutput')  # Remove 'energyoutput' from the column order
-        column_order.append('energyoutput')  # Append 'energyoutput' at the end
-        self.XY_df = self.XY_df.reindex(columns=column_order)  # Reindex the DataFrame with the new column order
-        self.X_train = self.XY_df.iloc[:, :-1].values
+        column_order.remove('energyoutput')      # Remove 'energyoutput' from the column order
+        column_order.append('energyoutput')      # Append 'energyoutput' at the end
+        column_order.remove('timeepoch')         # Remove 'timeepoch' from the column order
+        column_order.insert(0, 'timeepoch')      # Insert 'timeepoch' at the beginning
+        self.XY_df = self.XY_df.reindex(columns=column_order)   # Reindex the DataFrame with the new column order
+        self.X_train = self.XY_df.iloc[:, 1:-1].values
         self.y_train = self.XY_df.iloc[:,  -1].values.reshape(-1,1)
+        self.timeepoch_train = self.XY_df.iloc[:, 0].values.reshape(-1,1)
 
 
     def update_panda_dataframe(self):        
@@ -93,12 +109,13 @@ class ScikitManager():
         weather_df = dm.select_weather_data(self.location)     
         # merge data on timeepoch
         self.XY_df   = weather_df.merge(solar_df, on='timeepoch')
-        # drop timeepoch column
-        self.XY_df   = self.XY_df.drop(columns=['timeepoch'])
+        self.XY_df['timeepoch'] = pd.to_datetime(self.XY_df['timeepoch'], unit='s')      
+        # # drop timeepoch column
+        # self.XY_df   = self.XY_df.drop(columns=['timeepoch'])
         # print size of dataset
         print(f"Solar dataset size: {solar_df.shape}")
         print(f"Weather dataset size: {weather_df.shape}")
-        print(f"Dataset size: {self.XY_df.shape}")
+        print(f"Dataset size: {self.XY_df.shape}") 
 
 
     def filter_low_radiation(self):
@@ -136,9 +153,36 @@ class ScikitManager():
 
     def split_data(self, test_size: float):
         # warning: check if this is the correct way to split the data
-        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.X_train, self.y_train, test_size=test_size, random_state=0)
+        self.X_train, self.X_test, self.y_train, self.y_test, self.timeepoch_train,\
+            self.timeepoch_test = train_test_split(self.X_train, self.y_train, \
+            self.timeepoch_train, test_size=test_size, random_state=0)
+        
 
 
+    def split_data_by_days(self, test_size):
+        # Find unique dates from 'timeepoch' column
+        # unique_dates = pd.to_datetime(self.XY_df['timeepoch'], unit='s').dt.date.unique()
+        unique_dates = self.XY_df['timeepoch'].dt.date.unique()
+        
+        # Shuffle the unique dates
+        shuffled_dates = unique_dates.copy()
+        np.random.shuffle(shuffled_dates)
+        
+        # Split the shuffled dates into train and test sets
+        train_dates, test_dates = train_test_split(shuffled_dates, test_size=test_size, shuffle=False)
+        
+        # Filter the DataFrame based on train and test dates
+        train_df = self.XY_df[self.XY_df['timeepoch'].dt.date.isin(train_dates)]
+        test_df = self.XY_df[self.XY_df['timeepoch'].dt.date.isin(test_dates)]
+
+        self.X_train = train_df.drop(columns=['timeepoch','energyoutput']).to_numpy()
+        self.y_train = train_df['energyoutput'].to_numpy().flatten()
+        self.X_test = test_df.drop(columns=['timeepoch','energyoutput']).to_numpy()
+        self.y_test = test_df['energyoutput'].to_numpy().flatten()
+        self.timeepoch_train = train_df['timeepoch'].to_numpy().flatten()           
+        self.timeepoch_test = test_df['timeepoch'].to_numpy().flatten()      
+        
+    
 
     # def transform_features(self):
     #     # perform log transformation on solarradiation
@@ -172,31 +216,40 @@ class ScikitManager():
         # g.set_yscale("log")
 
 
-    def fit(self):
-        # {'max_depth': 5, 'max_features': 'log2', 'max_leaf_nodes': 16, 'min_samples_leaf': 1, 'min_weight_fraction_leaf': 0.1, 'splitter': 'best'}
-        {'max_depth': 9, 'max_features': 'log2', 'max_leaf_nodes': 64, 'min_samples_leaf': 3, 'min_weight_fraction_leaf': 0.1, 'splitter': 'best'}
-        self.model.fit(self.X_train, self.y_train)
-        self.model.fit(**p)
-
     def grid_search(self):
+        dm = DBManager()
         parameters={
-                    "splitter":["best","random"],
-                    "max_depth" : [5,7,9,11,12],
-                    "min_samples_leaf":[1,2,3,4,5],
-                    "min_weight_fraction_leaf":[0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9],
+                    # "splitter":["best","random"],
+                    "max_depth" : [8,9,11,12,16],
+                    "min_samples_leaf":[3,4,5,6,7],
+                    "min_weight_fraction_leaf":[0.0, 0.1,0.2,0.3],
                     "max_features":["auto","log2","sqrt",None],
                     "max_leaf_nodes":[None,8,16,32,64,128,256,512]
                     }
+        model_type = str(type(self.model))
 
         start_time = timer(None)
-        self.tuning_model = GridSearchCV(self.model, param_grid=parameters,scoring='neg_mean_squared_error',cv=3,verbose=2)
-        self.tuning_model.fit(self.X_train,self.y_train)
-        print(self.tuning_model.best_params_)
+        tuning_model = GridSearchCV(self.model, param_grid=parameters,scoring='neg_mean_squared_error',cv=3,verbose=2)
+        tuning_model.fit(self.X_train,self.y_train)
         timer(start_time=start_time)
 
+        self.model = tuning_model
+        dm.save_hypterparameters(self.solarsystem_id, self.model.best_params_, model_type=model_type)
+        text = [f'{key}: {value} \n' for key, value in self.model.best_params_.items()]
+        print(f"Grid search finished. Following are the best hyperparameters:\n\n{''.join(text)}")
 
-    def fit(self):
-        {'max_depth': 5, 'max_features': 'log2', 'max_leaf_nodes': 16, 'min_samples_leaf': 1, 'min_weight_fraction_leaf': 0.1, 'splitter': 'best'}
+
+    # def fit(self, model_type=None):
+    #     dm = DBManager()
+
+    #     self.hyperparams = dm.get_hyperparameters(self.solarsystem_id)
+
+        
+        
+    #     self.model_selection()
+        
+        
+        
 
 
     def make_sets(self):
@@ -221,19 +274,6 @@ class ScikitManager():
         self.hp_sets = sets
 
 
-    # def grid_search(self,model_type='LinearRegression'):
-    #     self.make_sets()
-    #     best_score = 0
-    #     best_params = None
-    #     for hp_set in self.hp_sets:
-            
-    #         self.model.fit(self.X_train, self.y_train.flatten())
-    #         score = self.model.score(self.X_test, self.y_test)          
-    #         if score > best_score:
-    #             best_score = score
-    #             best_params = hp_set
-    #     print(f"Best score: {best_score}")
-    #     print(f"Best params: {best_params}")
 
 
     def grid_search_v2(self):
@@ -262,47 +302,60 @@ class ScikitManager():
 
 
 
-    def model_selection(self, model_type='LinearRegression'):
+    def model_selection(self, model_type=None):
+        dm = DBManager()
+        self.hyperparams = dm.get_hyperparameters(self.solarsystem_id)
+
+        if self.hyperparams is not None and (model_type is None or \
+            model_type.lower() == self.hyperparams['model_type']):
+            self.hyperparams.pop('model_type')            
+            text = [f'{key}: {value} \n' for key, value in self.hyperparams.items()]
+            print(f"Found hyperparameters for this model. Using:\n\n{''.join(text)}")
+
+        else:
+            self.hyperparams = None
+            print('No hyperparameters found for this model. Using default hyperparameters.')
+
+
         if model_type == 'LinearRegression':
             from sklearn.linear_model import LinearRegression
-            self.model = LinearRegression()
+            self.model = LinearRegression(**self.hyperparams) if self.hyperparams else LinearRegression()
         elif model_type == 'Polynomial':
             from sklearn.preprocessing import PolynomialFeatures
             from sklearn.linear_model import LinearRegression
-            self.model = LinearRegression()
+            self.model = LinearRegression(**self.hyperparams) if self.hyperparams else LinearRegression()
             poly = PolynomialFeatures(degree=2)
             self.X_train = poly.fit_transform(self.X_train)
             self.X_test = poly.transform(self.X_test)
             
         elif model_type == 'Ridge':
             from sklearn.linear_model import Ridge
-            self.model = Ridge()
+            self.model = Ridge(**self.hyperparams) if self.hyperparams else Ridge()
         elif model_type == 'Lasso':
             from sklearn.linear_model import Lasso
-            self.model = Lasso()
+            self.model = Lasso(**self.hyperparams) if self.hyperparams else Lasso()
         elif model_type == 'ElasticNet':
             from sklearn.linear_model import ElasticNet
-            self.model = ElasticNet()
-        elif model_type == 'DecisionTreeRegressor':
+            self.model = ElasticNet(**self.hyperparams) if self.hyperparams else ElasticNet()
+        elif model_type == 'decisiontreeregressor':
             from sklearn.tree import DecisionTreeRegressor
-            self.model = DecisionTreeRegressor()
+            self.model = DecisionTreeRegressor(**self.hyperparams) if self.hyperparams else DecisionTreeRegressor()
         elif model_type == 'RandomForestRegressor':
             from sklearn.ensemble import RandomForestRegressor
-            self.model = RandomForestRegressor()
+            self.model = RandomForestRegressor(**self.hyperparams) if self.hyperparams else RandomForestRegressor()
         elif model_type == 'SVR':
             from sklearn.svm import SVR
-            self.model = SVR()
+            self.model = SVR(**self.hyperparams) if self.hyperparams else SVR()
         elif model_type == 'KNeighborsRegressor':
             from sklearn.neighbors import KNeighborsRegressor
-            self.model = KNeighborsRegressor()
+            self.model = KNeighborsRegressor(**self.hyperparams) if self.hyperparams else KNeighborsRegressor()
         # elif model_type == 'XGBRegressor':
         #     from xgboost import XGBRegressor
         #     self.model = XGBRegressor()
         else:
-            print('Invalid model type')
-            return
-
-        # self.model.fit(self.X_train, self.y_train.flatten())
+            raise Exception('No model type specified in database. Please specify one.')
+            
+        self.model.fit(self.X_train, self.y_train.flatten())
         # self.score = self.model.score(self.X_test, self.y_test)
 
 
@@ -328,12 +381,47 @@ class ScikitManager():
 
 
     def visualize_residues(self):
-        plt.scatter(self.y_train_pred, self.y_train_pred - self.y_train, c='steelblue', 
+        max_len = min(len(self.y_train_pred), len(self.y_train), len(self.y_test_pred), len(self.y_test))
+        y_train_residuals = self.y_train_pred - self.y_train.flatten()
+        y_test_residuals = self.y_test_pred - self.y_test.flatten()        
+
+        plt.scatter(self.y_train_pred, y_train_residuals, c='steelblue', 
                     edgecolor='white', marker='o', s=35, alpha=0.9, label='training data')
-        plt.scatter(self.y_test_pred, self.y_test_pred - self.y_test, c='limegreen',
+        plt.scatter(self.y_test_pred, y_test_residuals, c='limegreen',
                     marker='s', s=35, alpha=0.9, label='test data')
         plt.xlabel('Predicted values')
         plt.ylabel('Residuals')
         plt.legend(loc='upper left')
-        plt.hlines(y=0, lw=2, color='black')
+        plt.hlines(y=0, lw=2, color='black', xmin=min(self.y_train_pred), xmax=max(self.y_train_pred))
+        plt.rcParams['figure.figsize'] = [20, 10]
         plt.show()
+
+
+    def visualize_predictions(self, number_entries=None):
+        if number_entries is not None and number_entries < len(self.y_test):
+            y_test = self.y_test[:number_entries]
+            y_test_pred = self.y_test_pred[:number_entries]
+        else:
+            y_test = self.y_test
+            y_test_pred = self.y_test_pred            
+        # print(self.y_test.shape)
+        # print(self.y_test_pred.shape)
+        date_indices = get_local_maxima_index(self.y_test_pred)
+        # convert timeepoch to date
+        dates = [str(x)[:10] for x in self.timeepoch_test[date_indices]]
+        # plt.xticks(range(len(self.y_test_pred)), dates, rotation=45)
+        # plt.plot(range(len(y_test)), y_test, label='Actual')
+        # plt.plot(range(len(y_test_pred)), y_test_pred, label='Predicted')
+        plt.plot(self.timeepoch_test[:len(y_test)], y_test, label='Actual')
+        plt.plot(self.timeepoch_test[:len(y_test)], y_test_pred, label='Predicted')
+        plt.xticks(rotation=45)
+        
+        plt.title(f'Solarsystem id: {self.solarsystem_id}, Location: {self.location}')
+        plt.xlabel('Time')
+        plt.ylabel('Solar energy production')
+        plt.legend(loc='upper left')
+        # plt.rcParams['figure.figsize'] = [20, 10]
+        plt.show()
+
+
+    
