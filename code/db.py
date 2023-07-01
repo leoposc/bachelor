@@ -73,6 +73,8 @@ class DBManager():
     @connect
     def create_table(cur, self, location: str,table_type: str, solarsystem_id=None):
 
+        location = location.replace(" ", "__").strip()
+
         assert(len(location) < 30)
         
         if table_type=="WEATHER":
@@ -83,7 +85,6 @@ class DBManager():
             hour SMALLINT,
             calendarweek SMALLINT,
             solarradiation SMALLINT,
-            solarenergy SMALLINT,
             temperature SMALLINT,
             cloudcoverage SMALLINT,
             humidity SMALLINT,
@@ -134,7 +135,7 @@ class DBManager():
         tables = cur.fetchall()
 
         table_name = 'Unknown'
-        for table in tables:            
+        for table in tables:
             if table[0].split('_')[-1] == str(solarsystem_id):
                 table_name = table[0]
                 break                
@@ -185,7 +186,9 @@ class DBManager():
     @connect
     def fetch_weather_data(cur, self,location: str,start: str, end: str):
 
-        table_name = ("weatherdata_"+location.strip()).lower()
+        loc = location.replace(" ", "__").strip()
+
+        table_name = ("weatherdata_"+loc).lower()
 
         # find existing tables in database
         cur.execute("""
@@ -314,7 +317,9 @@ class DBManager():
     @connect
     def select_weather_data(cur, self, location: str):
 
-        table_name = ('weatherdata_'+location.strip()).lower()
+        
+
+        table_name = ('weatherdata_'+location.replace(' ','__').strip()).lower()
 
         # check if table even exists
         cur.execute("""
@@ -365,10 +370,6 @@ class DBManager():
         if not result:
 
             clause = ', '.join(['%s']*len(keys))
-
-            print(clause)
-            print(keys)
-            print(values)
             
             cur.execute(f"""
                 INSERT INTO hyperparameters_machinelearning ({', '.join(keys)})
@@ -393,9 +394,7 @@ class DBManager():
             cur.execute(f"""
                 DELETE FROM hyperparameters_machinelearning
                 WHERE solarsystem_id = {solarsystem_id}
-            """)
-            print(keys)
-            print(values)
+            """)           
 
             cur.execute(f"""
                 INSERT INTO hyperparameters_machinelearning ({', '.join(keys)})
@@ -504,6 +503,7 @@ class DBManager():
 
 
 # manager = DBManager()
+# manager.fetch_weather_data('Cherry Hill Township', '2019-01-01', '2019-01-01')
 # manager.create_hp_table()
 # manager.fetch_solar_data(10, "2022-05-30", "2022-06-13")
 # manager.save_hypterparameters(1200, p)

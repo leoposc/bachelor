@@ -3,6 +3,7 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import GridSearchCV
+from sklearn.preprocessing import PolynomialFeatures
 from datetime import datetime
 import matplotlib.pyplot as plt
 from itertools import product
@@ -35,13 +36,25 @@ def consider_temperature(df: pd.DataFrame):
     return energyoutput_index
 
 
-# get index of local maxima within a range of 7 entries
-def get_local_maxima_index(np_series: np.array):
+# get index of local maxima within a range of 9 entries
+# def get_local_maxima_index(np_series: np.array):
+#     local_maxima = []
+#     for i in range(4, len(np_series)-4):
+#         if np_series[i] >= np_series[i-4] and np_series[i] >= np_series[i-3] and \
+#             np_series[i] >= np_series[i-2] and np_series[i] >= np_series[i-1] and \
+#             np_series[i] > np_series[i+1] and np_series[i] > np_series[i+2] and \
+#             np_series[i] > np_series[i+3] and np_series[i] > np_series[i+4]:
+#             local_maxima.append(i)
+#     return local_maxima
+
+# get index of local maxima within a range of x entries
+def get_local_maxima_index(np_series: np.array, range_x=7):
     local_maxima = []
-    for i in range(3, len(np_series)-3):
-        if np_series[i] > np_series[i-3] and np_series[i] > np_series[i-2] \
-            and np_series[i] > np_series[i-1] and np_series[i] > np_series[i+1] \
-            and np_series[i] > np_series[i+2] and np_series[i] > np_series[i+3]:
+    for i in range((range_x) // 2, len(np_series)-((range_x+1) // 2)):
+        for x in range(1, (range_x+1) // 2):
+            if np_series[i] <= np_series[i-x] or np_series[i] <= np_series[i+x]:
+                break
+        else:   
             local_maxima.append(i)
     return local_maxima
     
@@ -89,6 +102,7 @@ class ScikitManager():
         column_order.append('energyoutput')      # Append 'energyoutput' at the end
         column_order.remove('timeepoch')         # Remove 'timeepoch' from the column order
         column_order.insert(0, 'timeepoch')      # Insert 'timeepoch' at the beginning
+        self.features = column_order
         self.XY_df = self.XY_df.reindex(columns=column_order)   # Reindex the DataFrame with the new column order
         self.X_train = self.XY_df.iloc[:, 1:-1].values
         self.y_train = self.XY_df.iloc[:,  -1].values.reshape(-1,1)
@@ -97,10 +111,12 @@ class ScikitManager():
 
     def update_panda_dataframe(self):        
         features = self.features.copy()
-        # drop energyoutput column
+        # drop energyoutput and timeepoch column
         features.remove('energyoutput')
+        features.remove('timeepoch')
         self.XY_df = pd.DataFrame(self.X_train, columns=features)
         self.XY_df['energyoutput'] = self.y_train
+        self.XY_df['timeepoch'] = self.timeepoch_train
 
 
     def get_data(self):
@@ -149,6 +165,15 @@ class ScikitManager():
         mmsc = MinMaxScaler()
         self.X_train = mmsc.fit_transform(self.X_train)
         self.X_test = mmsc.transform(self.X_test)
+
+    
+    # warning: check if the column order stays in the same order
+    # transform the feature hour into a polynomial feature 
+    def transform_hours(self):
+        poly = PolynomialFeatures(degree=4)
+        # self.XY_df['hour'] = poly.fit_transform(self.XY_df['hour'].reshape(-1, 1))
+        self.X_train = poly.fit_transform(self.X_train[:,2].reshape(-1, 1))
+        self.X_test = poly.fit(self.X_test[:,2].reshape(-1, 1))
 
 
     def split_data(self, test_size: float):
@@ -202,9 +227,11 @@ class ScikitManager():
 
 
     def visualize_heatmap(self):
-        cm = np.corrcoef(self.XY_df[self.features].values.T)
+        features = self.features.copy()
+        features.remove('timeepoch')
+        cm = np.corrcoef(self.XY_df[self.features].drop(columns=['timeepoch']).values.T)
         sns.set(font_scale=1.5)
-        hm = sns.heatmap(cm, cbar=True, annot=True, square=True, fmt='.2f', annot_kws={'size': 15}, yticklabels=self.features, xticklabels=self.features)
+        hm = sns.heatmap(cm, cbar=True, annot=True, square=True, fmt='.2f', annot_kws={'size': 15}, yticklabels=features, xticklabels=features)
         plt.show()
 
 
@@ -229,7 +256,7 @@ class ScikitManager():
         model_type = str(type(self.model))
 
         start_time = timer(None)
-        tuning_model = GridSearchCV(self.model, param_grid=parameters,scoring='neg_mean_squared_error',cv=3,verbose=2)
+        tuning_model = GridSearchCV(self.model, param_grid=parameters,scoring='neg_mean_squared_error',cv=3,verbose=1)
         tuning_model.fit(self.X_train,self.y_train)
         timer(start_time=start_time)
 
@@ -237,19 +264,6 @@ class ScikitManager():
         dm.save_hypterparameters(self.solarsystem_id, self.model.best_params_, model_type=model_type)
         text = [f'{key}: {value} \n' for key, value in self.model.best_params_.items()]
         print(f"Grid search finished. Following are the best hyperparameters:\n\n{''.join(text)}")
-
-
-    # def fit(self, model_type=None):
-    #     dm = DBManager()
-
-    #     self.hyperparams = dm.get_hyperparameters(self.solarsystem_id)
-
-        
-        
-    #     self.model_selection()
-        
-        
-        
 
 
     def make_sets(self):
@@ -306,8 +320,8 @@ class ScikitManager():
         dm = DBManager()
         self.hyperparams = dm.get_hyperparameters(self.solarsystem_id)
 
-        if self.hyperparams is not None and (model_type is None or \
-            model_type.lower() == self.hyperparams['model_type']):
+        if self.hyperparams is not None and 'model_type' in self.hyperparams and (model_type \
+            is None or model_type.lower() == self.hyperparams['model_type']):
             self.hyperparams.pop('model_type')            
             text = [f'{key}: {value} \n' for key, value in self.hyperparams.items()]
             print(f"Found hyperparameters for this model. Using:\n\n{''.join(text)}")
@@ -356,7 +370,73 @@ class ScikitManager():
             raise Exception('No model type specified in database. Please specify one.')
             
         self.model.fit(self.X_train, self.y_train.flatten())
-        # self.score = self.model.score(self.X_test, self.y_test)
+        # self.score = self.model.score(self.X_test, self.y_test
+
+
+    def find_outlier(self):
+        maxima_indices = np.array(get_local_maxima_index(self.y_test_pred))
+        # threshold_arr = self.y_test_pred[maxima_indices] - \
+        #     (np.max(self.y_test[maxima_indices]) / 2)
+        threshold = np.max(self.y_test[maxima_indices]) / 2
+        outlier_indices = np.array(np.abs(self.y_test_pred[maxima_indices] \
+            - self.y_test[maxima_indices]) > threshold)
+        self.outliers_indices_test = maxima_indices[outlier_indices]
+        # outlier_indices = np.where(self.outliers_indices_test)[0]        
+        # self.X_outlier_test = self.X_test[self.outliers_indices_test]
+        # self.y_outlier_test = self.y_test[self.outliers_indices_test]        
+
+        # maxima_indices = get_local_maxima_index(self.y_train)
+        # threshhold_arr = self.y_train_pred[maxima_indices] - \
+        #     (np.max(self.y_train[maxima_indices]) / 3)
+        # outlier_indices = np.abs(self.y_train[maxima_indices] \
+        #     - self.y_train_pred[maxima_indices]) > threshhold_arr
+        # self.outliers_indices_train = maxima_indices[outlier_indices]
+        # self.X_outlier_train = self.X_train[self.outliers_indices_train]
+        # self.y_outlier_train = self.y_train[self.outliers_indices_train]
+
+
+    # plot outliers and their surrouding data
+    def plot_outlier(self, number_entries=None):
+        self.find_outlier()
+        # abort if self.outliers_indices_test is empty
+        if len(self.outliers_indices_test) == 0:
+            print('\nNo outliers found.\n')
+            return
+        # enrichen outliers_indices with surrounding 7 data points
+        indices = np.array([[y for y in range(x-5,x+6)] for x in \
+            self.outliers_indices_test]).flatten()
+        if number_entries is not None:
+            indices = indices[:number_entries]
+            
+        rng = range(len(self.y_test[indices]))
+
+        outliers_indices = get_local_maxima_index(self.y_test[indices], range_x=5)
+        dates = [str(x)[:10] for x in self.timeepoch_test[self.outliers_indices_test]]
+
+        print(self.y_test[indices])
+        print(self.outliers_indices_test)
+        print(outliers_indices)
+        print(indices)
+        # plt.xticks(outliers_indices, dates, rotation=65)
+        plt.plot(rng, self.y_test[indices], label='solar energy prodcution')
+        plt.plot(rng, self.y_test_pred[indices], label='solar energy prediction')        
+        [plt.axvline(x=x_loc, color='red', linestyle='--')
+            for x_loc in outliers_indices]
+        plt.plot([], [], color='red', linestyle='--', label='outlier')
+        # plt.plot(indices, np.max(self.y_test)*np.ones(len(indices)), 'ro', label='outlier')
+        plt.title(f'Solarsystem id: {self.solarsystem_id}, Location: {self.location}')
+        plt.ylabel('Solar energy production')
+        plt.legend(loc='lower right')
+        plt.rcParams['figure.figsize'] = [20, 10] 
+        plt.show()
+        
+
+
+    def drum_off_outlier(self):
+        threshold_arr = self.y_test_pred - (np.max(self.y_test) / 2)
+        outliers_indices = self.y_test < threshold_arr
+        new_dataset = self.X_test[~outliers_indices]
+        new_labels = self.y_test[~outliers_indices]
 
 
     def analyze_feature_importance(self):
@@ -403,24 +483,17 @@ class ScikitManager():
             y_test_pred = self.y_test_pred[:number_entries]
         else:
             y_test = self.y_test
-            y_test_pred = self.y_test_pred            
-        # print(self.y_test.shape)
-        # print(self.y_test_pred.shape)
-        date_indices = get_local_maxima_index(self.y_test_pred)
-        # convert timeepoch to date
-        dates = [str(x)[:10] for x in self.timeepoch_test[date_indices]]
-        # plt.xticks(range(len(self.y_test_pred)), dates, rotation=45)
-        # plt.plot(range(len(y_test)), y_test, label='Actual')
-        # plt.plot(range(len(y_test_pred)), y_test_pred, label='Predicted')
-        plt.plot(self.timeepoch_test[:len(y_test)], y_test, label='Actual')
-        plt.plot(self.timeepoch_test[:len(y_test)], y_test_pred, label='Predicted')
-        plt.xticks(rotation=45)
-        
+            y_test_pred = self.y_test_pred
+
+        date_indices = get_local_maxima_index(self.y_test)        
+        dates = [str(x)[:10] for x in self.timeepoch_test[date_indices]] # convert timeepoch to date
+        plt.xticks(date_indices, dates, rotation=65)
+        plt.plot(range(len(y_test)), y_test, label='Actual')
+        plt.plot(range(len(y_test_pred)), y_test_pred, label='Predicted')        
         plt.title(f'Solarsystem id: {self.solarsystem_id}, Location: {self.location}')
-        plt.xlabel('Time')
         plt.ylabel('Solar energy production')
         plt.legend(loc='upper left')
-        # plt.rcParams['figure.figsize'] = [20, 10]
+        plt.rcParams['figure.figsize'] = [20, 10] 
         plt.show()
 
 

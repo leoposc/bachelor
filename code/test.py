@@ -91,6 +91,7 @@ class Tester():
                     cursor.execute(f'INSERT INTO {table_name} (timeepoch, energyoutput) VALUES (%s, %s)', (int(rounded_timestamp.timestamp()), energyoutput))
                 except psycopg2.errors.UniqueViolation:
                     print(f"Row {timestamp} has already been updated with timestamp {rounded_timestamp}. Update it instead")
+                    conn.rollback()
                     cursor.execute(f'UPDATE {table_name} SET energyoutput = %s WHERE timeepoch = %s', (energyoutput, int(timestamp.timestamp())))
                     updated_rows += 1
 
@@ -104,8 +105,12 @@ class Tester():
 
 # %%
 tester = Tester()
+
+# tester.test_solar_data_consistency(10)
+# tester.test_weather_data_consistency('applewood')
+# tester.verify_db_timestamps('solardata_applewood_10')
 # tester.test_solar_data_consistency(1200)
-tester.test_weather_data_consistency('linthicum')
+# tester.test_weather_data_consistency('linthicum')
 # tester.verify_db_timestamps('solardata_linthicum_1200')
 
 

@@ -50,7 +50,7 @@ def scrape_solar_data(start: str, end: str, id: int, power_index=None):
         longitude = (values[6].strip('"'))
         location = geolocation.reverse(f"{latitude}, {longitude}")
         # get city name
-        try:
+        try:            
             city = location.raw['address']['city']
         except KeyError:
             try:
@@ -94,8 +94,7 @@ def scrape_solar_data(start: str, end: str, id: int, power_index=None):
                         text = '\n\nChoose target variable by specifing the index. \nFollowing colums are available: \n\n' + ''.join(numerated_header) + '\n\n'
                         print(text, flush=True)
                         
-                        # target_index =  int(input())
-                        target_index = 9
+                        target_index =  int(input())                        
                         power_index = target_index
                     else:
                         target_index = power_index
@@ -134,8 +133,7 @@ def scrape_solar_data(start: str, end: str, id: int, power_index=None):
                 
             day_start = 1
 
-    
     return solar_data, city, power_index
 
 
-# print(scrape_solar_data('2022-05-01', '2022-05-02', 10))
+# print(scrape_solar_data('2019-01-01', '2019-01-02', 1201))

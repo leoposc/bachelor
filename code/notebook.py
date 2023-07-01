@@ -13,9 +13,16 @@ manager = DBManager()
 # =============================================================================
 # LINTHICUM, 1200
 # =============================================================================
-manager.fetch_solar_data(1200, "2019-04-13", "2019-06-30")
+# manager.fetch_solar_data(1200, "2019-04-13", "2019-06-30")
 # manager.fetch_weather_data("linthicum", "2019-04-13", "2019-06-30")
 
+
+# =============================================================================
+# COCKEYSVILLE, 1201
+# =============================================================================
+# manager.fetch_solar_data(1201, "2019-02-06", "2019-03-15")
+# manager.fetch_weather_data("Cherry Hill Townhill", "2019-02-06", "2019-03-15")
+# manager.fetch_weather_data("Cherry Hill Townhill", "2019-02-06", "2019-03-15")
 
 # %%
 
@@ -24,9 +31,9 @@ manager.fetch_solar_data(1200, "2019-04-13", "2019-06-30")
 # =============================================================================
 
 from scikit import ScikitManager
-# sci = ScikitManager(location='applewood', solarsystem_id=10)
-sci = ScikitManager(location='linthicum', solarsystem_id=1200)
-
+sci = ScikitManager(location='applewood', solarsystem_id=10)
+# sci = ScikitManager(location='linthicum', solarsystem_id=1200)
+# sci = ScikitManager(location='Cherry Hill Townhill', solarsystem_id=1201)
 
 
 
@@ -42,29 +49,32 @@ sci.choose_features(['solarradiation',
                      'calendarweek',
                      'hour',
                      'temperature',
-                    #  'wind',
+                     'wind',
                      'humidity',
                      'cloudcoverage',
                      'energyoutput'
                      ])
-sci.update_numpy_arrays()
+# sci.update_numpy_arrays()
 
 #%%
 sci.filter_low_energyoutput()
 # sci.split_data(0.1)
-sci.split_data_by_days(0.4)
+sci.split_data_by_days(0.3)
+# sci.transform_hours()
 # print(type(sci.timeepoch_test[0]))
 
 #%%
 
 sci.model_selection('decisiontreeregressor')
-sci.grid_search()
+# sci.grid_search()
 # # sci.compare_similar_radiation(400, 900)
 sci.predict()
 sci.evaluate()
+# %%
 # sci.visualize_residues()
-# sci.visualize_predictions()
-sci.visualize_predictions(number_entries=50)
+sci.visualize_predictions(number_entries=100)
+# sci.visualize_predictions(number_entries=20)
+sci.plot_outlier(number_entries=100)
 #%%
 
 # sci.standardise()
@@ -72,11 +82,11 @@ sci.visualize_predictions(number_entries=50)
 # sci.filter_low_radiation()
 # %%
 
-sci.update_panda_dataframe()
+# sci.update_panda_dataframe()
 # sci.update_numpy_arrays()
-sci.visualize_data_range()
-# sci.visualize_pairwise_correlation()
-# sci.visualize_heatmap()
+# sci.visualize_data_range()
+sci.visualize_pairwise_correlation()
+sci.visualize_heatmap()
 
 
 
@@ -105,12 +115,13 @@ print(sci.y_test.shape)
 
 import pandas as pd 
 
-# # sci.get_data()
-# sci.update_panda_dataframe()
-# with pd.option_context('display.max_rows', None, 'display.max_columns', None):
-#     print(sci.XY_df)
-#     # print(sci.X_test)
+# sci.get_data()
+sci.update_panda_dataframe()
+with pd.option_context('display.max_rows', None, 'display.max_columns', None):
+    print(sci.XY_df)
+    # print(sci.X_test)
 
+# %%
 
 # PLOT PREDICTION VALUES
 for i in range(len(sci.y_test)):
@@ -127,8 +138,7 @@ import numpy as np
 from datetime import datetime
 
 # Check the type of the object before converting
-[print(str(x)) for x in sci.timeepoch_test]
-
+print(sci.outliers_indices_test)
 # [print(type(x.astype(datetime))) if isinstance(x, np.datetime64) else x for x in sci.timeepoch_test[[12,3,4,5,6,19]]]
 
 # %%
