@@ -48,16 +48,20 @@ def consider_temperature(df: pd.DataFrame):
 #     return local_maxima
 
 # get index of local maxima within a range of x entries
-def get_local_maxima_index(np_series: np.array, range_x=7):
+def get_local_maxima_index(np_series: np.array, range_x=7):    
+    tmp = ([0] * (range_x // 2) + list(np_series.copy()) + [0] * (range_x // 2))
     local_maxima = []
-    for i in range((range_x) // 2, len(np_series)-((range_x+1) // 2)):
+    print(tmp)
+    for i in range((range_x) // 2, len(tmp)-((range_x+1) // 2)):
         for x in range(1, (range_x+1) // 2):
-            if np_series[i] <= np_series[i-x] or np_series[i] <= np_series[i+x]:
+            if tmp[i] <= tmp[i-x] or tmp[i] <= tmp[i+x]:
                 break
         else:   
             local_maxima.append(i)
-    return local_maxima
     
+    return np.array(local_maxima) - (range_x // 2)
+
+
 
 class ScikitManager():
     XY_df : pd.DataFrame
@@ -396,37 +400,34 @@ class ScikitManager():
 
 
     # plot outliers and their surrouding data
-    def plot_outlier(self, number_entries=None):
+    def plot_outlier(self, xlim_left=0, xlim_right=None):
         self.find_outlier()
         # abort if self.outliers_indices_test is empty
         if len(self.outliers_indices_test) == 0:
             print('\nNo outliers found.\n')
             return
-        # enrichen outliers_indices with surrounding 7 data points
+        # enrichen outliers_indices with the surrounding 11 data points
         indices = np.array([[y for y in range(x-5,x+6)] for x in \
             self.outliers_indices_test]).flatten()
-        if number_entries is not None:
-            indices = indices[:number_entries]
-            
+
         rng = range(len(self.y_test[indices]))
 
-        outliers_indices = get_local_maxima_index(self.y_test[indices], range_x=5)
+        figure_outlier_idx = get_local_maxima_index(self.y_test_pred[indices], range_x=11)
         dates = [str(x)[:10] for x in self.timeepoch_test[self.outliers_indices_test]]
-
-        print(self.y_test[indices])
-        print(self.outliers_indices_test)
-        print(outliers_indices)
-        print(indices)
-        # plt.xticks(outliers_indices, dates, rotation=65)
+        # print(self.y_test[indices])
+        # print(self.outliers_indices_test)
+        # print(figure_outlier_idx)
+        # print(indices)
+        plt.xticks(figure_outlier_idx, dates, rotation=65)
         plt.plot(rng, self.y_test[indices], label='solar energy prodcution')
         plt.plot(rng, self.y_test_pred[indices], label='solar energy prediction')        
         [plt.axvline(x=x_loc, color='red', linestyle='--')
-            for x_loc in outliers_indices]
+            for x_loc in figure_outlier_idx]
         plt.plot([], [], color='red', linestyle='--', label='outlier')
-        # plt.plot(indices, np.max(self.y_test)*np.ones(len(indices)), 'ro', label='outlier')
         plt.title(f'Solarsystem id: {self.solarsystem_id}, Location: {self.location}')
         plt.ylabel('Solar energy production')
         plt.legend(loc='lower right')
+        plt.xlim([xlim_left, xlim_right ])
         plt.rcParams['figure.figsize'] = [20, 10] 
         plt.show()
         
@@ -477,23 +478,21 @@ class ScikitManager():
         plt.show()
 
 
-    def visualize_predictions(self, number_entries=None):
-        if number_entries is not None and number_entries < len(self.y_test):
-            y_test = self.y_test[:number_entries]
-            y_test_pred = self.y_test_pred[:number_entries]
-        else:
-            y_test = self.y_test
-            y_test_pred = self.y_test_pred
+    def visualize_predictions(self, xlim_left=0, xlim_right=None):
 
         date_indices = get_local_maxima_index(self.y_test)        
         dates = [str(x)[:10] for x in self.timeepoch_test[date_indices]] # convert timeepoch to date
-        plt.xticks(date_indices, dates, rotation=65)
-        plt.plot(range(len(y_test)), y_test, label='Actual')
-        plt.plot(range(len(y_test_pred)), y_test_pred, label='Predicted')        
+        fig_1 = plt.figure(figsize=(20,10))
+        ax_1 = fig_1.add_axes([0.1,0.1,0.9,0.9])
+        ax_1.set_xticks(date_indices)
+        ax_1.set_xticklabels(dates, rotation=65)
+        ax_1.plot(range(len(self.y_test)), self.y_test, label='Actual')
+        ax_1.plot(range(len(self.y_test_pred)), self.y_test_pred, label='Predicted')        
+        ax_1.legend(loc='upper left')
         plt.title(f'Solarsystem id: {self.solarsystem_id}, Location: {self.location}')
         plt.ylabel('Solar energy production')
-        plt.legend(loc='upper left')
         plt.rcParams['figure.figsize'] = [20, 10] 
+        plt.xlim([xlim_left, xlim_right])
         plt.show()
 
 

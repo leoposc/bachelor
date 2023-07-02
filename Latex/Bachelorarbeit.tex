@@ -11,6 +11,12 @@
 \usepackage{hyperref} % Für Verlinkungen im Dokument
 \usepackage{tocloft} % Für Anpassungen an das Inhaltsverzeichnis
 \usepackage{apacite} % Für Zitate im APA-Stil
+\usepackage{color}
+\usepackage{transparent}
+\usepackage{graphicx}
+
+% Pfad SVG Bilder
+\graphicspath{{assets/}}
 
 % Formatierung
 \renewcommand{\familydefault}{\sfdefault} % Schriftart "Arial"
@@ -142,22 +148,36 @@ Bevor der Stromertag einer Photovoltaikanlage mit Hilfe von künstlicher Intelli
 
 In Bezug auf die Rahmenparameter der Solaranlage ist die reine Größe selbstverständlich ein maßgeblicher Faktor. Hinzu kommt, dass sich dieses Merkmal für jede individuelle stark unterscheiden kann. Die Dimensionierung der Solaranlage hängt schließlich ebenfalls von verschiedenen Faktoren ab, darunter die verfügbare Fläche am Standort, dem Energiebedarf und dem Verwendungszweck.
 
+\subsubsection{Schatten}
+
 Durch die Aggregation von Metadaten der Solaranlagen könnte man die zuvor genannten Faktoren ebenfalls in das Datenmodell einfließen lassen. Die Komplexität des Modells würde erheblich zunehmen, jedoch wäre es somit auf verschiedene Solaranlagen verallgemeinerbar. Zwei Faktoren überdehnen jedoch nicht nur die Möglichkeiten der Anwendungen von maschinellem Lernen - oder würden die Vorhersagen des Modells zumindest signifikant beeinträchtigen. Des Weiteren stellen sie teilweise eine große Herausforderung beim Schritt der Datenerfassung dar. Erster Faktor ist die Umgebung der Solaranlage, die sich folglich nur auf jene Solaranlage auswirken. Umliegende höhere Gebäude, Hügel und Bäume können Schatten auf die Solarmodule werfen, wodurch die Sonnenstrahlung blockiert und die Stromproduktion reduziert wird. Gesondert anspruchsvoll wird es dadurch, dass der geworfene Schatten von der Elevation der Sonne abhängig ist. Die Elevation der Sonne wiederum ist von der Jahreszeit abhängig. Die Wahrscheinlichkeit, dass die Solarpanele durch umliegende Strukturen verdeckt wird, ist somit im Winter höher. 
 
-Der zweite Faktor ist die Ausrichtung der Solarmodule bezogen auf die Himmelsrichtung. Sofern die Module statisch befestigt sind, sollten die Module Richtung Süden ausgerichtet sein, um den höchsten Stromertrag zu erzielen. Allerdings lassen sich die örtlichen Gegebenheiten bei der Installation der Solarpanele nicht ignorieren. Vor allem Solaranlagen, die für den Eigenbedarf installiert wurden, sind häufig auf Dächern befestigt. Allein aus Sicherheitsgründen werden die Solarmodule in aller Regel flach auf den Dachziegeln des Schrägdachs montiert, da ansonsten starker Wind die Module aus ihrer Befestigung reißen könnte. Folglich gibt die Ausrichtung des Gebäudes in vielen Fällen die Ausrichtung der Solarmodule ohne großen Spielraum vor. Konsequenz dessen ist, dass die Leistungsfähigkeit einer Solaranlage so vielfältig sein kann, wie die Bedachung von Häusern individuell ist.
+\subsubsection{Orientierung}
+
+Der zweite Faktor ist die Orientierung der Solarmodule, womit im Fachjargon der Architektur die Ausrichtung eines Baukörpers nach den Himmelsrichtung gemeint ist. Sofern die Module statisch befestigt sind, sollten die Module Richtung Süden ausgerichtet sein, um den höchsten Stromertrag zu erzielen. Allerdings lassen sich die örtlichen Gegebenheiten bei der Installation der Solarpanele nicht ignorieren. Vor allem Solaranlagen, die für den Eigenbedarf installiert wurden, sind häufig auf Dächern befestigt. Allein aus Sicherheitsgründen werden die Solarmodule in aller Regel flach auf den Dachziegeln des Schrägdachs montiert, da ansonsten starker Wind die Module aus ihrer Befestigung reißen könnte. Folglich gibt die Ausrichtung des Gebäudes in vielen Fällen die Ausrichtung der Solarmodule ohne großen Spielraum vor. Konsequenz dessen ist, dass die Leistungsfähigkeit einer Solaranlage so vielfältig sein kann, wie die Bedachung von Häusern individuell ist.
 
 Die Ausrichtung der Solarmodule hat nicht nur auf die gesamte erzeugte Strommenge Auswirkungen, des Weiteren führt sie dazu, dass Solaranlagen mit vergleichbarer Gesamtleistung zu unterschiedlichen Uhrzeiten kontrastiert Strom produzieren. Für die Netzstabilität ist es jedoch zwingend notwendig, dass kontinuierlich für eine gleichbleibende Spannung gesorgt wird. Folglich interessieren wir uns nicht nur für die kumulativ erzeugte Strommenge einer Photovoltaikanlage, weitaus spannender sind die Echtzeit-Vorhersagen. 
 
 Sowohl die Ausrichtung der Solarmodule als auch die Umgebung der Anlage soll in das Modell einfließen, indem Uhr- und Jahreszeit zu der entsprechenden Strommenge festgehalten werden. Die Logik dahinter ist mit der Annahme verbunden, dass sich die beiden Faktoren durch Uhr- und Jahreszeit repräsentieren lassen, weil die Konstellationen wiederkehrend sind. Ein Haus oder ein Baum, dass zwischen 11:14 und 11:46 Uhr Schatten auf die Solaranlage wirft, wird mit hoher Wahrscheinlichkeit die Stromproduktion der Solaranlage am nächsten Tag auf die gleiche Weise beeinträchtigen. Das Ziel ist der Forschung ist, dass das Datenmodell diesen Zusammenhang erkennt und eine niedrigere Stromproduktion prognostiziert als am Nachmittag, wenn sonst die gleichen Bedingungen vorliegen.
 
-Die Jahreszeit bündelt mehrere Faktoren und nimmt somit Komplexität aus dem Modell, ohne dabei entscheidende Rahmenparameter zu vernachlässigen. Wie bereits erwähnt können sich die Umgebungsfaktoren über die Jahreszeiten hinweg verändern, zum anderen wandert die Sonne in einem anderen Winkel über die Solaranlage. Der Einstrahlungswinkel und die Umgebung sind entscheidend für die Stromproduktion und werden durch die Jahreszeit repräsentiert. 
+Die Jahreszeit bündelt mehrere Faktoren und nimmt somit Komplexität aus dem Modell, ohne dabei entscheidende Rahmenparameter zu vernachlässigen. Wie bereits erwähnt können sich die Umgebungsfaktoren über die Jahreszeiten hinweg verändern, zum anderen wandert die Sonne in einem anderen Winkel über die Solaranlage. Der Einstrahlungswinkel und die Umgebung sind entscheidend für die Stromproduktion und werden durch die Jahreszeit repräsentiert.
+
+ Die Kalenderwoche scheint ein guter Kompromiss zu sein, um die verschiedenen Faktoren abzubilden. Der \textit{n-te} Tag des Jahres würde den Merkmalsraum des Modell deutlich vergrößern. Da die Dimension des Merkmals 1 bis 366 statt 1 bis 53 wäre, ist die Wahrscheinlichkeit, dass sich die einzelnen Datenpunkte in der Größe des Raums verlieren, deutlich höher. Die Elevation der Sonne unterliegt zwar einem ständigen Wandel, allerdings ist es zudem äußerlich fraglich, ob die minimalen Differenzen zwischen den einzelnen Tagen für die Prognose der Stromerzeugung einer Photovoltaikanlage überhaupt bemerkbar sind.
+
+ 
 
 \subsection{Nachgeführte Photovoltaikanlagen}
 
 Sogenannte nachgeführte Photovoltaikanlagen folgen selbstständig und automatisiert dem Sonnenstand, wodurch die Solarstromproduktion gegenüber stationären Anlagen verbessert wird. Optimalerweise trifft das Sonnenlicht fortwährend senkrecht auf die Solarmodule. Um dies zu bewerkstelligen, wird der Neigungswinkel und/ oder die Ausrichtung nach der Himmelsrichtung an den aktuellen Sonnenstand angepasst. 
 
 Die im letzten Unterkapitel genannten Faktoren werden aus dem Datenmodell mit der Begründung ausgeschlossen, weil für jede Solaranlage ein eigenes Modell angelegt wird und somit bei gleichen Wetterbedingungen dieselben Ergebnisse erzielt werden. 
-Sowohl die Leistungsfähigkeit, der Wirkungsgrad des Wechselrichters als auch die Umgebungsfaktoren sind nahezu feste Rahmenparameter. Bei nachgeführten Photovoltaikanlagen haben wir nun den Fall, dass sich ein wichtiger Faktor, die Position des Solarmoduls in Bezug auf die Sonne, stets verändert, ohne dass dies in den Eingabedaten des Modells bemerkbar ist. Um die Konsequenzen für unser Vorhersagemodell zu beurteilen, müssen wir zwischen zwei verschiedenen Methoden, um eine Photovoltaikanlage nachzuführen, unterscheiden. Zum einen gibt es die astronomische und die sensorische Steuerung von PV-Anlagen. Bei der astronomischen Steuerung werden die Solarmodule kontinuierlich zur Sonne hin ausgerichtet, unabhängig von der Wolkendecke. In diesem Szenario ist die Ausrichtung der Solarmodule zwar dynamisch, allerdings wird mit Hilfe dieser Methode die Ausbeute der Stromproduktion stets auf die gleiche Art und Weise verbessert. Insofern macht es für das maschinelle Lernen keinen Unterschied, ob die Solaranlage stets zur Sonne gewandt oder statisch montiert ist. Den Sonderfall, dass die Getriebemotoren beschädigt sind und ausfallen, sei an dieser Stelle außen vorgelassen.
+Sowohl die Leistungsfähigkeit, der Wirkungsgrad des Wechselrichters als auch die Umgebungsfaktoren sind nahezu feste Rahmenparameter. Bei nachgeführten Photovoltaikanlagen haben wir nun den Fall, dass sich ein wichtiger Faktor, die Position des Solarmoduls in Bezug auf die Sonne, stets verändert, ohne dass dies in den Eingabedaten des Modells bemerkbar ist. Um die Konsequenzen für unser Vorhersagemodell zu beurteilen, müssen wir zwischen zwei verschiedenen Methoden, um eine Photovoltaikanlage nachzuführen, unterscheiden. Zum einen gibt es die astronomische und die sensorische Steuerung von PV-Anlagen. 
+
+\subsubsection{Astronomisch nachgeführte Photovoltaikanlagen}
+
+Bei der astronomischen Steuerung werden die Solarmodule kontinuierlich zur Sonne hin ausgerichtet, unabhängig von der Wolkendecke. In diesem Szenario ist die Ausrichtung der Solarmodule zwar dynamisch, allerdings wird mit Hilfe dieser Methode die Ausbeute der Stromproduktion stets auf die gleiche Art und Weise verbessert. Insofern macht es für das maschinelle Lernen keinen Unterschied, ob die Solaranlage stets zur Sonne gewandt oder statisch montiert ist. Den Sonderfall, dass die Getriebemotoren beschädigt sind und ausfallen, sei an dieser Stelle außen vorgelassen.
+
+\subsubsection{Sensorisch nachgeführte Photovoltaikanlagen}
 
 Spannender wird es bei der aufwendigeren Technologie, die einen lokal installierten Sensor die optimale Ausrichtung der Solarpanele ermitteln lässt. Der hellste Punkt am Himmel wird durch die Sensorsteuerung wahrgenommen und dementsprechend werden die Sonnenkollektoren ausgerichtet. Der hellste Punkt am Himmel kann sich jedoch sehr schnell ändern, da er von der aktuellen Wolkendecke abhängt. Vor allem bei einer durchwachsenen Wolkendecke lässt sich nur schwer ermitteln, ob die Solarpanele im Moment von einer Wolke bedeckt werden. 
 
@@ -173,6 +193,18 @@ Inwiefern die Prognose bei durch einen Sensor nachgeführten Photovoltaikanlage 
 
 Verschiedene Wolkentypen wirken sich unterschiedlich auf die Sonneneinstrahlung aus. Zudem gehören Wolken zu den unbeständigen Faktoren, die sich sprunghaft auf die Stromerzeugung auswirken. Selbst wenn exakte, detailreiche Daten über die Bewölkung für die Forschung dieser Arbeit nicht vorliegen, soll der Effekt der unterschiedlichen Wolkentypen im folgenden kurz erläutert werden.
 
+\subsubsection{Wolkenarten}
+
+\begin{figure}
+\centering
+\def\svgwidth{400pt}
+\input{assets/Cloud_types_en.pdf_tex}
+\caption{Wolkentypen}
+\label{wolkentypen}
+\end{figure}
+
+%https://commons.wikimedia.org/w/index.php?search=cloud+types&title=Special:MediaSearch&go=Go&type=image
+
 Stratuswolken sind flache, graue Wolken, die den Himmel oft bedecken. Sie bestehen aus Wassertröpfchen und liegen in niedriger Höhe. Stratuswolken blockieren die Sonneneinstrahlung und reduzieren die Helligkeit des Tageslichts erheblich. Sie haben eine kühlende Wirkung, da sie einen großen Teil der Sonnenenergie reflektieren.
 
 Cumuluswolken sind große, weiße, flauschige Wolken mit einer flachen Basis und einer kuppelförmigen Oberseite. Sie treten oft an sonnigen Tagen auf. Cumuluswolken können die Sonneneinstrahlung beeinflussen, indem sie sie teilweise reflektieren und teilweise absorbieren. Dadurch entstehen Schatten und Sonnenflecken auf der Erdoberfläche.
@@ -181,7 +213,47 @@ Cirruswolken sind dünne, faserige Wolken, die in großen Höhen schweben. Sie b
 
 Nimbostratuswolken sind dichte, graue Wolken, die mit starkem Niederschlag verbunden sind. Sie erstrecken sich über große Gebiete und sind oft mit anhaltendem Regen oder Schneefall verbunden. Nimbostratuswolken blockieren die Sonneneinstrahlung weitgehend und führen zu trüben, düsteren Bedingungen.
 
-Im Allgemeinen lässt sich sagen, dass die Teilchen (Wassertröpfchen, Eiskristalle, Staub, Pollen, Meeressalze und Schadstoffe), aus denen die Wolken bestehen, die Sonnenstrahlen reflektieren oder absorbieren. Auf die gleiche Weise können Wasser- und Luftpartikel in der unteren Troposphäre die Strahlung beeinflussen. Folglich ist die gemessene Luftfeuchtigkeit und der Luftdruck ein weiteres Kennzeichen dafür, wie viele Teilchen sich in der Troposphäre befinden.
+\subsubsection{Relative Luftfeuchtigkeit und Luftdruck}
+
+Im Allgemeinen lässt sich sagen, dass die Teilchen (Wassertröpfchen, Eiskristalle, Staub, Pollen, Meeressalze und Schadstoffe), aus denen die Wolken bestehen, die Sonnenstrahlen reflektieren oder absorbieren. Auf die gleiche Weise können Wasser- und Luftpartikel in der unteren Troposphäre die Strahlung beeinflussen. Folglich ist die gemessene Luftfeuchtigkeit und der Luftdruck ein weiteres Kennzeichen dafür, wie viele Teilchen sich in der Troposphäre befinden. Umso höher die beiden Werte sind, desto größer ist die Wahrscheinlichkeit, dass die Sonneneinstrahlung reflektiert oder absorbiert wird, wodurch wir die Erwartungen an den Stromertrag senken müssen. 
+
+\subsubsection{Temperatur}
+
+Ein weit verbreiteter Glaube ist, dass die Stromproduktion durch Solaranlagen im Hochsommer am höchsten ist. In aller Regel ist dies jedoch nicht der Fall, da die Temperatur eine entscheidende Rolle spielt. Die hohen Temperaturen im Sommer beeinträchtigen den Wirkungsgrad der Solarzellen, welche die Schlüsselkomponente eines Photovoltaiksystems bilden. Die meisten Hersteller geben einen Temperaturkoeffizienten an, der spezifiziert inwiefern sich der Wirkungsgrad mit steigenden Temperaturen verändert. Gewöhnlich erhöht sich der Widerstand im Stromkreis der Solarzelle mit den höheren Temperaturen, wodurch die Gesamtleistung der Anlage zurückgeht. Folgende Temperaturkoeffizienten sind aus dem Datenblatt der Solarmodule \textit{White} von dem renommierten, deutschen Solarmodulhersteller \textit{Meyer Burger} entnommen: \newline
+
+
+\begin{table}[h]
+\begin{center}
+\def\arraystretch{1.5}
+\setlength\tabcolsep{0.75cm}
+\begin{tabular}{| l | c | r | c |}
+\hline
+Temperaturkoeffizient $I_{SC}$ &	$\alpha$ & 	$[\%/K]$ &		$+0,033$ \\ \hline
+Temperaturkoeffizient $V_{OC}$ & 	$\beta$  &	$[\%/K]$ & 		$-0,234$ \\ \hline
+Temperaturkoeffizient $P_{MPP}$ & 	$\gamma$  &	$[\%/K]$ & 		$-0,259$ \\ \hline
+\end{tabular}
+\end{center}
+\caption{Temperaturkoeffizienten Solarmodule Meyer Burger White}
+\label{tab:temperaturkoeffizienten} 
+\end{table}
+
+% QUELLE: https://www.meyerburger.com/fileadmin/user_upload/PDFs/Produktdatenblaetter/DE/DS_Meyer_Burger_White_de.pdf
+
+In Tabelle 1 ist ersichtlich, dass zwar der Kurzschlussstrom mit höherer Temperatur zunimmt, allerdings verringert sich die Leistung der Anlage. Dies ist am negativen Temperaturkoeffizienten $P_{MPP}$ ersichtlich. Die Tatsache, dass auch die Wetter-abhängigen Faktoren sich unterschiedlich auf die Stromerzeugung einzelner Solaranlagen auswirken, bestärkt die Notwendigkeit für jede Solaranlage ein eigenes Modell anzulegen.
+
+Des Weiteren kommt hinzu, dass bei manchen Solaranlagen ein Kühlmanagementsystem verbaut ist, das die Effizienz der Solarmodule steigert. Ebenso ist die Art der Befestigung in Bezug auf die Temperaturentwicklung von Interesse. So herrscht ein stärkerer Luftzug, wenn unter den Solarmodulen ein Freiraum ist. Durch die spürbaren Auswirkungen der heißen Temperaturen, müssten bei einem allgemeinen Modell zusätzlich zu der sich variierender Temperatur auch die Leistung des aktiven beziehungsweise passiven Kühlsystems berücksichtigt werden, wodurch selbstverständlich die Komplexität weiter in die Höhe getrieben werden würde. Auch an dieser Stelle sei erwähnt, dass die Kühlleistung des Systems und die Art der Montage in aller Regel statisch ist, weswegen wir sie getrost nicht in den Eingabedaten unseres Datenmodells berücksichtigen müssen.
+
+\subsubsection{Wind}
+
+Wind kann als eine Art natürlicher Ventilator dienen. Die entstehende Luftbewegung um die Solarmodule trägt dazu dabei, dass stehende Hitze auf der Oberfläche der Panele abgeführt werden kann. Dies dient der Aufrechterhaltung niedriger Betriebstemperaturen und fördert somit die Effizienz der Anlage. Selbstverständlich hängt auch hier der Einfluss der Winde von den örtlichen Gegebenheiten ab. Luftschneisen können diesen Effekt verstärken, während umliegende Hindernisse den Luftstrom genauso blockieren können.
+
+
+
+
+
+
+
+
 
 
 

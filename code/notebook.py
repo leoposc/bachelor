@@ -31,8 +31,8 @@ manager = DBManager()
 # =============================================================================
 
 from scikit import ScikitManager
-sci = ScikitManager(location='applewood', solarsystem_id=10)
-# sci = ScikitManager(location='linthicum', solarsystem_id=1200)
+# sci = ScikitManager(location='applewood', solarsystem_id=10)
+sci = ScikitManager(location='linthicum', solarsystem_id=1200)
 # sci = ScikitManager(location='Cherry Hill Townhill', solarsystem_id=1201)
 
 
@@ -59,7 +59,7 @@ sci.choose_features(['solarradiation',
 #%%
 sci.filter_low_energyoutput()
 # sci.split_data(0.1)
-sci.split_data_by_days(0.3)
+sci.split_data_by_days(0.5)
 # sci.transform_hours()
 # print(type(sci.timeepoch_test[0]))
 
@@ -72,9 +72,9 @@ sci.predict()
 sci.evaluate()
 # %%
 # sci.visualize_residues()
-sci.visualize_predictions(number_entries=100)
+sci.visualize_predictions(xlim_left=400, xlim_right=700)
 # sci.visualize_predictions(number_entries=20)
-sci.plot_outlier(number_entries=100)
+sci.plot_outlier()
 #%%
 
 # sci.standardise()

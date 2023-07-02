@@ -201,6 +201,7 @@ INTERESSANTE ARTIKEL/ LINKS:
 	- Wetter unabhängige Faktoren
 		Quantität und Qualität der Solarpanele
 		Wirkungsgrad Wechselrichter
+		Wirkungsgrad Solarpanele
 		Ausrichtung der Solarmodule/ Himmelsrichtung 
 		Einstrahlungswinkel
 		Umgebungsfaktoren, Schatten durch umliegende Gebäude, Bäume oder Berge

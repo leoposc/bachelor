@@ -7,8 +7,16 @@
 \contentsline {section}{\numberline {3}Eigene Fragestellung und methodisches Vorgehen}{7}{section.3}%
 \contentsline {section}{\numberline {4}Wichtige Faktoren bei der Stromerzeugung durch Solarenergie}{9}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Wetter-unabhängige Faktoren}{9}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Schatten}{9}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Orientierung}{10}{subsubsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.2}Nachgeführte Photovoltaikanlagen}{11}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Astronomisch nachgeführte Photovoltaikanlagen}{12}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Sensorisch nachgeführte Photovoltaikanlagen}{12}{subsubsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.3}Wetter-abhängige Faktoren}{13}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Zusammenhänge der Merkmale}{15}{section.5}%
-\contentsline {section}{\numberline {6}Datenvorverarbeitung}{16}{section.6}%
-\contentsline {section}{\numberline {7}Maschinelles Lernen - Auswahl des Modells}{17}{section.7}%
+\contentsline {subsubsection}{\numberline {4.3.1}Wolkenarten}{13}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Relative Luftfeuchtigkeit und Luftdruck}{14}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Temperatur}{15}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Wind}{16}{subsubsection.4.3.4}%
+\contentsline {section}{\numberline {5}Zusammenhänge der Merkmale}{17}{section.5}%
+\contentsline {section}{\numberline {6}Datenvorverarbeitung}{18}{section.6}%
+\contentsline {section}{\numberline {7}Maschinelles Lernen - Auswahl des Modells}{19}{section.7}%
