@@ -17,6 +17,9 @@
 \contentsline {subsubsection}{\numberline {4.3.2}Relative Luftfeuchtigkeit und Luftdruck}{14}{subsubsection.4.3.2}%
 \contentsline {subsubsection}{\numberline {4.3.3}Temperatur}{15}{subsubsection.4.3.3}%
 \contentsline {subsubsection}{\numberline {4.3.4}Wind}{16}{subsubsection.4.3.4}%
-\contentsline {section}{\numberline {5}Zusammenhänge der Merkmale}{17}{section.5}%
-\contentsline {section}{\numberline {6}Datenvorverarbeitung}{18}{section.6}%
-\contentsline {section}{\numberline {7}Maschinelles Lernen - Auswahl des Modells}{19}{section.7}%
+\contentsline {subsubsection}{\numberline {4.3.5}Sonneneinstrahlung}{16}{subsubsection.4.3.5}%
+\contentsline {section}{\numberline {5}Zusammenhänge der Merkmale}{21}{section.5}%
+\contentsline {section}{\numberline {6}Datenvorverarbeitung}{22}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Ausreißer}{22}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Maschinelles Lernen - Auswahl des Modells}{23}{section.7}%
+\contentsline {section}{\numberline {8}Optimierung der Hyperparameter}{26}{section.8}%

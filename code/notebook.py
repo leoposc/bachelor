@@ -24,6 +24,12 @@ manager = DBManager()
 # manager.fetch_weather_data("Cherry Hill Townhill", "2019-02-06", "2019-03-15")
 # manager.fetch_weather_data("Cherry Hill Townhill", "2019-02-06", "2019-03-15")
 
+# =============================================================================
+# NEW SMYRNA BEACH, 1231
+# =============================================================================
+manager.fetch_solar_data(1231, "2004-05-01", "2004-05-31")
+# manager.fetch_weather_data("New Smyrna beach", "2004-05-01", "2004-05-31")
+
 # %%
 
 # =============================================================================
@@ -32,9 +38,9 @@ manager = DBManager()
 
 from scikit import ScikitManager
 # sci = ScikitManager(location='applewood', solarsystem_id=10)
-sci = ScikitManager(location='linthicum', solarsystem_id=1200)
+# sci = ScikitManager(location='linthicum', solarsystem_id=1200)
 # sci = ScikitManager(location='Cherry Hill Townhill', solarsystem_id=1201)
-
+sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)
 
 
 # %%
@@ -49,8 +55,8 @@ sci.choose_features(['solarradiation',
                      'calendarweek',
                      'hour',
                      'temperature',
-                     'wind',
-                     'humidity',
+                    #  'wind',
+                    #  'humidity',
                      'cloudcoverage',
                      'energyoutput'
                      ])
@@ -59,7 +65,7 @@ sci.choose_features(['solarradiation',
 #%%
 sci.filter_low_energyoutput()
 # sci.split_data(0.1)
-sci.split_data_by_days(0.5)
+sci.split_data_by_days(0.1)
 # sci.transform_hours()
 # print(type(sci.timeepoch_test[0]))
 
@@ -72,10 +78,22 @@ sci.predict()
 sci.evaluate()
 # %%
 # sci.visualize_residues()
-sci.visualize_predictions(xlim_left=400, xlim_right=700)
-# sci.visualize_predictions(number_entries=20)
-sci.plot_outlier()
+# sci.visualize_predictions(xlim_left=400, xlim_right=700)
+sci.visualize_predictions()
+# sci.plot_outlier()
+
+# sci.visualize_tree()
+# sci.visualize_3d_plot()
 #%%
+
+sci.features
+# sci.model.feature_importances_
+# sci.model.n_features_in_
+# sci.model.n_outputs_
+# sci.model.tree_
+# # dir(sci.model)
+
+# %%
 
 # sci.standardise()
 # sci.normalise()
@@ -87,6 +105,7 @@ sci.plot_outlier()
 # sci.visualize_data_range()
 sci.visualize_pairwise_correlation()
 sci.visualize_heatmap()
+
 
 
 

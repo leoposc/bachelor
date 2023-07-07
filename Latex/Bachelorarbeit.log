@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.9)  2 JUL 2023 18:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.9)  7 JUL 2023 11:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -464,7 +464,7 @@ to-ren, die sich sprung-
  []
 
 (./assets/Cloud_types_en.pdf_tex
-<assets//Cloud_types_en.pdf, id=167, page=1, 722.76022pt x 444.27832pt>
+<assets//Cloud_types_en.pdf, id=182, page=1, 722.76022pt x 444.27832pt>
 File: assets//Cloud_types_en.pdf Graphic file (type pdf)
 <use assets//Cloud_types_en.pdf, page 1>
 Package pdftex.def Info: assets//Cloud_types_en.pdf , page1 used on input line 
@@ -475,29 +475,90 @@ Underfull \hbox (badness 10000) in paragraph at lines 222--223
 
  []
 
-[15] [16] [17] [18] [19] (./Bachelorarbeit.aux)
+[15]
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 252.
+
+
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 2
+52.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 252.
+
+
+Missing character: There is no ² in font cmr12!
+(./assets/sonneneinstrahlung_deutschland.pdf_tex
+<assets//sonneneinstrahlung_deutschland.pdf, id=204, page=1, 597.51802pt x 844.
+65562pt>
+File: assets//sonneneinstrahlung_deutschland.pdf Graphic file (type pdf)
+<use assets//sonneneinstrahlung_deutschland.pdf, page 1>
+Package pdftex.def Info: assets//sonneneinstrahlung_deutschland.pdf , page1 use
+d on input line 56.
+(pdftex.def)             Requested size: 350.0pt x 494.77242pt.
+) [16] [17 <./assets//sonneneinstrahlung_deutschland.pdf>] [18] [19]
+Overfull \hbox (2.18967pt too wide) in paragraph at lines 292--293
+[]\T1/phv/m/n/12 Die jah-res-zeit-li-chen Schwan-kun-gen er-ge-ben sich aus der
+ Nei-gung der Erdach-
+ []
+
+
+Overfull \hbox (3.18546pt too wide) in paragraph at lines 294--295
+[]\T1/phv/m/n/12 Auÿerdem be-ein-flus-sen Fak-to-ren wie Be-wöl-kung, Luft-ver-
+schmut-zung und geo-
+ []
+
+[20] [21] [22] [23] (./assets/decisiontree_linear.pdf_tex
+<assets//decisiontree_linear.pdf, id=245, page=1, 611.28375pt x 388.45125pt>
+File: assets//decisiontree_linear.pdf Graphic file (type pdf)
+<use assets//decisiontree_linear.pdf, page 1>
+Package pdftex.def Info: assets//decisiontree_linear.pdf , page1 used on input 
+line 56.
+(pdftex.def)             Requested size: 350.0pt x 222.40936pt.
+) [24 <./assets//decisiontree_linear.pdf>] (./assets/decisiontree_example_2.pdf
+_tex
+<assets//decisiontree_example_2.pdf, id=261, page=1, 602.25pt x 451.6875pt>
+File: assets//decisiontree_example_2.pdf Graphic file (type pdf)
+<use assets//decisiontree_example_2.pdf, page 1>
+Package pdftex.def Info: assets//decisiontree_example_2.pdf , page1 used on inp
+ut line 56.
+(pdftex.def)             Requested size: 350.0pt x 262.50963pt.
+)
+(./assets/decisiontree_example.pdf_tex
+<assets//decisiontree_example.pdf, id=262, page=1, 450.9347pt x 338.76563pt>
+File: assets//decisiontree_example.pdf Graphic file (type pdf)
+<use assets//decisiontree_example.pdf, page 1>
+Package pdftex.def Info: assets//decisiontree_example.pdf , page1 used on input
+ line 56.
+(pdftex.def)             Requested size: 350.0pt x 262.94899pt.
+) [25 <./assets//decisiontree_example_2.pdf>] [26 <./assets//decisiontree_examp
+le.pdf>] (./Bachelorarbeit.aux)
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: DAE0CBDB7E5391A1714DADDF54FAEF29;4039.
+(rerunfilecheck)             Checksum: 3C12EFA4DEC2D44A3716C3F07E1E4837;4503.
  ) 
 Here is how much of TeX's memory you used:
- 11539 strings out of 476047
- 183879 string characters out of 5791252
- 1859248 words of memory out of 5000000
- 31758 multiletter control sequences out of 15000+600000
- 535503 words of font info for 56 fonts, out of 8000000 for 9000
+ 11649 strings out of 476047
+ 186801 string characters out of 5791252
+ 1860248 words of memory out of 5000000
+ 31838 multiletter control sequences out of 15000+600000
+ 535816 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,10n,76p,1862b,457s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 ></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
 /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
-r/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local
-/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texliv
-e/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Bachelorarbeit.pdf (20 pages, 250392 bytes).
+sr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
+local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
+ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loc
+al/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texl
+ive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/202
+3/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Bachelorarbeit.pdf (27 pages, 504220 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 211 compressed objects within 3 object streams
- 43 named destinations out of 1000 (max. 500000)
- 174 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 338 PDF objects out of 1000 (max. 8388607)
+ 278 compressed objects within 3 object streams
+ 57 named destinations out of 1000 (max. 500000)
+ 218 words of extra memory for PDF output out of 10000 (max. 10000000)
 

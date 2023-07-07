@@ -4,9 +4,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import GridSearchCV
 from sklearn.preprocessing import PolynomialFeatures
-from datetime import datetime
+from sklearn.tree import export_graphviz
+from plotly.subplots import make_subplots
+import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 from itertools import product
+from datetime import datetime
 import seaborn as sns
 import pandas as pd
 import numpy as np
@@ -51,7 +54,6 @@ def consider_temperature(df: pd.DataFrame):
 def get_local_maxima_index(np_series: np.array, range_x=7):    
     tmp = ([0] * (range_x // 2) + list(np_series.copy()) + [0] * (range_x // 2))
     local_maxima = []
-    print(tmp)
     for i in range((range_x) // 2, len(tmp)-((range_x+1) // 2)):
         for x in range(1, (range_x+1) // 2):
             if tmp[i] <= tmp[i-x] or tmp[i] <= tmp[i+x]:
@@ -60,6 +62,21 @@ def get_local_maxima_index(np_series: np.array, range_x=7):
             local_maxima.append(i)
     
     return np.array(local_maxima) - (range_x // 2)
+
+
+
+# get index of local maxima within a range of x entries
+# def get_local_maxima_index(np_series: np.array, range_x=7):    
+#     tmp = ([0] * (range_x // 2) + list(np_series.copy()) + [0] * (range_x // 2))
+#     local_maxima = []
+#     for i in range((range_x) // 2, len(tmp)-((range_x+1) // 2), range_x):
+#         for x in range(1, (range_x+1) // 2):
+#             if tmp[i] <= tmp[i-x] or tmp[i] <= tmp[i+x]:
+#                 break
+#         else:   
+#             local_maxima.append(i)
+    
+#     return np.array(local_maxima) - (range_x // 2)
 
 
 
@@ -416,8 +433,9 @@ class ScikitManager():
         dates = [str(x)[:10] for x in self.timeepoch_test[self.outliers_indices_test]]
         # print(self.y_test[indices])
         # print(self.outliers_indices_test)
-        # print(figure_outlier_idx)
+        print(figure_outlier_idx)
         # print(indices)
+        print(dates)
         plt.xticks(figure_outlier_idx, dates, rotation=65)
         plt.plot(rng, self.y_test[indices], label='solar energy prodcution')
         plt.plot(rng, self.y_test_pred[indices], label='solar energy prediction')        
@@ -494,6 +512,57 @@ class ScikitManager():
         plt.rcParams['figure.figsize'] = [20, 10] 
         plt.xlim([xlim_left, xlim_right])
         plt.show()
+
+
+    def visualize_tree(self):
+        feature_names = self.features
+        feature_names.remove('energyoutput')
+        feature_names.remove('timeepoch')
+        export_graphviz(self.model, out_file='tree.dot',  
+            feature_names=feature_names)
+        # graph = pydotplus.graph_from_dot_data(dot_data.getvalue())  
+        # Image(graph.create_png())
+
+
+    
+    def visualize_3d_plot(self):
+        energy = self.y_test
+        radiation = self.X_test[:, 0]
+        temperature = self.X_test[:, 1]
+        fig = make_subplots(rows=1, cols=1, specs=[[{'type': 'surface'}]])
+        fig.add_trace(go.Surface(x=radiation , y=temperature, z=energy, \
+            showscale=True, opacity=0.5), row=1, col=1)
+
+        fig.add_trace(go.Scatter3d(x=radiation, y=temperature, z=energy, mode='markers', \
+            marker=dict(size=5, color='red')), row=1, col=1)
+        
+        fig.update_layout(title=f'Solarsystem id: {self.solarsystem_id}, Location: {self.location}', \
+            scene = dict(
+                xaxis_title='Solar radiation',
+                yaxis_title='Temperature',
+                zaxis_title='Energy output',
+                xaxis = dict(
+                    backgroundcolor="rgb(200, 200, 230)",
+                    gridcolor="white",
+                    showbackground=True,
+                    zerolinecolor="white",),
+                yaxis = dict(
+                    backgroundcolor="rgb(230, 200,230)",
+                    gridcolor="white",
+                    showbackground=True,
+                    zerolinecolor="white"),
+                zaxis = dict(
+                    backgroundcolor="rgb(230, 230,200)",
+                    gridcolor="white",
+                    showbackground=True,
+                    zerolinecolor="white",),),
+                # width=700, height=700, 
+                autosize=True, 
+                # margin=dict(l=65, r=50, b=65, t=90)
+                )
+        
+        fig.show()
+        
 
 
     

@@ -239,7 +239,7 @@ Temperaturkoeffizient $P_{MPP}$ & 	$\gamma$  &	$[\%/K]$ & 		$-0,259$ \\ \hline
 
 % QUELLE: https://www.meyerburger.com/fileadmin/user_upload/PDFs/Produktdatenblaetter/DE/DS_Meyer_Burger_White_de.pdf
 
-In Tabelle 1 ist ersichtlich, dass zwar der Kurzschlussstrom mit höherer Temperatur zunimmt, allerdings verringert sich die Leistung der Anlage. Dies ist am negativen Temperaturkoeffizienten $P_{MPP}$ ersichtlich. Die Tatsache, dass auch die Wetter-abhängigen Faktoren sich unterschiedlich auf die Stromerzeugung einzelner Solaranlagen auswirken, bestärkt die Notwendigkeit für jede Solaranlage ein eigenes Modell anzulegen.
+In \autoref{tab:temperaturkoeffizienten} ist ersichtlich, dass zwar der Kurzschlussstrom mit höherer Temperatur zunimmt, allerdings verringert sich die Leistung der Anlage. Dies ist am negativen Temperaturkoeffizienten $P_{MPP}$ ersichtlich. Die Tatsache, dass auch die Wetter-abhängigen Faktoren sich unterschiedlich auf die Stromerzeugung einzelner Solaranlagen auswirken, bestärkt die Notwendigkeit für jede Solaranlage ein eigenes Modell anzulegen.
 
 Des Weiteren kommt hinzu, dass bei manchen Solaranlagen ein Kühlmanagementsystem verbaut ist, das die Effizienz der Solarmodule steigert. Ebenso ist die Art der Befestigung in Bezug auf die Temperaturentwicklung von Interesse. So herrscht ein stärkerer Luftzug, wenn unter den Solarmodulen ein Freiraum ist. Durch die spürbaren Auswirkungen der heißen Temperaturen, müssten bei einem allgemeinen Modell zusätzlich zu der sich variierender Temperatur auch die Leistung des aktiven beziehungsweise passiven Kühlsystems berücksichtigt werden, wodurch selbstverständlich die Komplexität weiter in die Höhe getrieben werden würde. Auch an dieser Stelle sei erwähnt, dass die Kühlleistung des Systems und die Art der Montage in aller Regel statisch ist, weswegen wir sie getrost nicht in den Eingabedaten unseres Datenmodells berücksichtigen müssen.
 
@@ -247,9 +247,51 @@ Des Weiteren kommt hinzu, dass bei manchen Solaranlagen ein Kühlmanagementsyste
 
 Wind kann als eine Art natürlicher Ventilator dienen. Die entstehende Luftbewegung um die Solarmodule trägt dazu dabei, dass stehende Hitze auf der Oberfläche der Panele abgeführt werden kann. Dies dient der Aufrechterhaltung niedriger Betriebstemperaturen und fördert somit die Effizienz der Anlage. Selbstverständlich hängt auch hier der Einfluss der Winde von den örtlichen Gegebenheiten ab. Luftschneisen können diesen Effekt verstärken, während umliegende Hindernisse den Luftstrom genauso blockieren können.
 
+\subsubsection{Sonneneinstrahlung}
+
+Die Sonne emittiert Energie in sämtliche Richtungen über den gesamten elektromagnetischen Strahlungsbereich. Ungefähr 20 Kilometer über der Erdoberfläche treffen im Mittel $S = 1367 W/M²$. Messungen im Weltraum haben gezeigt, dass dieser Wert nur geringfügig um vage 0,1\% über die letzten Jahrzehnte geschwankt ist, weswegen er als die Solarkonstante betitelt wird. 
+
+\begin{figure}
+\centering
+\def\svgwidth{350pt}
+\input{assets/sonneneinstrahlung_deutschland.pdf_tex}
+\caption{Sonneneinstrahlung Deutschland, Juli 2022}
+\label{fig:sonneneinstrahlung}
+\end {figure}
+
+In \autoref{fig:sonneneinstrahlung} ist eine Karte von Deutschland zu sehen. Dargestellt wird die Monatssumme der Globalstrahlung. Deutlich zu erkennen ist, dass im Süden die Globalstrahlung im Mittel höher ist als im Norden. Folglich kommt die Sonnenstrahlung keineswegs gleichermaßen auf der Erdoberfläche an. Viele Faktoren tragen dazu bei, dass die Sonnenstrahlen unterschiedlich stark an verschiedenen Orten der Erdoberfläche auftreffen. Die Kugelform unseres Planeten ist der Grund, dass je höher der Breitengrad, desto flacher treffen die Sonnenstrahlen die Oberfläche der Erde, wodurch sich diese Strahlen auf eine größere Fläche verteilen. Auf die gleiche Weise wirkt sich die Topografie der Erde aus, wodurch es zu stärkeren, lokalen Unterschieden der Bestrahlung kommen kann.
+
+Zum flacheren Einstrahlungswinkel in den höheren Breiten kommt hinzu, dass die Sonnenstrahlen eine größere Strecke zurücklegen müssen. Insbesondere auf dem letzten Abschnitt ihrer Reise, nämlich der Atmosphäre, kommen immer mehr Hindernisse wie Luftpartikel oder Wassertröpfchen hinzu, die die Strahlen reflektieren oder absorbieren können. Dass die Auswirkungen der Teilchen nicht zu unterschätzen sei, ist allein an der Temperaturabnahme bei zunehmender Höhenlage erkenntlich. Da die Energie der Sonnenstrahlen mit steigender Höhe von immer weniger Teilchen absorbiert werden kann, nimmt die Temperatur im Mittel $6,5 K/ 1 Kilometer$  ab, bis sie Zahlenwerte von unter $-50 ^\circ C$ an der Tropopause erreicht.
+
+%https://www.dwd.de/DE/wetter/thema_des_tages/2020/11/6.html
+
+Die auf der Erde gemessene Globalstrahlung setzt sich aus der Diffusstrahlung und Direktstrahlung zusammen. Unter Diffusstrahlung versteht man jene Strahlung, die auf ihrem Weg von der Sonne zur Erde an anderen Atomen reflektiert und dadurch gestreut wurde. Direktstrahlung hingegen wurde nicht abgelenkt und ist dadurch intensiver und gebündelt. Während die Globalstrahlung schon seit geraumer Zeit protokolliert wird,  vermisst der \textit{Deutsche Wetterdienst} erst seit wenigen Jahren auf die horizontale Ebene bezogene Diffusstrahlung. Aus der Differenz der beiden wird die Direktstrahlung berechnet. 
 
 
 
+
+
+Die solare Stromerzeugung beruht auf der reichlich vorhandenen Energie der Sonne, die immense Mengen an Sonnenenergie auf die Erdoberfläche abstrahlt. Das Verständnis der verschiedenen Faktoren, die sich auf die Solarstromerzeugung auswirken, ist entscheidend für die Optimierung der Effizienz und Leistung von Solarenergiesystemen. Unter diesen Faktoren spielt die Sonneneinstrahlung eine zentrale Rolle. In diesem Kapitel befassen wir uns mit der komplizierten Beziehung zwischen Sonneneinstrahlung und Solarstromerzeugung und untersuchen ihre Eigenschaften, Schwankungen und die Auswirkungen auf die Gesamtleistung von Solarenergiesystemen.
+
+5.1 Die Natur der Sonnenstrahlung:
+
+Unter Sonnenstrahlung versteht man die von der Sonne ausgestrahlte elektromagnetische Energie, die durch den Weltraum wandert und die Erdatmosphäre und -oberfläche erreicht. Diese Strahlung umfasst ein Spektrum von Wellenlängen, darunter ultraviolettes (UV), sichtbares Licht und Infrarotstrahlung (IR). Die Menge und Intensität der Sonnenstrahlung, die an einem bestimmten Ort empfangen wird, wird von verschiedenen Faktoren wie Tageszeit, Jahreszeit, Breitengrad und Wetterbedingungen beeinflusst.
+
+5.2 Solare Bestrahlungsstärke und Sonneneinstrahlung:
+
+Zwei wichtige Begriffe zur Quantifizierung der Sonnenstrahlung sind die solare Bestrahlungsstärke und die Sonneneinstrahlung. Die solare Bestrahlungsstärke stellt die von der Sonne empfangene Leistung pro Flächeneinheit dar und wird üblicherweise in Watt pro Quadratmeter (W/m²) gemessen. Die Sonneneinstrahlung hingegen bezieht sich auf die Gesamtmenge der über einen bestimmten Zeitraum empfangenen Sonnenenergie und wird normalerweise in Kilowattstunden pro Quadratmeter (kWh/m²) oder Megajoule pro Quadratmeter (MJ/m²) angegeben.
+
+Die Erdatmosphäre beeinflusst die Sonnenstrahlung, die die Erdoberfläche erreicht. Sie streut und absorbiert einen Teil der Strahlung, was zu Schwankungen in der Intensität und im Spektrum der empfangenen Sonnenenergie führt.
+
+5.3 Schwankungen der Sonneneinstrahlung:
+
+Die Sonneneinstrahlung unterliegt zeitlichen und räumlichen Schwankungen, die die solare Stromerzeugung beeinflussen. Zeitliche Schwankungen treten auf verschiedenen Zeitskalen auf, z. B. in Tages-, Saison- und Jahreszyklen.
+
+Die täglichen Schwankungen der Sonnenstrahlung sind in erster Linie auf die Erdrotation und den Winkel zurückzuführen, in dem die Sonnenstrahlen einen bestimmten Ort erreichen. Die Intensität der Sonnenstrahlung ist am höchsten, wenn die Sonne im Zenit steht, also um die Mittagszeit, und nimmt am Morgen und Abend ab.
+
+Die jahreszeitlichen Schwankungen ergeben sich aus der Neigung der Erdachse, die dazu führt, dass der Einfallswinkel der Sonne im Laufe des Jahres variiert. Infolgedessen schwankt die Sonneneinstrahlung, wobei die Sonneneinstrahlung in den Sommermonaten intensiver und in den Wintermonaten schwächer ist.
+
+Außerdem beeinflussen Faktoren wie Bewölkung, Luftverschmutzung und geografische Lage die räumlichen Schwankungen der Sonneneinstrahlung. Gebiete in Äquatornähe erhalten im Allgemeinen das ganze Jahr über eine höhere Sonneneinstrahlung als Regionen in höheren Breitengraden.
 
 
 
@@ -267,10 +309,67 @@ Wind kann als eine Art natürlicher Ventilator dienen. Die entstehende Luftbeweg
 
 \section{Datenvorverarbeitung}
 
+Für die Forschung dieser Arbeit wurden ein paar Solaranlagen ausgewählt, um zu untersuchen, wie gut anhand von Wetterdaten sich die Solarstromproduktion prognostizieren lässt. Selbst bei den wenigen Solaranlagen, die für diese Forschung verwendet wurden, konnte festgestellt werden, dass die Zusammenhänge zwischen den einzelnen Wettermerkmalen und der erzeugten Strommenge sehr unterschiedlich sein kann.
+
+\subsection{Ausreißer}
+
 
 \newpage
 
 \section{Maschinelles Lernen - Auswahl des Modells}
+
+Die Konsequenz, dass die Zusammenhänge zwischen den Merkmalen und der Zielvariablen sehr verschieden sein können, ist es ein Modell auszuwählen, dass für seine Kontingenz gegenüber der Datenvorverarbeitung bekannt ist. 
+
+Ein Entscheidungsbaum \textit{zu engl.: decision tree} hat eine Flussdiagramm ähnliche Baumstruktur, in der je nach ausgewählter Hyperparameter alle möglichen Ergebnisse, Eingabekosten und Nutzen dargestellt werden kann. Da das Modell sowohl für kategoriale als auch kontinuierliche Zielvariablen verwendet werden kann, eignet es sich für die Prognose verschiedener Solaranlagen. 
+
+Die Bedingungen werden innerhalb der Entscheidungsknoten aufgestellt. Der Entscheidungsbaum wird so lange durchgegangen, bis man an einem Endknoten angelangt ist. Die Endknoten eines Binärbaums werden als Blätter bezeichnet, sie bilden das Ergebnis für die jeweiligen Eingabedaten ab. Folglich müssen die Bedingungen des Binärbaum von oben nach unten durchgegangen werden, um zu einem Ergebnis zu gelangen. Ein Binärbaum hat die Eigenschaften, dass er maximal $2^{n}$ Blätter besitzen kann, wobei $n$ für die Höhe des Baums steht. Indes es nur so viele Ergebnisse wie Blätter geben kann, muss die Wertemenge der Zielvariablen diskretisiert werden. 
+
+Die diskretisierten Werte werden so augeswählt, sodass der mittlere quadratische Fehler am geringsten ist. Für die Berechnung des mittleren quadratischen Fehler eines Blattes werden ausschließlich die Trainingswerte verwendet, die eben diesem Blatt zuvor zugeordnet wurden. Auf Grund des geringen Rechenaufwands genießt diese Straffunktion in vielen Bereichen der Informatik größerer Beliebtheit. Schließlich genügt durch die Art wie ein Computer Zahlen speichert eine anspruchslose Operation, explizit gesagt eine Bitverschiebung nach links, um das Quadrat einer Zahl auszurechnen. Somit ist diese Methode äußerst effizient, um die Mitte zwischen 2 oder mehreren Punkten zu finden. Den mittleren quadratischen Fehler als Straffunktion zu verwenden birgt allerdings den Nachteil, dass Ausreißer die Vorhersage sehr stark verfälschen können, weshalb diese idealerweise aus dem für das Training zuständigen Datensatz entfernt werden.
+
+
+%https://www.geeksforgeeks.org/python-decision-tree-regression-using-sklearn/
+
+Wie so häufig kommen mit den Vorteilen eines Modells auch Nachteile einher. Zu einer der vielen Vorteile von Entscheidungsbäumen gehört die leicht verständliche Darstellung der Entscheidungsprozesse. Das Modell lässt sich als Flussdiagramm darstellen, wodurch sich die Vorhersagen des Modells gut nachvollziehen lassen. Dies ist bei der Fehlersuche und der Interpretierbarkeit von großem Nutzen.
+
+\begin{figure}
+\centering
+\def\svgwidth{350pt}
+\input{assets/decisiontree_linear.pdf_tex}
+\caption{Einfacher Entscheidungsbaum mit einem Merkmal und der Tiefe 2}
+\label{fig:decisiontree_linear}
+\end {figure}
+
+Die Tatsache, dass nichtlineare Beziehungen gut erkannt werden können ist sowohl ein Nachteil als auch ein Vorteil. Viele der Wettermerkmale haben eine nicht-lineare Beziehung zu der erzeugten Strommenge einer Solaranlage. Vor allem sind die Beziehungen bei verschiedenen Solaranlagen unterschiedlich, wodurch die Vorverarbeitung der Daten sich als schwierig darstellt. Insofern ist es ein großer Vorteil, dass die Wetterdaten nicht modifiziert werden müssen. In \autoref{fig:decisiontree_linear} ist jedoch ersichtlich, wie schwer sich ein Entscheidungsbaum mit linearen Beziehungen, wie beim Fall $x=y$, tun kann. Der Entscheidungsbaum kann den Zusammenhang $x=y$ nicht nur sehr limitiert wiedergeben, des Weiteren wird bei gleicher Tiefe des Entscheidungsbaum der Fehler  unabdingbar und maßlos größer, sobald Vorhersagen zu Daten getroffen werden soll, dessen Erwartungswert der Zielvariablen außerhalb des Wertebereichs des Trainingsdatensatz liegt. Das liegt daran, dass nach dem trainieren des Modells die Menge der möglichen Ausgangswerte bestimmt und statisch ist. Betrachte man nochmals \autoref{fig:decisiontree_linear}, so wird ersichtlich, dass für $x>10$ stets $y=11$ prognostiziert wird. Da $x=y$ ist, würde ein optimales Modell für $x=111$ auch $y=111$ vorhersagen. Wie bereits erwähnt würde unser Modell $y=11$ prognostizieren, wodurch wir den quadratischen Fehler $100^{2}=10000$ erhalten. 
+
+Aus dieser Eigenschaft von Entscheidungsbäumen müssen zwei Schlussfolgerungen für die Prognose über die Stromerzeugung von Photovoltaikanlagen gezogen werden. Zum einem muss das Modell so lange trainiert werden, bis der Trainingsdatensatz alle möglichen Ausgangswerte der Zielvariablen beinhaltet. Da die Jahreszeit nicht nur eine erhebliche Rolle für die Vorhersage spielt, sondern den Maximalertrag eines Tages führend mitbestimmt, definiert sie folglich auch die Wertemenge der Zielvariablen. Somit sollte für jede Solaranlage mindestens ein Jahr lang Daten gesammelt werden. Gewiss kann das Modell bereits zuvor trainiert und für die Prognose verwendet werden, allerdings wird die Prognose weniger präzise, desto größer die Differenz zwischen den für das Training verwendeten Randwerten und den Test- beziehungsweise Produktionsdaten. Im Allgemeinen ist ein Entscheidungsbaum nicht gut darin Vorhersagen für Daten zu treffen, die zuvor nicht im Raum des Trainingsdatensatzes waren.
+
+Die zweite Schlussfolgerung bezieht sich auf die die unterschiedliche Leistung von Solaranlagen. Selbstverständlich haben Photovoltaikanlagen mit qualitativ und quantitativen unterschiedlichen Solarpanelen verschieden hohe Maximalerträge. Folglich ist die Wertemenge der möglichen Ausgangswerte einer Photovoltaikanlage von einem Eigenheim mit weniger Solarmodulen kleiner als die einer häufig größeren, kommerziell genutzten Anlage. Um bei größeren Anlagen die gleiche Auflösung in Bezug auf die Vorhersage zu erhalten, muss die Tiefe des Entscheidungsbaums zunehmen. Da diese die Anzahl der Blätter und somit die Anzahl der möglichen Werte auf direkte Weise steuert. Eine Konsequenz dessen ist, dass die Komplexität zunimmt und das Modell in der Regel einen größeren Trainingsdatensatz benötigt.
+
+
+\begin{figure}
+\centering
+\def\svgwidth{350pt}
+\input{assets/decisiontree_example_2.pdf_tex}
+\caption{Einfacher Entscheidungsbaum mit 2 Merkmalen und der Tiefe 2}
+\label{fig:decisiontree_example_2}
+\end {figure}
+
+
+
+
+\begin{figure}
+\centering
+\def\svgwidth{350pt}
+\input{assets/decisiontree_example.pdf_tex}
+\caption{Einfacher Entscheidungsbaum mit 2 Merkmalen und der Tiefe 5}
+\label{fig:decisiontree_example}
+\end {figure}
+
+
+
+\newpage
+
+\section{Optimierung der Hyperparameter}
 
 
 
