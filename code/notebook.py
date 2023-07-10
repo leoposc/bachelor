@@ -27,8 +27,8 @@ manager = DBManager()
 # =============================================================================
 # NEW SMYRNA BEACH, 1231
 # =============================================================================
-manager.fetch_solar_data(1231, "2004-05-01", "2004-05-31")
-# manager.fetch_weather_data("New Smyrna beach", "2004-05-01", "2004-05-31")
+manager.fetch_solar_data(1231, "2004-05-01", "2004-06-30")
+manager.fetch_weather_data("New Smyrna beach", "2004-05-01", "2004-06-30")
 
 # %%
 
