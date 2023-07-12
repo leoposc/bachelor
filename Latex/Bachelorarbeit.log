@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.9)  12 JUL 2023 18:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.9)  12 JUL 2023 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -746,7 +746,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.201 \newpage
+l.205 \newpage
                <./assets//Strombedarf_Erzeugung_Woche.pdf> <./assets//Strombeda
 rf_Erzeugung_Woche.pdf
 
@@ -801,19 +801,19 @@ e.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_Woch
 e.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >] [11] [12] [13]
-Overfull \hbox (5.45285pt too wide) in paragraph at lines 236--237
+Overfull \hbox (5.45285pt too wide) in paragraph at lines 240--241
 []\T1/phv/m/n/12 Die Aus-rich-tung der So-lar-mo-du-le hat nicht nur auf die ge
 -sam-te er-zeug-te Strom-
  []
 
 
-Overfull \hbox (3.7519pt too wide) in paragraph at lines 236--237
+Overfull \hbox (3.7519pt too wide) in paragraph at lines 240--241
 \T1/phv/m/n/12 gleich-ba-rer Ge-samt-leis-tung zu un-ter-schied-li-chen Uhr-zei
 -ten kon-tras-tiert Strom pro-
  []
 
 [14] [15] [16]
-Overfull \hbox (6.8483pt too wide) in paragraph at lines 271--272
+Overfull \hbox (6.8483pt too wide) in paragraph at lines 275--276
 \T1/phv/m/n/12 lung aus. Zu-dem ge-hö-ren Wol-ken zu den un-be-stän-di-gen Fak-
 to-ren, die sich sprung-
  []
@@ -830,9 +830,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.296 
+l.300 
        <./assets//Cloud_types_en.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 299--300
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
 
@@ -841,20 +841,20 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.321 D
+l.325 D
        es Weiteren kommt hinzu, dass bei manchen Solaranlagen ein KÃ¼hlmanag...
 ]
 
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 329.
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 333.
 
 
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 3
-29.
+33.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 329.
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 333.
 
 
 Missing character: There is no ² in font cmr12!
@@ -871,15 +871,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.340 
+l.344 
        <./assets//sonneneinstrahlung_deutschland.pdf>] [22] [23]
-Overfull \hbox (2.18967pt too wide) in paragraph at lines 369--370
+Overfull \hbox (2.18967pt too wide) in paragraph at lines 373--374
 []\T1/phv/m/n/12 Die jah-res-zeit-li-chen Schwan-kun-gen er-ge-ben sich aus der
  Nei-gung der Erdach-
  []
 
 
-Overfull \hbox (3.18546pt too wide) in paragraph at lines 371--372
+Overfull \hbox (3.18546pt too wide) in paragraph at lines 375--376
 []\T1/phv/m/n/12 Auÿerdem be-ein-flus-sen Fak-to-ren wie Be-wöl-kung, Luft-ver-
 schmut-zung und geo-
  []
@@ -896,7 +896,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.420 
+l.424 
        <./assets//decisiontree_linear.pdf>]
 (./assets/decisiontree_example_2.pdf_tex
 <assets//decisiontree_example_2.pdf, id=401, page=1, 602.25pt x 451.6875pt>
@@ -918,13 +918,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.447 \newpage
+l.451 \newpage
               
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.447 \newpage
+l.451 \newpage
                <./assets//decisiontree_example_2.pdf> <./assets//decisiontree_e
 xample.pdf
 
@@ -951,7 +951,7 @@ ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loc
 al/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texl
 ive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/202
 3/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Bachelorarbeit.pdf (32 pages, 601475 bytes).
+Output written on Bachelorarbeit.pdf (32 pages, 601745 bytes).
 PDF statistics:
  483 PDF objects out of 1000 (max. 8388607)
  363 compressed objects within 4 object streams
