@@ -1,0 +1,103 @@
+%% Creator: Inkscape inkscape 0.92.5, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'Strombedarf_Erzeugung_2022.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{750bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.5)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{Strombedarf_Erzeugung_2022.pdf}}%
+    \put(0.97557813,0.309){\color[rgb]{0.4,0.4,0.4}\rotatebox{-90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}MWh\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{Strombedarf_Erzeugung_2022.pdf}}%
+    \put(0.12,0.078){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Sonstige Konventionelle}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{Strombedarf_Erzeugung_2022.pdf}}%
+    \put(0.51804102,0.078){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Pumpspeicher}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{Strombedarf_Erzeugung_2022.pdf}}%
+    \put(0.75608203,0.078){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Erdgas}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{Strombedarf_Erzeugung_2022.pdf}}%
+    \put(0.12,0.064){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Steinkohle}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{Strombedarf_Erzeugung_2022.pdf}}%
+    \put(0.51804102,0.064){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Braunkohle}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{Strombedarf_Erzeugung_2022.pdf}}%
+    \put(0.75608203,0.064){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Kernenergie}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{Strombedarf_Erzeugung_2022.pdf}}%
+    \put(0.12,0.05){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Sonstige Erneuerbare}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{Strombedarf_Erzeugung_2022.pdf}}%
+    \put(0.51804102,0.05){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Photovoltaik}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{Strombedarf_Erzeugung_2022.pdf}}%
+    \put(0.75608203,0.05){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Wind Onshore}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{Strombedarf_Erzeugung_2022.pdf}}%
+    \put(0.12,0.036){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Wind Offshore}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{Strombedarf_Erzeugung_2022.pdf}}%
+    \put(0.51804102,0.036){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Wasserkraft}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{Strombedarf_Erzeugung_2022.pdf}}%
+    \put(0.75608203,0.036){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Biomasse}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{Strombedarf_Erzeugung_2022.pdf}}%
+    \put(0.12,0.022){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Realisierter Stromverbrauch - Gesamt (Netzlast)}\end{tabular}}}}%
+    \put(0.02909375,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Jan. '22\end{tabular}}}}%
+    \put(0.08728767,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Feb. '22\end{tabular}}}}%
+    \put(0.15709589,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}März '22\end{tabular}}}}%
+    \put(0.23427968,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Apr. '22\end{tabular}}}}%
+    \put(0.30907419,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Mai '22\end{tabular}}}}%
+    \put(0.38636188,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Juni '22\end{tabular}}}}%
+    \put(0.4611564,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Juli '22\end{tabular}}}}%
+    \put(0.53844409,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Aug. '22\end{tabular}}}}%
+    \put(0.61573175,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Sep. '22\end{tabular}}}}%
+    \put(0.69052625,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Okt. '22\end{tabular}}}}%
+    \put(0.76791779,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Nov. '22\end{tabular}}}}%
+    \put(0.84271234,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Dez. '22\end{tabular}}}}%
+    \put(0.935,0.123){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.935,0.195){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2.5M\end{tabular}}}}%
+    \put(0.935,0.268){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}5M\end{tabular}}}}%
+    \put(0.935,0.34){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}7.5M\end{tabular}}}}%
+    \put(0.935,0.413){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10M\end{tabular}}}}%
+    \put(0.935,0.485){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}12.5M\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

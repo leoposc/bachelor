@@ -2,24 +2,26 @@
 \contentsline {section}{\numberline {1}Einführung}{4}{section.1}%
 \contentsline {section}{\numberline {2}Stand der Technik}{6}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Strombedarf in Deutschland}{6}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Schwankungen im Stromnetz}{6}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Maschinelles Lernen}{6}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Eigene Fragestellung und methodisches Vorgehen}{7}{section.3}%
-\contentsline {section}{\numberline {4}Wichtige Faktoren bei der Stromerzeugung durch Solarenergie}{9}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Wetter-unabhängige Faktoren}{9}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Schatten}{9}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Orientierung}{10}{subsubsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.2}Nachgeführte Photovoltaikanlagen}{11}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Astronomisch nachgeführte Photovoltaikanlagen}{12}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Sensorisch nachgeführte Photovoltaikanlagen}{12}{subsubsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.3}Wetter-abhängige Faktoren}{13}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Wolkenarten}{13}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Relative Luftfeuchtigkeit und Luftdruck}{14}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Temperatur}{15}{subsubsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.4}Wind}{16}{subsubsection.4.3.4}%
-\contentsline {subsubsection}{\numberline {4.3.5}Sonneneinstrahlung}{16}{subsubsection.4.3.5}%
-\contentsline {section}{\numberline {5}Zusammenhänge der Merkmale}{21}{section.5}%
-\contentsline {section}{\numberline {6}Datenvorverarbeitung}{22}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Ausreißer}{22}{subsection.6.1}%
-\contentsline {section}{\numberline {7}Maschinelles Lernen - Auswahl des Modells}{23}{section.7}%
-\contentsline {section}{\numberline {8}Optimierung der Hyperparameter}{26}{section.8}%
+\contentsline {subsection}{\numberline {2.2}Strommix Deutschland}{7}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Aufbau des Stromnetzes}{8}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Schwankungen im Stromnetz}{9}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Redispatch}{10}{subsubsection.2.4.1}%
+\contentsline {section}{\numberline {3}Eigene Fragestellung und methodisches Vorgehen}{11}{section.3}%
+\contentsline {section}{\numberline {4}Wichtige Faktoren bei der Stromerzeugung durch Solarenergie}{13}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Wetter-unabhängige Faktoren}{13}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Schatten}{13}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Orientierung}{14}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Nachgeführte Photovoltaikanlagen}{15}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Astronomisch nachgeführte Photovoltaikanlagen}{16}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Sensorisch nachgeführte Photovoltaikanlagen}{16}{subsubsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.3}Wetter-abhängige Faktoren}{17}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Wolkenarten}{17}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Relative Luftfeuchtigkeit und Luftdruck}{18}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Temperatur}{19}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Wind}{20}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.5}Sonneneinstrahlung}{20}{subsubsection.4.3.5}%
+\contentsline {section}{\numberline {5}Zusammenhänge der Merkmale}{25}{section.5}%
+\contentsline {section}{\numberline {6}Datenvorverarbeitung}{26}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Ausreißer}{26}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Maschinelles Lernen - Auswahl des Modells}{27}{section.7}%
+\contentsline {section}{\numberline {8}Optimierung der Hyperparameter}{31}{section.8}%

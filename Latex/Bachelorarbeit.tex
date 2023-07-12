@@ -14,6 +14,7 @@
 \usepackage{color}
 \usepackage{transparent}
 \usepackage{graphicx}
+\usepackage{float}
 
 % Pfad SVG Bilder
 \graphicspath{{assets/}}
@@ -111,11 +112,51 @@ anzupassen, wobei die Information über die Verfügbarkeit von Strom gleichfalls
 
 % https://zeitung.faz.net/fas/technik-und-motor/2023-05-14/fuenf-am-tag/892835.html
 
+\newpage
+
 \section{Stand der Technik}
+
+Im folgenden soll betrachtet werden, wie das Stromnetz von Deutschland im Moment aufgestellt ist und welche Maßnahmen ergriffen werden müssen, um den Bedarf an Strom zu decken und die Energiewende zu meistern. Betreffend gilt es, den in Zukunft zu erwartenden Strombedarf zu analysieren
 
 \subsection{Strombedarf in Deutschland}
 
+Im gesamten Jahr 2018 betrug die realisierte Stromerzeugung in Deutschland 543.053.395 MWh, wodurch gute 30 TWh Strom mehr erzeugt als benötigt wurden. 2022 hingegen sank der Bedarf und die Erzeugung auf ungefähr 490.000.000 MWh.
+
+%https://www.smard.de/home/marktdaten?marketDataAttributes=%7B%22resolution%22:%22year%22,%22from%22:1498773600000,%22to%22:1687471199999,%22moduleIds%22:%5B5000410,1004066,1001226,1001225,1004067,1004068,1001228,1001224,1001223,1004069,1004071,1004070,1001227%5D,%22selectedCategory%22:null,%22activeChart%22:true,%22style%22:%22color%22,%22categoriesModuleOrder%22:%7B%7D,%22region%22:%22DE%22%7D
+
+Tatsache ist jedoch, dass die Dekarbonisierung durch Elektrifizierung unserer Industrie, des Verkehrs als auch des privaten Sektors stattfinden soll, weshalb mit einer deutlichen Zunahme des Energiebedarfs zu rechnen ist. Allem voran kommen hierbei Elektroautos und Wärmepumpen ins Spiel, für dessen Betrieb elektrische Energie eine Grundvoraussetzung ist. Bis 2030 sollen sich 15 Millionen Elektroautos auf den deutschen Straßen fortbewegen, damit wäre nahezu jedes vierte Auto im Mutterland der Automobilindustrie kein klassischer Verbrenner mehr, sondern von Energie aus der Wallbox abhängig.
+%https://www.tagesschau.de/inland/spitzenrunde-mobilitaet-e-autos-101.html
+
+%https://de.statista.com/statistik/daten/studie/1202904/umfrage/anteil-der-elektroautos-am-pkw-bestand-in-deutschland/#:~:text=Im%20Jahr%202020%20lag%20der,11%2C55%20Millionen%20Fahrzeugen%20entsprechen.
+
+Schließlich hat sich Deutschland es als Ziel gesetzt, bis 2030 65 Prozent weniger Treibhausgase zu emittieren als  1990. Hierzu soll der noch bisher hinkende Verkehrssektor durch die Elektrifizierung aufholen.
+
+Um die Klimaneutralität bis 2045 zu erreichen, sollen parallel dazu ab 2024 500.000 neue Wärmepumpen pro Jahr installiert werden. Wärmepumpen werden mit elektrischer Energie betrieben und entziehen der Umweltwärme die Energie, um diese für die Wärmeversorgung von Gebäuden zu verwenden. So können wir uns von fossilen Energieträgern nach und nach freimachen.
+%https://www.bundesregierung.de/breg-de/aktuelles/kanzler-viessmann-2070096#:~:text=W%C3%A4rmepumpen%20k%C3%B6nnen%20sowohl%20Alt%2D%20als%20auch%20Neubauten%20klimafreundlich%20beheizen.&text=Die%20Bundesregierung%20hat%20sich%20das,weniger%20Treibhausgas%2DEmissionen%20zu%20verursachen.
+
+Das Bunderministerium für Wirtschaft und Klimaschutz (BMWK) prognostiziert für 2030, dass der Bedarf an Strom auf 750 TWh ansteigen wird.
+
+\subsection{Strommix Deutschland}
+
+Laut dem Bundesministerium für Wirtschaft und Klimaschutz (Stand 1. April 2020) ist Deutschland im Besitz von Stromerzeugungsanlagen mit einer Netto-Nennleistung von effektiv 221,3 Gigawatt. Die Netto-Nennleistung bezeichnet die Energie, die eine Anlage unter Normalbedingungen ohne Beeinträchtigung der Lebensdauer vollbringen kann, bereits abgezogen ist der Eigenbedarf der Stromerzeugungsanlage. Im Falle einer Photovoltaikanlage ist Brutto-Nennleistung vor allem wegen des Wechselrichter höher. 
+
+\begin{figure}
+\centering
+\def\svgwidth{450pt}
+\fontsize{7}{10}\selectfont
+\input{assets/Strombedarf_Erzeugung_2022.pdf_tex}
+\caption{Stromerzeugung und -bedarf, Deutschland 2022}
+\label{fig:stromerzeugung_de_2022}
+\end {figure}
+
+Der Anteil der erneuerbaren Energien an Deutschlands Netto-Nennleistung beläuft sich dabei bereits auf mehr als die Hälfte, nämlich 121 Gigawatt. Führend unter den erneuerbaren Energien ist die On- und Offshore Windenergie, Energie aus Photovoltaikanlagen kommt mit 47,3 Gigawatt an zweiter Stelle. Mit 21,2 Prozent spielen sie dementsprechend eine entscheidende Rolle in der Energieversorgung unseres Industriestaates. Dabei ist jedoch zu beachten, dass die verschiedenen Stromerzeuger je nach Jahreszeit eine unterschiedlich wichtige Stellung einnehmen. Während Photovoltaik in der Winterzeit auf einen Bruchteil zurückgeht, erreicht die Windenergie im Winter seine Maximalwerte, die jedoch selbst in der wöchentlichen Betrachtung mit stärkeren Schwankungen einhergehen. In \autoref{fig:stromerzeugung_de_2022} ist ersichtlich, dass temporär fast die Hälfte des Strommix durch auf dem Land befestigte Windkraftanlagen erzeugt wird. Ebenso ist erkenntlich, dass Deutschland auf den Import von Energie angewiesen ist, wenn eine Flaute aufzieht und die Erneuerbaren weniger Energie als üblich erzeugen. Ausschließlich Wasserkraft und Biogasanlagen sind in der Lage konstant Energie zu produzieren. Sowohl im Mai als auch Mitte Oktober 2022 konnten konventionelle Energieerzeuger die Diskrepanz nicht ausgleichen, weswegen die Vernetzung des Stromnetzes und dadurch möglichen Importe beziehungsweise Exporte unentbehrlich sind. Schließlich wären die Investitionskosten für Speicherkraftwerke oder überschüssige Kraftwerke, die selbst Dunkelflauten genügend Energie noch erzeugen können, weder ökologisch noch ökonomisch tragbar. Für eine gestärkte Versorgungssicherheit ist die Vernetzung elementar. Hilfreich ist, dass die unterschiedlichen geographischen Gegebenheiten der Länder verschiedene Arten der regenerativen Energieerzeugung ermöglichen. So verfügen die Alpenländer und Skandinavien eine erheblich bessere Grundvoraussetzung, um Wasserkraft Gebrauch zu machen. So ist das vernetze Stromnetz gegenüber Großwetterlagen, die zum Beispiel die Produktion von Solar- und Windkraftanlagen auf weiten Gebieten des Kontinents beeinflussen, weniger anfällig.
+
+
 \subsection{Aufbau des Stromnetzes}
+
+Auf Grund der geographischen Lage liegt Deutschland äußerst zentral in einem ineinander verstricktem europäischen Stromsystem. Somit nimmt es in Europa eine Schlüsselrolle ein und ist eine Drehscheibe für den Stromfluss innerhalb des Kontinents.
+
+%https://www.bmwk.de/Redaktion/DE/Dossier/strommarkt-der-zukunft.html#:~:text=Aufgrund%20der%20zunehmenden%20Elektrifizierung%20in,2045%20wurde%20im%20Energiewirtschaftsgesetz%20verankert.
 
 Um das Stromnetz genauer zu betrachten, muss zunächst zwischen Hochspannungsnetzen, Mittelspannungsnetzen und Niederspannungsnetzen differenziert werden. Mit 60 bis 220 Kilovolt Spannung ist der landesweite Transport des Strom signifikant effizienter, da durch die höhere Spannung die Stromstärke gesenkt werden. Schließlich nimmt der Verlust quadratisch mit der Stromstärke zu. Sozusagen sind Hochspannungsnetze die Autobahnen des Stromnetzes. (QUELLE)
 
@@ -133,7 +174,33 @@ Heutzutage sind Verbraucher längst nicht mehr nur Verbraucher, stattdessen werd
 
 Dementsprechend ist es für uns unverzichtbar, die Wichtigkeit einer stabilen \linebreak Stromerzeugung richtig einzuschätzen und anhand dessen Maßnahmen zu ergreifen, um Spannungsschwankungen im Netz so gut wie möglich zu reduzieren.
 
-\subsection{Maschinelles Lernen}
+Der stetig schwankende Strombedarf und die ebenso fluktuierende Stromerzeugung führt dazu, dass von einzelnen Ländern in größeren Dimensionen Strom sowohl exportiert als auch importiert werden müssen. Dies hilft dabei, im gesamten Stromnetz die Netzspannung beständig und konstant zu halten. In 2019 konnte Deutschland 72,4 TWh Strom an verschiedene Nachbarländer exportieren und hat im selben Jahr etwa die Hälfte (39,8 TWh) davon importiert.
+%https://www.bmwk.de/Redaktion/DE/Dossier/strommarkt-der-zukunft.html#:~:text=Aufgrund%20der%20zunehmenden%20Elektrifizierung%20in,2045%20wurde%20im%20Energiewirtschaftsgesetz%20verankert.
+
+Auf Grund von Verbraucherverhalten sowie auch Teilen der Industrie ist der Strombedarf je nach Uhrzeit unterschiedlich. Äußerst gelegen ist die Sachlage, dass der Strombedarf tagsüber nahezu doppelt so hoch ist als während der Nacht. Von Frühling bis in die späten Sommermonate kann der zusätzliche Bedarf häufig durch Photovoltaik gedeckt werden und somit bildet Sonnenenergie eine gute Ergänzung für die anderen Energieerzeuger. 
+
+%Folglich sind Solaranlagen allein ohne Speichermöglichkeiten keineswegs grundlastfähig.
+
+\begin{figure}
+\centering
+\def\svgwidth{450pt}
+\fontsize{7}{10}\selectfont
+\input{assets/Strombedarf_Erzeugung_Woche.pdf_tex}
+\caption{Realisierte Erzeugung Deutschland im Juli 2022}
+\label{fig:stromerzeugung_de_mai}
+\end {figure}
+
+\subsubsection{Redispatch}
+
+Zuvor wurde thematisiert, wie wichtig es ist, dass das Stromnetz auf internationaler Ebene miteinander verknüpft ist. Ebenso ist es notwendig, das Netz auf lokaler Ebene zu betrachten. Um die Netzstabilität zu gewährleisten, führen Übertragungsnetzbetreiber sogenanntes \textit{Redispatching} durch. Dabei wird gezielt die Einspeisung durch Erzeugungsanlagen gedrosselt, sodass an Engpässen die Leitungen nicht überlastet werden. Da dies äußerst kurzfristig passiert und die zuvor gekaufte mit der tatsächlich erzeugten Strommenge übereinstimmen muss, beauftragen die Übertragungsnetzbetreiber andere Erzeugungsanlagen, die sozusagen hinter den Engpässen liegen, mehr Strom zu produzieren.
+
+Eine Neuerung des Netzausbaubeschleunigungsgesetzes (NABEG) im Jahr 2019 wurde \textit{Redispatch} weiterhin optimiert. Die Neuerung besagt, dass ab Oktober 2021 die Netzbetreiber mehr Erzeugungs- und Speicheranlagen für das Unterbinden von Netzengpässen miteinbeziehen dürfen. Zuvor konnten sich Anlagen mit einer installierten Leistung unter 10 MW der Teilnahmepflicht am \textit{Redispatch} entziehen. Der Grenzwert wurde nicht nur auf 100kW herabgesetzt, des Weiteren sind sämtliche steuerbaren Anlagen, unabhängig von deren installierten Leistung, ebenso an der Teilnahme verpflichtet.
+
+%https://www.bmwk.de/Redaktion/DE/Dossier/strommarkt-der-zukunft.html#:~:text=Aufgrund%20der%20zunehmenden%20Elektrifizierung%20in,2045%20wurde%20im%20Energiewirtschaftsgesetz%20verankert.
+
+
+
+%\subsection{Maschinelles Lernen}
 
 \newpage
 

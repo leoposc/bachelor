@@ -1,0 +1,105 @@
+%% Creator: Inkscape inkscape 0.92.5, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'Strombedarf_Erzeugung_Woche.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{750bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.5)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{Strombedarf_Erzeugung_Woche.pdf}}%
+    \put(0.97553125,0.309){\color[rgb]{0.4,0.4,0.4}\rotatebox{-90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}MWh\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{Strombedarf_Erzeugung_Woche.pdf}}%
+    \put(0.054,0.078){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Sonstige Konventionelle}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{Strombedarf_Erzeugung_Woche.pdf}}%
+    \put(0.51204102,0.078){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Pumpspeicher}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{Strombedarf_Erzeugung_Woche.pdf}}%
+    \put(0.83008203,0.078){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Erdgas}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{Strombedarf_Erzeugung_Woche.pdf}}%
+    \put(0.054,0.064){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Steinkohle}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{Strombedarf_Erzeugung_Woche.pdf}}%
+    \put(0.51204102,0.064){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Braunkohle}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{Strombedarf_Erzeugung_Woche.pdf}}%
+    \put(0.83008203,0.064){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Kernenergie}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{Strombedarf_Erzeugung_Woche.pdf}}%
+    \put(0.054,0.05){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Sonstige Erneuerbare}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{Strombedarf_Erzeugung_Woche.pdf}}%
+    \put(0.51204102,0.05){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Photovoltaik}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{Strombedarf_Erzeugung_Woche.pdf}}%
+    \put(0.83008203,0.05){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Wind Onshore}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{Strombedarf_Erzeugung_Woche.pdf}}%
+    \put(0.054,0.036){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Wind Offshore}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{Strombedarf_Erzeugung_Woche.pdf}}%
+    \put(0.51204102,0.036){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Wasserkraft}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{Strombedarf_Erzeugung_Woche.pdf}}%
+    \put(0.83008203,0.036){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Biomasse}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{Strombedarf_Erzeugung_Woche.pdf}}%
+    \put(0.054,0.022){\color[rgb]{0.2,0.2,0.2}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Realisierter Stromverbrauch - Gesamt (Netzlast)}\end{tabular}}}}%
+    \put(0.02734615,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}30. …\end{tabular}}}}%
+    \put(0.07442857,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}1. Juli\end{tabular}}}}%
+    \put(0.13885715,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}2. Juli\end{tabular}}}}%
+    \put(0.20328572,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}3. Juli\end{tabular}}}}%
+    \put(0.26771429,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}4. Juli\end{tabular}}}}%
+    \put(0.33214285,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}5. Juli\end{tabular}}}}%
+    \put(0.39657144,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}6. Juli\end{tabular}}}}%
+    \put(0.461,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}7. Juli\end{tabular}}}}%
+    \put(0.52542859,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}8. Juli\end{tabular}}}}%
+    \put(0.58985712,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}9. Juli\end{tabular}}}}%
+    \put(0.65428571,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}10. Juli\end{tabular}}}}%
+    \put(0.71871429,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}11. Juli\end{tabular}}}}%
+    \put(0.78314288,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}12. Juli\end{tabular}}}}%
+    \put(0.84757141,0.109){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}13. Juli\end{tabular}}}}%
+    \put(0.927,0.123){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.927,0.195){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}20Tsd.\end{tabular}}}}%
+    \put(0.927,0.268){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}40Tsd.\end{tabular}}}}%
+    \put(0.927,0.34){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}60Tsd.\end{tabular}}}}%
+    \put(0.927,0.413){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}80Tsd.\end{tabular}}}}%
+    \put(0.927,0.485){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}100Tsd.\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

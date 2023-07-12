@@ -173,14 +173,22 @@ INTERESSANTE ARTIKEL/ LINKS:
 		aktueller Strombedarf
 		politische Ziele/ Erwartungen
 		Aussagen von der Industrie
+
+	- Strommix Deutschland
+		Strommix allg.
+		Unterschiede über die Jahreszeiten -> bedarf/ erzeugung
+
+	- Aufbau Stromnetz
+
 	- Schwankungen im Stromnetz
-		Wie ist das Stromnetz aufgebaut? 
+		
 		stetiges Gleichgewicht halten 
 		unterschiedliche Stromerzeuger
 		ohne Akkumulator im Keller erreicht eine Solaranlage nur 30% Autarkie, mit Akku ca. 70% 
 			-> folglich werden ohne Batterie 70% der Energie eingespeist
 		Vergangenheit - Zukunft
 		unternommene Maßnahmen
+		
 	- Aktuelle Methoden um eingespeiste Solarenergie zu prognostizieren
 
 	- Maschinelles Lernen
