@@ -386,13 +386,26 @@ Außerdem beeinflussen Faktoren wie Bewölkung, Luftverschmutzung und geografisc
 
 \section{Zusammenhänge der Merkmale}
 
+Die Qualität der Daten definiert maßgeblich die Leistungsfähigkeit des Prognose-Modells. Schließlich sind die Algorithmen im Bereich des maschinellen Lernens derart verallgemeinert, sodass sie die Bedeutung der Daten überhaupt nicht kennen müssen. Dies ist von enormen Vorteil, da ansonsten maschinelles Lernen kaum derart viele Anwendungsmöglichkeiten, wie Klassifizierung von Spam und Phishing-Mails, Erkennung von Objekten anhand von Bildern, Schätzung eines Immobilienwertes oder eben die Prognose der Stromerzeugung einer Photovoltaikanlage, bieten könnte.
+
+\subsection{Transformation der Daten zu Wissen}
+
+Im heutigen Zeitalter werden Unmengen von Daten gesammelt, die sowohl strukturiert als auch unstrukturiert sein können. Die Stärke der selbstlernenden Algorithmen ist es Erkenntnisse aus einer gewaltigen Datenmenge zu ziehen und anhand der Muster, die sich in den Daten befinden, bestimmte Vorhersagen zu treffen. In diesem Kapitel sollen die Zusammenhänge zwischen den einzelnen Merkmalen\footnote{Als Merkmale werden im Folgenden jegliche Daten bezeichnet, die die Grundlage für die Prognose bilden. Sie werden in den Lernalgorithmus eingespeist, um daraus eine Vorhersage zu erhalten.} und der Zielvariablen\footnote{Als Zielvariable bezeichnen wir jenen Wert, für dessen wir eine Vorhersage treffen möchten.} im Detail betrachtet werden. Insbesondere sind wir daran interessiert, ob sich die zuvor beschriebenen Auswirkungen der Wetterfaktoren in den Datensätzen widerspiegeln.
+
+Wie die Merkmale und die Zielvariable verknüpft sind, entscheidet über die Auswahl des passenden Lernalgorithmus. Im vorangehendem Kapitel haben wir bereits die Auswirkungen einzelner Faktoren erläutert. Auf Grund der Gegebenheit, dass die exakten Auswirkungen nicht umgehend erforscht sind, um sie beziffern zu können und sich zudem das gleiche Merkmal bei verschiedenen Solaranlagen unterschiedlich stark auswirken kann, ist ein Lernalgorithmus die richtige Wahl für diesen Anwendungsfall. Nicht zu vergessen, müssten bei einem konventionellem Algorithmus\footnote{Für jeden Anwendungsfall werden bei einem konventionellem Algorithmus eine Reihe von Regeln festgelegt, die ein jeweiliger Programmierer umsetzt.} Informationen über die Spezifikationen der Solaranlage einfließen, wodurch die Programmierung des Algorithmus zunehmend komplexer werden würde.
+
+
 \newpage
 
 \section{Datenvorverarbeitung}
 
 Für die Forschung dieser Arbeit wurden ein paar Solaranlagen ausgewählt, um zu untersuchen, wie gut anhand von Wetterdaten sich die Solarstromproduktion prognostizieren lässt. Selbst bei den wenigen Solaranlagen, die für diese Forschung verwendet wurden, konnte festgestellt werden, dass die Zusammenhänge zwischen den einzelnen Wettermerkmalen und der erzeugten Strommenge sehr unterschiedlich sein kann.
 
+Ziel der Datenvorverarbeitung ist es, dass die Daten für den jeweiligen Lernalgorithmus optimiert werden und somit die Leistungsfähigkeit des Modells gesteigert werden kann. Zudem soll somit vermieden werden, dass Unstimmigkeiten innerhalb des Datensatzes die Ergebnisse des Modells verzerren oder gänzlich verfälschen.
+
 \subsection{Ausreißer}
+
+Unstimmigkeiten innerhalb des Datensatzes werden häufig als Ausreißer betitelt, da sich nicht zum Muster zwischen ihresgleichen und der Zielvariablen passen. Da solche Ausreißer unausweichlich und in sämtlichen Datensätzen auftauchen können, dürfen diese nicht ungeachtet bleiben. Ein möglicher Grund für etwaige Ausreißer könnte ein defektes Bauteil des Solarsystems sein. Ein nicht funktionierender würde dazu führen, dass trotz idealer Wetterbedingungen die erzeugte Wechselspannung ausbleibt. Umso länger das Solarsystem nicht repariert wird, desto wahrscheinlicher ist es, dass der Fehler übersehen und die Kalenderwoche für die übermäßige Abweichung verantwortlich gemacht wird.
 
 
 \newpage
