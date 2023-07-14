@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.13)  13 JUL 2023 15:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.13)  13 JUL 2023 18:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -922,7 +922,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.437 
+l.438 
        <./assets//decisiontree_linear.pdf>]
 (./assets/decisiontree_example_2.pdf_tex
 <assets//decisiontree_example_2.pdf, id=416, page=1, 602.25pt x 451.6875pt>
@@ -944,13 +944,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.464 \newpage
+l.465 \newpage
               
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.464 \newpage
+l.465 \newpage
                <./assets//decisiontree_example_2.pdf> <./assets//decisiontree_e
 xample.pdf
 
@@ -958,9 +958,6 @@ pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//decisiontree_examp
 le.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 
 >] [32] (./Bachelorarbeit.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
 (rerunfilecheck)             Checksum: 3BD1361BAFA9187EBB667E5B2DD3538B;5040.
  ) 
@@ -981,7 +978,7 @@ ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loc
 al/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texl
 ive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/202
 3/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Bachelorarbeit.pdf (33 pages, 605090 bytes).
+Output written on Bachelorarbeit.pdf (33 pages, 605440 bytes).
 PDF statistics:
  499 PDF objects out of 1000 (max. 8388607)
  378 compressed objects within 4 object streams
