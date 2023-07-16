@@ -450,7 +450,7 @@ In der Diagonalen der \autoref{fig:pairplot_all} sind Balkendiagramme abgebildet
 
 Wie dieser Wert zu Stande kommt oder ob verschiedene Wolkentypen unterschiedlich bewertet werden, bleibt dabei unklar.} handelt.
 
-Da bei den anderen Werten keine Auffälligkeiten zu verzeichnen sind und deren Messung vergleichsweise einfach und standardisiert ist, können wir davon ausgehen, dass sie vertrauenswürdig sind. Für den Bewölkungsgrad 
+Da bei den anderen Werten keine Auffälligkeiten zu verzeichnen sind und deren Messung vergleichsweise einfach und standardisiert ist, können wir davon ausgehen, dass sie vertrauenswürdig sind. Für den Bewölkungsgrad könnte es eine mögliche Konsequenz sein ihn aus der Merkmalsliste des Lernalgorithmus zu streichen. Schließlich wird die Bewölkung, zwar nicht vollständig, aber zumindest teilweise durch die zuverlässigeren Messwerte über die Feuchtigkeit und des Einstrahlungswertes repräsentiert. In \autoref{fig:pairplot_hcr} ist erkenntlich, dass ein höhere Feuchtigkeit mit mehr Bewölkung einhergeht, gleichzeitig kommen weniger Sonnenstrahlen auf der Erdoberfläche an. 
 
 \subsubsection{Überflutung von Daten}
 
@@ -463,6 +463,12 @@ Anhand der Kalenderwochen lässt sich ablesen, dass für die Erstellung der Stre
 \caption{Streudiagramme zur Visualisierung der Korrelationen zwischen den Merkmalen bei einer Sonneneinstrahlung zwischen 550 und 600 $W/ M^2$}
 \label{fig:pairplot_filtered}
 \end {figure}
+
+Betrachten wir nun nochmals die Korrelation zwischen der Temperatur und der Stromproduktion, ist eine negative lineare Beziehung deutlich zu erkennen. Der negative Temperaturkoeffizient \textit{P_MPP} zeigt sich in der Heatmap ebenfalls ersichtlich, dort erhalten wir diesmal den Wert -0.68. Nachdem wir den Datensatz nach Datenreihen mit ähnlicher Sonneneinstrahlung gefiltert haben, bilden Temperatur und Stromertrag den absolut höchsten Korrelationskoeffizienten innerhalb der Heatmap. Dementsprechend ist die Temperatur nach der Sonneneinstrahlung der zweitwichtigste Wetterfaktor. Wie bereits zuvor erwähnt können Windböen dabei helfen, die Wärme auf den Solarmodule abzutransportieren und somit die Effizienz der Module erhöhen. Inwiefern dies tatsächlich der Fall ist, soll auf die gleiche Art untersucht werden. Folglich schauen wir uns Datenreihen mit ähnlicher Sonneneinstrahlung ein geringer Temperaturschwankung an.
+
+PLOT SIMILAR TEMPERATURE AND RADIATION
+
+ 
 
 \newpage
 
