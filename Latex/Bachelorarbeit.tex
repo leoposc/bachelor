@@ -394,9 +394,75 @@ Im heutigen Zeitalter werden Unmengen von Daten gesammelt, die sowohl strukturie
 
 Wie die Merkmale und die Zielvariable verknüpft sind, entscheidet über die Auswahl des passenden Lernalgorithmus. Im vorangehendem Kapitel haben wir bereits die Auswirkungen einzelner Faktoren erläutert. Auf Grund der Gegebenheit, dass die exakten Auswirkungen nicht umgehend erforscht sind, um sie beziffern zu können und sich zudem das gleiche Merkmal bei verschiedenen Solaranlagen unterschiedlich stark auswirken kann, ist ein Lernalgorithmus die richtige Wahl für diesen Anwendungsfall. Nicht zu vergessen, müssten bei einem konventionellem Algorithmus\footnote{Für jeden Anwendungsfall werden bei einem konventionellem Algorithmus eine Reihe von Regeln festgelegt, die ein jeweiliger Programmierer umsetzt.} Informationen über die Spezifikationen der Solaranlage einfließen, wodurch die Programmierung des Algorithmus zunehmend komplexer werden würde.
 
-Zuletzt gilt es zu überprüfen, wie stark die verschiedenen Merkmale tatsächlich mit der Zielvariablen korrelieren. Falls manche Merkmale zu irrelevant sind und dementsprechend nur geringe Auswirkungen auf die Stromerzeugung haben, kann die Eliminierung dieser Merkmale zu einer Verbesserung der Leistungsfähigkeit des Lernalgorithmus führen. 
+Zuletzt gilt es zu überprüfen, wie stark die verschiedenen Merkmale tatsächlich mit der Zielvariablen korrelieren. Falls manche Merkmale zu irrelevant sind und dementsprechend nur geringe Auswirkungen auf die Stromerzeugung haben, kann die Eliminierung dieser Merkmale zu einer Verbesserung der Leistungsfähigkeit des Lernalgorithmus führen. Dies gilt insbesondere, wenn nur ein kleiner Datensatz für die Erstellung eines Modells zur Verfügung steht. 
 
-test
+Um möglichst schnell für verschiedene Solaranlagen Prognosen erstellen zu können, könnte man zu Beginn absichtlich weniger relevante Merkmale ignorieren und sie erst zu einem späteren Zeitpunkt in das Modell einfließen lassen. Dies kann zu einer zu einer temporären Verbesserung der Ergebnisse führen.
+
+\subsection{Heatmap}
+
+\begin{figure}[H]
+\centering
+\def\svgwidth{375pt}
+\input{assets/heatmap.pdf_tex}
+\caption{Heatmap zur Visualisierung der Korrelationen zwischen den Merkmalen}
+\label{fig:heatmap}
+\end {figure}
+
+Eine Heatmap ist ein schnell und einfach zu erstellendes Diagramm, dass die Korrelationen zwischen den Merkmalen sowohl zueinander als auch zu der Zielvariablen aufzeigt. Die Zahlen auf den einzelnen Feldern, welche in \autoref{fig:heatmap} zu sehen sind, sollen die Korrelation zwischen den jeweiligen zwei Variablen widerspiegeln. Die Zahlenspanne beinhaltet Werte zwischen -1 bis 1. Die entsprechenden Werte werden dabei wie folgt berechnet:
+
+\begin{equation}
+r=\frac{\sum(x_i - \bar{x})(y_i - \bar{y})}
+{\sqrt{\sum(x_i - \bar{x})^2\sum(y_i -  \bar{y})^2}}
+\end{equation}
+
+%https://vitalflux.com/correlation-heatmap-with-seaborn-pandas/
+
+Aus der Gleichung wird ersichtlich, dass das Ergebnis maximal $(=1)$ wird, wenn die zwei Variablen $x$ und $y$ gleich stark steigen. Minimal hingegen wird das Ergebnis, wenn eine der Variablen steigt während die andere fällt. Der sogenannte \textit{Pearson Korrelationskoeffizient \textbf{r}} soll somit abbilden, wie stark zwei Variablen miteinander korrelieren. 
+
+\subsubsection{Korrelation und Kausalität}
+
+Anhand der Temperatur wird allerdings ersichtlich, dass die richtige Interpretation des Diagramms wichtig ist und teilweise die Aussagekraft nur sehr beschränkt ist. Wie wir wissen, leidet die Effizienz einer Solaranlage unter hohen Temperaturen. Dennoch vermittelt \autoref{fig:heatmap} den Eindruck, dass die Stromproduktion mit steigender Temperatur zunimmt. Schließlich haben die Temperatur und die Solarengerie den Korrelationskoeffizienten 0.22. Jedoch darf man die Multikollinearität zwischen den anderen Faktoren nicht außer Acht lassen. So ergibt sich für die Temperatur und der Sonneneinstrahlung der Wert 0.42. Wenig überraschend steigt die Temperatur mit erhöhter Sonneneinstrahlung. Wie so häufig bedeutet Korrelation nicht gleich Kausalität. 
+
+Die tatsächliche Realität ist, dass Temperatur und der Stromertrag einer Photovoltaikanlage einen negativen Korrelationskoeffizienten haben.
+
+\subsubsection{Nicht-lineare Beziehungen}
+
+Ein Korrelationskoeffizient, der sich im Nullbereich befindet, muss nicht unbedingt bedeuten, dass die zwei Variablen nicht miteinander korrelieren. Der Koeffizient spiegelt nur wieder, ob es zwischen den Variablen eine lineare Beziehung vorhanden ist. Selbstverständlich ist die Tageszeit ein äußerst guter Indiz, um zu schätzen, wie viel Strom produziert wird. Nach dem die Sonne mittags ihren Zenit erreicht hat, fällt in der Regel die Stromproduktion wieder ab, währenddessen die Stunden weiter fortschreiten. Im Jahresdurchschnitt und etwas vereinfacht könnte die Beziehung zwischen Stromertrag und Uhrzeit durch eine umgedrehte Parabel beschrieben werden, wobei selbstverständlich diese unten abgeschnitten ist, da die Stromproduktion nicht negativ wird.
+
+
+\subsection{Streudiagramm}
+
+\begin{figure}
+\centering
+\def\svgwidth{450pt}
+\input{assets/pairplot_all.pdf_tex}
+\caption{Streudiagramme zur Visualisierung der Korrelationen zwischen den Merkmalen}
+\label{fig:pairplot_all}
+\end {figure}
+
+Da im Gegensatz zu Computern Menschen visuelle Grafiken an Stelle einer mit Zahlen gefüllten Matrix besser verstehen können, sind Streudiagramme eine gute Herangehensweise, um die Zusammenhänge innerhalb des Datensatzes besser zu verstehen.
+
+\autoref{fig:pairplot_all} zeigt die Daten einer Solaranlage in der Gemeinde Linthicum im Bundestaat Maryland\footnote{Maryland ist ein Bundesstaat an der Ostküste der Vereingiten Staaten von Amerika.} und die dazugehörigen Wetterdaten. In \autoref{fig:pairplot_all} lässt sich die lineare Beziehung zwischen der Sonneneinstrahlung in der Nähe der Stadt Baltimore und dieser spezifischen Solaranlage beobachten. Allerdings sei an dieser Stelle erwähnt, dass nicht bei allen Solaranlagen das Streudiagramm ein solch deutliches Muster erblicken lässt. Dies kann man auf verschiedene Gründe zurückführen. Wechselrichter oder Solarmodule mit einer niedrigeren beziehungsweise höheren Effizienz könnten würden dazu führen, dass aus der gleichen Sonneneinstrahlung unterschiedlich viel in elektrische Energie umgewandelt werden kann. Ebenso gilt es zu bedenken, dass die Wetterdaten von einem separaten Dienst verwendet werden. Es ist nicht garantiert, das die Wetterstationen, die möglicherweise gar nicht exakt an diesem Standort stehen werden, für alle Orte auf der Welt die gleiche Qualität gewährleisten.
+
+\subsubsection{Qualität der Daten}
+
+In der Diagonalen der \autoref{fig:pairplot_all} sind Balkendiagramme abgebildet, die die Verteilung der einzelnen Merkmale aufweisen. Besonders interessant ist hierbei das Balkendiagramm zum Bewölkungsgrad in Prozent. Die auffällige Verteilung spiegelt die in Kapitel 4.3.1 bereits erwähnte Problematik die Bewölkung am Himmel anhand einer Prozentzahl darzustellen wider. Bei einem Index, der die Bewölkung einer Ortschaft wiedergeben soll, würden wir erwarten, dass die Verteilung keine größeren Ausreißer beinhaltet. Selbstverständlich ist die Bewölkung von Ort zu Ort unabhängig. So haben Städte in der Nähe von Flüssen in der Regel einen höheren Niederschlag, da sich über den Stadtflächen durch den Asphalt und die Betonflächen die Luft stärker erwärmt als über Grünflächen. Folglich verdunstet mehr Wasser, worauf die Wolken zu schwer werden können und letztendlich abregnen. Das bedeutet, dass es kein einheitliches Schaubild gibt, dass wir als Referenz verwenden könnten. Dass einige Werte jedoch eklatant auftreten, währenddessen deren benachbarte Werte überhaupt nicht in der Statistik vertreten sind, ist ein recht starkes Indiz dafür, dass es sich bei den Angaben zu der Bewölkung um Schätzwerte\footnote{Die Dokumentation des Wetterdienstleisters beschreibt den Wert wie folgt: "Die Wolkenbedeckung ist der Anteil des Himmels, der von Wolken bedeckt ist, ausgedrückt in Prozent. Die Wolkenbedeckung gilt für alle Höhenlagen. Die Tageswerte umfassen den Mittelwert der stündlichen Werte der Wolkenbedeckung."
+
+Wie dieser Wert zu Stande kommt oder ob verschiedene Wolkentypen unterschiedlich bewertet werden, bleibt dabei unklar.} handelt.
+
+Da bei den anderen Werten keine Auffälligkeiten zu verzeichnen sind und deren Messung vergleichsweise einfach und standardisiert ist, können wir davon ausgehen, dass sie vertrauenswürdig sind. Für den Bewölkungsgrad 
+
+\subsubsection{Überflutung von Daten}
+
+Anhand der Kalenderwochen lässt sich ablesen, dass für die Erstellung der Streudiagramme verwendete Datensatz die Zeitspanne eines halben Jahres umfasst. Durch die große Menge an Datenpunkte werden Streudiagramme, die zwei schwach miteinander korrelierende Variablen beinhalten, häufig unübersichtlich. Die vielen Datenpunkte im Diagramm färben das gesamte Schaubild ein, sodass sich kein Muster mehr erkennen lässt. Wie bei der Heatmap kommt hinzu, dass die Sonneneinstrahlung andere Wetterfaktoren als auch selbst von diesen stark beeinflusst wird. Um Abhilfe zu schaffen, können wir die Daten filtern. Der Zusammenhang zwischen Sonneneinstrahlung und Stromproduktion ist gut erkenntlich. Ohne Zweifel besitzt dieses Merkmal die größte Hebelwirkung auf die Stromproduktion einer Solaranlage. Um besser die Auswirkungen der anderen Merkmale zu studieren, betrachten wir nun ausschließlich Datenreihen in denen der Einstrahlungswert zwischen 550 und 600 $W/ M^2$ liegt. Zuvor umfasste der Datensatz Werte von 0 bis zu 1000 $W/ M^2$.
+
+\begin{figure}
+\centering
+\def\svgwidth{450pt}
+\input{assets/pairplot_filtered.pdf_tex}
+\caption{Streudiagramme zur Visualisierung der Korrelationen zwischen den Merkmalen bei einer Sonneneinstrahlung zwischen 550 und 600 $W/ M^2$}
+\label{fig:pairplot_filtered}
+\end {figure}
 
 \newpage
 

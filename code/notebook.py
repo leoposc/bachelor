@@ -7,8 +7,8 @@ manager = DBManager()
 # =============================================================================
 # APPLEWOOD, 10
 # =============================================================================
-# manager.fetch_solar_data(10, "2022-11-23", "2022-12-20")
-# manager.fetch_weather_data("applewood", "2022-11-11", "2022-12-20")
+manager.fetch_solar_data(10, "2022-11-23", "2022-12-20")
+manager.fetch_weather_data("applewood", "2022-11-11", "2022-12-20")
 
 # =============================================================================
 # LINTHICUM, 1200
@@ -34,7 +34,7 @@ manager = DBManager()
 # NEW SMYRNA BEACH, 1231
 # =============================================================================
 # manager.fetch_solar_data(1257, "2014-05-01", "2014-05-31")
-manager.fetch_weather_data("New Orleans", "2014-05-01", "2014-05-31")
+# manager.fetch_weather_data("New Orleans", "2014-05-01", "2014-05-31")
 
 # %%
 
@@ -44,9 +44,9 @@ manager.fetch_weather_data("New Orleans", "2014-05-01", "2014-05-31")
 
 from scikit import ScikitManager
 # sci = ScikitManager(location='applewood', solarsystem_id=10)
-# sci = ScikitManager(location='linthicum', solarsystem_id=1200)
+sci = ScikitManager(location='linthicum', solarsystem_id=1200)
 # sci = ScikitManager(location='Cherry Hill Townhill', solarsystem_id=1201)
-sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)
+# sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)
 
 
 # %%
@@ -55,21 +55,21 @@ sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)
 sci.get_data()
 
 # sci.calculate_energyoutput_index()
-sci.choose_features(['solarradiation',
-                     'timeepoch',
+sci.choose_features(['timeepoch',
+                    #  'solarradiation',
                     #  'energyoutput_index',
-                     'calendarweek',
-                     'hour',
-                     'temperature',
+                    #  'calendarweek',
+                    #  'hour',
+                    #  'temperature',
                     #  'wind',
-                    #  'humidity',
+                     'humidity',
                      'cloudcoverage',
-                     'energyoutput'
+                    #  'energyoutput'
                      ])
 # sci.update_numpy_arrays()
 
 #%%
-sci.filter_low_energyoutput()
+sci.filter_low_energyoutput() 
 # sci.split_data(0.1)
 sci.split_data_by_days(0.1)
 # sci.transform_hours()
@@ -77,9 +77,12 @@ sci.split_data_by_days(0.1)
 
 #%%
 
+sci.compare_similar_radiation(550, 600)
+
+#%%
+
 sci.model_selection('decisiontreeregressor')
 # sci.grid_search()
-# # sci.compare_similar_radiation(400, 900)
 sci.predict()
 sci.evaluate()
 # %%

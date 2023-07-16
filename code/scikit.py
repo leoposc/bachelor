@@ -242,6 +242,7 @@ class ScikitManager():
 
 
     def visualize_pairwise_correlation(self):
+        sns.set(font_scale=1.3)
         sns.pairplot(self.XY_df[self.features], height=2.5)
         plt.tight_layout()
         plt.show()
