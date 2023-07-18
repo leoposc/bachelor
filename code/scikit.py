@@ -272,7 +272,7 @@ class ScikitManager():
                     "max_depth" : [8,9,11,12,16],
                     "min_samples_leaf":[3,4,5,6,7],
                     "min_weight_fraction_leaf":[0.0, 0.1,0.2,0.3],
-                    "max_features":["auto","log2","sqrt",None],
+                    "max_features":["log2","sqrt",None],
                     "max_leaf_nodes":[None,8,16,32,64,128,256,512]
                     }
         model_type = str(type(self.model))

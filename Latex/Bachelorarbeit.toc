@@ -30,13 +30,18 @@
 \contentsline {subsubsection}{\numberline {5.3.2}Überflutung von Daten}{32}{subsubsection.5.3.2}%
 \contentsline {section}{\numberline {6}Datenvorverarbeitung}{34}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Ausreißer}{34}{subsection.6.1}%
-\contentsline {section}{\numberline {7}Maschinelles Lernen - Auswahl des Modells}{35}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Diskretisierung der Zielvariablen}{35}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Lineare Beziehungen}{36}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Schlussfolgerungen für das Training des Modells}{37}{subsection.7.3}%
-\contentsline {subsubsection}{\numberline {7.3.1}Schwierigkeiten bei unbekannten Werten}{37}{subsubsection.7.3.1}%
-\contentsline {subsubsection}{\numberline {7.3.2}Limitierte Wertemenge für mögliche Prognosen}{37}{subsubsection.7.3.2}%
-\contentsline {section}{\numberline {8}Optimierung der Hyperparameter}{39}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Tiefe des Entscheidungsbaum}{39}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Weitere Hyperparameter}{40}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Hyperparameter auswählen}{41}{subsection.8.3}%
+\contentsline {section}{\numberline {7}Lernalgorithmus}{36}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Diskretisierung der Zielvariablen}{36}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Lineare Beziehungen}{37}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Schlussfolgerungen für das Training des Modells}{38}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Schwierigkeiten bei unbekannten Werten}{38}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}Limitierte Wertemenge für mögliche Prognosen}{38}{subsubsection.7.3.2}%
+\contentsline {section}{\numberline {8}Optimierung der Hyperparameter}{40}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Tiefe des Entscheidungsbaum}{40}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Weitere Hyperparameter}{42}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}Mindestanzahl an Proben pro Blatt}{42}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.2}Beschränkung der Merkmale}{42}{subsubsection.8.2.2}%
+\contentsline {subsubsection}{\numberline {8.2.3}Maximalanzahl an Blättern}{42}{subsubsection.8.2.3}%
+\contentsline {subsubsection}{\numberline {8.2.4}Aufteilung der Proben}{42}{subsubsection.8.2.4}%
+\contentsline {subsection}{\numberline {8.3}Hyperparameter auswählen}{42}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Evaluierung des Lernalgorithmus}{44}{section.9}%

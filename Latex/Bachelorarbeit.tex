@@ -476,16 +476,20 @@ PLOT SIMILAR TEMPERATURE AND RADIATION
 
 Für die Forschung dieser Arbeit wurden ein paar Solaranlagen ausgewählt, um zu untersuchen, wie gut anhand von Wetterdaten sich die Solarstromproduktion prognostizieren lässt. Selbst bei den wenigen Solaranlagen, die für diese Forschung verwendet wurden, konnte festgestellt werden, dass die Zusammenhänge zwischen den einzelnen Wettermerkmalen und der erzeugten Strommenge sehr unterschiedlich sein kann.
 
+Auf Grund der Gegebenheit, dass die Zusammenhänge zwischen den Merkmalen und der Zielvariablen je nach Solaranlage unterschiedlich sind, entscheiden wir uns für einen Lernalgorithmus, der möglichst wenig Datenvorverarbeitung benötigt. Dies soll zu dem Ziel dieser Arbeit beitragen, dass für beliebige Solaranlagen ein qualitativ hochwertiges Prognosemodell erstellt werden kann, dass in der Lage ist den erzeugten Solarstrom vorherzusagen.
+
 Ziel der Datenvorverarbeitung ist es, dass die Daten für den jeweiligen Lernalgorithmus optimiert werden und somit die Leistungsfähigkeit des Modells gesteigert werden kann. Zudem soll somit vermieden werden, dass Unstimmigkeiten innerhalb des Datensatzes die Ergebnisse des Modells verzerren oder gänzlich verfälschen.
 
 \subsection{Ausreißer}
+
+Selbst wenn für ein Entscheidungsbaum die Datenvorverarbeitung nicht zwingend von Nöten ist, ist es dennoch zu empfehlen Unstimmigkeiten in den Daten zu beseitigen.
 
 Unstimmigkeiten innerhalb des Datensatzes werden häufig als Ausreißer betitelt, da sich nicht zum Muster zwischen ihresgleichen und der Zielvariablen passen. Da solche Ausreißer unausweichlich und in sämtlichen Datensätzen auftauchen können, dürfen diese nicht ungeachtet bleiben. Ein möglicher Grund für etwaige Ausreißer könnte ein defektes Bauteil des Solarsystems sein. Ein nicht funktionierender würde dazu führen, dass trotz idealer Wetterbedingungen die erzeugte Wechselspannung ausbleibt. Umso länger das Solarsystem nicht repariert wird, desto wahrscheinlicher ist es, dass der Fehler übersehen und die Kalenderwoche für die übermäßige Abweichung verantwortlich gemacht wird.
 
 
 \newpage
 
-\section{Maschinelles Lernen - Auswahl des Modells}
+\section{Lernalgorithmus}
 
 Die Konsequenz, dass die Zusammenhänge zwischen den Merkmalen und der Zielvariablen sehr verschieden sein können, ist es ein Modell auszuwählen, dass für seine Kontingenz gegenüber der Datenvorverarbeitung bekannt ist. 
 
@@ -530,11 +534,11 @@ Die zweite Schlussfolgerung bezieht sich auf die die unterschiedliche Leistung v
 
 \section{Optimierung der Hyperparameter}
 
-Bei einem Entscheidungsbaum ist es auf Grund seiner Flexibilität gegenüber der verschiedenen Beziehungen zwischen den Merkmalen und der Zielvariablen von besonderer Wichtigkeit die Hyperparameter entsprechend anzupassen. Wenn ein Entscheidungsbaum in seiner Flexibilität nicht angepasst wird, neigt er dazu sich zu sehr an den Trainingsdatensatz anzupassen. Folglich werden die Datenreihen des Trainingsdatensatz gut abgebildet, sobald das 
+Bei einem Entscheidungsbaum ist es auf Grund seiner Flexibilität gegenüber der verschiedenen Beziehungen zwischen den Merkmalen und der Zielvariablen von besonderer Wichtigkeit die Hyperparameter entsprechend anzupassen. Wenn ein Entscheidungsbaum in seiner Flexibilität nicht angepasst wird, neigt er dazu sich zu sehr an den Trainingsdatensatz anzupassen. Die Datenreihen des Trainingsdatensatz werden häufig perfekt abgebildet, sodass dieses Modell für den Trainingsdatensatz den Maximalwert bei der Evaluierung erzielt. In solchen Fällen schneiden zuvor unbekannte Daten, der sogenannte Testdatensatz, signifikant schlechter ab.
 
 \subsection{Tiefe des Entscheidungsbaum}
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \def\svgwidth{350pt}
 \input{assets/decisiontree_example_2.pdf_tex}
@@ -559,14 +563,35 @@ Die roten Punkte stellen die Trainingsdaten dar, die für die Erstellung des Mod
 
 \subsection{Weitere Hyperparameter}
 
-Sämtliche Hyperparameter haben den Sinn und Zweck, dass Modell bezüglich der Anpassung an die Trainingsdaten zu beschränken. 
+Sämtliche Hyperparameter haben den Sinn und Zweck, dass Modell bezüglich der Anpassung an die Trainingsdaten zu beschränken. Im Folgenden sollen ein paar der wichtigsten Hyperparameter detaillierter erläutert werden. \autoref{fig:binary_tree} zeigt die Bestandteile eines Binärbaums.
 
+\subsubsection{Mindestanzahl an Proben pro Blatt} 
+
+Dieser Parameter entscheidet, wie viele Proben mindestens in einem Blatt enthalten sein müssen, damit die Existenz dieses Blattes und die des Bruder-Blattes berechtigt ist. Wenn die Bedingung nicht erfüllt, teilt der sich darüber liegende Knotenpunkt nicht weiter auf und wird selbst zum Blatt. Da Auswirkung des Grenzwertes abhängig von der Größe des Datensatzes ist, ist es durchaus sinnvoll den Mindestwert ebenfalls abhängig von der Größe zu gestalten. Seit der Version 0.18 des Entscheidungsbaum aus der \textit{scikit-learn} Bibliothek ist es möglich eine Fließkommazahl als Parameter anzugeben, woraufhin diese mit der Anzahl der Datenreihen multipliziert wird und somit den Grenzwert bildet.
+
+\subsubsection{Beschränkung der Merkmale}
+
+Bei jedem Knotenpunkt wird neu entschieden, welches der Merkmale sich am besten eignet, um den Datensatz weiter zu unterteilen. Da an jedem Knotenpunkt ein anderes Merkmal das Beste sein könnte, um die Daten aufzuteilen, muss die Berechnung immer wieder erneut durchgeführt werden. Um die Rechenzeit zu verkürzen, lässt sich die Anzahl der zu berücksichtigten Merkmale beschränken. Wenn die Anzahl der zu berücksichtigen Merkmale limitiert werden soll, wird die maximale Anzahl an Merkmalen zufällig aus der Gesamtliste der Merkmalen ausgewählt. 
+
+\subsubsection{Maximalanzahl an Blättern}
+
+Die Maximalanzahl an Blättern ähnelt dem Parameter, der die maximale Höhe des Baums bestimmt. Schließlich lässt sich die Anzahl der Blätter bei einem vollständigem Binärbaum durch die Formel $n=2^h$ beschreiben lässt. Folglich können beide Parameter sich gegenseitig begrenzen.
+
+\subsubsection{Aufteilung der Proben}
 
 \subsection{Hyperparameter auswählen}
 
 Da im Vorhinein schwer zu beurteilen ist, welche Hyperparameter am besten zum jeweiligen Datensatz passen, ist eine Rastersuche eine Methode um diese bestmöglichen Parameter zu finden. Eine Rastersuche ist ein Vorgehen, bei der mit roher Gewalt \textit{(zu engl.: brute-force)} versucht wird, die beste Kombination von Hyperparametern zu finden, indem alle Variationen durchprobiert werden.
 
 Da die \textit{Brute-Force-Methode} mit erheblich mehr Rechenaufwand verbunden ist - schließlich muss für jeden Kombination das Modell trainiert und evaluiert werden -, ist eine verkürzte Rastersuche eine beliebte Alternative. Dabei werden nicht alle Variationen durchprobiert, sondern eine zufällige Kombination verschiedener Hyperparameter getestet. Sofern man in Kauf nehmen kann, nicht das bestmögliche Ergebnis zu erzielen, kann durch die randomisierte Auswahl der Kombinationen an Hyperparametern erheblich Rechenzeit eingespart werden.
+
+Um reproduzierbare Ergebnisse zu erhalten, verwenden wir die \textit{Brute-Force-Methode}, um die optimalen Parameter für das jeweilige Modell zu finden. Bei verschiedenen Solaranlagen wurden zwar unterschiedliche Kombinationen an Hyperparametern als optimal bewertet, allerdings waren diese selten weit voneinander entfernt. Folglich können wir das Raster auf ein paar wenige Kombinationen reduzieren und verringern damit gleichzeitig den Rechenaufwand.
+
+OPTIMIERUNG DES RASTERS UNTERSUCHEN UND DIE GEFUNDEN HYPERPARAMETER HIER ABBILDEN
+
+\newpage
+
+\section{Evaluierung des Lernalgorithmus}
 
 
 \end{document}
