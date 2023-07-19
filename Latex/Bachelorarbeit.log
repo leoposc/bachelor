@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.9)  18 JUL 2023 17:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.9)  19 JUL 2023 15:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -993,7 +993,10 @@ as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.567 
-       <./assets//decisiontree_example.pdf>] [42] [43] [44]
+       <./assets//decisiontree_example.pdf>]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 576.
+ [42] [43] [44] [45]
 (./Bachelorarbeit.aux)
 
 LaTeX Warning: There were undefined references.
@@ -1002,11 +1005,11 @@ Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
 (rerunfilecheck)             Checksum: B89BE55666516C4B6758B8C5FB8A3D7B;8719.
  ) 
 Here is how much of TeX's memory you used:
- 11967 strings out of 476047
- 196107 string characters out of 5791252
+ 11972 strings out of 476047
+ 196160 string characters out of 5791252
  1870248 words of memory out of 5000000
- 32080 multiletter control sequences out of 15000+600000
- 550072 words of font info for 67 fonts, out of 8000000 for 9000
+ 32082 multiletter control sequences out of 15000+600000
+ 553088 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,14n,76p,2238b,615s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -1020,10 +1023,10 @@ l/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texli
 ve/2023/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/202
 3/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2023/texmf
 -dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Bachelorarbeit.pdf (45 pages, 1112474 bytes).
+Output written on Bachelorarbeit.pdf (46 pages, 1114954 bytes).
 PDF statistics:
- 696 PDF objects out of 1000 (max. 8388607)
- 551 compressed objects within 6 object streams
- 108 named destinations out of 1000 (max. 500000)
+ 704 PDF objects out of 1000 (max. 8388607)
+ 558 compressed objects within 6 object streams
+ 110 named destinations out of 1000 (max. 500000)
  549 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -573,9 +573,15 @@ Dieser Parameter entscheidet, wie viele Proben mindestens in einem Blatt enthalt
 
 Bei jedem Knotenpunkt wird neu entschieden, welches der Merkmale sich am besten eignet, um den Datensatz weiter zu unterteilen. Da an jedem Knotenpunkt ein anderes Merkmal das Beste sein könnte, um die Daten aufzuteilen, muss die Berechnung immer wieder erneut durchgeführt werden. Um die Rechenzeit zu verkürzen, lässt sich die Anzahl der zu berücksichtigten Merkmale beschränken. Wenn die Anzahl der zu berücksichtigen Merkmale limitiert werden soll, wird die maximale Anzahl an Merkmalen zufällig aus der Gesamtliste der Merkmalen ausgewählt. 
 
+An dieser Stelle sei angemerkt, dass ein sogenannter \textit{gieriger Algorithmus}\footnote{\textit{Gierige Algorithmen} entscheiden schrittweise über nächst besten Folgeschritt. Folglich können wir uns bei dem Ergebnis, welches durch den Algorithmus gefunden wurde, nicht sicher sein, dass es sich um das optimale Ergebnis handelt. Der Vorteil von dieser Art von Algorithmen vergleichsweise schnell und leicht zu implementieren sind. Zudem sind die Ergebnisse in der Regel gut genug, um den Anforderungen gerecht zu werden.} den Entscheidungsbaum erstellt. Für den Entscheidungsbaum bedeutet dies, dass bei jedem Knotenpunkt das momentan beste Merkmal aus der eventuell temporär begrenzten Merkmalsliste ausgewählt wird. Durch die Begrenzung der Merkmale kann es vorkommen, dass ein Merkmal nicht berücksichtigt wird, dass zwar im aktuellen Schritt für die Teilung des Datensatzes das beste Ergebnis erzielt hätte, jedoch nicht für das optimale Endergebnis.
+
+Ob dieses Szenario tatsächlich eintreten könnte, lässt sich nur schwerlich voraussagen. Dementsprechend soll für die Suche nach den besten Merkmalen für die optimale Teilung, die bei jedem Knotenpunkt im Entscheidungsbaum stattfindet, die zusätzliche Rechenzeit in Kauf genommen werden. Stattdessen beschränken wir die Rechenoperationen an anderer Stelle, indem wir die automatisierte Rastersuche auf die aus Erfahrung gut geeigneten Hyperparametern beschränken.
+
 \subsubsection{Maximalanzahl an Blättern}
 
 Die Maximalanzahl an Blättern ähnelt dem Parameter, der die maximale Höhe des Baums bestimmt. Schließlich lässt sich die Anzahl der Blätter bei einem vollständigem Binärbaum durch die Formel $n=2^h$ beschreiben lässt. Folglich können beide Parameter sich gegenseitig begrenzen.
+
+Nur durch die Tatsache, dass es sich bei dem erstellten Entscheidungsbaum nicht zwingend um einen vollständigen Binärbaum handeln muss, können die zwei sehr ähnlichen Parameter den Entscheidungsbaum auf verschiedene Weise beeinträchtigen.  
 
 \subsubsection{Aufteilung der Proben}
 
