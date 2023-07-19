@@ -1,0 +1,1443 @@
+%% Creator: Inkscape inkscape 0.92.5, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'binary_tree_linthicum.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1362.29819292bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.48410754)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{binary_tree_linthicum.pdf}}%
+    \put(-0.79601343,0.62057423){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 418.5\end{tabular}}}}%
+    \put(-0.79601343,0.60824177){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 178382289.341\end{tabular}}}}%
+    \put(-0.79601343,0.59590941){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 1443\end{tabular}}}}%
+    \put(-0.79601343,0.58357696){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 14125.527\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{binary_tree_linthicum.pdf}}%
+    \put(-2.2531473,0.5389454){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 157.5\end{tabular}}}}%
+    \put(-2.2531473,0.52661295){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 51427411.533\end{tabular}}}}%
+    \put(-2.2531473,0.5142805){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 939\end{tabular}}}}%
+    \put(-2.2531473,0.50194813){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 6336.676\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{binary_tree_linthicum.pdf}}%
+    \put(-2.16398545,0.53843867){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}True\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{binary_tree_linthicum.pdf}}%
+    \put(0.37630032,0.5389454){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 689.5\end{tabular}}}}%
+    \put(0.37630032,0.52661295){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 91304562.577\end{tabular}}}}%
+    \put(0.37630032,0.5142805){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 504\end{tabular}}}}%
+    \put(0.37630032,0.50194813){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 28636.897\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{binary_tree_linthicum.pdf}}%
+    \put(0.28741016,0.53964426){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}False\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{binary_tree_linthicum.pdf}}%
+    \put(-4.35993531,0.45731649){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 90.0\end{tabular}}}}%
+    \put(-4.35993531,0.44498413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 11003470.453\end{tabular}}}}%
+    \put(-4.35993531,0.43265167){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 598\end{tabular}}}}%
+    \put(-4.35993531,0.42031926){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2873.527\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{binary_tree_linthicum.pdf}}%
+    \put(-2.2531473,0.45731649){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 12.5\end{tabular}}}}%
+    \put(-2.2531473,0.44498413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 64401231.64\end{tabular}}}}%
+    \put(-2.2531473,0.43265167){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 341\end{tabular}}}}%
+    \put(-2.2531473,0.42031926){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 12409.883\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{binary_tree_linthicum.pdf}}%
+    \put(-6.44983965,0.37568767){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 23.5\end{tabular}}}}%
+    \put(-6.44983965,0.36335521){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 6556771.867\end{tabular}}}}%
+    \put(-6.44983965,0.3510228){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 430\end{tabular}}}}%
+    \put(-6.44983965,0.3386904){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 1952.684\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{binary_tree_linthicum.pdf}}%
+    \put(-4.35993531,0.37568767){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 14.5\end{tabular}}}}%
+    \put(-4.35993531,0.36335521){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 14659477.95\end{tabular}}}}%
+    \put(-4.35993531,0.3510228){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 168\end{tabular}}}}%
+    \put(-4.35993531,0.3386904){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 5230.446\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{binary_tree_linthicum.pdf}}%
+    \put(-7.42542197,0.2940588){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 12.5\end{tabular}}}}%
+    \put(-7.42542197,0.28172639){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 769479.74\end{tabular}}}}%
+    \put(-7.42542197,0.26939394){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 165\end{tabular}}}}%
+    \put(-7.42542197,0.25706153){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 789.388\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{binary_tree_linthicum.pdf}}%
+    \put(-6.44983965,0.2940588){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 16.5\end{tabular}}}}%
+    \put(-6.44983965,0.28172639){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 8792951.985\end{tabular}}}}%
+    \put(-6.44983965,0.26939394){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 265\end{tabular}}}}%
+    \put(-6.44983965,0.25706153){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2677.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{binary_tree_linthicum.pdf}}%
+    \put(-7.9767104,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 8.5\end{tabular}}}}%
+    \put(-7.9767104,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 166984.27\end{tabular}}}}%
+    \put(-7.9767104,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 100\end{tabular}}}}%
+    \put(-7.9767104,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 562.7\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{binary_tree_linthicum.pdf}}%
+    \put(-7.42542197,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 12.5\end{tabular}}}}%
+    \put(-7.42542197,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1495711.35\end{tabular}}}}%
+    \put(-7.42542197,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 65\end{tabular}}}}%
+    \put(-7.42542197,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 1138.138\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{binary_tree_linthicum.pdf}}%
+    \put(-8.20867731,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 8.5\end{tabular}}}}%
+    \put(-8.20867731,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 123330.723\end{tabular}}}}%
+    \put(-8.20867731,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 47\end{tabular}}}}%
+    \put(-8.20867731,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 386.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{binary_tree_linthicum.pdf}}%
+    \put(-7.9767104,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperature <= 1.5\end{tabular}}}}%
+    \put(-7.9767104,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 153453.975\end{tabular}}}}%
+    \put(-7.9767104,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 53\end{tabular}}}}%
+    \put(-7.9767104,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 719.396\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{binary_tree_linthicum.pdf}}%
+    \put(-8.41495165,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 76.5\end{tabular}}}}%
+    \put(-8.41495165,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 205580.245\end{tabular}}}}%
+    \put(-8.41495165,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 14\end{tabular}}}}%
+    \put(-8.41495165,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 641.571\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{binary_tree_linthicum.pdf}}%
+    \put(-8.20867731,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 6.5\end{tabular}}}}%
+    \put(-8.20867731,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 48971.032\end{tabular}}}}%
+    \put(-8.20867731,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 33\end{tabular}}}}%
+    \put(-8.20867731,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 277.576\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{binary_tree_linthicum.pdf}}%
+    \put(-8.57057503,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 243085.714\end{tabular}}}}%
+    \put(-8.57057503,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-8.57057503,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 816.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{binary_tree_linthicum.pdf}}%
+    \put(-8.41495165,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 107224.122\end{tabular}}}}%
+    \put(-8.41495165,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-8.41495165,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 467.143\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{binary_tree_linthicum.pdf}}%
+    \put(-8.2622646,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 17.5\end{tabular}}}}%
+    \put(-8.2622646,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 46338.225\end{tabular}}}}%
+    \put(-8.2622646,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 22\end{tabular}}}}%
+    \put(-8.2622646,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 213.045\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{binary_tree_linthicum.pdf}}%
+    \put(-8.11251381,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 29251.686\end{tabular}}}}%
+    \put(-8.11251381,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 11\end{tabular}}}}%
+    \put(-8.11251381,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 406.636\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{binary_tree_linthicum.pdf}}%
+    \put(-8.40320649,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1106.61\end{tabular}}}}%
+    \put(-8.40320649,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 10\end{tabular}}}}%
+    \put(-8.40320649,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 63.7\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{binary_tree_linthicum.pdf}}%
+    \put(-8.25932831,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 49955.583\end{tabular}}}}%
+    \put(-8.25932831,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 12\end{tabular}}}}%
+    \put(-8.25932831,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 337.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{binary_tree_linthicum.pdf}}%
+    \put(-8.01635032,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 234650.988\end{tabular}}}}%
+    \put(-8.01635032,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-8.01635032,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 454.889\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{binary_tree_linthicum.pdf}}%
+    \put(-7.86072695,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 6.5\end{tabular}}}}%
+    \put(-7.86072695,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 119607.432\end{tabular}}}}%
+    \put(-7.86072695,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 44\end{tabular}}}}%
+    \put(-7.86072695,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 773.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{binary_tree_linthicum.pdf}}%
+    \put(-7.95982674,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 23.5\end{tabular}}}}%
+    \put(-7.95982674,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 106840.457\end{tabular}}}}%
+    \put(-7.95982674,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 26\end{tabular}}}}%
+    \put(-7.95982674,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 663.346\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{binary_tree_linthicum.pdf}}%
+    \put(-7.80713966,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperature <= 8.5\end{tabular}}}}%
+    \put(-7.80713966,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 95205.571\end{tabular}}}}%
+    \put(-7.80713966,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 18\end{tabular}}}}%
+    \put(-7.80713966,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 932.611\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=28]{binary_tree_linthicum.pdf}}%
+    \put(-8.10590716,-0.1140855){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 81.5\end{tabular}}}}%
+    \put(-8.10590716,-0.12641793){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 78793.573\end{tabular}}}}%
+    \put(-8.10590716,-0.13875034){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 15\end{tabular}}}}%
+    \put(-8.10590716,-0.15108276){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 564.6\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=29]{binary_tree_linthicum.pdf}}%
+    \put(-7.95909266,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 113658.0\end{tabular}}}}%
+    \put(-7.95909266,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 11\end{tabular}}}}%
+    \put(-7.95909266,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 798.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=30]{binary_tree_linthicum.pdf}}%
+    \put(-8.18078255,-0.20188057){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 77863.438\end{tabular}}}}%
+    \put(-8.18078255,-0.21421299){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-8.18078255,-0.22654541){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 482.25\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=31]{binary_tree_linthicum.pdf}}%
+    \put(-8.03103177,-0.20188057){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 63248.776\end{tabular}}}}%
+    \put(-8.03103177,-0.21421299){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-8.03103177,-0.22654541){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 658.714\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=32]{binary_tree_linthicum.pdf}}%
+    \put(-7.80787373,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 135482.395\end{tabular}}}}%
+    \put(-7.80787373,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-7.80787373,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 995.778\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=33]{binary_tree_linthicum.pdf}}%
+    \put(-7.65518666,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 46948.691\end{tabular}}}}%
+    \put(-7.65518666,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-7.65518666,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 869.444\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=34]{binary_tree_linthicum.pdf}}%
+    \put(-7.50029737,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 7.5\end{tabular}}}}%
+    \put(-7.50029737,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1545032.0\end{tabular}}}}%
+    \put(-7.50029737,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 48\end{tabular}}}}%
+    \put(-7.50029737,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 1486.854\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=35]{binary_tree_linthicum.pdf}}%
+    \put(-7.35054658,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 75.0\end{tabular}}}}%
+    \put(-7.35054658,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 43649.426\end{tabular}}}}%
+    \put(-7.35054658,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 17\end{tabular}}}}%
+    \put(-7.35054658,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 153.529\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=36]{binary_tree_linthicum.pdf}}%
+    \put(-7.65445259,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 6.5\end{tabular}}}}%
+    \put(-7.65445259,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 480540.56\end{tabular}}}}%
+    \put(-7.65445259,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 35\end{tabular}}}}%
+    \put(-7.65445259,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 1126.2\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=37]{binary_tree_linthicum.pdf}}%
+    \put(-7.49882922,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 3117952.746\end{tabular}}}}%
+    \put(-7.49882922,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 13\end{tabular}}}}%
+    \put(-7.49882922,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2457.846\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=38]{binary_tree_linthicum.pdf}}%
+    \put(-7.65445259,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 370136.947\end{tabular}}}}%
+    \put(-7.65445259,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 13\end{tabular}}}}%
+    \put(-7.65445259,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 625.231\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=39]{binary_tree_linthicum.pdf}}%
+    \put(-7.49882922,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 90.0\end{tabular}}}}%
+    \put(-7.49882922,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 309846.357\end{tabular}}}}%
+    \put(-7.49882922,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 22\end{tabular}}}}%
+    \put(-7.49882922,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 1422.227\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=40]{binary_tree_linthicum.pdf}}%
+    \put(-7.50103144,-0.1140855){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 79.5\end{tabular}}}}%
+    \put(-7.50103144,-0.12641793){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 359321.573\end{tabular}}}}%
+    \put(-7.50103144,-0.13875034){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 15\end{tabular}}}}%
+    \put(-7.50103144,-0.15108276){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 1531.4\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=41]{binary_tree_linthicum.pdf}}%
+    \put(-7.34540807,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 123559.347\end{tabular}}}}%
+    \put(-7.34540807,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-7.34540807,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 1188.286\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=42]{binary_tree_linthicum.pdf}}%
+    \put(-7.58838606,-0.20188057){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 439097.0\end{tabular}}}}%
+    \put(-7.58838606,-0.21421299){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-7.58838606,-0.22654541){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 1397.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=43]{binary_tree_linthicum.pdf}}%
+    \put(-7.43863528,-0.20188057){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 223912.857\end{tabular}}}}%
+    \put(-7.43863528,-0.21421299){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-7.43863528,-0.22654541){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 1685.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=44]{binary_tree_linthicum.pdf}}%
+    \put(-7.35201473,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1929.8\end{tabular}}}}%
+    \put(-7.35201473,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 10\end{tabular}}}}%
+    \put(-7.35201473,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 77.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=45]{binary_tree_linthicum.pdf}}%
+    \put(-7.21107281,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 82929.551\end{tabular}}}}%
+    \put(-7.21107281,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-7.21107281,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 262.857\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=46]{binary_tree_linthicum.pdf}}%
+    \put(-6.645837,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 54.5\end{tabular}}}}%
+    \put(-6.645837,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 9641522.341\end{tabular}}}}%
+    \put(-6.645837,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 185\end{tabular}}}}%
+    \put(-6.645837,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 3599.897\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=47]{binary_tree_linthicum.pdf}}%
+    \put(-6.17236025,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 44.5\end{tabular}}}}%
+    \put(-6.17236025,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 306175.985\end{tabular}}}}%
+    \put(-6.17236025,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 80\end{tabular}}}}%
+    \put(-6.17236025,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 542.8\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=48]{binary_tree_linthicum.pdf}}%
+    \put(-6.88881499,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperature <= 4.5\end{tabular}}}}%
+    \put(-6.88881499,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 23701856.179\end{tabular}}}}%
+    \put(-6.88881499,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 26\end{tabular}}}}%
+    \put(-6.88881499,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 5691.115\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=49]{binary_tree_linthicum.pdf}}%
+    \put(-6.645837,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 44.5\end{tabular}}}}%
+    \put(-6.645837,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 6510298.147\end{tabular}}}}%
+    \put(-6.645837,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 159\end{tabular}}}}%
+    \put(-6.645837,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 3257.937\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=50]{binary_tree_linthicum.pdf}}%
+    \put(-7.05251315,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperature <= 1.0\end{tabular}}}}%
+    \put(-7.05251315,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 30557634.102\end{tabular}}}}%
+    \put(-7.05251315,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 14\end{tabular}}}}%
+    \put(-7.05251315,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 8040.429\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=51]{binary_tree_linthicum.pdf}}%
+    \put(-6.88881499,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1751954.354\end{tabular}}}}%
+    \put(-6.88881499,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 12\end{tabular}}}}%
+    \put(-6.88881499,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2950.25\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=52]{binary_tree_linthicum.pdf}}%
+    \put(-7.2140091,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 14927861.551\end{tabular}}}}%
+    \put(-7.2140091,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-7.2140091,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 5050.857\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=53]{binary_tree_linthicum.pdf}}%
+    \put(-7.05251315,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 28312332.0\end{tabular}}}}%
+    \put(-7.05251315,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-7.05251315,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 11030.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=54]{binary_tree_linthicum.pdf}}%
+    \put(-6.72731905,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 10.5\end{tabular}}}}%
+    \put(-6.72731905,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 3322771.752\end{tabular}}}}%
+    \put(-6.72731905,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 75\end{tabular}}}}%
+    \put(-6.72731905,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2493.813\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=55]{binary_tree_linthicum.pdf}}%
+    \put(-6.5658231,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 8.5\end{tabular}}}}%
+    \put(-6.5658231,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 8369508.178\end{tabular}}}}%
+    \put(-6.5658231,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 84\end{tabular}}}}%
+    \put(-6.5658231,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 3940.19\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=56]{binary_tree_linthicum.pdf}}%
+    \put(-6.8939535,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 7.5\end{tabular}}}}%
+    \put(-6.8939535,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 3255068.737\end{tabular}}}}%
+    \put(-6.8939535,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 66\end{tabular}}}}%
+    \put(-6.8939535,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2727.742\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=57]{binary_tree_linthicum.pdf}}%
+    \put(-6.72731905,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 475088.222\end{tabular}}}}%
+    \put(-6.72731905,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-6.72731905,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 778.333\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=58]{binary_tree_linthicum.pdf}}%
+    \put(-7.05618352,-0.1140855){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 62.5\end{tabular}}}}%
+    \put(-7.05618352,-0.12641793){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 8106045.944\end{tabular}}}}%
+    \put(-7.05618352,-0.13875034){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 14\end{tabular}}}}%
+    \put(-7.05618352,-0.15108276){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 4333.357\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=59]{binary_tree_linthicum.pdf}}%
+    \put(-6.89468757,-0.1140855){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 45.5\end{tabular}}}}%
+    \put(-6.89468757,-0.12641793){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1068093.095\end{tabular}}}}%
+    \put(-6.89468757,-0.13875034){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 52\end{tabular}}}}%
+    \put(-6.89468757,-0.15108276){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2295.462\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=60]{binary_tree_linthicum.pdf}}%
+    \put(-7.21694539,-0.20188057){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 6426591.633\end{tabular}}}}%
+    \put(-7.21694539,-0.21421299){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-7.21694539,-0.22654541){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 6420.286\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=61]{binary_tree_linthicum.pdf}}%
+    \put(-7.05544944,-0.20188057){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1074958.531\end{tabular}}}}%
+    \put(-7.05544944,-0.21421299){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-7.05544944,-0.22654541){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2246.429\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=62]{binary_tree_linthicum.pdf}}%
+    \put(-6.89542164,-0.19571437){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 29.0\end{tabular}}}}%
+    \put(-6.89542164,-0.20804679){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 796378.366\end{tabular}}}}%
+    \put(-6.89542164,-0.2203792){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 19\end{tabular}}}}%
+    \put(-6.89542164,-0.23271162){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 1759.947\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=63]{binary_tree_linthicum.pdf}}%
+    \put(-6.73979828,-0.19571437){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 90.5\end{tabular}}}}%
+    \put(-6.73979828,-0.20804679){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 964356.652\end{tabular}}}}%
+    \put(-6.73979828,-0.2203792){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 33\end{tabular}}}}%
+    \put(-6.73979828,-0.23271162){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2603.788\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=64]{binary_tree_linthicum.pdf}}%
+    \put(-7.04443836,-0.27734323){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 798510.4\end{tabular}}}}%
+    \put(-7.04443836,-0.28967565){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 10\end{tabular}}}}%
+    \put(-7.04443836,-0.30200806){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2063.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=65]{binary_tree_linthicum.pdf}}%
+    \put(-6.89468757,-0.27734323){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 578580.173\end{tabular}}}}%
+    \put(-6.89468757,-0.28967565){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-6.89468757,-0.30200806){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 1423.222\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=66]{binary_tree_linthicum.pdf}}%
+    \put(-6.74053235,-0.27734323){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 721611.69\end{tabular}}}}%
+    \put(-6.74053235,-0.28967565){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 20\end{tabular}}}}%
+    \put(-6.74053235,-0.30200806){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2974.9\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=67]{binary_tree_linthicum.pdf}}%
+    \put(-6.58784528,-0.27734323){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 799952.592\end{tabular}}}}%
+    \put(-6.58784528,-0.28967565){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 13\end{tabular}}}}%
+    \put(-6.58784528,-0.30200806){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2032.846\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=68]{binary_tree_linthicum.pdf}}%
+    \put(-6.57169568,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 11.5\end{tabular}}}}%
+    \put(-6.57169568,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 3039793.43\end{tabular}}}}%
+    \put(-6.57169568,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 25\end{tabular}}}}%
+    \put(-6.57169568,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2671.64\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=69]{binary_tree_linthicum.pdf}}%
+    \put(-6.40799752,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 11.5\end{tabular}}}}%
+    \put(-6.40799752,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 9657059.629\end{tabular}}}}%
+    \put(-6.40799752,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 59\end{tabular}}}}%
+    \put(-6.40799752,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 4477.712\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=70]{binary_tree_linthicum.pdf}}%
+    \put(-6.73319163,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 4211321.609\end{tabular}}}}%
+    \put(-6.73319163,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-6.73319163,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 4034.125\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=71]{binary_tree_linthicum.pdf}}%
+    \put(-6.57169568,-0.1140855){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 83.5\end{tabular}}}}%
+    \put(-6.57169568,-0.12641793){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1203804.131\end{tabular}}}}%
+    \put(-6.57169568,-0.13875034){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 17\end{tabular}}}}%
+    \put(-6.57169568,-0.15108276){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2030.471\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=72]{binary_tree_linthicum.pdf}}%
+    \put(-6.57756826,-0.20188057){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 412947.111\end{tabular}}}}%
+    \put(-6.57756826,-0.21421299){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-6.57756826,-0.22654541){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 1453.667\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=73]{binary_tree_linthicum.pdf}}%
+    \put(-6.41900861,-0.20188057){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1298150.734\end{tabular}}}}%
+    \put(-6.41900861,-0.21421299){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-6.41900861,-0.22654541){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2679.375\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=74]{binary_tree_linthicum.pdf}}%
+    \put(-6.40799752,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 33894781.265\end{tabular}}}}%
+    \put(-6.40799752,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-6.40799752,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 8172.857\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=75]{binary_tree_linthicum.pdf}}%
+    \put(-6.24429936,-0.1140855){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 82.0\end{tabular}}}}%
+    \put(-6.24429936,-0.12641793){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 4308807.628\end{tabular}}}}%
+    \put(-6.24429936,-0.13875034){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 52\end{tabular}}}}%
+    \put(-6.24429936,-0.15108276){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 3980.288\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=76]{binary_tree_linthicum.pdf}}%
+    \put(-6.25090601,-0.19571437){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 39.5\end{tabular}}}}%
+    \put(-6.25090601,-0.20804679){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1293321.331\end{tabular}}}}%
+    \put(-6.25090601,-0.2203792){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 22\end{tabular}}}}%
+    \put(-6.25090601,-0.23271162){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 3102.818\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=77]{binary_tree_linthicum.pdf}}%
+    \put(-6.08941006,-0.19571437){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 96.0\end{tabular}}}}%
+    \put(-6.08941006,-0.20804679){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 5541467.046\end{tabular}}}}%
+    \put(-6.08941006,-0.2203792){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 30\end{tabular}}}}%
+    \put(-6.08941006,-0.23271162){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 4623.767\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=78]{binary_tree_linthicum.pdf}}%
+    \put(-6.40946566,-0.27734323){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 148546.122\end{tabular}}}}%
+    \put(-6.40946566,-0.28967565){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-6.40946566,-0.30200806){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2188.143\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=79]{binary_tree_linthicum.pdf}}%
+    \put(-6.25090601,-0.27734323){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1254922.356\end{tabular}}}}%
+    \put(-6.25090601,-0.28967565){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 15\end{tabular}}}}%
+    \put(-6.25090601,-0.30200806){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 3529.667\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=80]{binary_tree_linthicum.pdf}}%
+    \put(-6.08941006,-0.27734323){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 7130173.036\end{tabular}}}}%
+    \put(-6.08941006,-0.28967565){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 19\end{tabular}}}}%
+    \put(-6.08941006,-0.30200806){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 5203.737\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=81]{binary_tree_linthicum.pdf}}%
+    \put(-5.92791412,-0.27734323){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1212807.273\end{tabular}}}}%
+    \put(-5.92791412,-0.28967565){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 11\end{tabular}}}}%
+    \put(-5.92791412,-0.30200806){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 3622.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=82]{binary_tree_linthicum.pdf}}%
+    \put(-6.17236025,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 18.5\end{tabular}}}}%
+    \put(-6.17236025,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 53615.322\end{tabular}}}}%
+    \put(-6.17236025,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 34\end{tabular}}}}%
+    \put(-6.17236025,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 208.824\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=83]{binary_tree_linthicum.pdf}}%
+    \put(-5.84716615,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 19.5\end{tabular}}}}%
+    \put(-5.84716615,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 349472.444\end{tabular}}}}%
+    \put(-5.84716615,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 46\end{tabular}}}}%
+    \put(-5.84716615,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 789.652\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=84]{binary_tree_linthicum.pdf}}%
+    \put(-6.2457675,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 143032.75\end{tabular}}}}%
+    \put(-6.2457675,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-6.2457675,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 415.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=85]{binary_tree_linthicum.pdf}}%
+    \put(-6.09895301,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 18.5\end{tabular}}}}%
+    \put(-6.09895301,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 8915.101\end{tabular}}}}%
+    \put(-6.09895301,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 26\end{tabular}}}}%
+    \put(-6.09895301,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 145.231\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=86]{binary_tree_linthicum.pdf}}%
+    \put(-6.16942396,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 17109.01\end{tabular}}}}%
+    \put(-6.16942396,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 10\end{tabular}}}}%
+    \put(-6.16942396,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 187.7\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=87]{binary_tree_linthicum.pdf}}%
+    \put(-6.02848205,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 22.5\end{tabular}}}}%
+    \put(-6.02848205,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1962.09\end{tabular}}}}%
+    \put(-6.02848205,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 16\end{tabular}}}}%
+    \put(-6.02848205,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 118.688\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=88]{binary_tree_linthicum.pdf}}%
+    \put(-6.09748486,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1286.0\end{tabular}}}}%
+    \put(-6.09748486,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-6.09748486,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 93.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=89]{binary_tree_linthicum.pdf}}%
+    \put(-5.95947924,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1318.484\end{tabular}}}}%
+    \put(-5.95947924,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-5.95947924,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 144.375\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=90]{binary_tree_linthicum.pdf}}%
+    \put(-5.84716615,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 18.5\end{tabular}}}}%
+    \put(-5.84716615,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 324113.17\end{tabular}}}}%
+    \put(-5.84716615,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 37\end{tabular}}}}%
+    \put(-5.84716615,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 934.73\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=91]{binary_tree_linthicum.pdf}}%
+    \put(-5.69741536,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 11469.951\end{tabular}}}}%
+    \put(-5.69741536,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-5.69741536,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 193.222\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=92]{binary_tree_linthicum.pdf}}%
+    \put(-5.84716615,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 54.5\end{tabular}}}}%
+    \put(-5.84716615,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 116334.621\end{tabular}}}}%
+    \put(-5.84716615,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 26\end{tabular}}}}%
+    \put(-5.84716615,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 720.385\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=93]{binary_tree_linthicum.pdf}}%
+    \put(-5.69154278,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 449953.686\end{tabular}}}}%
+    \put(-5.69154278,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 11\end{tabular}}}}%
+    \put(-5.69154278,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 1441.364\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=94]{binary_tree_linthicum.pdf}}%
+    \put(-5.81266474,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 66127.333\end{tabular}}}}%
+    \put(-5.81266474,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-5.81266474,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 489.667\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=95]{binary_tree_linthicum.pdf}}%
+    \put(-5.66291395,-0.1140855){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 18.5\end{tabular}}}}%
+    \put(-5.66291395,-0.12641793){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 99814.602\end{tabular}}}}%
+    \put(-5.66291395,-0.13875034){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 17\end{tabular}}}}%
+    \put(-5.66291395,-0.15108276){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 842.529\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=96]{binary_tree_linthicum.pdf}}%
+    \put(-5.73485306,-0.20188057){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 58673.918\end{tabular}}}}%
+    \put(-5.73485306,-0.21421299){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-5.73485306,-0.22654541){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 1013.286\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=97]{binary_tree_linthicum.pdf}}%
+    \put(-5.59097485,-0.20188057){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 93915.4\end{tabular}}}}%
+    \put(-5.59097485,-0.21421299){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 10\end{tabular}}}}%
+    \put(-5.59097485,-0.22654541){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 723.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=98]{binary_tree_linthicum.pdf}}%
+    \put(-4.51849496,0.2940588){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 11.5\end{tabular}}}}%
+    \put(-4.51849496,0.28172639){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 14592762.501\end{tabular}}}}%
+    \put(-4.51849496,0.26939394){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 98\end{tabular}}}}%
+    \put(-4.51849496,0.25706153){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 6786.265\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=99]{binary_tree_linthicum.pdf}}%
+    \put(-4.12062768,0.2940588){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 83.5\end{tabular}}}}%
+    \put(-4.12062768,0.28172639){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 6619756.381\end{tabular}}}}%
+    \put(-4.12062768,0.26939394){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 70\end{tabular}}}}%
+    \put(-4.12062768,0.25706153){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 3052.3\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=100]{binary_tree_linthicum.pdf}}%
+    \put(-4.76073888,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 17.5\end{tabular}}}}%
+    \put(-4.76073888,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 15805161.444\end{tabular}}}}%
+    \put(-4.76073888,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 72\end{tabular}}}}%
+    \put(-4.76073888,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 7351.486\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=101]{binary_tree_linthicum.pdf}}%
+    \put(-4.51849496,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperature <= 10.5\end{tabular}}}}%
+    \put(-4.51849496,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 7900716.191\end{tabular}}}}%
+    \put(-4.51849496,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 26\end{tabular}}}}%
+    \put(-4.51849496,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 5221.038\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=102]{binary_tree_linthicum.pdf}}%
+    \put(-5.12337068,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 110.5\end{tabular}}}}%
+    \put(-5.12337068,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 24735200.583\end{tabular}}}}%
+    \put(-5.12337068,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 37\end{tabular}}}}%
+    \put(-5.12337068,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 8731.892\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=103]{binary_tree_linthicum.pdf}}%
+    \put(-4.76073888,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 139.0\end{tabular}}}}%
+    \put(-4.76073888,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 2220911.417\end{tabular}}}}%
+    \put(-4.76073888,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 35\end{tabular}}}}%
+    \put(-4.76073888,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 5892.2\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=104]{binary_tree_linthicum.pdf}}%
+    \put(-5.36634867,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 61.5\end{tabular}}}}%
+    \put(-5.36634867,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 21794298.339\end{tabular}}}}%
+    \put(-5.36634867,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 17\end{tabular}}}}%
+    \put(-5.36634867,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 6835.118\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=105]{binary_tree_linthicum.pdf}}%
+    \put(-5.12337068,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 9.5\end{tabular}}}}%
+    \put(-5.12337068,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 21577501.627\end{tabular}}}}%
+    \put(-5.12337068,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 20\end{tabular}}}}%
+    \put(-5.12337068,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 10344.15\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=106]{binary_tree_linthicum.pdf}}%
+    \put(-5.53004684,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 31226723.938\end{tabular}}}}%
+    \put(-5.53004684,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-5.53004684,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 8839.75\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=107]{binary_tree_linthicum.pdf}}%
+    \put(-5.36634867,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 6662723.506\end{tabular}}}}%
+    \put(-5.36634867,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-5.36634867,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 5053.222\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=108]{binary_tree_linthicum.pdf}}%
+    \put(-5.20265051,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 18437226.444\end{tabular}}}}%
+    \put(-5.20265051,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-5.20265051,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 13633.667\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=109]{binary_tree_linthicum.pdf}}%
+    \put(-5.03895235,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 8049581.471\end{tabular}}}}%
+    \put(-5.03895235,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 11\end{tabular}}}}%
+    \put(-5.03895235,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 7652.727\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=110]{binary_tree_linthicum.pdf}}%
+    \put(-4.92150075,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 19.5\end{tabular}}}}%
+    \put(-4.92150075,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1953907.504\end{tabular}}}}%
+    \put(-4.92150075,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 26\end{tabular}}}}%
+    \put(-4.92150075,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 5493.269\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=111]{binary_tree_linthicum.pdf}}%
+    \put(-4.76000481,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1204322.222\end{tabular}}}}%
+    \put(-4.76000481,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-4.76000481,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 7044.667\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=112]{binary_tree_linthicum.pdf}}%
+    \put(-4.88332898,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 898065.29\end{tabular}}}}%
+    \put(-4.88332898,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 10\end{tabular}}}}%
+    \put(-4.88332898,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 6194.9\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=113]{binary_tree_linthicum.pdf}}%
+    \put(-4.72770562,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 112.5\end{tabular}}}}%
+    \put(-4.72770562,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 2113831.188\end{tabular}}}}%
+    \put(-4.72770562,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 16\end{tabular}}}}%
+    \put(-4.72770562,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 5054.75\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=114]{binary_tree_linthicum.pdf}}%
+    \put(-4.80845359,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1826009.918\end{tabular}}}}%
+    \put(-4.80845359,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-4.80845359,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 4176.714\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=115]{binary_tree_linthicum.pdf}}%
+    \put(-4.64695765,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1271691.778\end{tabular}}}}%
+    \put(-4.64695765,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-4.64695765,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 5737.667\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=116]{binary_tree_linthicum.pdf}}%
+    \put(-4.59850886,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 125.0\end{tabular}}}}%
+    \put(-4.59850886,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 8416104.359\end{tabular}}}}%
+    \put(-4.59850886,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 16\end{tabular}}}}%
+    \put(-4.59850886,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 4449.125\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=117]{binary_tree_linthicum.pdf}}%
+    \put(-4.43994921,0.12463488){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 4597357.49\end{tabular}}}}%
+    \put(-4.43994921,0.11230243){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 10\end{tabular}}}}%
+    \put(-4.43994921,0.09997002){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 6456.1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=118]{binary_tree_linthicum.pdf}}%
+    \put(-4.59850886,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 3954347.778\end{tabular}}}}%
+    \put(-4.59850886,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-4.59850886,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 3586.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=119]{binary_tree_linthicum.pdf}}%
+    \put(-4.4348107,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 11963305.551\end{tabular}}}}%
+    \put(-4.4348107,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-4.4348107,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 5558.857\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=120]{binary_tree_linthicum.pdf}}%
+    \put(-4.12062768,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 118.5\end{tabular}}}}%
+    \put(-4.12062768,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 4133919.107\end{tabular}}}}%
+    \put(-4.12062768,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 63\end{tabular}}}}%
+    \put(-4.12062768,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2680.19\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=121]{binary_tree_linthicum.pdf}}%
+    \put(-3.95692952,0.2062637){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 16530397.061\end{tabular}}}}%
+    \put(-3.95692952,0.19393129){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-3.95692952,0.18159889){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 6401.286\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=122]{binary_tree_linthicum.pdf}}%
+    \put(-4.12062768,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 18.5\end{tabular}}}}%
+    \put(-4.12062768,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1015396.757\end{tabular}}}}%
+    \put(-4.12062768,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 30\end{tabular}}}}%
+    \put(-4.12062768,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 1942.9\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=123]{binary_tree_linthicum.pdf}}%
+    \put(-3.95546137,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 18.5\end{tabular}}}}%
+    \put(-3.95546137,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 6025506.187\end{tabular}}}}%
+    \put(-3.95546137,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 33\end{tabular}}}}%
+    \put(-3.95546137,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 3350.455\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=124]{binary_tree_linthicum.pdf}}%
+    \put(-4.27331475,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 10.0\end{tabular}}}}%
+    \put(-4.27331475,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 969893.139\end{tabular}}}}%
+    \put(-4.27331475,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 18\end{tabular}}}}%
+    \put(-4.27331475,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2195.167\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=125]{binary_tree_linthicum.pdf}}%
+    \put(-4.11769139,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 845007.917\end{tabular}}}}%
+    \put(-4.11769139,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 12\end{tabular}}}}%
+    \put(-4.11769139,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 1564.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=126]{binary_tree_linthicum.pdf}}%
+    \put(-4.43334255,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 531033.951\end{tabular}}}}%
+    \put(-4.43334255,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-4.43334255,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 1781.222\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=127]{binary_tree_linthicum.pdf}}%
+    \put(-4.2747829,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1066052.321\end{tabular}}}}%
+    \put(-4.2747829,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-4.2747829,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2609.111\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=128]{binary_tree_linthicum.pdf}}%
+    \put(-3.95546137,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 17.0\end{tabular}}}}%
+    \put(-3.95546137,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 9329950.014\end{tabular}}}}%
+    \put(-3.95546137,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 17\end{tabular}}}}%
+    \put(-3.95546137,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 4293.529\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=129]{binary_tree_linthicum.pdf}}%
+    \put(-3.79323135,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 136.5\end{tabular}}}}%
+    \put(-3.79323135,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 565519.371\end{tabular}}}}%
+    \put(-3.79323135,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 16\end{tabular}}}}%
+    \put(-3.79323135,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2348.438\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=130]{binary_tree_linthicum.pdf}}%
+    \put(-4.11328695,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1365778.222\end{tabular}}}}%
+    \put(-4.11328695,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-4.11328695,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2613.667\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=131]{binary_tree_linthicum.pdf}}%
+    \put(-3.94958879,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 11543445.734\end{tabular}}}}%
+    \put(-3.94958879,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-3.94958879,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 6183.375\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=132]{binary_tree_linthicum.pdf}}%
+    \put(-3.78809285,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 378170.245\end{tabular}}}}%
+    \put(-3.78809285,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-3.78809285,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 1864.429\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=133]{binary_tree_linthicum.pdf}}%
+    \put(-3.63246948,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 387313.877\end{tabular}}}}%
+    \put(-3.63246948,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-3.63246948,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2724.889\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=134]{binary_tree_linthicum.pdf}}%
+    \put(-2.58347991,0.37568767){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 53.0\end{tabular}}}}%
+    \put(-2.58347991,0.36335521){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 67939395.843\end{tabular}}}}%
+    \put(-2.58347991,0.3510228){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 158\end{tabular}}}}%
+    \put(-2.58347991,0.3386904){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 16638.665\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=135]{binary_tree_linthicum.pdf}}%
+    \put(-1.92648504,0.37568767){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 268.5\end{tabular}}}}%
+    \put(-1.92648504,0.36335521){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 32576423.863\end{tabular}}}}%
+    \put(-1.92648504,0.3510228){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 183\end{tabular}}}}%
+    \put(-1.92648504,0.3386904){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 8758.803\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=136]{binary_tree_linthicum.pdf}}%
+    \put(-3.22138889,0.2940588){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 46.5\end{tabular}}}}%
+    \put(-3.22138889,0.28172639){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 49110487.2\end{tabular}}}}%
+    \put(-3.22138889,0.26939394){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 50\end{tabular}}}}%
+    \put(-3.22138889,0.25706153){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 21048.86\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=137]{binary_tree_linthicum.pdf}}%
+    \put(-2.58347991,0.2940588){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 82.5\end{tabular}}}}%
+    \put(-2.58347991,0.28172639){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 63483162.843\end{tabular}}}}%
+    \put(-2.58347991,0.26939394){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 108\end{tabular}}}}%
+    \put(-2.58347991,0.25706153){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 14596.907\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=138]{binary_tree_linthicum.pdf}}%
+    \put(-3.47097354,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 9.5\end{tabular}}}}%
+    \put(-3.47097354,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 28754796.912\end{tabular}}}}%
+    \put(-3.47097354,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 21\end{tabular}}}}%
+    \put(-3.47097354,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 24686.571\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=139]{binary_tree_linthicum.pdf}}%
+    \put(-3.22138889,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 288.0\end{tabular}}}}%
+    \put(-3.22138889,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 47329302.571\end{tabular}}}}%
+    \put(-3.22138889,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 29\end{tabular}}}}%
+    \put(-3.22138889,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 18414.655\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=140]{binary_tree_linthicum.pdf}}%
+    \put(-3.63760799,0.12463488){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 17448966.245\end{tabular}}}}%
+    \put(-3.63760799,0.11230243){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-3.63760799,0.09997002){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 20175.571\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=141]{binary_tree_linthicum.pdf}}%
+    \put(-3.47097354,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 32.5\end{tabular}}}}%
+    \put(-3.47097354,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 19145871.495\end{tabular}}}}%
+    \put(-3.47097354,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 14\end{tabular}}}}%
+    \put(-3.47097354,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 26942.071\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=142]{binary_tree_linthicum.pdf}}%
+    \put(-3.6346717,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 9357833.388\end{tabular}}}}%
+    \put(-3.6346717,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-3.6346717,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 29935.429\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=143]{binary_tree_linthicum.pdf}}%
+    \put(-3.47097354,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 11013535.633\end{tabular}}}}%
+    \put(-3.47097354,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-3.47097354,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 23948.714\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=144]{binary_tree_linthicum.pdf}}%
+    \put(-3.30433908,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 9.0\end{tabular}}}}%
+    \put(-3.30433908,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 37599580.152\end{tabular}}}}%
+    \put(-3.30433908,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 16\end{tabular}}}}%
+    \put(-3.30433908,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 15181.812\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=145]{binary_tree_linthicum.pdf}}%
+    \put(-3.13770463,0.12463488){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 30609729.633\end{tabular}}}}%
+    \put(-3.13770463,0.11230243){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 13\end{tabular}}}}%
+    \put(-3.13770463,0.09997002){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 22393.538\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=146]{binary_tree_linthicum.pdf}}%
+    \put(-3.30947759,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 42775071.5\end{tabular}}}}%
+    \put(-3.30947759,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-3.30947759,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 13106.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=147]{binary_tree_linthicum.pdf}}%
+    \put(-3.14798165,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 23810244.859\end{tabular}}}}%
+    \put(-3.14798165,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-3.14798165,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 17257.125\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=148]{binary_tree_linthicum.pdf}}%
+    \put(-2.6664301,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 9.5\end{tabular}}}}%
+    \put(-2.6664301,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 66574467.341\end{tabular}}}}%
+    \put(-2.6664301,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 85\end{tabular}}}}%
+    \put(-2.6664301,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 15892.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=149]{binary_tree_linthicum.pdf}}%
+    \put(-2.49979565,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 194.5\end{tabular}}}}%
+    \put(-2.49979565,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 22952366.299\end{tabular}}}}%
+    \put(-2.49979565,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 23\end{tabular}}}}%
+    \put(-2.49979565,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 9810.696\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=150]{binary_tree_linthicum.pdf}}%
+    \put(-2.82719197,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperature <= 14.5\end{tabular}}}}%
+    \put(-2.82719197,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 15924436.103\end{tabular}}}}%
+    \put(-2.82719197,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 35\end{tabular}}}}%
+    \put(-2.82719197,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 11976.8\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=151]{binary_tree_linthicum.pdf}}%
+    \put(-2.66349381,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 9.5\end{tabular}}}}%
+    \put(-2.66349381,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 83788227.87\end{tabular}}}}%
+    \put(-2.66349381,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 50\end{tabular}}}}%
+    \put(-2.66349381,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 18632.64\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=152]{binary_tree_linthicum.pdf}}%
+    \put(-2.98428348,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 18321883.75\end{tabular}}}}%
+    \put(-2.98428348,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-2.98428348,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 17426.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=153]{binary_tree_linthicum.pdf}}%
+    \put(-2.82572383,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 23.5\end{tabular}}}}%
+    \put(-2.82572383,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 3806969.55\end{tabular}}}}%
+    \put(-2.82572383,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 27\end{tabular}}}}%
+    \put(-2.82572383,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 10362.074\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=154]{binary_tree_linthicum.pdf}}%
+    \put(-3.14431128,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperature <= 21.5\end{tabular}}}}%
+    \put(-3.14431128,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 2192107.008\end{tabular}}}}%
+    \put(-3.14431128,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 19\end{tabular}}}}%
+    \put(-3.14431128,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 11287.789\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=155]{binary_tree_linthicum.pdf}}%
+    \put(-2.98868792,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 773286.25\end{tabular}}}}%
+    \put(-2.98868792,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-2.98868792,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 8163.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=156]{binary_tree_linthicum.pdf}}%
+    \put(-3.22212297,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 764480.667\end{tabular}}}}%
+    \put(-3.22212297,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-3.22212297,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 12237.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=157]{binary_tree_linthicum.pdf}}%
+    \put(-3.0664996,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1936259.65\end{tabular}}}}%
+    \put(-3.0664996,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 10\end{tabular}}}}%
+    \put(-3.0664996,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 10433.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=158]{binary_tree_linthicum.pdf}}%
+    \put(-2.66349381,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperature <= 4.5\end{tabular}}}}%
+    \put(-2.66349381,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 62805682.472\end{tabular}}}}%
+    \put(-2.66349381,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 18\end{tabular}}}}%
+    \put(-2.66349381,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 12552.167\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=159]{binary_tree_linthicum.pdf}}%
+    \put(-2.49685936,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 61.5\end{tabular}}}}%
+    \put(-2.49685936,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 63095850.71\end{tabular}}}}%
+    \put(-2.49685936,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 32\end{tabular}}}}%
+    \put(-2.49685936,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 22052.906\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=160]{binary_tree_linthicum.pdf}}%
+    \put(-2.83012826,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 43903076.571\end{tabular}}}}%
+    \put(-2.83012826,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-2.83012826,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 8009.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=161]{binary_tree_linthicum.pdf}}%
+    \put(-2.66349381,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 53341342.562\end{tabular}}}}%
+    \put(-2.66349381,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 11\end{tabular}}}}%
+    \put(-2.66349381,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 15443.273\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=162]{binary_tree_linthicum.pdf}}%
+    \put(-2.49685936,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 65504089.076\end{tabular}}}}%
+    \put(-2.49685936,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 12\end{tabular}}}}%
+    \put(-2.49685936,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 26504.583\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=163]{binary_tree_linthicum.pdf}}%
+    \put(-2.3331612,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 18.0\end{tabular}}}}%
+    \put(-2.3331612,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 42626175.99\end{tabular}}}}%
+    \put(-2.3331612,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 20\end{tabular}}}}%
+    \put(-2.3331612,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 19381.9\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=164]{binary_tree_linthicum.pdf}}%
+    \put(-2.49979565,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 11039868.286\end{tabular}}}}%
+    \put(-2.49979565,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-2.49979565,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 25162.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=165]{binary_tree_linthicum.pdf}}%
+    \put(-2.3331612,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 31957632.556\end{tabular}}}}%
+    \put(-2.3331612,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 13\end{tabular}}}}%
+    \put(-2.3331612,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 16269.538\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=166]{binary_tree_linthicum.pdf}}%
+    \put(-2.50199787,0.12463488){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 4233886.744\end{tabular}}}}%
+    \put(-2.50199787,0.11230243){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 11\end{tabular}}}}%
+    \put(-2.50199787,0.09997002){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 7265.727\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=167]{binary_tree_linthicum.pdf}}%
+    \put(-2.3382997,0.12463488){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 28731482.243\end{tabular}}}}%
+    \put(-2.3382997,0.11230243){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 12\end{tabular}}}}%
+    \put(-2.3382997,0.09997002){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 12143.583\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=168]{binary_tree_linthicum.pdf}}%
+    \put(-1.92648504,0.2940588){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 15.5\end{tabular}}}}%
+    \put(-1.92648504,0.28172639){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 11372965.975\end{tabular}}}}%
+    \put(-1.92648504,0.26939394){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 95\end{tabular}}}}%
+    \put(-1.92648504,0.25706153){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 6317.937\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=169]{binary_tree_linthicum.pdf}}%
+    \put(-1.29958715,0.2940588){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 14.5\end{tabular}}}}%
+    \put(-1.29958715,0.28172639){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 42091409.846\end{tabular}}}}%
+    \put(-1.29958715,0.26939394){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 88\end{tabular}}}}%
+    \put(-1.29958715,0.25706153){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 11393.83\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=170]{binary_tree_linthicum.pdf}}%
+    \put(-2.00796709,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperature <= 3.5\end{tabular}}}}%
+    \put(-2.00796709,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 12654305.599\end{tabular}}}}%
+    \put(-2.00796709,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 39\end{tabular}}}}%
+    \put(-2.00796709,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 7924.128\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=171]{binary_tree_linthicum.pdf}}%
+    \put(-1.77600018,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 229.0\end{tabular}}}}%
+    \put(-1.77600018,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 7432662.224\end{tabular}}}}%
+    \put(-1.77600018,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 56\end{tabular}}}}%
+    \put(-1.77600018,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 5199.339\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=172]{binary_tree_linthicum.pdf}}%
+    \put(-2.17166525,0.12463488){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 10279130.938\end{tabular}}}}%
+    \put(-2.17166525,0.11230243){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-2.17166525,0.09997002){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 4369.25\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=173]{binary_tree_linthicum.pdf}}%
+    \put(-2.00796709,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 14.5\end{tabular}}}}%
+    \put(-2.00796709,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 9164450.959\end{tabular}}}}%
+    \put(-2.00796709,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 31\end{tabular}}}}%
+    \put(-2.00796709,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 8841.516\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=174]{binary_tree_linthicum.pdf}}%
+    \put(-2.16946303,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 90.5\end{tabular}}}}%
+    \put(-2.16946303,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 6841028.812\end{tabular}}}}%
+    \put(-2.16946303,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 22\end{tabular}}}}%
+    \put(-2.16946303,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 8082.227\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=175]{binary_tree_linthicum.pdf}}%
+    \put(-2.00796709,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 9989774.914\end{tabular}}}}%
+    \put(-2.00796709,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-2.00796709,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 10697.556\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=176]{binary_tree_linthicum.pdf}}%
+    \put(-2.16946303,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 212.0\end{tabular}}}}%
+    \put(-2.16946303,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 6790866.918\end{tabular}}}}%
+    \put(-2.16946303,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 14\end{tabular}}}}%
+    \put(-2.16946303,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 8927.286\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=177]{binary_tree_linthicum.pdf}}%
+    \put(-2.00796709,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 3492091.484\end{tabular}}}}%
+    \put(-2.00796709,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-2.00796709,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 6603.375\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=178]{binary_tree_linthicum.pdf}}%
+    \put(-2.16946303,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 4382383.551\end{tabular}}}}%
+    \put(-2.16946303,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-2.16946303,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 8538.143\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=179]{binary_tree_linthicum.pdf}}%
+    \put(-2.00796709,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 8896485.959\end{tabular}}}}%
+    \put(-2.00796709,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-2.00796709,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 9316.429\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=180]{binary_tree_linthicum.pdf}}%
+    \put(-1.77600018,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 45.5\end{tabular}}}}%
+    \put(-1.77600018,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 6749567.142\end{tabular}}}}%
+    \put(-1.77600018,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 38\end{tabular}}}}%
+    \put(-1.77600018,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 4411.447\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=181]{binary_tree_linthicum.pdf}}%
+    \put(-1.54696957,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 16.5\end{tabular}}}}%
+    \put(-1.54696957,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 4797571.667\end{tabular}}}}%
+    \put(-1.54696957,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 18\end{tabular}}}}%
+    \put(-1.54696957,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 6862.667\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=182]{binary_tree_linthicum.pdf}}%
+    \put(-1.84647114,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1896450.743\end{tabular}}}}%
+    \put(-1.84647114,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 12\end{tabular}}}}%
+    \put(-1.84647114,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 2978.583\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=183]{binary_tree_linthicum.pdf}}%
+    \put(-1.6849752,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 23.5\end{tabular}}}}%
+    \put(-1.6849752,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 7604536.101\end{tabular}}}}%
+    \put(-1.6849752,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 26\end{tabular}}}}%
+    \put(-1.6849752,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 5072.769\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=184]{binary_tree_linthicum.pdf}}%
+    \put(-1.72461511,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 77.5\end{tabular}}}}%
+    \put(-1.72461511,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 9553888.339\end{tabular}}}}%
+    \put(-1.72461511,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 17\end{tabular}}}}%
+    \put(-1.72461511,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 5810.882\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=185]{binary_tree_linthicum.pdf}}%
+    \put(-1.56605546,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 949507.136\end{tabular}}}}%
+    \put(-1.56605546,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-1.56605546,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 3678.556\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=186]{binary_tree_linthicum.pdf}}%
+    \put(-1.7649891,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 13883253.506\end{tabular}}}}%
+    \put(-1.7649891,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-1.7649891,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 6638.778\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=187]{binary_tree_linthicum.pdf}}%
+    \put(-1.60349315,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 3044792.25\end{tabular}}}}%
+    \put(-1.60349315,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-1.60349315,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 4879.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=188]{binary_tree_linthicum.pdf}}%
+    \put(-1.52935183,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 2533432.0\end{tabular}}}}%
+    \put(-1.52935183,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-1.52935183,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 5775.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=189]{binary_tree_linthicum.pdf}}%
+    \put(-1.37372847,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 5006483.967\end{tabular}}}}%
+    \put(-1.37372847,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 11\end{tabular}}}}%
+    \put(-1.37372847,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 7554.818\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=190]{binary_tree_linthicum.pdf}}%
+    \put(-1.29958715,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 311.5\end{tabular}}}}%
+    \put(-1.29958715,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 75015269.356\end{tabular}}}}%
+    \put(-1.29958715,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 17\end{tabular}}}}%
+    \put(-1.29958715,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 17074.765\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=191]{binary_tree_linthicum.pdf}}%
+    \put(-1.0500025,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 39.5\end{tabular}}}}%
+    \put(-1.0500025,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 24630679.281\end{tabular}}}}%
+    \put(-1.0500025,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 71\end{tabular}}}}%
+    \put(-1.0500025,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 10033.606\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=192]{binary_tree_linthicum.pdf}}%
+    \put(-1.38327141,0.12463488){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 33792642.469\end{tabular}}}}%
+    \put(-1.38327141,0.11230243){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(-1.38327141,0.09997002){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 13084.556\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=193]{binary_tree_linthicum.pdf}}%
+    \put(-1.21663696,0.12463488){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 83327745.438\end{tabular}}}}%
+    \put(-1.21663696,0.11230243){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-1.21663696,0.09997002){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 21563.75\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=194]{binary_tree_linthicum.pdf}}%
+    \put(-1.0500025,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 42.0\end{tabular}}}}%
+    \put(-1.0500025,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 10120701.929\end{tabular}}}}%
+    \put(-1.0500025,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 15\end{tabular}}}}%
+    \put(-1.0500025,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 6931.267\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=195]{binary_tree_linthicum.pdf}}%
+    \put(-0.88336805,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 16.5\end{tabular}}}}%
+    \put(-0.88336805,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 25248753.563\end{tabular}}}}%
+    \put(-0.88336805,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 56\end{tabular}}}}%
+    \put(-0.88336805,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 10864.589\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=196]{binary_tree_linthicum.pdf}}%
+    \put(-1.21223252,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 3180757.102\end{tabular}}}}%
+    \put(-1.21223252,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-1.21223252,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 8835.429\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=197]{binary_tree_linthicum.pdf}}%
+    \put(-1.04853436,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 10244522.109\end{tabular}}}}%
+    \put(-1.04853436,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-1.04853436,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 5265.125\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=198]{binary_tree_linthicum.pdf}}%
+    \put(-0.8848362,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 334.5\end{tabular}}}}%
+    \put(-0.8848362,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 33645474.99\end{tabular}}}}%
+    \put(-0.8848362,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 28\end{tabular}}}}%
+    \put(-0.8848362,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 12825.286\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=199]{binary_tree_linthicum.pdf}}%
+    \put(-0.72260618,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 381.5\end{tabular}}}}%
+    \put(-0.72260618,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 9163371.167\end{tabular}}}}%
+    \put(-0.72260618,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 28\end{tabular}}}}%
+    \put(-0.72260618,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 8903.893\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=200]{binary_tree_linthicum.pdf}}%
+    \put(-1.05220472,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 15184842.521\end{tabular}}}}%
+    \put(-1.05220472,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 13\end{tabular}}}}%
+    \put(-1.05220472,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 9689.692\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=201]{binary_tree_linthicum.pdf}}%
+    \put(-0.88557027,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 46.5\end{tabular}}}}%
+    \put(-0.88557027,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 33738786.027\end{tabular}}}}%
+    \put(-0.88557027,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 15\end{tabular}}}}%
+    \put(-0.88557027,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 15542.8\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=202]{binary_tree_linthicum.pdf}}%
+    \put(-1.0500025,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 41761538.25\end{tabular}}}}%
+    \put(-1.0500025,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-1.0500025,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 16643.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=203]{binary_tree_linthicum.pdf}}%
+    \put(-0.88630434,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 21602888.408\end{tabular}}}}%
+    \put(-0.88630434,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-0.88630434,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 14284.857\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=204]{binary_tree_linthicum.pdf}}%
+    \put(-0.72260618,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperature <= 22.5\end{tabular}}}}%
+    \put(-0.72260618,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 8231429.76\end{tabular}}}}%
+    \put(-0.72260618,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 21\end{tabular}}}}%
+    \put(-0.72260618,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 8387.952\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=205]{binary_tree_linthicum.pdf}}%
+    \put(-0.56698281,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 8764860.49\end{tabular}}}}%
+    \put(-0.56698281,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(-0.56698281,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 10451.714\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=206]{binary_tree_linthicum.pdf}}%
+    \put(-0.72260618,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 7110406.992\end{tabular}}}}%
+    \put(-0.72260618,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 11\end{tabular}}}}%
+    \put(-0.72260618,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 9155.091\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=207]{binary_tree_linthicum.pdf}}%
+    \put(-0.56404652,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 8105116.29\end{tabular}}}}%
+    \put(-0.56404652,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 10\end{tabular}}}}%
+    \put(-0.56404652,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 7544.1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=208]{binary_tree_linthicum.pdf}}%
+    \put(0.37630032,0.45731649){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 15.5\end{tabular}}}}%
+    \put(0.37630032,0.44498413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 79750303.977\end{tabular}}}}%
+    \put(0.37630032,0.43265167){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 291\end{tabular}}}}%
+    \put(0.37630032,0.42031926){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 24205.808\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=209]{binary_tree_linthicum.pdf}}%
+    \put(1.72552553,0.45731649){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 29.0\end{tabular}}}}%
+    \put(1.72552553,0.44498413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 43617500.156\end{tabular}}}}%
+    \put(1.72552553,0.43265167){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 213\end{tabular}}}}%
+    \put(1.72552553,0.42031926){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 34690.638\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=210]{binary_tree_linthicum.pdf}}%
+    \put(0.251508,0.37568767){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 9.5\end{tabular}}}}%
+    \put(0.251508,0.36335521){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 78726922.901\end{tabular}}}}%
+    \put(0.251508,0.3510228){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 221\end{tabular}}}}%
+    \put(0.251508,0.3386904){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 26171.665\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=211]{binary_tree_linthicum.pdf}}%
+    \put(0.50182671,0.37568767){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 503.5\end{tabular}}}}%
+    \put(0.50182671,0.36335521){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 32259623.501\end{tabular}}}}%
+    \put(0.50182671,0.3510228){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 70\end{tabular}}}}%
+    \put(0.50182671,0.3386904){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 17999.314\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=212]{binary_tree_linthicum.pdf}}%
+    \put(0.08780984,0.28789257){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 2045320.173\end{tabular}}}}%
+    \put(0.08780984,0.27556016){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(0.08780984,0.26322775){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 9025.778\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=213]{binary_tree_linthicum.pdf}}%
+    \put(0.251508,0.2940588){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 41.5\end{tabular}}}}%
+    \put(0.251508,0.28172639){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 68972103.256\end{tabular}}}}%
+    \put(0.251508,0.26939394){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 212\end{tabular}}}}%
+    \put(0.251508,0.25706153){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 26899.557\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=214]{binary_tree_linthicum.pdf}}%
+    \put(0.08193726,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 555.5\end{tabular}}}}%
+    \put(0.08193726,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 46139391.791\end{tabular}}}}%
+    \put(0.08193726,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 73\end{tabular}}}}%
+    \put(0.08193726,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 30649.644\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=215]{binary_tree_linthicum.pdf}}%
+    \put(0.251508,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperature <= 4.5\end{tabular}}}}%
+    \put(0.251508,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 69698884.899\end{tabular}}}}%
+    \put(0.251508,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 139\end{tabular}}}}%
+    \put(0.251508,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 24930.086\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=216]{binary_tree_linthicum.pdf}}%
+    \put(-0.0846972,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 13.5\end{tabular}}}}%
+    \put(-0.0846972,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 38084233.184\end{tabular}}}}%
+    \put(-0.0846972,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 34\end{tabular}}}}%
+    \put(-0.0846972,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 28121.853\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=217]{binary_tree_linthicum.pdf}}%
+    \put(0.08193726,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 55.5\end{tabular}}}}%
+    \put(0.08193726,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 42734946.281\end{tabular}}}}%
+    \put(0.08193726,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 39\end{tabular}}}}%
+    \put(0.08193726,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 32853.359\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=218]{binary_tree_linthicum.pdf}}%
+    \put(-0.25133165,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 11.5\end{tabular}}}}%
+    \put(-0.25133165,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 35154312.754\end{tabular}}}}%
+    \put(-0.25133165,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 22\end{tabular}}}}%
+    \put(-0.25133165,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 29847.136\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=219]{binary_tree_linthicum.pdf}}%
+    \put(-0.0846972,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 27993955.639\end{tabular}}}}%
+    \put(-0.0846972,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 12\end{tabular}}}}%
+    \put(-0.0846972,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 24958.833\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=220]{binary_tree_linthicum.pdf}}%
+    \put(-0.40548687,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 26290437.333\end{tabular}}}}%
+    \put(-0.40548687,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 12\end{tabular}}}}%
+    \put(-0.40548687,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 31971.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=221]{binary_tree_linthicum.pdf}}%
+    \put(-0.24178871,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 33882459.85\end{tabular}}}}%
+    \put(-0.24178871,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 10\end{tabular}}}}%
+    \put(-0.24178871,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 27298.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=222]{binary_tree_linthicum.pdf}}%
+    \put(0.08193726,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperature <= 14.5\end{tabular}}}}%
+    \put(0.08193726,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 22906947.932\end{tabular}}}}%
+    \put(0.08193726,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 28\end{tabular}}}}%
+    \put(0.08193726,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 35004.179\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=223]{binary_tree_linthicum.pdf}}%
+    \put(0.24857171,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 51457295.521\end{tabular}}}}%
+    \put(0.24857171,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 11\end{tabular}}}}%
+    \put(0.24857171,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 27378.545\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=224]{binary_tree_linthicum.pdf}}%
+    \put(-0.08029276,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 12.5\end{tabular}}}}%
+    \put(-0.08029276,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 9250864.144\end{tabular}}}}%
+    \put(-0.08029276,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 19\end{tabular}}}}%
+    \put(-0.08029276,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 37135.474\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=225]{binary_tree_linthicum.pdf}}%
+    \put(0.0834054,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 21902299.728\end{tabular}}}}%
+    \put(0.0834054,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(0.0834054,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 30504.778\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=226]{binary_tree_linthicum.pdf}}%
+    \put(-0.23738427,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 2232894.413\end{tabular}}}}%
+    \put(-0.23738427,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 11\end{tabular}}}}%
+    \put(-0.23738427,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 38986.364\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=227]{binary_tree_linthicum.pdf}}%
+    \put(-0.07882462,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 7713215.25\end{tabular}}}}%
+    \put(-0.07882462,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(-0.07882462,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 34590.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=228]{binary_tree_linthicum.pdf}}%
+    \put(0.251508,0.12463488){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 190211094.765\end{tabular}}}}%
+    \put(0.251508,0.11230243){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(0.251508,0.09997002){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 14994.111\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=229]{binary_tree_linthicum.pdf}}%
+    \put(0.42107874,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 17.5\end{tabular}}}}%
+    \put(0.42107874,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 54047848.591\end{tabular}}}}%
+    \put(0.42107874,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 130\end{tabular}}}}%
+    \put(0.42107874,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 25617.962\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=230]{binary_tree_linthicum.pdf}}%
+    \put(0.4196106,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 12.5\end{tabular}}}}%
+    \put(0.4196106,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 50062104.407\end{tabular}}}}%
+    \put(0.4196106,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 59\end{tabular}}}}%
+    \put(0.4196106,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 28372.39\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=231]{binary_tree_linthicum.pdf}}%
+    \put(0.60239464,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 39.5\end{tabular}}}}%
+    \put(0.60239464,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 45816336.882\end{tabular}}}}%
+    \put(0.60239464,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 71\end{tabular}}}}%
+    \put(0.60239464,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 23329.07\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=232]{binary_tree_linthicum.pdf}}%
+    \put(0.25003985,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 462.5\end{tabular}}}}%
+    \put(0.25003985,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 43516098.911\end{tabular}}}}%
+    \put(0.25003985,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 33\end{tabular}}}}%
+    \put(0.25003985,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 31151.242\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=233]{binary_tree_linthicum.pdf}}%
+    \put(0.4196106,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperature <= 11.5\end{tabular}}}}%
+    \put(0.4196106,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 36129702.621\end{tabular}}}}%
+    \put(0.4196106,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 26\end{tabular}}}}%
+    \put(0.4196106,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 24845.385\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=234]{binary_tree_linthicum.pdf}}%
+    \put(0.08487355,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 72929232.988\end{tabular}}}}%
+    \put(0.08487355,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(0.08487355,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 25563.889\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=235]{binary_tree_linthicum.pdf}}%
+    \put(0.24636949,-0.1140855){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 595.5\end{tabular}}}}%
+    \put(0.24636949,-0.12641793){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 16389124.5\end{tabular}}}}%
+    \put(0.24636949,-0.13875034){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 24\end{tabular}}}}%
+    \put(0.24636949,-0.15108276){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 33246.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=236]{binary_tree_linthicum.pdf}}%
+    \put(0.16488745,-0.19571437){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 46.5\end{tabular}}}}%
+    \put(0.16488745,-0.20804679){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 7032922.889\end{tabular}}}}%
+    \put(0.16488745,-0.2203792){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 15\end{tabular}}}}%
+    \put(0.16488745,-0.23271162){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 31912.667\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=237]{binary_tree_linthicum.pdf}}%
+    \put(0.32858561,-0.20188057){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 24075632.247\end{tabular}}}}%
+    \put(0.32858561,-0.21421299){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(0.32858561,-0.22654541){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 35469.556\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=238]{binary_tree_linthicum.pdf}}%
+    \put(0.08413947,-0.27734323){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 6101551.109\end{tabular}}}}%
+    \put(0.08413947,-0.28967565){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(0.08413947,-0.30200806){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 32782.875\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=239]{binary_tree_linthicum.pdf}}%
+    \put(0.24563542,-0.27734323){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 6242827.265\end{tabular}}}}%
+    \put(0.24563542,-0.28967565){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(0.24563542,-0.30200806){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 30918.143\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=240]{binary_tree_linthicum.pdf}}%
+    \put(0.40786544,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 23321919.359\end{tabular}}}}%
+    \put(0.40786544,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(0.40786544,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 20476.125\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=241]{binary_tree_linthicum.pdf}}%
+    \put(0.57449989,-0.1140855){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperature <= 19.5\end{tabular}}}}%
+    \put(0.57449989,-0.12641793){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 29566466.312\end{tabular}}}}%
+    \put(0.57449989,-0.13875034){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 18\end{tabular}}}}%
+    \put(0.57449989,-0.15108276){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 26787.278\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=242]{binary_tree_linthicum.pdf}}%
+    \put(0.57449989,-0.20188057){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 17397082.76\end{tabular}}}}%
+    \put(0.57449989,-0.21421299){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 10\end{tabular}}}}%
+    \put(0.57449989,-0.22654541){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 28906.8\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=243]{binary_tree_linthicum.pdf}}%
+    \put(0.73819805,-0.20188057){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 32143392.609\end{tabular}}}}%
+    \put(0.73819805,-0.21421299){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(0.73819805,-0.22654541){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 24137.875\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=244]{binary_tree_linthicum.pdf}}%
+    \put(0.73819805,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 10.5\end{tabular}}}}%
+    \put(0.73819805,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 28063338.667\end{tabular}}}}%
+    \put(0.73819805,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 18\end{tabular}}}}%
+    \put(0.73819805,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 26692.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=245]{binary_tree_linthicum.pdf}}%
+    \put(1.06559438,-0.03245665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 46.5\end{tabular}}}}%
+    \put(1.06559438,-0.04478906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 46700310.129\end{tabular}}}}%
+    \put(1.06559438,-0.05712149){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 53\end{tabular}}}}%
+    \put(1.06559438,-0.0694539){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 22186.943\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=246]{binary_tree_linthicum.pdf}}%
+    \put(0.73819805,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 7880870.667\end{tabular}}}}%
+    \put(0.73819805,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(0.73819805,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 23866.667\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=247]{binary_tree_linthicum.pdf}}%
+    \put(0.90189621,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 32280789.778\end{tabular}}}}%
+    \put(0.90189621,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(0.90189621,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 29517.333\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=248]{binary_tree_linthicum.pdf}}%
+    \put(1.06559438,-0.12025172){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 30016062.41\end{tabular}}}}%
+    \put(1.06559438,-0.13258413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 10\end{tabular}}}}%
+    \put(1.06559438,-0.14491655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 17281.7\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=249]{binary_tree_linthicum.pdf}}%
+    \put(1.22929254,-0.1140855){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 499.0\end{tabular}}}}%
+    \put(1.22929254,-0.12641793){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 43683370.025\end{tabular}}}}%
+    \put(1.22929254,-0.13875034){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 43\end{tabular}}}}%
+    \put(1.22929254,-0.15108276){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 23327.698\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=250]{binary_tree_linthicum.pdf}}%
+    \put(1.14560828,-0.20188057){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 39601233.076\end{tabular}}}}%
+    \put(1.14560828,-0.21421299){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 12\end{tabular}}}}%
+    \put(1.14560828,-0.22654541){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 26977.583\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=251]{binary_tree_linthicum.pdf}}%
+    \put(1.31224273,-0.19571437){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 579.5\end{tabular}}}}%
+    \put(1.31224273,-0.20804679){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 38110607.942\end{tabular}}}}%
+    \put(1.31224273,-0.2203792){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 31\end{tabular}}}}%
+    \put(1.31224273,-0.23271162){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 21914.839\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=252]{binary_tree_linthicum.pdf}}%
+    \put(1.22855847,-0.27734323){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 26291215.209\end{tabular}}}}%
+    \put(1.22855847,-0.28967565){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 14\end{tabular}}}}%
+    \put(1.22855847,-0.30200806){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 19306.929\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=253]{binary_tree_linthicum.pdf}}%
+    \put(1.39519292,-0.27734323){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 37630665.779\end{tabular}}}}%
+    \put(1.39519292,-0.28967565){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 17\end{tabular}}}}%
+    \put(1.39519292,-0.30200806){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 24062.529\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=254]{binary_tree_linthicum.pdf}}%
+    \put(0.50182671,0.2940588){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 38.5\end{tabular}}}}%
+    \put(0.50182671,0.28172639){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 21475389.562\end{tabular}}}}%
+    \put(0.50182671,0.26939394){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 19\end{tabular}}}}%
+    \put(0.50182671,0.25706153){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 13960.737\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=255]{binary_tree_linthicum.pdf}}%
+    \put(0.75141136,0.2940588){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 16.5\end{tabular}}}}%
+    \put(0.75141136,0.28172639){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 27937239.555\end{tabular}}}}%
+    \put(0.75141136,0.26939394){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 51\end{tabular}}}}%
+    \put(0.75141136,0.25706153){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 19503.882\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=256]{binary_tree_linthicum.pdf}}%
+    \put(0.41814245,0.2062637){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 11555723.633\end{tabular}}}}%
+    \put(0.41814245,0.19393129){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(0.41814245,0.18159889){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 10976.714\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=257]{binary_tree_linthicum.pdf}}%
+    \put(0.5847769,0.2062637){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 19037667.243\end{tabular}}}}%
+    \put(0.5847769,0.19393129){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 12\end{tabular}}}}%
+    \put(0.5847769,0.18159889){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 15701.417\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=258]{binary_tree_linthicum.pdf}}%
+    \put(0.75141136,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 61.5\end{tabular}}}}%
+    \put(0.75141136,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 43494158.825\end{tabular}}}}%
+    \put(0.75141136,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 19\end{tabular}}}}%
+    \put(0.75141136,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 22128.263\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=259]{binary_tree_linthicum.pdf}}%
+    \put(0.91804581,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperature <= 25.5\end{tabular}}}}%
+    \put(0.91804581,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 12182871.476\end{tabular}}}}%
+    \put(0.91804581,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 32\end{tabular}}}}%
+    \put(0.91804581,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 17945.656\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=260]{binary_tree_linthicum.pdf}}%
+    \put(0.58771319,0.12463488){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 11558743.702\end{tabular}}}}%
+    \put(0.58771319,0.11230243){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 11\end{tabular}}}}%
+    \put(0.58771319,0.09997002){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 25007.455\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=261]{binary_tree_linthicum.pdf}}%
+    \put(0.75434765,0.12463488){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 60334162.484\end{tabular}}}}%
+    \put(0.75434765,0.11230243){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(0.75434765,0.09997002){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 18169.375\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=262]{binary_tree_linthicum.pdf}}%
+    \put(0.91804581,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 35.5\end{tabular}}}}%
+    \put(0.91804581,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 4908860.533\end{tabular}}}}%
+    \put(0.91804581,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 17\end{tabular}}}}%
+    \put(0.91804581,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 19804.235\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=263]{binary_tree_linthicum.pdf}}%
+    \put(1.08174397,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 583.5\end{tabular}}}}%
+    \put(1.08174397,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 12074981.929\end{tabular}}}}%
+    \put(1.08174397,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 15\end{tabular}}}}%
+    \put(1.08174397,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 15839.267\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=264]{binary_tree_linthicum.pdf}}%
+    \put(0.76609281,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 2153930.173\end{tabular}}}}%
+    \put(0.76609281,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(0.76609281,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 21386.222\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=265]{binary_tree_linthicum.pdf}}%
+    \put(0.92171617,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 2025181.5\end{tabular}}}}%
+    \put(0.92171617,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(0.92171617,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 18024.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=266]{binary_tree_linthicum.pdf}}%
+    \put(1.07733954,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 4760429.102\end{tabular}}}}%
+    \put(1.07733954,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(1.07733954,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 13388.429\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=267]{binary_tree_linthicum.pdf}}%
+    \put(1.23883548,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 8620625.438\end{tabular}}}}%
+    \put(1.23883548,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(1.23883548,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 17983.75\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=268]{binary_tree_linthicum.pdf}}%
+    \put(1.72552553,0.37568767){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 15.5\end{tabular}}}}%
+    \put(1.72552553,0.36335521){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 20906447.635\end{tabular}}}}%
+    \put(1.72552553,0.3510228){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 56\end{tabular}}}}%
+    \put(1.72552553,0.3386904){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 39321.589\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=269]{binary_tree_linthicum.pdf}}%
+    \put(2.25625993,0.37568767){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 890.5\end{tabular}}}}%
+    \put(2.25625993,0.36335521){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 41340377.438\end{tabular}}}}%
+    \put(2.25625993,0.3510228){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 157\end{tabular}}}}%
+    \put(2.25625993,0.3386904){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 33038.834\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=270]{binary_tree_linthicum.pdf}}%
+    \put(1.64257534,0.2940588){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 42.5\end{tabular}}}}%
+    \put(1.64257534,0.28172639){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 10559354.582\end{tabular}}}}%
+    \put(1.64257534,0.26939394){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 48\end{tabular}}}}%
+    \put(1.64257534,0.25706153){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 40636.792\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=271]{binary_tree_linthicum.pdf}}%
+    \put(1.8092098,0.28789257){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 10339199.234\end{tabular}}}}%
+    \put(1.8092098,0.27556016){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(1.8092098,0.26322775){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 31430.375\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=272]{binary_tree_linthicum.pdf}}%
+    \put(1.56182737,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 14.5\end{tabular}}}}%
+    \put(1.56182737,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 6871707.646\end{tabular}}}}%
+    \put(1.56182737,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 37\end{tabular}}}}%
+    \put(1.56182737,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 41716.405\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=273]{binary_tree_linthicum.pdf}}%
+    \put(1.72332332,0.2062637){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 5855448.777\end{tabular}}}}%
+    \put(1.72332332,0.19393129){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 11\end{tabular}}}}%
+    \put(1.72332332,0.18159889){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 37005.364\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=274]{binary_tree_linthicum.pdf}}%
+    \put(1.4810794,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 831.5\end{tabular}}}}%
+    \put(1.4810794,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 5858039.284\end{tabular}}}}%
+    \put(1.4810794,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 29\end{tabular}}}}%
+    \put(1.4810794,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 42458.483\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=275]{binary_tree_linthicum.pdf}}%
+    \put(1.64257534,0.12463488){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1313781.234\end{tabular}}}}%
+    \put(1.64257534,0.11230243){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(1.64257534,0.09997002){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 39026.375\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=276]{binary_tree_linthicum.pdf}}%
+    \put(1.40033143,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 6763050.076\end{tabular}}}}%
+    \put(1.40033143,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 12\end{tabular}}}}%
+    \put(1.40033143,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 40954.083\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=277]{binary_tree_linthicum.pdf}}%
+    \put(1.56182737,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 33.0\end{tabular}}}}%
+    \put(1.56182737,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 2493949.536\end{tabular}}}}%
+    \put(1.56182737,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 17\end{tabular}}}}%
+    \put(1.56182737,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 43520.412\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=278]{binary_tree_linthicum.pdf}}%
+    \put(1.48401569,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 1334035.44\end{tabular}}}}%
+    \put(1.48401569,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 10\end{tabular}}}}%
+    \put(1.48401569,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 44573.4\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=279]{binary_tree_linthicum.pdf}}%
+    \put(1.63963905,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 304167.265\end{tabular}}}}%
+    \put(1.63963905,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(1.63963905,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 42016.143\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=280]{binary_tree_linthicum.pdf}}%
+    \put(2.25625993,0.2940588){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperature <= 23.5\end{tabular}}}}%
+    \put(2.25625993,0.28172639){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 44257748.96\end{tabular}}}}%
+    \put(2.25625993,0.26939394){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 108\end{tabular}}}}%
+    \put(2.25625993,0.25706153){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 31292.324\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=281]{binary_tree_linthicum.pdf}}%
+    \put(2.9000415,0.2940588){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperature <= 25.5\end{tabular}}}}%
+    \put(2.9000415,0.28172639){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 13368870.531\end{tabular}}}}%
+    \put(2.9000415,0.26939394){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 49\end{tabular}}}}%
+    \put(2.9000415,0.25706153){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 36888.286\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=282]{binary_tree_linthicum.pdf}}%
+    \put(2.1344039,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 13.5\end{tabular}}}}%
+    \put(2.1344039,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 36069786.273\end{tabular}}}}%
+    \put(2.1344039,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 47\end{tabular}}}}%
+    \put(2.1344039,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 34377.638\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=283]{binary_tree_linthicum.pdf}}%
+    \put(2.49703571,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 13.5\end{tabular}}}}%
+    \put(2.49703571,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 37580945.216\end{tabular}}}}%
+    \put(2.49703571,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 61\end{tabular}}}}%
+    \put(2.49703571,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 28915.115\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=284]{binary_tree_linthicum.pdf}}%
+    \put(1.88702148,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 50.0\end{tabular}}}}%
+    \put(1.88702148,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 14913778.912\end{tabular}}}}%
+    \put(1.88702148,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 21\end{tabular}}}}%
+    \put(1.88702148,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 37885.571\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=285]{binary_tree_linthicum.pdf}}%
+    \put(2.1344039,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 802.0\end{tabular}}}}%
+    \put(2.1344039,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 35190434.059\end{tabular}}}}%
+    \put(2.1344039,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 26\end{tabular}}}}%
+    \put(2.1344039,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 31544.308\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=286]{binary_tree_linthicum.pdf}}%
+    \put(1.72332332,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 4482224.083\end{tabular}}}}%
+    \put(1.72332332,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 12\end{tabular}}}}%
+    \put(1.72332332,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 39309.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=287]{binary_tree_linthicum.pdf}}%
+    \put(1.88702148,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 22514515.111\end{tabular}}}}%
+    \put(1.88702148,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(1.88702148,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 35987.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=288]{binary_tree_linthicum.pdf}}%
+    \put(2.05365593,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 41.5\end{tabular}}}}%
+    \put(2.05365593,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 29448539.188\end{tabular}}}}%
+    \put(2.05365593,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 16\end{tabular}}}}%
+    \put(2.05365593,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 28652.75\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=289]{binary_tree_linthicum.pdf}}%
+    \put(2.21515188,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 9595265.36\end{tabular}}}}%
+    \put(2.21515188,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 10\end{tabular}}}}%
+    \put(2.21515188,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 36170.8\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=290]{binary_tree_linthicum.pdf}}%
+    \put(1.96483316,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 39372304.98\end{tabular}}}}%
+    \put(1.96483316,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(1.96483316,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 25786.143\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=291]{binary_tree_linthicum.pdf}}%
+    \put(2.12853132,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 10367673.333\end{tabular}}}}%
+    \put(2.12853132,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(2.12853132,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 30882.333\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=292]{binary_tree_linthicum.pdf}}%
+    \put(2.49703571,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}solarradiation <= 771.5\end{tabular}}}}%
+    \put(2.49703571,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 29761957.29\end{tabular}}}}%
+    \put(2.49703571,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 24\end{tabular}}}}%
+    \put(2.49703571,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 31485.708\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=293]{binary_tree_linthicum.pdf}}%
+    \put(2.66220201,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}humidity <= 47.0\end{tabular}}}}%
+    \put(2.66220201,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 35586219.506\end{tabular}}}}%
+    \put(2.66220201,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 37\end{tabular}}}}%
+    \put(2.66220201,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 27247.703\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=294]{binary_tree_linthicum.pdf}}%
+    \put(2.37371153,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 35908205.09\end{tabular}}}}%
+    \put(2.37371153,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 10\end{tabular}}}}%
+    \put(2.37371153,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 28976.1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=295]{binary_tree_linthicum.pdf}}%
+    \put(2.53520748,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}calendarweek <= 22.5\end{tabular}}}}%
+    \put(2.53520748,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 17659779.49\end{tabular}}}}%
+    \put(2.53520748,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 14\end{tabular}}}}%
+    \put(2.53520748,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 33278.286\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=296]{binary_tree_linthicum.pdf}}%
+    \put(2.36783895,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 10536574.245\end{tabular}}}}%
+    \put(2.36783895,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(2.36783895,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 31416.429\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=297]{binary_tree_linthicum.pdf}}%
+    \put(2.5344734,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 17849960.694\end{tabular}}}}%
+    \put(2.5344734,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 7\end{tabular}}}}%
+    \put(2.5344734,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 35140.143\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=298]{binary_tree_linthicum.pdf}}%
+    \put(2.70037378,0.04917221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}hour <= 15.5\end{tabular}}}}%
+    \put(2.70037378,0.03683978){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 20343370.222\end{tabular}}}}%
+    \put(2.70037378,0.02450738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 24\end{tabular}}}}%
+    \put(2.70037378,0.01217497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 29235.167\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=299]{binary_tree_linthicum.pdf}}%
+    \put(2.86700824,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 42971766.402\end{tabular}}}}%
+    \put(2.86700824,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 13\end{tabular}}}}%
+    \put(2.86700824,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 23578.538\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=300]{binary_tree_linthicum.pdf}}%
+    \put(2.70110786,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 26349853.091\end{tabular}}}}%
+    \put(2.70110786,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 11\end{tabular}}}}%
+    \put(2.70110786,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 30828.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=301]{binary_tree_linthicum.pdf}}%
+    \put(2.86774231,-0.03862286){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 11297653.006\end{tabular}}}}%
+    \put(2.86774231,-0.05095527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 13\end{tabular}}}}%
+    \put(2.86774231,-0.0632877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 27887.385\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=302]{binary_tree_linthicum.pdf}}%
+    \put(2.9000415,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperature <= 22.5\end{tabular}}}}%
+    \put(2.9000415,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 5879876.612\end{tabular}}}}%
+    \put(2.9000415,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 22\end{tabular}}}}%
+    \put(2.9000415,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 39201.545\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=303]{binary_tree_linthicum.pdf}}%
+    \put(3.13788098,0.21242993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperature <= 28.5\end{tabular}}}}%
+    \put(3.13788098,0.20009752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 11558034.39\end{tabular}}}}%
+    \put(3.13788098,0.18776511){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 27\end{tabular}}}}%
+    \put(3.13788098,0.17543266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 35003.407\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=304]{binary_tree_linthicum.pdf}}%
+    \put(2.82369796,0.12463488){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 5350886.91\end{tabular}}}}%
+    \put(2.82369796,0.11230243){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 12\end{tabular}}}}%
+    \put(2.82369796,0.09997002){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 40154.583\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=305]{binary_tree_linthicum.pdf}}%
+    \put(2.97932133,0.12463488){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 4116801.89\end{tabular}}}}%
+    \put(2.97932133,0.11230243){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 10\end{tabular}}}}%
+    \put(2.97932133,0.09997002){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 38057.9\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=306]{binary_tree_linthicum.pdf}}%
+    \put(3.13788098,0.13080106){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cloudcoverage <= 39.5\end{tabular}}}}%
+    \put(3.13788098,0.11846865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 5942373.444\end{tabular}}}}%
+    \put(3.13788098,0.10613624){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 18\end{tabular}}}}%
+    \put(3.13788098,0.09380384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 36218.333\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=307]{binary_tree_linthicum.pdf}}%
+    \put(3.30157914,0.12463488){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 13933086.247\end{tabular}}}}%
+    \put(3.30157914,0.11230243){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 9\end{tabular}}}}%
+    \put(3.30157914,0.09997002){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 32573.556\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=308]{binary_tree_linthicum.pdf}}%
+    \put(3.10044328,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 4039376.6\end{tabular}}}}%
+    \put(3.10044328,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 10\end{tabular}}}}%
+    \put(3.10044328,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 37503.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=309]{binary_tree_linthicum.pdf}}%
+    \put(3.25313036,0.04300601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}squared_error = 3679458.25\end{tabular}}}}%
+    \put(3.25313036,0.03067358){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}samples = 8\end{tabular}}}}%
+    \put(3.25313036,0.01834117){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}value = 34612.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=310]{binary_tree_linthicum.pdf}}%
+  \end{picture}%
+\endgroup%

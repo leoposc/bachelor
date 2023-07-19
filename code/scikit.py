@@ -516,7 +516,7 @@ class ScikitManager():
 
 
     def visualize_tree(self):
-        feature_names = self.features
+        feature_names = self.features.copy()
         feature_names.remove('energyoutput')
         feature_names.remove('timeepoch')
         export_graphviz(self.model, out_file='tree.dot',  

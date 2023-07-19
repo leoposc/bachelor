@@ -56,22 +56,22 @@ sci.get_data()
 
 # sci.calculate_energyoutput_index()
 sci.choose_features(['timeepoch',
-                    #  'solarradiation',
+                     'solarradiation',
                     #  'energyoutput_index',
-                    #  'calendarweek',
-                    #  'hour',
-                    #  'temperature',
+                     'calendarweek',
+                     'hour',
+                     'temperature',
                     #  'wind',
                      'humidity',
                      'cloudcoverage',
-                    #  'energyoutput'
+                     'energyoutput'
                      ])
 # sci.update_numpy_arrays()
 
 #%%
 sci.filter_low_energyoutput() 
 # sci.split_data(0.1)
-sci.split_data_by_days(0.1)
+sci.split_data_by_days(0.2)
 # sci.transform_hours()
 # print(type(sci.timeepoch_test[0]))
 
@@ -170,4 +170,6 @@ print(sci.outliers_indices_test)
 # [print(type(x.astype(datetime))) if isinstance(x, np.datetime64) else x for x in sci.timeepoch_test[[12,3,4,5,6,19]]]
 
 # %%
+
+sci.visualize_tree()
 # %%
