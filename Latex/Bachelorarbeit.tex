@@ -577,6 +577,8 @@ An dieser Stelle sei angemerkt, dass ein sogenannter \textit{gieriger Algorithmu
 
 Ob dieses Szenario tatsächlich eintreten könnte, lässt sich nur schwerlich voraussagen. Dementsprechend soll für die Suche nach den besten Merkmalen für die optimale Teilung, die bei jedem Knotenpunkt im Entscheidungsbaum stattfindet, die zusätzliche Rechenzeit in Kauf genommen werden. Stattdessen beschränken wir die Rechenoperationen an anderer Stelle, indem wir die automatisierte Rastersuche auf die aus Erfahrung gut geeigneten Hyperparametern beschränken.
 
+Zudem müssen relativ wenige Merkmale in den Lernalgorithmus einfließen, da für jede einzelne Solaranlage ein eigenes Modell erstellt werden soll. Die Anzahl der zu berücksichtigenden Merkmale zu beschränken ist vor allem dann sinnvoll, wenn für die Modellerstellung viele verschiedene Merkmale verwendet werden. 
+
 \subsubsection{Maximalanzahl an Blättern}
 
 Die Maximalanzahl an Blättern ähnelt dem Parameter, der die maximale Höhe des Baums bestimmt. Schließlich lässt sich die Anzahl der Blätter bei einem vollständigem Binärbaum durch die Formel $n=2^h$ beschreiben lässt. Folglich können beide Parameter sich gegenseitig begrenzen.

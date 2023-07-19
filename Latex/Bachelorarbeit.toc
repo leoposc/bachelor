@@ -42,6 +42,6 @@
 \contentsline {subsubsection}{\numberline {8.2.1}Mindestanzahl an Proben pro Blatt}{42}{subsubsection.8.2.1}%
 \contentsline {subsubsection}{\numberline {8.2.2}Beschränkung der Merkmale}{42}{subsubsection.8.2.2}%
 \contentsline {subsubsection}{\numberline {8.2.3}Maximalanzahl an Blättern}{43}{subsubsection.8.2.3}%
-\contentsline {subsubsection}{\numberline {8.2.4}Aufteilung der Proben}{43}{subsubsection.8.2.4}%
-\contentsline {subsection}{\numberline {8.3}Hyperparameter auswählen}{43}{subsection.8.3}%
+\contentsline {subsubsection}{\numberline {8.2.4}Aufteilung der Proben}{44}{subsubsection.8.2.4}%
+\contentsline {subsection}{\numberline {8.3}Hyperparameter auswählen}{44}{subsection.8.3}%
 \contentsline {section}{\numberline {9}Evaluierung des Lernalgorithmus}{45}{section.9}%
