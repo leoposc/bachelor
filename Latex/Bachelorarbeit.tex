@@ -526,18 +526,8 @@ Die Tatsache, dass nichtlineare Beziehungen gut erkannt werden können ist sowoh
 
 \subsection{Aufbau eines Entscheidungsbaum}
 
-%\begin{figure}
-%\centering
-%\def\svgwidth{350pt}
-%\input{assets/binary_tree_linthicum.pdf_tex}
-%\caption{Einfacher Entscheidungsbaum mit einem Merkmal und der Tiefe 2}
-%\label{fig:binary}
-%\end{figure}
-
 Künstliche Intelligenz nimmt eine immer bedeutendere Rolle in unserer heutigen Gesellschaft ein. Bereiche unseres täglichen Lebens werden bereits durch sie erheblich erleichtert. Dennoch schreckt ein Teil der Gesellschaft vor den noch unerforschten Begleiterscheinungen der neuen Technologie zurück. Nicht selten sind die Ergebnisse dieser Algorithmen schwer zu verstehen, wodurch Ungewissheiten hervorgerufen werden. 
 Ein Entscheidungsbaum ist ein Modell aus dem Bereich des maschinellem Lernens, welches wiederum ein Teilgebiet von künstlicher Intelligenz ist. Obwohl Entscheidungsbäume derzeit als äußerst mächtige Lernalgorithmen angesehen werden, sind ihre Prognosen äußerst leicht nachzuvollziehen. Im Grunde genommen ist ein Entscheidungsbaum eine Verkettung von \textit{Wenn-Sonst-Anweisungen}, die schlussendlich zum Ergebnis führen. \autoref{fig:binary_tree_linthicum} zeigt den Entscheidungsbaum für die Solaranlage in Linthicum, Maryland, welcher vom \textit{CART-Algorithmus} erstellt.
-
-
 
 \subsection{Schlussfolgerungen für das Training des Modells}
 
@@ -597,8 +587,6 @@ Bei jedem Knotenpunkt wird neu entschieden, welches der Merkmale sich am besten 
 An dieser Stelle sei angemerkt, dass ein sogenannter \textit{gieriger Algorithmus}\footnote{\textit{Gierige Algorithmen} entscheiden schrittweise über nächst besten Folgeschritt. Folglich können wir uns bei dem Ergebnis, welches durch den Algorithmus gefunden wurde, nicht sicher sein, dass es sich um das optimale Ergebnis handelt. Der Vorteil von dieser Art von Algorithmen vergleichsweise schnell und leicht zu implementieren sind. Zudem sind die Ergebnisse in der Regel gut genug, um den Anforderungen gerecht zu werden.} den Entscheidungsbaum erstellt. Für den Entscheidungsbaum bedeutet dies, dass bei jedem Knotenpunkt das momentan beste Merkmal aus der eventuell temporär begrenzten Merkmalsliste ausgewählt wird. Durch die Begrenzung der Merkmale kann es vorkommen, dass ein Merkmal nicht berücksichtigt wird, dass zwar im aktuellen Schritt für die Teilung des Datensatzes das beste Ergebnis erzielt hätte, jedoch nicht für das optimale Endergebnis.
 
 Ob dieses Szenario tatsächlich eintreten könnte, lässt sich nur schwerlich voraussagen. Dementsprechend soll für die Suche nach den besten Merkmalen für die optimale Teilung, die bei jedem Knotenpunkt im Entscheidungsbaum stattfindet, die zusätzliche Rechenzeit in Kauf genommen werden. Stattdessen beschränken wir die Rechenoperationen an anderer Stelle, indem wir die automatisierte Rastersuche auf die aus Erfahrung gut geeigneten Hyperparametern beschränken.
-
-Zudem müssen relativ wenige Merkmale in den Lernalgorithmus einfließen, da für jede einzelne Solaranlage ein eigenes Modell erstellt werden soll. Die Anzahl der zu berücksichtigenden Merkmale zu beschränken ist vor allem dann sinnvoll, wenn für die Modellerstellung viele verschiedene Merkmale verwendet werden. 
 
 \subsubsection{Maximalanzahl an Blättern}
 

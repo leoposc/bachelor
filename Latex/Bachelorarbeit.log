@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.13)  20 JUL 2023 09:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.13)  20 JUL 2023 15:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -329,4 +329,737 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 34.
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 43
 .
 
-(/usr/local/texlive/2023/texmf-dist/tex/la
+(/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count279
+\l__pdf_internal_box=\box54
+)
+(./Bachelorarbeit.aux)
+\openout1 = `Bachelorarbeit.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=702.78308pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring ON on input line 43.
+(./Bachelorarbeit.out) (./Bachelorarbeit.out)
+\@outlinefile=\write3
+\openout3 = `Bachelorarbeit.out'.
+
+\c@maskedRefs=\count280
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/apacite/ngerman.apc
+File: ngerman.apc 2013/07/21 v6.03 apacite language file
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/apacite/german.apc
+File: german.apc 2013/07/21 v6.03 apacite language file
+LaTeX Info: Redefining \BPBI on input line 142.
+LaTeX Info: Redefining \BHBI on input line 143.
+))
+(/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count281
+\scratchdimen=\dimen161
+\scratchbox=\box55
+\nofMPsegments=\count282
+\nofMParguments=\count283
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count284
+\MPscratchDim=\dimen162
+\MPnumerator=\count285
+\makeMPintoPDFobject=\count286
+\everyMPtoPDFconversion=\toks24
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+[1
+
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
+al/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.83 \newpage
+              [1] [2] (./Bachelorarbeit.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 2.
+ [3])
+\tf@toc=\write4
+\openout4 = `Bachelorarbeit.toc'.
+
+ [4] [5] [6]
+Overfull \hbox (3.27159pt too wide) in paragraph at lines 123--124
+\T1/phv/m/n/12 den. 2022 hin-ge-gen sank der Be-darf und die Er-zeu-gung auf un
+-ge-fähr 490.000.000
+ []
+
+[7]
+Overfull \hbox (0.28345pt too wide) in paragraph at lines 147--148
+\T1/phv/m/n/12 Laut dem Bun-des-mi-nis-te-ri-um für Wirt-schaft und Kli-ma-schu
+tz (Stand 1. April 2020)
+ []
+
+
+Overfull \hbox (19.2319pt too wide) in paragraph at lines 147--148
+\T1/phv/m/n/12 ist Deutsch-land im Be-sitz von Stromer-zeu-gungs-an-la-gen mit 
+ei-ner Netto-Nennleistung
+ []
+
+(./assets/Strombedarf_Erzeugung_2022.pdf_tex
+<assets//Strombedarf_Erzeugung_2022.pdf, id=275, page=1, 752.8125pt x 376.40625
+pt>
+File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_2022.pdf, page 1>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page1 used on
+ input line 56.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 57.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 57.
+<assets//Strombedarf_Erzeugung_2022.pdf, id=276, page=2, 752.8125pt x 376.40625
+pt>
+File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_2022.pdf, page 2>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page2 used on
+ input line 58.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_2022.pdf, id=277, page=3, 752.8125pt x 376.40625
+pt>
+File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_2022.pdf, page 3>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page3 used on
+ input line 60.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_2022.pdf, id=278, page=4, 752.8125pt x 376.40625
+pt>
+File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_2022.pdf, page 4>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page4 used on
+ input line 62.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_2022.pdf, id=279, page=5, 752.8125pt x 376.40625
+pt>
+File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_2022.pdf, page 5>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page5 used on
+ input line 64.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_2022.pdf, id=280, page=6, 752.8125pt x 376.40625
+pt>
+File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_2022.pdf, page 6>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page6 used on
+ input line 66.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_2022.pdf, id=281, page=7, 752.8125pt x 376.40625
+pt>
+File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_2022.pdf, page 7>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page7 used on
+ input line 68.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_2022.pdf, id=282, page=8, 752.8125pt x 376.40625
+pt>
+File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_2022.pdf, page 8>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page8 used on
+ input line 70.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_2022.pdf, id=283, page=9, 752.8125pt x 376.40625
+pt>
+File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_2022.pdf, page 9>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page9 used on
+ input line 72.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_2022.pdf, id=284, page=10, 752.8125pt x 376.4062
+5pt>
+File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_2022.pdf, page 10>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page10 used o
+n input line 74.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_2022.pdf, id=285, page=11, 752.8125pt x 376.4062
+5pt>
+File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_2022.pdf, page 11>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page11 used o
+n input line 76.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_2022.pdf, id=286, page=12, 752.8125pt x 376.4062
+5pt>
+File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_2022.pdf, page 12>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page12 used o
+n input line 78.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_2022.pdf, id=287, page=13, 752.8125pt x 376.4062
+5pt>
+File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_2022.pdf, page 13>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page13 used o
+n input line 80.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_2022.pdf, id=288, page=14, 752.8125pt x 376.4062
+5pt>
+File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_2022.pdf, page 14>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page14 used o
+n input line 82.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+)
+Overfull \hbox (23.20865pt too wide) in paragraph at lines 102--154
+ [][] 
+ []
+
+[8
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.159 
+       <./assets//Strombedarf_Erzeugung_2022.pdf> <./assets//Strombedarf_Erzeug
+ung_2022.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+> <./assets//Strombedarf_Erzeugung_2022.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+> <./assets//Strombedarf_Erzeugung_2022.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+> <./assets//Strombedarf_Erzeugung_2022.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+> <./assets//Strombedarf_Erzeugung_2022.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+> <./assets//Strombedarf_Erzeugung_2022.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+> <./assets//Strombedarf_Erzeugung_2022.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+> <./assets//Strombedarf_Erzeugung_2022.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+> <./assets//Strombedarf_Erzeugung_2022.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+> <./assets//Strombedarf_Erzeugung_2022.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+> <./assets//Strombedarf_Erzeugung_2022.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+> <./assets//Strombedarf_Erzeugung_2022.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+> <./assets//Strombedarf_Erzeugung_2022.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+>] [9] [10] (./assets/Strombedarf_Erzeugung_Woche.pdf_tex
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=345, page=1, 752.8125pt x 376.4062
+5pt>
+File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_Woche.pdf, page 1>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page1 used o
+n input line 56.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=346, page=2, 752.8125pt x 376.4062
+5pt>
+File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_Woche.pdf, page 2>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page2 used o
+n input line 58.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=347, page=3, 752.8125pt x 376.4062
+5pt>
+File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_Woche.pdf, page 3>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page3 used o
+n input line 60.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=348, page=4, 752.8125pt x 376.4062
+5pt>
+File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_Woche.pdf, page 4>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page4 used o
+n input line 62.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=349, page=5, 752.8125pt x 376.4062
+5pt>
+File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_Woche.pdf, page 5>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page5 used o
+n input line 64.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=350, page=6, 752.8125pt x 376.4062
+5pt>
+File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_Woche.pdf, page 6>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page6 used o
+n input line 66.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=351, page=7, 752.8125pt x 376.4062
+5pt>
+File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_Woche.pdf, page 7>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page7 used o
+n input line 68.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=352, page=8, 752.8125pt x 376.4062
+5pt>
+File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_Woche.pdf, page 8>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page8 used o
+n input line 70.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=353, page=9, 752.8125pt x 376.4062
+5pt>
+File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_Woche.pdf, page 9>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page9 used o
+n input line 72.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=354, page=10, 752.8125pt x 376.406
+25pt>
+File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_Woche.pdf, page 10>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page10 used 
+on input line 74.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=355, page=11, 752.8125pt x 376.406
+25pt>
+File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_Woche.pdf, page 11>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page11 used 
+on input line 76.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=356, page=12, 752.8125pt x 376.406
+25pt>
+File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_Woche.pdf, page 12>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page12 used 
+on input line 78.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=357, page=13, 752.8125pt x 376.406
+25pt>
+File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_Woche.pdf, page 13>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page13 used 
+on input line 80.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=358, page=14, 752.8125pt x 376.406
+25pt>
+File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
+<use assets//Strombedarf_Erzeugung_Woche.pdf, page 14>
+Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page14 used 
+on input line 82.
+(pdftex.def)             Requested size: 450.0pt x 225.00693pt.
+)
+Overfull \hbox (23.20865pt too wide) in paragraph at lines 104--195
+ [][] 
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 199.
+[11
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.204 
+       <./assets//Strombedarf_Erzeugung_Woche.pdf> <./assets//Strombedarf_Erzeu
+gung_Woche.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+> <./assets//Strombedarf_Erzeugung_Woche.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+> <./assets//Strombedarf_Erzeugung_Woche.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+> <./assets//Strombedarf_Erzeugung_Woche.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+> <./assets//Strombedarf_Erzeugung_Woche.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+> <./assets//Strombedarf_Erzeugung_Woche.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+> <./assets//Strombedarf_Erzeugung_Woche.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+> <./assets//Strombedarf_Erzeugung_Woche.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+> <./assets//Strombedarf_Erzeugung_Woche.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+> <./assets//Strombedarf_Erzeugung_Woche.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+> <./assets//Strombedarf_Erzeugung_Woche.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+> <./assets//Strombedarf_Erzeugung_Woche.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+> <./assets//Strombedarf_Erzeugung_Woche.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
+ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>] [12] [13] [14] [15]
+Overfull \hbox (5.45285pt too wide) in paragraph at lines 246--247
+[]\T1/phv/m/n/12 Die Aus-rich-tung der So-lar-mo-du-le hat nicht nur auf die ge
+-sam-te er-zeug-te Strom-
+ []
+
+
+Overfull \hbox (3.7519pt too wide) in paragraph at lines 246--247
+\T1/phv/m/n/12 gleich-ba-rer Ge-samt-leis-tung zu un-ter-schied-li-chen Uhr-zei
+-ten kon-tras-tiert Strom pro-
+ []
+
+[16] [17] [18]
+Overfull \hbox (6.8483pt too wide) in paragraph at lines 281--282
+\T1/phv/m/n/12 lung aus. Zu-dem ge-hö-ren Wol-ken zu den un-be-stän-di-gen Fak-
+to-ren, die sich sprung-
+ []
+
+(./assets/Cloud_types_en.pdf_tex
+<assets//Cloud_types_en.pdf, id=436, page=1, 722.76022pt x 444.27832pt>
+File: assets//Cloud_types_en.pdf Graphic file (type pdf)
+<use assets//Cloud_types_en.pdf, page 1>
+Package pdftex.def Info: assets//Cloud_types_en.pdf , page1 used on input line 
+56.
+(pdftex.def)             Requested size: 400.0pt x 245.87912pt.
+) [19] [20
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.306 
+       <./assets//Cloud_types_en.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
+
+ []
+
+[21
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.331 D
+       es Weiteren kommt hinzu, dass bei manchen Solaranlagen ein KÃ¼hlmanag...
+]
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 339.
+
+
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 3
+39.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 339.
+
+
+Missing character: There is no ² in font cmr12!
+(./assets/sonneneinstrahlung_deutschland.pdf_tex
+<assets//sonneneinstrahlung_deutschland.pdf, id=458, page=1, 597.51802pt x 844.
+65562pt>
+File: assets//sonneneinstrahlung_deutschland.pdf Graphic file (type pdf)
+<use assets//sonneneinstrahlung_deutschland.pdf, page 1>
+Package pdftex.def Info: assets//sonneneinstrahlung_deutschland.pdf , page1 use
+d on input line 56.
+(pdftex.def)             Requested size: 350.0pt x 494.77242pt.
+) [22] [23
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.350 
+       <./assets//sonneneinstrahlung_deutschland.pdf>] [24] [25]
+Overfull \hbox (2.18967pt too wide) in paragraph at lines 379--380
+[]\T1/phv/m/n/12 Die jah-res-zeit-li-chen Schwan-kun-gen er-ge-ben sich aus der
+ Nei-gung der Erdach-
+ []
+
+
+Overfull \hbox (3.18546pt too wide) in paragraph at lines 381--382
+[]\T1/phv/m/n/12 Auÿerdem be-ein-flus-sen Fak-to-ren wie Be-wöl-kung, Luft-ver-
+schmut-zung und geo-
+ []
+
+[26] [27] (./assets/heatmap.pdf_tex
+<assets//heatmap.pdf, id=498, page=1, 824.07881pt x 696.6025pt>
+File: assets//heatmap.pdf Graphic file (type pdf)
+<use assets//heatmap.pdf, page 1>
+Package pdftex.def Info: assets//heatmap.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 375.0pt x 316.98653pt.
+) [28
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.418 
+       <./assets//heatmap.pdf>]
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 426.
+ [29] (./assets/pairplot_all.pdf_tex
+<assets//pairplot_all.pdf, id=518, page=1, 1058.95638pt x 1058.95638pt>
+File: assets//pairplot_all.pdf Graphic file (type pdf)
+<use assets//pairplot_all.pdf, page 1>
+Package pdftex.def Info: assets//pairplot_all.pdf , page1 used on input line 56
+.
+(pdftex.def)             Requested size: 450.0pt x 449.99396pt.
+)
+Overfull \hbox (23.20865pt too wide) in paragraph at lines 57--445
+ [][] 
+ []
+
+[30] [31
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.458 
+       <./assets//pairplot_all.pdf>]
+
+LaTeX Warning: Reference `fig:pairplot_hcr' on page 32 undefined on input line 
+459.
+
+
+Overfull \hbox (13.1726pt too wide) in paragraph at lines 463--464
+\T1/phv/m/n/12 Durch die groÿe Men-ge an Da-ten-punk-te wer-den Streu-dia-gram-
+me, die zwei schwach
+ []
+
+[32] (./assets/pairplot_filtered.pdf_tex
+<assets//pairplot_filtered.pdf, id=544, page=1, 1064.97887pt x 1063.975pt>
+File: assets//pairplot_filtered.pdf Graphic file (type pdf)
+<use assets//pairplot_filtered.pdf, page 1>
+Package pdftex.def Info: assets//pairplot_filtered.pdf , page1 used on input li
+ne 56.
+(pdftex.def)             Requested size: 450.0pt x 449.5777pt.
+)
+Overfull \hbox (23.20865pt too wide) in paragraph at lines 57--469
+ [][] 
+ []
+
+[33] [34
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.479 \newpage
+               <./assets//pairplot_filtered.pdf>] [35] [36] [37]
+(./assets/decisiontree_linear.pdf_tex
+<assets//decisiontree_linear.pdf, id=571, page=1, 611.28375pt x 388.45125pt>
+File: assets//decisiontree_linear.pdf Graphic file (type pdf)
+<use assets//decisiontree_linear.pdf, page 1>
+Package pdftex.def Info: assets//decisiontree_linear.pdf , page1 used on input 
+line 56.
+(pdftex.def)             Requested size: 350.0pt x 222.40936pt.
+) [38
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.526 
+       <./assets//decisiontree_linear.pdf>]
+
+LaTeX Warning: Reference `fig:binary_tree_linthicum' on page 39 undefined on in
+put line 530.
+
+[39] [40] (./assets/decisiontree_example_2.pdf_tex
+<assets//decisiontree_example_2.pdf, id=595, page=1, 602.25pt x 451.6875pt>
+File: assets//decisiontree_example_2.pdf Graphic file (type pdf)
+<use assets//decisiontree_example_2.pdf, page 1>
+Package pdftex.def Info: assets//decisiontree_example_2.pdf , page1 used on inp
+ut line 56.
+(pdftex.def)             Requested size: 350.0pt x 262.50963pt.
+) [41
+pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.561 
+       <./assets//decisiontree_example_2.pdf>]
+(./assets/decisiontree_example.pdf_tex
+<assets//decisiontree_example.pdf, id=606, page=1, 450.9347pt x 338.76563pt>
+File: assets//decisiontree_example.pdf Graphic file (type pdf)
+<use assets//decisiontree_example.pdf, page 1>
+Package pdftex.def Info: assets//decisiontree_example.pdf , page1 used on input
+ line 56.
+(pdftex.def)             Requested size: 350.0pt x 262.94899pt.
+)
+
+LaTeX Warning: Reference `fig:binary_tree' on page 42 undefined on input line 5
+77.
+
+[42
+pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.578 
+       <./assets//decisiontree_example.pdf>]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 587.
+ [43] [44] [45] [46]
+(./Bachelorarbeit.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
+(rerunfilecheck)             Checksum: 7ADB8C9546A478787303429D8D407278;8933.
+ ) 
+Here is how much of TeX's memory you used:
+ 11665 strings out of 476025
+ 192339 string characters out of 5790017
+ 1870388 words of memory out of 5000000
+ 31798 multiletter control sequences out of 15000+600000
+ 553088 words of font info for 69 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 75i,14n,76p,2238b,615s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
+ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
+cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loca
+l/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texli
+ve/2023/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/202
+3/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2023/texmf
+-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Bachelorarbeit.pdf (47 pages, 1116750 bytes).
+PDF statistics:
+ 713 PDF objects out of 1000 (max. 8388607)
+ 566 compressed objects within 6 object streams
+ 112 named destinations out of 1000 (max. 500000)
+ 557 words of extra memory for PDF output out of 10000 (max. 10000000)
+

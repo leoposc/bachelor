@@ -1,0 +1,48 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Einführung}{5}{section.1}%
+\contentsline {section}{\numberline {2}Stand der Technik}{7}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Strombedarf in Deutschland}{7}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Strommix Deutschland}{8}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Aufbau des Stromnetzes}{9}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Schwankungen im Stromnetz}{10}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Redispatch}{11}{subsubsection.2.4.1}%
+\contentsline {section}{\numberline {3}Eigene Fragestellung und methodisches Vorgehen}{13}{section.3}%
+\contentsline {section}{\numberline {4}Wichtige Faktoren bei der Stromerzeugung durch Solarenergie}{15}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Wetter-unabhängige Faktoren}{15}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Schatten}{15}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Orientierung}{16}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Nachgeführte Photovoltaikanlagen}{17}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Astronomisch nachgeführte Photovoltaikanlagen}{18}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Sensorisch nachgeführte Photovoltaikanlagen}{18}{subsubsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.3}Wetter-abhängige Faktoren}{19}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Wolkenarten}{19}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Relative Luftfeuchtigkeit und Luftdruck}{20}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Temperatur}{21}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Wind}{22}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.5}Sonneneinstrahlung}{22}{subsubsection.4.3.5}%
+\contentsline {section}{\numberline {5}Zusammenhänge der Merkmale}{27}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Transformation der Daten zu Wissen}{27}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Heatmap}{28}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Korrelation und Kausalität}{29}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Nicht-lineare Beziehungen}{30}{subsubsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.3}Streudiagramm}{30}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Qualität der Daten}{32}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Überflutung von Daten}{33}{subsubsection.5.3.2}%
+\contentsline {section}{\numberline {6}Datenvorverarbeitung}{35}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Ausreißer}{35}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Lernalgorithmus}{37}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Diskretisierung der Zielvariablen}{37}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Lineare Beziehungen}{38}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Aufbau eines Entscheidungsbaum}{39}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Schlussfolgerungen für das Training des Modells}{39}{subsection.7.4}%
+\contentsline {subsubsection}{\numberline {7.4.1}Schwierigkeiten bei unbekannten Werten}{40}{subsubsection.7.4.1}%
+\contentsline {subsubsection}{\numberline {7.4.2}Limitierte Wertemenge für mögliche Prognosen}{40}{subsubsection.7.4.2}%
+\contentsline {section}{\numberline {8}Optimierung der Hyperparameter}{41}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Tiefe des Entscheidungsbaum}{41}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Weitere Hyperparameter}{43}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}Mindestanzahl an Proben pro Blatt}{43}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.2}Beschränkung der Merkmale}{43}{subsubsection.8.2.2}%
+\contentsline {subsubsection}{\numberline {8.2.3}Maximalanzahl an Blättern}{44}{subsubsection.8.2.3}%
+\contentsline {subsubsection}{\numberline {8.2.4}Aufteilung der Proben}{44}{subsubsection.8.2.4}%
+\contentsline {subsection}{\numberline {8.3}Hyperparameter auswählen}{44}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Evaluierung des Lernalgorithmus}{46}{section.9}%

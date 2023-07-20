@@ -43,9 +43,9 @@ manager.fetch_weather_data("applewood", "2022-11-11", "2022-12-20")
 # =============================================================================
 
 from scikit import ScikitManager
-# sci = ScikitManager(location='applewood', solarsystem_id=10)
-sci = ScikitManager(location='linthicum', solarsystem_id=1200)
-# sci = ScikitManager(location='Cherry Hill Townhill', solarsystem_id=1201)
+sci = ScikitManager(location='applewood', solarsystem_id=10)
+# sci = ScikitManager(location='linthicum', solarsystem_id=1200)
+# # sci = ScikitManager(location='Cherry Hill Townhill', solarsystem_id=1201)
 # sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)
 
 
@@ -82,13 +82,13 @@ sci.compare_similar_radiation(550, 600)
 #%%
 
 sci.model_selection('decisiontreeregressor')
-# sci.grid_search()
+sci.grid_search()
 sci.predict()
 sci.evaluate()
 # %%
 # sci.visualize_residues()
 # sci.visualize_predictions(xlim_left=400, xlim_right=700)
-sci.visualize_predictions()
+sci.visualize_predictions(xlim_left=0, xlim_right=200)
 # sci.plot_outlier()
 
 # sci.visualize_tree()
