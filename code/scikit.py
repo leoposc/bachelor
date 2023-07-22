@@ -173,7 +173,7 @@ class ScikitManager():
 
     def choose_features(self, features: list):
         self.features = features
-        self.XY_df = self.XY_df[features]
+        self.XY_df = self.XY_df[features]        
 
 
     def standardise(self):
@@ -226,7 +226,7 @@ class ScikitManager():
         self.X_test = test_df.drop(columns=['timeepoch','energyoutput']).to_numpy()
         self.y_test = test_df['energyoutput'].to_numpy().flatten()
         self.timeepoch_train = train_df['timeepoch'].to_numpy().flatten()           
-        self.timeepoch_test = test_df['timeepoch'].to_numpy().flatten()      
+        self.timeepoch_test = test_df['timeepoch'].to_numpy().flatten()
         
     
 
@@ -269,11 +269,11 @@ class ScikitManager():
         dm = DBManager()
         parameters={
                     # "splitter":["best","random"],
-                    "max_depth" : [8,9,11,12,16],
+                    "max_depth" : [8,9,11,12,13,15,17],
                     "min_samples_leaf":[3,4,5,6,7],
                     "min_weight_fraction_leaf":[0.0, 0.1,0.2,0.3],
-                    "max_features":["log2","sqrt",None],
-                    "max_leaf_nodes":[None,8,16,32,64,128,256,512]
+                    "max_features":[None],
+                    "max_leaf_nodes":[48,96,192,384,768,1536],
                     }
         model_type = str(type(self.model))
 
@@ -524,6 +524,62 @@ class ScikitManager():
         # graph = pydotplus.graph_from_dot_data(dot_data.getvalue())  
         # Image(graph.create_png())
 
+
+    def plot_histogram_feature_importances(self):
+        feature_importance = self.model.feature_importances_
+        feature_names = self.features.copy()
+        feature_names.remove('energyoutput')
+        feature_names.remove('timeepoch')
+        feature_names = np.array(feature_names)
+        feature_indices = np.arange(len(self.features) - 2)
+        # make importances relative to max importance
+        # feature_importance = 100.0 * (feature_importance / feature_importance.max())
+        plt.bar(feature_indices, feature_importance, align='center', alpha=0.5)
+        plt.xticks(feature_indices, feature_names, rotation=90)
+        plt.xlabel('Features')
+        plt.ylabel('Frequency of Feature Selection')
+        plt.title('Decision Tree Regressor Feature Selection Frequency')
+        plt.show()
+
+
+    def histogram(self):
+
+        # convert GridSearchCV class to a decision tree class
+        if isinstance(self.model, GridSearchCV):
+            self.model = self.model.best_estimator_
+            
+        tree = self.model.tree_
+
+        def count_feature_occurrences(node, feature_counts):
+            if tree.feature[node] != -2:
+                feature_idx = tree.feature[node]
+                if feature_idx not in feature_counts:
+                    feature_counts[feature_idx] = 1
+                else:
+                    feature_counts[feature_idx] += 1
+                count_feature_occurrences(tree.children_left[node], feature_counts)
+                count_feature_occurrences(tree.children_right[node], feature_counts)
+
+        # create a dictionary to store the feature counts
+        feature_counts = dict()
+
+        # traverse the tree and count the occurrences of each feature
+        count_feature_occurrences(0, feature_counts)
+
+        feature_names = self.features.copy()
+        feature_names.remove('energyoutput')
+        feature_names.remove('timeepoch')
+        # display the results
+        keys = list(feature_counts.keys())
+        values = list(feature_counts.values())
+        # sort the feature_names based on the keys
+        feature_names = [feature_names[i] for i in keys]                
+        plt.bar(range(len(feature_counts)), values, align='center', alpha=0.5)
+        plt.xticks(range(len(feature_counts)), feature_names, rotation=65)
+        plt.ylabel('Quantity of Feature Selection')
+        plt.title('Decision Tree Regressor Feature Selection Quantity', y=1.05)
+        plt.rcParams.update({'font.size': 14})
+        plt.show()
 
     
     def visualize_3d_plot(self):

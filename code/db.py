@@ -101,6 +101,8 @@ class DBManager():
 
         cur.execute(cmd)
 
+        return name
+
 
     @connect
     def create_hp_table(cur, self):
@@ -143,8 +145,9 @@ class DBManager():
         # check if table already exists
         if table_name == 'Unknown':
             solar_data, location, power_index = scrape_solar_data(start, end, solarsystem_id, power_index)
-            # create table
-            self.create_table(location, "SOLAR", solarsystem_id)
+            # create 
+            print(f"Creating table for solarsystem {solarsystem_id} in {location}.")
+            table_name = self.create_table(location, "SOLAR", solarsystem_id)
 
         else:
             # sort the table by timeEpoch

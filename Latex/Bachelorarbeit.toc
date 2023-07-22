@@ -20,21 +20,21 @@
 \contentsline {subsubsection}{\numberline {4.3.3}Temperatur}{21}{subsubsection.4.3.3}%
 \contentsline {subsubsection}{\numberline {4.3.4}Wind}{22}{subsubsection.4.3.4}%
 \contentsline {subsubsection}{\numberline {4.3.5}Sonneneinstrahlung}{22}{subsubsection.4.3.5}%
-\contentsline {section}{\numberline {5}Zusammenhänge der Merkmale}{27}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Transformation der Daten zu Wissen}{27}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Heatmap}{28}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Korrelation und Kausalität}{29}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Nicht-lineare Beziehungen}{30}{subsubsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.3}Streudiagramm}{30}{subsection.5.3}%
-\contentsline {subsubsection}{\numberline {5.3.1}Qualität der Daten}{32}{subsubsection.5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.2}Überflutung von Daten}{33}{subsubsection.5.3.2}%
-\contentsline {section}{\numberline {6}Datenvorverarbeitung}{35}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Ausreißer}{35}{subsection.6.1}%
-\contentsline {section}{\numberline {7}Lernalgorithmus}{37}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Diskretisierung der Zielvariablen}{37}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Lineare Beziehungen}{38}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Aufbau eines Entscheidungsbaum}{39}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Schlussfolgerungen für das Training des Modells}{39}{subsection.7.4}%
+\contentsline {section}{\numberline {5}Zusammenhänge der Merkmale}{25}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Transformation der Daten zu Wissen}{25}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Heatmap}{26}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Korrelation und Kausalität}{27}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Nicht-lineare Beziehungen}{28}{subsubsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.3}Streudiagramm}{28}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Qualität der Daten}{30}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Überflutung von Daten}{31}{subsubsection.5.3.2}%
+\contentsline {section}{\numberline {6}Datenvorverarbeitung}{33}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Ausreißer}{33}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Lernalgorithmus}{35}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Diskretisierung der Zielvariablen}{35}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Lineare Beziehungen}{36}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Aufbau eines Entscheidungsbaum}{37}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Schlussfolgerungen für das Training des Modells}{40}{subsection.7.4}%
 \contentsline {subsubsection}{\numberline {7.4.1}Schwierigkeiten bei unbekannten Werten}{40}{subsubsection.7.4.1}%
 \contentsline {subsubsection}{\numberline {7.4.2}Limitierte Wertemenge für mögliche Prognosen}{40}{subsubsection.7.4.2}%
 \contentsline {section}{\numberline {8}Optimierung der Hyperparameter}{41}{section.8}%
@@ -46,3 +46,7 @@
 \contentsline {subsubsection}{\numberline {8.2.4}Aufteilung der Proben}{44}{subsubsection.8.2.4}%
 \contentsline {subsection}{\numberline {8.3}Hyperparameter auswählen}{44}{subsection.8.3}%
 \contentsline {section}{\numberline {9}Evaluierung des Lernalgorithmus}{46}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Evaluierung der einzelnen Merkmale}{46}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}Bewölkungsgrad}{46}{subsubsection.9.1.1}%
+\contentsline {section}{\numberline {10}Zusammenfassung und Fazit}{47}{section.10}%
+\contentsline {section}{\numberline {11}Ausblick}{48}{section.11}%

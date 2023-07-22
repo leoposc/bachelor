@@ -7,8 +7,8 @@ manager = DBManager()
 # =============================================================================
 # APPLEWOOD, 10
 # =============================================================================
-manager.fetch_solar_data(10, "2022-11-23", "2022-12-20")
-manager.fetch_weather_data("applewood", "2022-11-11", "2022-12-20")
+# manager.fetch_solar_data(10, "2022-11-23", "2022-12-20")
+# manager.fetch_weather_data("applewood", "2022-11-11", "2022-12-20")
 
 # =============================================================================
 # LINTHICUM, 1200
@@ -36,6 +36,14 @@ manager.fetch_weather_data("applewood", "2022-11-11", "2022-12-20")
 # manager.fetch_solar_data(1257, "2014-05-01", "2014-05-31")
 # manager.fetch_weather_data("New Orleans", "2014-05-01", "2014-05-31")
 
+
+
+# =============================================================================
+# NEW SMYRNA BEACH, 1220
+# =============================================================================
+manager.fetch_solar_data(1220, "2014-06-01", "2014-06-30")
+manager.fetch_weather_data("Village of Port Chester", "2014-06-01", "2014-06-30")
+
 # %%
 
 # =============================================================================
@@ -43,10 +51,11 @@ manager.fetch_weather_data("applewood", "2022-11-11", "2022-12-20")
 # =============================================================================
 
 from scikit import ScikitManager
-sci = ScikitManager(location='applewood', solarsystem_id=10)
-# sci = ScikitManager(location='linthicum', solarsystem_id=1200)
+# sci = ScikitManager(location='applewood', solarsystem_id=10)
+sci = ScikitManager(location='linthicum', solarsystem_id=1200)
 # # sci = ScikitManager(location='Cherry Hill Townhill', solarsystem_id=1201)
 # sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)
+# sci = ScikitManager(location='Village of Port Chester', solarsystem_id=1220)
 
 
 # %%
@@ -63,28 +72,29 @@ sci.choose_features(['timeepoch',
                      'temperature',
                     #  'wind',
                      'humidity',
-                     'cloudcoverage',
+                    #  'cloudcoverage',
                      'energyoutput'
                      ])
 # sci.update_numpy_arrays()
 
 #%%
-sci.filter_low_energyoutput() 
+sci.filter_low_energyoutput()
 # sci.split_data(0.1)
-sci.split_data_by_days(0.2)
+sci.split_data_by_days(0.4)
 # sci.transform_hours()
 # print(type(sci.timeepoch_test[0]))
 
 #%%
 
-sci.compare_similar_radiation(550, 600)
-
+# sci.compare_similar_radiation(550, 600)
 #%%
-
 sci.model_selection('decisiontreeregressor')
-sci.grid_search()
+# sci.grid_search()
 sci.predict()
 sci.evaluate()
+# sci.plot_histogram_feature_importances()
+sci.histogram()
+
 # %%
 # sci.visualize_residues()
 # sci.visualize_predictions(xlim_left=400, xlim_right=700)
@@ -172,4 +182,5 @@ print(sci.outliers_indices_test)
 # %%
 
 sci.visualize_tree()
+# %%
 # %%
