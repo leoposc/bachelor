@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.9)  22 JUL 2023 21:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.9)  23 JUL 2023 17:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -337,7 +337,11 @@ File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count280
 \l__pdf_internal_box=\box54
 )
-(./Bachelorarbeit.aux)
+(./Bachelorarbeit.aux
+
+LaTeX Warning: Label `fig:decisiontree_example' multiply defined.
+
+)
 \openout1 = `Bachelorarbeit.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
@@ -469,7 +473,7 @@ ei-ner Netto-Nennleistung
  []
 
 (./assets/Strombedarf_Erzeugung_2022.pdf_tex
-<assets//Strombedarf_Erzeugung_2022.pdf, id=295, page=1, 752.8125pt x 376.40625
+<assets//Strombedarf_Erzeugung_2022.pdf, id=300, page=1, 752.8125pt x 376.40625
 pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 1>
@@ -480,91 +484,91 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 57.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 57.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=296, page=2, 752.8125pt x 376.40625
+<assets//Strombedarf_Erzeugung_2022.pdf, id=301, page=2, 752.8125pt x 376.40625
 pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 2>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page2 used on
  input line 58.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=297, page=3, 752.8125pt x 376.40625
+<assets//Strombedarf_Erzeugung_2022.pdf, id=302, page=3, 752.8125pt x 376.40625
 pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 3>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page3 used on
  input line 60.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=298, page=4, 752.8125pt x 376.40625
+<assets//Strombedarf_Erzeugung_2022.pdf, id=303, page=4, 752.8125pt x 376.40625
 pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 4>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page4 used on
  input line 62.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=299, page=5, 752.8125pt x 376.40625
+<assets//Strombedarf_Erzeugung_2022.pdf, id=304, page=5, 752.8125pt x 376.40625
 pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 5>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page5 used on
  input line 64.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=300, page=6, 752.8125pt x 376.40625
+<assets//Strombedarf_Erzeugung_2022.pdf, id=305, page=6, 752.8125pt x 376.40625
 pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 6>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page6 used on
  input line 66.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=301, page=7, 752.8125pt x 376.40625
+<assets//Strombedarf_Erzeugung_2022.pdf, id=306, page=7, 752.8125pt x 376.40625
 pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 7>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page7 used on
  input line 68.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=302, page=8, 752.8125pt x 376.40625
+<assets//Strombedarf_Erzeugung_2022.pdf, id=307, page=8, 752.8125pt x 376.40625
 pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 8>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page8 used on
  input line 70.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=303, page=9, 752.8125pt x 376.40625
+<assets//Strombedarf_Erzeugung_2022.pdf, id=308, page=9, 752.8125pt x 376.40625
 pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 9>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page9 used on
  input line 72.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=304, page=10, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_2022.pdf, id=309, page=10, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 10>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page10 used o
 n input line 74.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=305, page=11, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_2022.pdf, id=310, page=11, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 11>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page11 used o
 n input line 76.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=306, page=12, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_2022.pdf, id=311, page=12, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 12>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page12 used o
 n input line 78.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=307, page=13, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_2022.pdf, id=312, page=13, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 13>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page13 used o
 n input line 80.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=308, page=14, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_2022.pdf, id=313, page=14, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 14>
@@ -636,98 +640,98 @@ pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_2022
 pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_2022
 .pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >] [9] [10] (./assets/Strombedarf_Erzeugung_Woche.pdf_tex
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=365, page=1, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=370, page=1, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 1>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page1 used o
 n input line 56.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=366, page=2, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=371, page=2, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 2>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page2 used o
 n input line 58.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=367, page=3, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=372, page=3, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 3>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page3 used o
 n input line 60.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=368, page=4, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=373, page=4, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 4>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page4 used o
 n input line 62.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=369, page=5, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=374, page=5, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 5>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page5 used o
 n input line 64.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=370, page=6, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=375, page=6, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 6>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page6 used o
 n input line 66.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=371, page=7, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=376, page=7, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 7>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page7 used o
 n input line 68.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=372, page=8, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=377, page=8, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 8>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page8 used o
 n input line 70.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=373, page=9, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=378, page=9, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 9>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page9 used o
 n input line 72.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=374, page=10, 752.8125pt x 376.406
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=379, page=10, 752.8125pt x 376.406
 25pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 10>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page10 used 
 on input line 74.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=375, page=11, 752.8125pt x 376.406
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=380, page=11, 752.8125pt x 376.406
 25pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 11>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page11 used 
 on input line 76.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=376, page=12, 752.8125pt x 376.406
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=381, page=12, 752.8125pt x 376.406
 25pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 12>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page12 used 
 on input line 78.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=377, page=13, 752.8125pt x 376.406
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=382, page=13, 752.8125pt x 376.406
 25pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 13>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page13 used 
 on input line 80.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=378, page=14, 752.8125pt x 376.406
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=383, page=14, 752.8125pt x 376.406
 25pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 14>
@@ -819,7 +823,7 @@ to-ren, die sich sprung-
  []
 
 (./assets/Cloud_types_en.pdf_tex
-<assets//Cloud_types_en.pdf, id=456, page=1, 722.76022pt x 444.27832pt>
+<assets//Cloud_types_en.pdf, id=461, page=1, 722.76022pt x 444.27832pt>
 File: assets//Cloud_types_en.pdf Graphic file (type pdf)
 <use assets//Cloud_types_en.pdf, page 1>
 Package pdftex.def Info: assets//Cloud_types_en.pdf , page1 used on input line 
@@ -830,9 +834,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.308 
+l.309 
        <./assets//Cloud_types_en.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
@@ -841,25 +845,25 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.333 D
+l.334 D
        es Weiteren kommt hinzu, dass bei manchen Solaranlagen ein KÃ¼hlmanag...
 ]
 
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 341.
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 342.
 
 
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 3
-41.
+42.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 341.
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 342.
 
 
 Missing character: There is no ² in font cmr12!
 (./assets/sonneneinstrahlung_deutschland.pdf_tex
-<assets//sonneneinstrahlung_deutschland.pdf, id=479, page=1, 597.51802pt x 844.
+<assets//sonneneinstrahlung_deutschland.pdf, id=484, page=1, 597.51802pt x 844.
 65562pt>
 File: assets//sonneneinstrahlung_deutschland.pdf Graphic file (type pdf)
 <use assets//sonneneinstrahlung_deutschland.pdf, page 1>
@@ -871,10 +875,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.352 
+l.353 
        <./assets//sonneneinstrahlung_deutschland.pdf>] [24] [25]
 (./assets/heatmap.pdf_tex
-<assets//heatmap.pdf, id=510, page=1, 824.07881pt x 696.6025pt>
+<assets//heatmap.pdf, id=515, page=1, 824.07881pt x 696.6025pt>
 File: assets//heatmap.pdf Graphic file (type pdf)
 <use assets//heatmap.pdf, page 1>
 Package pdftex.def Info: assets//heatmap.pdf , page1 used on input line 56.
@@ -884,19 +888,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.388 
+l.389 
        <./assets//heatmap.pdf>]
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 396.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 397.
  [27] (./assets/pairplot_all.pdf_tex
-<assets//pairplot_all.pdf, id=530, page=1, 1058.95638pt x 1058.95638pt>
+<assets//pairplot_all.pdf, id=535, page=1, 1058.95638pt x 1058.95638pt>
 File: assets//pairplot_all.pdf Graphic file (type pdf)
 <use assets//pairplot_all.pdf, page 1>
 Package pdftex.def Info: assets//pairplot_all.pdf , page1 used on input line 56
 .
 (pdftex.def)             Requested size: 450.0pt x 449.99396pt.
 )
-Overfull \hbox (23.20865pt too wide) in paragraph at lines 57--415
+Overfull \hbox (23.20865pt too wide) in paragraph at lines 57--416
  [][] 
  []
 
@@ -905,27 +909,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.429 
+l.430 
        <./assets//pairplot_all.pdf>]
-
-LaTeX Warning: Reference `fig:pairplot_hcr' on page 30 undefined on input line 
-430.
-
-
-Overfull \hbox (13.1726pt too wide) in paragraph at lines 434--435
+Overfull \hbox (13.1726pt too wide) in paragraph at lines 435--436
 \T1/phv/m/n/12 Durch die groÿe Men-ge an Da-ten-punk-te wer-den Streu-dia-gram-
 me, die zwei schwach
  []
 
 [30] (./assets/pairplot_filtered.pdf_tex
-<assets//pairplot_filtered.pdf, id=556, page=1, 1064.97887pt x 1063.975pt>
+<assets//pairplot_filtered.pdf, id=564, page=1, 1064.97887pt x 1063.975pt>
 File: assets//pairplot_filtered.pdf Graphic file (type pdf)
 <use assets//pairplot_filtered.pdf, page 1>
 Package pdftex.def Info: assets//pairplot_filtered.pdf , page1 used on input li
 ne 56.
 (pdftex.def)             Requested size: 450.0pt x 449.5777pt.
 )
-Overfull \hbox (23.20865pt too wide) in paragraph at lines 57--440
+Overfull \hbox (23.20865pt too wide) in paragraph at lines 57--441
  [][] 
  []
 
@@ -934,10 +933,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.450 \newpage
+l.451 \newpage
                <./assets//pairplot_filtered.pdf>] [33] [34] [35]
 (./assets/decisiontree_linear.pdf_tex
-<assets//decisiontree_linear.pdf, id=582, page=1, 611.28375pt x 388.45125pt>
+<assets//decisiontree_linear.pdf, id=589, page=1, 611.28375pt x 388.45125pt>
 File: assets//decisiontree_linear.pdf Graphic file (type pdf)
 <use assets//decisiontree_linear.pdf, page 1>
 Package pdftex.def Info: assets//decisiontree_linear.pdf , page1 used on input 
@@ -948,62 +947,63 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.497 
+l.498 
        <./assets//decisiontree_linear.pdf>]
 (./assets/binary_tree_linthicum_zoom_v2.pdf_tex
-<assets//binary_tree_linthicum_zoom_v2.pdf, id=599, page=1, 721.06271pt x 443.5
+<assets//binary_tree_linthicum_zoom_v2.pdf, id=606, page=1, 721.06271pt x 443.5
 7544pt>
 File: assets//binary_tree_linthicum_zoom_v2.pdf Graphic file (type pdf)
 <use assets//binary_tree_linthicum_zoom_v2.pdf, page 1>
 Package pdftex.def Info: assets//binary_tree_linthicum_zoom_v2.pdf , page1 used
  on input line 56.
 (pdftex.def)             Requested size: 425.0pt x 261.4568pt.
-) [37]
+)
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 511.
- [38
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 512.
+ [37] [38
 pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.514 
+l.519 
        <./assets//binary_tree_linthicum_zoom_v2.pdf>]
-Overfull \hbox (3.86563pt too wide) in paragraph at lines 515--516
-\T1/phv/m/sl/12 Anweisungen \T1/phv/m/n/12 bil-det, ver-leiht dem Ge-wicht der 
-Son-nen-ein-strah-lung wei-te-ren Nach-
- []
-
 (./assets/histogram_feature_quantity.pdf_tex
-<assets//histogram_feature_quantity.pdf, id=625, page=1, 383.4325pt x 334.24875
+<assets//histogram_feature_quantity.pdf, id=633, page=1, 383.4325pt x 334.24875
 pt>
 File: assets//histogram_feature_quantity.pdf Graphic file (type pdf)
 <use assets//histogram_feature_quantity.pdf, page 1>
 Package pdftex.def Info: assets//histogram_feature_quantity.pdf , page1 used on
  input line 56.
 (pdftex.def)             Requested size: 400.0pt x 348.71214pt.
-) [39
+) [39]
+Overfull \hbox (3.86563pt too wide) in paragraph at lines 531--532
+\T1/phv/m/sl/12 Anweisungen \T1/phv/m/n/12 bil-det, ver-leiht dem Ge-wicht der 
+Son-nen-ein-strah-lung wei-te-ren Nach-
+ []
+
+[40
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.532 
-       <./assets//histogram_feature_quantity.pdf>] [40]
+l.542 
+       <./assets//histogram_feature_quantity.pdf>] [41]
 (./assets/decisiontree_example_2.pdf_tex
-<assets//decisiontree_example_2.pdf, id=641, page=1, 602.25pt x 451.6875pt>
+<assets//decisiontree_example_2.pdf, id=653, page=1, 602.25pt x 451.6875pt>
 File: assets//decisiontree_example_2.pdf Graphic file (type pdf)
 <use assets//decisiontree_example_2.pdf, page 1>
 Package pdftex.def Info: assets//decisiontree_example_2.pdf , page1 used on inp
 ut line 56.
 (pdftex.def)             Requested size: 350.0pt x 262.50963pt.
-) [41
+) [42
 pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.558 
+l.564 
        <./assets//decisiontree_example_2.pdf>]
 (./assets/decisiontree_example.pdf_tex
-<assets//decisiontree_example.pdf, id=652, page=1, 450.9347pt x 338.76563pt>
+<assets//decisiontree_example.pdf, id=665, page=1, 450.9347pt x 338.76563pt>
 File: assets//decisiontree_example.pdf Graphic file (type pdf)
 <use assets//decisiontree_example.pdf, page 1>
 Package pdftex.def Info: assets//decisiontree_example.pdf , page1 used on input
@@ -1011,28 +1011,60 @@ Package pdftex.def Info: assets//decisiontree_example.pdf , page1 used on input
 (pdftex.def)             Requested size: 350.0pt x 262.94899pt.
 )
 
-LaTeX Warning: Reference `fig:binary_tree' on page 42 undefined on input line 5
-74.
+LaTeX Warning: Reference `fig:binary_tree' on page 43 undefined on input line 5
+80.
 
-[42
+[43
 pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.575 
-       <./assets//decisiontree_example.pdf>] [43] [44] [45] [46] [47] [48]
-(./Bachelorarbeit.aux)
+l.581 
+       <./assets//decisiontree_example.pdf>] [44] [45] [46]
+(./assets/residuals.pdf_tex
+<assets//residuals.pdf, id=691, page=1, 1305.87888pt x 633.36626pt>
+File: assets//residuals.pdf Graphic file (type pdf)
+<use assets//residuals.pdf, page 1>
+Package pdftex.def Info: assets//residuals.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 400.0pt x 194.00273pt.
+) (./assets/predictions_linthicum.pdf_tex
+<assets//predictions_linthicum.pdf, id=692, page=1, 1486.55388pt x 892.3337pt>
+File: assets//predictions_linthicum.pdf Graphic file (type pdf)
+<use assets//predictions_linthicum.pdf, page 1>
+Package pdftex.def Info: assets//predictions_linthicum.pdf , page1 used on inpu
+t line 56.
+(pdftex.def)             Requested size: 400.0pt x 240.10275pt.
+) [47
+pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.642 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.642 
+       <./assets//residuals.pdf> <./assets//predictions_linthicum.pdf
+
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//predictions_linthicum.pdf)
+: PDF inclusion: multiple pdfs with page group included in a single page
+>] [48] [49] [50] (./Bachelorarbeit.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: DC99EF0C6B1F42D7A3F592FC8B8386D2;9572.
+(rerunfilecheck)             Checksum: D420BC090C253D15506D0FB6E350AA37;9847.
  ) 
 Here is how much of TeX's memory you used:
- 12019 strings out of 476047
- 197640 string characters out of 5791252
+ 12052 strings out of 476047
+ 198583 string characters out of 5791252
  1871248 words of memory out of 5000000
- 32112 multiletter control sequences out of 15000+600000
+ 32134 multiletter control sequences out of 15000+600000
  554824 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,14n,76p,2238b,615s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1047,10 +1079,10 @@ l/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texli
 ve/2023/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/202
 3/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2023/texmf
 -dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Bachelorarbeit.pdf (49 pages, 3023856 bytes).
+Output written on Bachelorarbeit.pdf (51 pages, 3315725 bytes).
 PDF statistics:
- 772 PDF objects out of 1000 (max. 8388607)
- 613 compressed objects within 7 object streams
- 121 named destinations out of 1000 (max. 500000)
- 599 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 803 PDF objects out of 1000 (max. 8388607)
+ 636 compressed objects within 7 object streams
+ 126 named destinations out of 1000 (max. 500000)
+ 617 words of extra memory for PDF output out of 10000 (max. 10000000)
 

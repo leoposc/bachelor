@@ -96,9 +96,9 @@ sci.evaluate()
 sci.histogram()
 
 # %%
-# sci.visualize_residues()
-# sci.visualize_predictions(xlim_left=400, xlim_right=700)
-sci.visualize_predictions(xlim_left=0, xlim_right=200)
+sci.visualize_residuals()
+# sci.visualize_predictions(xlim_left=250, xlim_right=500)
+# sci.visualize_predictions()
 # sci.plot_outlier()
 
 # sci.visualize_tree()

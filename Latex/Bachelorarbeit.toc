@@ -35,18 +35,19 @@
 \contentsline {subsection}{\numberline {7.2}Lineare Beziehungen}{36}{subsection.7.2}%
 \contentsline {subsection}{\numberline {7.3}Aufbau eines Entscheidungsbaum}{37}{subsection.7.3}%
 \contentsline {subsection}{\numberline {7.4}Schlussfolgerungen für das Training des Modells}{40}{subsection.7.4}%
-\contentsline {subsubsection}{\numberline {7.4.1}Schwierigkeiten bei unbekannten Werten}{40}{subsubsection.7.4.1}%
-\contentsline {subsubsection}{\numberline {7.4.2}Limitierte Wertemenge für mögliche Prognosen}{40}{subsubsection.7.4.2}%
-\contentsline {section}{\numberline {8}Optimierung der Hyperparameter}{41}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Tiefe des Entscheidungsbaum}{41}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Weitere Hyperparameter}{43}{subsection.8.2}%
-\contentsline {subsubsection}{\numberline {8.2.1}Mindestanzahl an Proben pro Blatt}{43}{subsubsection.8.2.1}%
-\contentsline {subsubsection}{\numberline {8.2.2}Beschränkung der Merkmale}{43}{subsubsection.8.2.2}%
-\contentsline {subsubsection}{\numberline {8.2.3}Maximalanzahl an Blättern}{44}{subsubsection.8.2.3}%
-\contentsline {subsubsection}{\numberline {8.2.4}Aufteilung der Proben}{44}{subsubsection.8.2.4}%
-\contentsline {subsection}{\numberline {8.3}Hyperparameter auswählen}{44}{subsection.8.3}%
-\contentsline {section}{\numberline {9}Evaluierung des Lernalgorithmus}{46}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Evaluierung der einzelnen Merkmale}{46}{subsection.9.1}%
-\contentsline {subsubsection}{\numberline {9.1.1}Bewölkungsgrad}{46}{subsubsection.9.1.1}%
-\contentsline {section}{\numberline {10}Zusammenfassung und Fazit}{47}{section.10}%
-\contentsline {section}{\numberline {11}Ausblick}{48}{section.11}%
+\contentsline {subsubsection}{\numberline {7.4.1}Schwierigkeiten bei unbekannten Werten}{41}{subsubsection.7.4.1}%
+\contentsline {subsubsection}{\numberline {7.4.2}Limitierte Wertemenge für mögliche Prognosen}{41}{subsubsection.7.4.2}%
+\contentsline {section}{\numberline {8}Optimierung der Hyperparameter}{42}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Tiefe des Entscheidungsbaum}{42}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Weitere Hyperparameter}{44}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}Mindestanzahl an Proben pro Blatt}{44}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.2}Beschränkung der Merkmale}{44}{subsubsection.8.2.2}%
+\contentsline {subsubsection}{\numberline {8.2.3}Maximalanzahl an Blättern}{45}{subsubsection.8.2.3}%
+\contentsline {subsubsection}{\numberline {8.2.4}Minimaler gewichteter Anteil der Proben}{46}{subsubsection.8.2.4}%
+\contentsline {subsubsection}{\numberline {8.2.5}Aufteilung der Proben}{46}{subsubsection.8.2.5}%
+\contentsline {subsection}{\numberline {8.3}Hyperparameter auswählen}{46}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Evaluierung des Lernalgorithmus}{47}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Evaluierung der einzelnen Merkmale}{47}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}Bewölkungsgrad}{47}{subsubsection.9.1.1}%
+\contentsline {section}{\numberline {10}Zusammenfassung und Fazit}{49}{section.10}%
+\contentsline {section}{\numberline {11}Ausblick}{50}{section.11}%

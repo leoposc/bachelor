@@ -271,7 +271,7 @@ class ScikitManager():
                     # "splitter":["best","random"],
                     "max_depth" : [8,9,11,12,13,15,17],
                     "min_samples_leaf":[3,4,5,6,7],
-                    "min_weight_fraction_leaf":[0.0, 0.1,0.2,0.3],
+                    # "min_weight_fraction_leaf":[0.0, 0.1,0.2,0.3],
                     "max_features":[None],
                     "max_leaf_nodes":[48,96,192,384,768,1536],
                     }
@@ -480,7 +480,7 @@ class ScikitManager():
                   r2_score(self.y_train, self.y_train_pred)))
 
 
-    def visualize_residues(self):
+    def visualize_residuals(self):
         max_len = min(len(self.y_train_pred), len(self.y_train), len(self.y_test_pred), len(self.y_test))
         y_train_residuals = self.y_train_pred - self.y_train.flatten()
         y_test_residuals = self.y_test_pred - self.y_test.flatten()        
@@ -493,13 +493,14 @@ class ScikitManager():
         plt.ylabel('Residuals')
         plt.legend(loc='upper left')
         plt.hlines(y=0, lw=2, color='black', xmin=min(self.y_train_pred), xmax=max(self.y_train_pred))
+        plt.rcParams.update({'font.size': 32}) 
         plt.rcParams['figure.figsize'] = [20, 10]
         plt.show()
 
 
     def visualize_predictions(self, xlim_left=0, xlim_right=None):
 
-        date_indices = get_local_maxima_index(self.y_test)        
+        date_indices = get_local_maxima_index(self.y_test, range_x=11)        
         dates = [str(x)[:10] for x in self.timeepoch_test[date_indices]] # convert timeepoch to date
         fig_1 = plt.figure(figsize=(20,10))
         ax_1 = fig_1.add_axes([0.1,0.1,0.9,0.9])
@@ -510,7 +511,8 @@ class ScikitManager():
         ax_1.legend(loc='upper left')
         plt.title(f'Solarsystem id: {self.solarsystem_id}, Location: {self.location}')
         plt.ylabel('Solar energy production')
-        plt.rcParams['figure.figsize'] = [20, 10] 
+        plt.rcParams.update({'font.size': 32}) 
+        plt.rcParams['figure.figsize'] = [20, 10]
         plt.xlim([xlim_left, xlim_right])
         plt.show()
 

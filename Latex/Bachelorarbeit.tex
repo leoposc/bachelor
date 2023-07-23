@@ -283,6 +283,7 @@ Inwiefern die Prognose bei durch einen Sensor nachgeführten Photovoltaikanlage 
 Verschiedene Wolkentypen wirken sich unterschiedlich auf die Sonneneinstrahlung aus. Zudem gehören Wolken zu den unbeständigen Faktoren, die sich sprunghaft auf die Stromerzeugung auswirken. Selbst wenn exakte, detailreiche Daten über die Bewölkung für die Forschung dieser Arbeit nicht vorliegen, soll der Effekt der unterschiedlichen Wolkentypen im folgenden kurz erläutert werden.
 
 \subsubsection{Wolkenarten}
+\label{subsubsec:clouds}
 
 \begin{figure}
 \centering
@@ -423,11 +424,11 @@ Da im Gegensatz zu Computern Menschen visuelle Grafiken an Stelle einer mit Zahl
 \subsubsection{Qualität der Daten}
 \label{subsubsec:quality_data}
 
-In der Diagonalen der \autoref{fig:pairplot_all} sind Balkendiagramme abgebildet, die die Verteilung der einzelnen Merkmale aufweisen. Besonders interessant ist hierbei das Balkendiagramm zum Bewölkungsgrad in Prozent. Die auffällige Verteilung spiegelt die in Kapitel 4.3.1 bereits erwähnte Problematik die Bewölkung am Himmel anhand einer Prozentzahl darzustellen wider. Bei einem Index, der die Bewölkung einer Ortschaft wiedergeben soll, würden wir erwarten, dass die Verteilung keine größeren Ausreißer beinhaltet. Selbstverständlich ist die Bewölkung von Ort zu Ort unabhängig. So haben Städte in der Nähe von Flüssen in der Regel einen höheren Niederschlag, da sich über den Stadtflächen durch den Asphalt und die Betonflächen die Luft stärker erwärmt als über Grünflächen. Folglich verdunstet mehr Wasser, worauf die Wolken zu schwer werden können und letztendlich abregnen. Das bedeutet, dass es kein einheitliches Schaubild gibt, dass wir als Referenz verwenden könnten. Dass einige Werte jedoch eklatant auftreten, währenddessen deren benachbarte Werte überhaupt nicht in der Statistik vertreten sind, ist ein recht starkes Indiz dafür, dass es sich bei den Angaben zu der Bewölkung um Schätzwerte\footnote{Die Dokumentation des Wetterdienstleisters beschreibt den Wert wie folgt: "Die Wolkenbedeckung ist der Anteil des Himmels, der von Wolken bedeckt ist, ausgedrückt in Prozent. Die Wolkenbedeckung gilt für alle Höhenlagen. Die Tageswerte umfassen den Mittelwert der stündlichen Werte der Wolkenbedeckung."
+In der Diagonalen der \autoref{fig:pairplot_all} sind Balkendiagramme abgebildet, die die Verteilung der einzelnen Merkmale aufweisen. Besonders interessant ist hierbei das Balkendiagramm zum Bewölkungsgrad in Prozent. Die auffällige Verteilung spiegelt die in \autoref{subsubsec:clouds} bereits erwähnte Problematik die Bewölkung am Himmel anhand einer Prozentzahl darzustellen wider. Bei einem Index, der die Bewölkung einer Ortschaft wiedergeben soll, würden wir erwarten, dass die Verteilung keine größeren Ausreißer beinhaltet. Selbstverständlich ist die Bewölkung von Ort zu Ort unabhängig. So haben Städte in der Nähe von Flüssen in der Regel einen höheren Niederschlag, da sich über den Stadtflächen durch den Asphalt und die Betonflächen die Luft stärker erwärmt als über Grünflächen. Folglich verdunstet mehr Wasser, worauf die Wolken zu schwer werden können und letztendlich abregnen. Das bedeutet, dass es kein einheitliches Schaubild gibt, dass wir als Referenz verwenden könnten. Dass einige Werte jedoch eklatant auftreten, währenddessen deren benachbarte Werte überhaupt nicht in der Statistik vertreten sind, ist ein recht starkes Indiz dafür, dass es sich bei den Angaben zu der Bewölkung um Schätzwerte\footnote{Die Dokumentation des Wetterdienstleisters beschreibt den Wert wie folgt: "Die Wolkenbedeckung ist der Anteil des Himmels, der von Wolken bedeckt ist, ausgedrückt in Prozent. Die Wolkenbedeckung gilt für alle Höhenlagen. Die Tageswerte umfassen den Mittelwert der stündlichen Werte der Wolkenbedeckung."
 
 Wie dieser Wert zu Stande kommt oder ob verschiedene Wolkentypen unterschiedlich bewertet werden, bleibt dabei unklar.} handelt.
 
-Da bei den anderen Werten keine Auffälligkeiten zu verzeichnen sind und deren Messung vergleichsweise einfach und standardisiert ist, können wir davon ausgehen, dass sie vertrauenswürdig sind. Für den Bewölkungsgrad könnte es eine mögliche Konsequenz sein ihn aus der Merkmalsliste des Lernalgorithmus zu streichen. Schließlich wird die Bewölkung, zwar nicht vollständig, aber zumindest teilweise durch die zuverlässigeren Messwerte über die Feuchtigkeit und des Einstrahlungswertes repräsentiert. In \autoref{fig:pairplot_hcr} ist erkenntlich, dass ein höhere Feuchtigkeit mit mehr Bewölkung einhergeht, gleichzeitig kommen weniger Sonnenstrahlen auf der Erdoberfläche an. 
+Da bei den anderen Werten keine Auffälligkeiten zu verzeichnen sind und deren Messung vergleichsweise einfach und standardisiert ist, können wir davon ausgehen, dass sie vertrauenswürdig sind. Für den Bewölkungsgrad könnte es eine mögliche Konsequenz sein ihn aus der Merkmalsliste des Lernalgorithmus zu streichen. Schließlich wird die Bewölkung, zwar nicht vollständig, aber zumindest teilweise durch die zuverlässigeren Messwerte über die Feuchtigkeit und des Einstrahlungswertes repräsentiert. In \autoref{fig:pairplot_filtered} ist erkenntlich, dass ein höhere Feuchtigkeit mit mehr Bewölkung einhergeht, gleichzeitig kommen weniger Sonnenstrahlen auf der Erdoberfläche an. 
 
 \subsubsection{Überflutung von Daten}
 
@@ -445,7 +446,7 @@ Betrachten wir nun nochmals die Korrelation zwischen der Temperatur und der Stro
 
 PLOT SIMILAR TEMPERATURE AND RADIATION
 
- 
+  
 
 \newpage
 
@@ -500,7 +501,7 @@ Die Tatsache, dass nichtlineare Beziehungen gut erkannt werden können ist sowoh
 Künstliche Intelligenz nimmt eine immer bedeutendere Rolle in unserer heutigen Gesellschaft ein. Bereiche unseres täglichen Lebens werden bereits durch sie erheblich erleichtert. Dennoch schreckt ein Teil der Gesellschaft vor den noch unerforschten Begleiterscheinungen der neuen Technologie zurück. Nicht selten sind die Ergebnisse dieser Algorithmen schwer zu verstehen, wodurch Ungewissheiten hervorgerufen werden. 
 Ein Entscheidungsbaum ist ein Modell aus dem Bereich des maschinellem Lernens, welches wiederum ein Teilgebiet von künstlicher Intelligenz ist. Obwohl Entscheidungsbäume derzeit als äußerst mächtige Lernalgorithmen angesehen werden, sind ihre Prognosen äußerst leicht nachzuvollziehen. Im Grunde genommen ist ein Entscheidungsbaum eine Verkettung von \textit{Wenn-Sonst-Anweisungen}, die schlussendlich zum Ergebnis führen. 
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \def\svgwidth{425pt}
 \input{assets/binary_tree_linthicum_zoom_v2.pdf_tex}
@@ -512,7 +513,9 @@ Da der komplette Binärbaum mit der Tiefe 11 zu groß für eine Abbildung innerh
 
 Das Feld \textit{squared\_error} gibt den mittleren quadratischen Fehler der sich in diesem Feld befindenden Proben in Bezug auf den Wert des Feldes an. Wie viele Proben des Trainingsdatensatz diese Bedingungen und demzufolge die darüber liegenden Bedingungen ebenso erfüllen, lässt sich aus den Knotenpunkten ablesen. Der dort zu sehende Wert wäre die Prognose für die jeweiligen Datenreihen, wenn der Knotenpunkt keine Kinderknoten mehr hätte.
 
-Anhand der Häufigkeit, in der das Merkmal Sonneneinstrahlung auftritt, lässt sich die enorme Bedeutung für die Prognose der Stromerzeugung erahnen. Insbesondere die Tatsache, dass die Sonneneinstrahlung bei sämtlichen Modellen die Entscheidung für die obersten und somit grundlegendsten \textit{Wenn-Sonst-Anweisungen} bildet, verleiht dem Gewicht der Sonneneinstrahlung weiteren Nachdruck.
+Die Zusammenhänge zwischen den Merkmalen und der Zielvariablen konnten weitestgehend gut nachgebildet werden. So wird die Prognose jedes mal herunter gesetzt, wenn die Sonneneinstrahlung weniger wird. Genauso fällt die Prognose ohne Ausnahme, wenn die Bewölkung oder die Luftfeuchtigkeit zunimmt. 
+
+Wie in \autoref{fig:binary_tree_linthicum} zu erkennen ist, sind die Auswirkungen der Temperatur dem Modell nicht gänzlich vertraut. Fällt die Temperatur unter 3,5° C, so wird die Prognose ebenfalls auf den Wert 4369 EINHEIT EINFÜGEN herabgesetzt. Bei vereinzelten Knotenpunkten des Entscheidungsbaum ist zu beobachten, dass eine niedrigere Temperatur zu einer geringeren Stromproduktion führt. Die Fehleinschätzung des Entscheidungsbaum ist vor allem dann zu beobachten, wenn der Grenzwert für die Temperatur besonders niedrig ist. Dies zeugt davon, dass die Multikollinearität zwischen Temperatur, Sonneneinstrahlung und Stromproduktion dem Entscheidungsbaum Schwierigkeiten bereitet. Da die Temperatur mit der Sonneneinstrahlung steigt, fehlinterpretiert der Algorithmus den Zusammenhang zwischen Temperatur und Stromproduktion. Da dies allerdings nur bei einem Teil der Knotenpunkte der Fall ist, soll die Temperatur nicht aus der Merkmalsmatrix ausgeschlossen werden. Unter dem Strich werden unter Berücksichtigung der Temperatur in Bezug auf die Prognose des Stromertrags dennoch bessere Ergebnisse erzielt. Dass die Temperatur ein wichtiger Parameter für die Prognose ist, liegt unter anderem daran, dass sie ebenfalls von verschiedenen Faktoren beeinträchtigt wird und somit, trotz der Korrelation zur Sonneneinstrahlung, nicht vernachlässigt werden darf. Zudem ist die Temperatur im Vergleich zur Sonneneinstrahlung viel träger.
 
 Um ein besseres Verständnis für die Gewichtungen der einzelnen Merkmale zu bekommen, lassen wir uns ein Histogramm abbilden, dass die Anzahl der Verwendungen der einzelnen Merkmale bei den \textit{Wenn-Sonst-Anweisungen} darstellt.
 
@@ -524,6 +527,9 @@ Um ein besseres Verständnis für die Gewichtungen der einzelnen Merkmale zu bek
 \caption{Verwendung der jeweiligen Merkmale im Entscheidungsbaum}
 \label{fig:histogram_feature_quantity}
 \end{figure}
+
+Anhand der Häufigkeit, in der das Merkmal Sonneneinstrahlung auftritt, lässt sich die enorme Bedeutung für die Prognose der Stromerzeugung erahnen. Insbesondere die Tatsache, dass die Sonneneinstrahlung bei sämtlichen Modellen die Entscheidung für die obersten und somit grundlegendsten \textit{Wenn-Sonst-Anweisungen} bildet, verleiht dem Gewicht der Sonneneinstrahlung weiteren Nachdruck.
+
 
 
 \subsection{Schlussfolgerungen für das Training des Modells}
@@ -589,7 +595,10 @@ Ob dieses Szenario tatsächlich eintreten könnte, lässt sich nur schwerlich vo
 
 Die Maximalanzahl an Blättern ähnelt dem Parameter, der die maximale Höhe des Baums bestimmt. Schließlich lässt sich die Anzahl der Blätter bei einem vollständigem Binärbaum durch die Formel $n=2^h$ beschreiben lässt. Folglich können beide Parameter sich gegenseitig begrenzen.
 
-Nur durch die Tatsache, dass es sich bei dem erstellten Entscheidungsbaum nicht zwingend um einen vollständigen Binärbaum handeln muss, können die zwei sehr ähnlichen Parameter den Entscheidungsbaum auf verschiedene Weise beeinträchtigen.  
+Durch die Tatsache, dass es sich bei dem erstellten Entscheidungsbaum nicht zwingend um einen vollständigen Binärbaum handeln muss, können die zwei sehr ähnlichen Parameter den Entscheidungsbaum auf verschiedene Weise beeinträchtigen.
+Zusätzlich dazu wurden Zahlen ausgewählt, die möglichst weit von der nächsten Zweierpotenz entfernt sind. So wird im Rahmen der Rastersuche nach den optimalen Parametern sichergestellt, dass voneinander differenzierte Entscheidungsbäume erstellt und überprüft werden.
+
+\subsubsection{Minimaler gewichteter Anteil der Proben}
 
 \subsubsection{Aufteilung der Proben}
 
@@ -607,11 +616,29 @@ OPTIMIERUNG DES RASTERS UNTERSUCHEN UND DIE GEFUNDEN HYPERPARAMETER HIER ABBILDE
 
 \section{Evaluierung des Lernalgorithmus}
 
+
+\begin{figure}[H]
+\centering
+\def\svgwidth{400pt}
+\input{assets/residuals.pdf_tex}
+\caption{Residuen }
+\label{fig:decisiontree_example}
+\end {figure}
+
+
+\begin{figure}[H]
+\centering
+\def\svgwidth{400pt}
+\input{assets/predictions_linthicum.pdf_tex}
+\caption{Einfacher Entscheidungsbaum mit 2 Merkmalen und der Tiefe 5}
+\label{fig:decisiontree_example}
+\end {figure}
+
 \subsection{Evaluierung der einzelnen Merkmale}
 
 \subsubsection{Bewölkungsgrad}
 
-Die im \fullref{subsubsec:quality_data} zuvor geäußerten Bedenken, dass die Angaben des Wetterdienst bezüglich des Bewölkungsgrad zu fragwürdig sind, sollen anhand der Evaluierung des Lernalgorithmus untersucht werden. Dazu trainieren wir das Modell einmal mit und einmal ohne den Bewölkungsgrad als Teil der Merkmalsmatrix. Anschließend vergleichen wir den Determinierungskoeffizienten. Dabei gilt allerdings zu beachten, dass die Aufteilung des gesamten Datensatzes zu einem Test- und einem Trainingsdatensatz randomisiert stattfindet. Dadurch sind die Ergebnisse nicht reproduzierbar und die Evaluierung der unterschiedlichen Modelle nur bedingt vergleichbar. Um dies Genüge zu leisten, teilen wir die Datensätze in etwa zwei gleichgroße Teilmengen auf. So sinkt die Wahrscheinlichkeit, dass Ausreißer im Testdatensatz den mittleren quadratischen Fehler übermäßig verfälschen. Ausreißer im Trainingsdatensatz werden durch Hyperparameter wie die Mindestanzahl an Proben pro Blatt beschränkt und das Modell sodurch geglättet. 
+Die im \fullref{subsubsec:quality_data} zuvor geäußerten Bedenken, dass die Angaben des Wetterdienst bezüglich des Bewölkungsgrad zu fragwürdig sind, sollen anhand der Evaluierung des Lernalgorithmus untersucht werden. Dazu trainieren wir das Modell einmal mit und einmal ohne den Bewölkungsgrad als Teil der Merkmalsmatrix. Anschließend vergleichen wir den Determinierungskoeffizienten. Dabei gilt allerdings zu beachten, dass die Aufteilung des gesamten Datensatzes zu einem Test- und einem Trainingsdatensatz randomisiert stattfindet. Dadurch sind die Ergebnisse nicht reproduzierbar und die Evaluierung der unterschiedlichen Modelle nur bedingt vergleichbar. Um dies Genüge zu leisten, teilen wir die Datensätze in etwa zwei gleichgroße Teilmengen auf. So sinkt die Wahrscheinlichkeit, dass Ausreißer im Testdatensatz den mittleren quadratischen Fehler übermäßig verfälschen. Ausreißer im Trainingsdatensatz werden durch Hyperparameter wie die Mindestanzahl an Proben pro Blatt behandelt und das Modell sodurch geglättet. 
 
 Zudem führen wir die Evaluierung mehrmals durch und erhalten dadurch mehrere Vergleichswerte. Lassen wir den Bewölkungsgrad aus der Merkmalsmatrix außen vor, so erhalten wir für den Determinierungskoeffizienten des Entscheidungsbaum Werte zwischen 0.82 und 0.89. Im Durchschnitt schneidet das Modell um 0.04 besser ab, als wenn der Bewölkungsgrad für die Prognose berücksichtigt wird.
 
