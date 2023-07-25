@@ -16,7 +16,6 @@ manager = DBManager()
 # manager.fetch_solar_data(1200, "2019-04-13", "2019-06-30")
 # manager.fetch_weather_data("linthicum", "2019-04-13", "2019-06-30")
 
-
 # =============================================================================
 # COCKEYSVILLE, 1201
 # =============================================================================
@@ -31,18 +30,23 @@ manager = DBManager()
 # manager.fetch_weather_data("New Smyrna beach", "2004-05-01", "2004-06-30")
 
 # =============================================================================
-# NEW SMYRNA BEACH, 1231
+# NEW ORLEANS, 1257
 # =============================================================================
 # manager.fetch_solar_data(1257, "2014-05-01", "2014-05-31")
 # manager.fetch_weather_data("New Orleans", "2014-05-01", "2014-05-31")
 
-
+# =============================================================================
+# VILLAGE OF PORT CHESTER, 1220
+# =============================================================================
+# manager.fetch_solar_data(1220, "2014-06-01", "2014-06-30")
+# manager.fetch_weather_data("Village of Port Chester", "2014-06-01", "2014-06-30")
 
 # =============================================================================
-# NEW SMYRNA BEACH, 1220
+# NEW ORLEANS, 1244
 # =============================================================================
-manager.fetch_solar_data(1220, "2014-06-01", "2014-06-30")
-manager.fetch_weather_data("Village of Port Chester", "2014-06-01", "2014-06-30")
+manager.fetch_solar_data(1244, "2014-07-01", "2014-07-31")
+# manager.fetch_weather_data("New Orleans", "2014-06-01", "2014-07-31")
+
 
 # %%
 
@@ -52,11 +56,12 @@ manager.fetch_weather_data("Village of Port Chester", "2014-06-01", "2014-06-30"
 
 from scikit import ScikitManager
 # sci = ScikitManager(location='applewood', solarsystem_id=10)
-sci = ScikitManager(location='linthicum', solarsystem_id=1200)
+# sci = ScikitManager(location='linthicum', solarsystem_id=1200)
 # # sci = ScikitManager(location='Cherry Hill Townhill', solarsystem_id=1201)
 # sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)
 # sci = ScikitManager(location='Village of Port Chester', solarsystem_id=1220)
-
+sci = ScikitManager(location='New Orleans', solarsystem_id=1244)
+# sci = ScikitManager(location='New Orleans', solarsystem_id=1257)
 
 # %%
 
@@ -70,7 +75,7 @@ sci.choose_features(['timeepoch',
                      'calendarweek',
                      'hour',
                      'temperature',
-                    #  'wind',
+                     'wind',
                      'humidity',
                     #  'cloudcoverage',
                      'energyoutput'
@@ -80,7 +85,7 @@ sci.choose_features(['timeepoch',
 #%%
 sci.filter_low_energyoutput()
 # sci.split_data(0.1)
-sci.split_data_by_days(0.4)
+sci.split_data_by_days(0.3)
 # sci.transform_hours()
 # print(type(sci.timeepoch_test[0]))
 
@@ -89,7 +94,7 @@ sci.split_data_by_days(0.4)
 # sci.compare_similar_radiation(550, 600)
 #%%
 sci.model_selection('decisiontreeregressor')
-# sci.grid_search()
+sci.grid_search()
 sci.predict()
 sci.evaluate()
 # sci.plot_histogram_feature_importances()

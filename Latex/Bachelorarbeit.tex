@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper]{article}
+	\documentclass[12pt, a4paper]{article}
 
 % Pakete
 \usepackage[utf8]{inputenc}
@@ -207,33 +207,11 @@ Eine Neuerung des Netzausbaubeschleunigungsgesetzes (NABEG) im Jahr 2019 wurde \
 %https://www.bmwk.de/Redaktion/DE/Dossier/strommarkt-der-zukunft.html#:~:text=Aufgrund%20der%20zunehmenden%20Elektrifizierung%20in,2045%20wurde%20im%20Energiewirtschaftsgesetz%20verankert.
 
 
-
-%\subsection{Maschinelles Lernen}
-
-\newpage
-
-\section{Eigene Fragestellung und methodisches Vorgehen}
-
-Um die zukünftigen Herausforderungen der Energieversorgung zu bewältigen, befasst sich diese Arbeit damit den fluktuierenden Stromerzeuger, die Photovoltaikanlage, so gut wie möglich in unser bestehendes Stromnetz zu integrieren. Die zentrale Fragestellung lautet hierbei, wie man präzise den erzeugten Solarstrom prognostizieren kann. Um dieses Ziel zu erreichen, sollen zuerst entscheidende Parameter ermittelt werden, die die Stromerzeugung einer Solaranlage beeinflussen. Allerdings liegt der Fokus ebenfalls darauf, dass die Berechnung der Prognose für beliebige Photovoltaikanlagen anwendbar ist, indem nur wenige spezifische Informationen über die Anlage in die Berechnung einfließen. Selbstverständlich spielen verschiedenste Eigenschaften der Solaranlage eine entscheidende Rolle, jedoch werden diese im Datenmodell nicht berücksichtigt. Zunehmende Rechenkapazitäten und kostengünstigere Speichermöglichkeiten ermöglichen es, dass für jede einzelne Solaranlage ein eigenes Datenmodell angelegt wird. Somit können die Gegebenheiten der Photovoltaikanlage, wie Quantität und Qualität der Solarpanele, vernachlässigt werden. Durch die Trainingsdaten ist das Datenmodell selbstständig in der Lage die Leistungsfähigkeit der Solaranlage zu beurteilen. Ein weiterer Vorteil ist, dass dadurch schwer zu beschaffende Datensätze nicht weiter benötigt werden. Stattdessen wird das Modell fast ausschließlich von Wetterdaten trainiert, welche von verschiedensten Institutionen flächenmäßig und umfangreich aufgezeichnet werden. Die für das Trainieren des maschinellen Lernen Modells benötigten Wetterdaten werden von der Website \textit{https://www.visualcrossing.com} extrahiert. Die Website bietet einen kostenfreien Zugang zu detaillierten historischen Wetterdaten, bis zu 50 Jahren vor heute. 
-
-HIER: QUELLE SOLARDATEN
-
-Durch die Literaturrecherche sind bereits die relevanten Faktoren eingegrenzt wurden, allerdings ist eine exakte Analyse der Daten unumgänglich. Hierbei soll vor allem beachtet werden, ob die Aufnahme des Merkmals einen solch starken Einfluss auf die Stromerzeugung hat, sodass die zunehmende Komplexität des Modells gerechtfertigt ist. Herausfordernd ist dabei, ob die Informationen in manchen Merkmalen nicht bereits in anderen Merkmalen enthalten sind. Schließlich korrelieren einige Wetterdaten sehr stark miteinander. Ebenso gilt es zu überprüfen, ob sich die ausgewählten Merkmale auf unterschiedliche Solaranlagen auf die gleiche Art und Weise auswirken. Um dies zu überprüfen, sollen mehrere Solaranlagen an verschiedenen Standorten ausgesucht und getestet werden.
-
-Sofern es gelingt, sämtliche sich variierende Parameter herauszufinden, die die Solarproduktion beeinträchtigen, ist maschinelles Lernen eine vielversprechende Technologie um die Stromerzeugung zu prognostizieren. Insbesondere ist zu erwarten, dass sich das Spektrum der Trainingsdaten und das Spektrum während der Produktion (Inbetriebnahme) sich nicht groß voneinander unterscheiden werden.
-
-Eine Unvollkommenheit des Datenmodells ist jedoch die Alterung der Solaranlage, welche dazu führt, dass die Leistungsfähigkeit über die Lebenszeit sich reduziert. Wie stark die Alterung jedoch die Prognose beeinträchtigt, lässt sich über den Zeitraum dieser Arbeit von vier Monaten nur schwerlich beurteilen. Mögliche Konsequenzen wären ältere Daten kontinuierlich auszusortieren und mit das Modell mit den Neusten zu aktualisieren. Es ist davon auszugehen, dass der Alterungsprozess sich nur langsam in den Datensätzen bemerkbar machen wird, weshalb er die Ergebnisse über die kurze Zeitspanne kaum verfälschen dürfte.
-
-
-\newpage
-
-\section{Wichtige Faktoren bei der Stromerzeugung durch Solarenergie}
-
-Bevor der Stromertag einer Photovoltaikanlage mit Hilfe von künstlicher Intelligenz berechnet werden soll, ist es von immenser Bedeutung die maßgeblichen Faktoren herauszufinden. Wenn ein Modell eingelernt werden soll, können zu viele Faktoren zum \textit{Fluch der Dimensionen} führen. Dieser besagt, dass zu viele Merkmale dazu verleiten, dass Muster und Strukturen sich schwerer erkennen lassen. Die Datenpunkte sind durch die Größe des mehrdimensionalen Raums weiter voneinander entfernt, wodurch die Interpretierbarkeit komplexer wird. Dementsprechend sind die Eingabedaten behutsam auszuwählen.
-
 % https://www.visualcrossing.com/resources/documentation/weather-data/how-to-obtain-solar-radiation-data/
 
 \subsection{Wetter-unabhängige Faktoren}
+
+Bevor der Stromertag einer Photovoltaikanlage mit Hilfe von künstlicher Intelligenz berechnet werden soll, ist es von immenser Bedeutung die maßgeblichen Faktoren herauszufinden. Wenn ein Modell eingelernt werden soll, können zu viele Faktoren zum \textit{Fluch der Dimensionen} führen. Dieser besagt, dass zu viele Merkmale dazu verleiten, dass Muster und Strukturen sich schwerer erkennen lassen. Die Datenpunkte sind durch die Größe des mehrdimensionalen Raums weiter voneinander entfernt, wodurch die Interpretierbarkeit komplexer wird. Dementsprechend sind die Eingabedaten behutsam auszuwählen.
 
 In Bezug auf die Rahmenparameter der Solaranlage ist die reine Größe selbstverständlich ein maßgeblicher Faktor. Hinzu kommt, dass sich dieses Merkmal für jede individuelle stark unterscheiden kann. Die Dimensionierung der Solaranlage hängt schließlich ebenfalls von verschiedenen Faktoren ab, darunter die verfügbare Fläche am Standort, dem Energiebedarf und dem Verwendungszweck.
 
@@ -358,10 +336,26 @@ Zum flacheren Einstrahlungswinkel in den höheren Breiten kommt hinzu, dass die 
 Die auf der Erde gemessene Globalstrahlung setzt sich aus der Diffusstrahlung und Direktstrahlung zusammen. Unter Diffusstrahlung versteht man jene Strahlung, die auf ihrem Weg von der Sonne zur Erde an anderen Atomen reflektiert und dadurch gestreut wurde. Direktstrahlung hingegen wurde nicht abgelenkt und ist dadurch intensiver und gebündelt. Während die Globalstrahlung schon seit geraumer Zeit protokolliert wird,  vermisst der \textit{Deutsche Wetterdienst} erst seit wenigen Jahren auf die horizontale Ebene bezogene Diffusstrahlung. Aus der Differenz der beiden wird die Direktstrahlung berechnet. 
 
 
+\newpage
 
+\section{Eigene Fragestellung und methodisches Vorgehen}
+
+Um die zukünftigen Herausforderungen der Energieversorgung zu bewältigen, befasst sich diese Arbeit damit den fluktuierenden Stromerzeuger, die Photovoltaikanlage, so gut wie möglich in unser bestehendes Stromnetz zu integrieren. Die zentrale Fragestellung lautet hierbei, wie man präzise den erzeugten Solarstrom prognostizieren kann. Um dieses Ziel zu erreichen, sollen zuerst entscheidende Parameter ermittelt werden, die die Stromerzeugung einer Solaranlage beeinflussen. Allerdings liegt der Fokus ebenfalls darauf, dass die Berechnung der Prognose für beliebige Photovoltaikanlagen anwendbar ist, indem nur wenige spezifische Informationen über die Anlage in die Berechnung einfließen. Selbstverständlich spielen verschiedenste Eigenschaften der Solaranlage eine entscheidende Rolle, jedoch werden diese im Datenmodell nicht berücksichtigt. Zunehmende Rechenkapazitäten und kostengünstigere Speichermöglichkeiten ermöglichen es, dass für jede einzelne Solaranlage ein eigenes Datenmodell angelegt wird. Somit können die Gegebenheiten der Photovoltaikanlage, wie Quantität und Qualität der Solarpanele, vernachlässigt werden. Durch die Trainingsdaten ist das Datenmodell selbstständig in der Lage die Leistungsfähigkeit der Solaranlage zu beurteilen. Ein weiterer Vorteil ist, dass dadurch schwer zu beschaffende Datensätze über die spezifischen Informationen der jeweiligen Solaranlagen nicht weiter benötigt werden. Stattdessen wird das Modell fast ausschließlich von Wetterdaten trainiert, welche von verschiedensten Institutionen flächenmäßig und umfangreich aufgezeichnet werden. Die für das Trainieren des maschinellen Lernen Modells benötigten Wetterdaten werden von der Website \textit{https://www.visualcrossing.com} extrahiert. Die Website bietet einen kostenfreien Zugang zu detaillierten historischen Wetterdaten, bis zu 50 Jahren vor heute. 
+
+Das amerikanische nationale Labor für erneuerbare Energien, welches im Besitz des amerikanischen Energieministerium ist, stellt eine groß angelegte Zeitreihen-Datenbank zu Verfügung, die System-Metadaten und Leistungswerte von sowohl experimentellen als auch öffentlichen, kommerziell genutzten Solaranlagen enthält.  Der Datensatz besteht aus einer Sammlung von Dateien, die jedem System zugeordnet sind. Die Metadaten umfassen Informationen über die Einzelheiten der Systemhardware und über den geografischen Standort. Diese Arbeit macht von den Datensätzen Gebrauch, um die Realisierbarkeit der Thesis zu überprüfen. 
+
+Durch die Literaturrecherche sind bereits die relevanten Faktoren eingegrenzt wurden, allerdings ist eine exakte Analyse der Daten unumgänglich. Hierbei soll vor allem beachtet werden, ob die Aufnahme des Merkmals einen solch starken Einfluss auf die Stromerzeugung hat, sodass die zunehmende Komplexität des Modells gerechtfertigt ist. Herausfordernd ist dabei, ob die Informationen in manchen Merkmalen nicht bereits in anderen Merkmalen enthalten sind. Schließlich korrelieren einige Wetterdaten sehr stark miteinander. Ebenso gilt es zu überprüfen, ob sich die ausgewählten Merkmale auf unterschiedliche Solaranlagen auf die gleiche Art und Weise auswirken. Um dies zu überprüfen, sollen mehrere Solaranlagen an verschiedenen Standorten ausgesucht und getestet werden.
+
+Sofern es gelingt, sämtliche sich variierende Parameter herauszufinden, die die Solarproduktion beeinträchtigen, ist maschinelles Lernen eine vielversprechende Technologie um die Stromerzeugung zu prognostizieren. Insbesondere ist zu erwarten, dass sich das Spektrum der Trainingsdaten und das Spektrum während der Produktion (Inbetriebnahme) sich nicht groß voneinander unterscheiden werden.
+
+Eine Unvollkommenheit des Datenmodells ist jedoch die Alterung der Solaranlage, welche dazu führt, dass die Leistungsfähigkeit über die Lebenszeit sich reduziert. Mögliche Konsequenzen wären ältere Daten kontinuierlich auszusortieren und mit das Modell mit den Neusten zu aktualisieren. Es ist davon auszugehen, dass der Alterungsprozess sich nur langsam in den Datensätzen bemerkbar machen wird, weshalb er die Ergebnisse über die kurze Zeitspanne eines Jahres kaum verfälschen dürfte.
+
+Um dieses Ziel zu erreichen, sollen zuerst die Wetter- und Solardaten analysiert werden. Nachdem die Zusammenhänge innerhalb der Datensätze in \autoref{sec:features} erläutert wurden, befassen wir uns in \autoref{sec:algorithm} damit einen passenden Lernalgorithmus für diesen Anwendungsfall zu finden. Sobald ein geeigneter Lernalgorithmus gefunden wurde, thematisieren wir in \autoref{sec:data_preparation}, wie die Daten für den erwählten Lernalgorithmus vorverarbeitet werden müssen. Schließlich erfordern die verschiedenen Lernalgorithmen eine unterschiedliche Datenvorverarbeitung. Dementsprechend ist es wichtig, diese mit dem erwählten Lernalgorithmus abzustimmen. In \autoref{sec:conclusion} soll die Leistungsfähigkeit des Modells beurteilt werden. Dazu betrachten wir vor allem den Determinierungskoeffizienten, der die Abweichung der prognostizierten von den tatsächlichen Werten widerspiegelt. Im letzten \fullref{sec:outlook} soll der Mehrwert dieser Arbeit, insbesondere inwiefern sie dabei helfen kann Schwankungen im Stromnetz zu stabilisieren, diskutiert werden.
+ 
 \newpage
 
 \section{Zusammenhänge der Merkmale}
+\label{sec:features}
 
 Die Qualität der Daten definiert maßgeblich die Leistungsfähigkeit des Prognose-Modells. Schließlich sind die Algorithmen im Bereich des maschinellen Lernens derart verallgemeinert, sodass sie die Bedeutung der Daten überhaupt nicht kennen müssen. Dies ist von enormen Vorteil, da ansonsten maschinelles Lernen kaum derart viele Anwendungsmöglichkeiten, wie Klassifizierung von Spam und Phishing-Mails, Erkennung von Objekten anhand von Bildern, Schätzung eines Immobilienwertes oder eben die Prognose der Stromerzeugung einer Photovoltaikanlage, bieten könnte.
 
@@ -451,6 +445,7 @@ PLOT SIMILAR TEMPERATURE AND RADIATION
 \newpage
 
 \section{Datenvorverarbeitung}
+\label{sec:data_preparation}
 
 Für die Forschung dieser Arbeit wurden ein paar Solaranlagen ausgewählt, um zu untersuchen, wie gut anhand von Wetterdaten sich die Solarstromproduktion prognostizieren lässt. Selbst bei den wenigen Solaranlagen, die für diese Forschung verwendet wurden, konnte festgestellt werden, dass die Zusammenhänge zwischen den einzelnen Wettermerkmalen und der erzeugten Strommenge sehr unterschiedlich sein kann.
 
@@ -468,6 +463,7 @@ Unstimmigkeiten innerhalb des Datensatzes werden häufig als Ausreißer betitelt
 \newpage
 
 \section{Lernalgorithmus}
+\label{sec:algorithm}
 
 Die Konsequenz, dass die Zusammenhänge zwischen den Merkmalen und der Zielvariablen sehr verschieden sein können, ist es ein Modell auszuwählen, dass für seine Kontingenz gegenüber der Datenvorverarbeitung bekannt ist. 
 
@@ -547,6 +543,7 @@ Die zweite Schlussfolgerung bezieht sich auf die die unterschiedliche Leistung v
 \newpage
 
 \section{Optimierung der Hyperparameter}
+\label{sec:hyperparameters}
 
 Bei einem Entscheidungsbaum ist es auf Grund seiner Flexibilität gegenüber der verschiedenen Beziehungen zwischen den Merkmalen und der Zielvariablen von besonderer Wichtigkeit die Hyperparameter entsprechend anzupassen. Wenn ein Entscheidungsbaum in seiner Flexibilität nicht angepasst wird, neigt er dazu sich zu sehr an den Trainingsdatensatz anzupassen. Die Datenreihen des Trainingsdatensatz werden häufig perfekt abgebildet, sodass dieses Modell für den Trainingsdatensatz den Maximalwert bei der Evaluierung erzielt. In solchen Fällen schneiden zuvor unbekannte Daten, der sogenannte Testdatensatz, signifikant schlechter ab.
 
@@ -615,6 +612,8 @@ OPTIMIERUNG DES RASTERS UNTERSUCHEN UND DIE GEFUNDEN HYPERPARAMETER HIER ABBILDE
 \newpage
 
 \section{Evaluierung des Lernalgorithmus}
+\label{sec:evaluation}
+
 
 
 \begin{figure}[H]
@@ -622,16 +621,20 @@ OPTIMIERUNG DES RASTERS UNTERSUCHEN UND DIE GEFUNDEN HYPERPARAMETER HIER ABBILDE
 \def\svgwidth{400pt}
 \input{assets/residuals.pdf_tex}
 \caption{Residuen }
-\label{fig:decisiontree_example}
+\label{fig:residuals}
 \end {figure}
+
+Da der Determinierungskoeffizient zwar eine äußerst hilfreiche Methode ist, um die Leistungsfähigkeit des Modells zu bewerten, jedoch auf Grund seiner Einfachheit nur bedingt etwas über die Stärken und Schwächen des Modells verrät, stellen wir die tatsächlichen Prognosewerte und die dazugehörigen Ist-Werte nebeneinander dar. Für die Solaranlage in Linthicum im Bundesstaat Maryland erreichte das Prognosemodell beim Determinierungskoeffizienten, bezogen auf den Testdatensatz, Spitzwerte von bis zu 0.89. Ein Wert von 1 würde bedeuten, dass die Prognosewerte exakt mit den Ist-Werten übereinstimmen. 
+
+\autoref{fig:predictions_linthicum} zeigt, dass an jedem Tag leichte Abweichung zwischen dem Ist- und dem Prognosewert zu verzeichnen sind. Auf der y-Achse ist die erzeugte Strommenge zu sehen, wohingegen die x-Achse das Datum des jeweiligen Tages\footnote{Der Grund für die lückenbehaftete Auflistung der einzelnen Tage liegt daran, dass der Datensatz randomisiert in einen Test- und Trainingsdatensatz aufgeteilt wird, wobei ausschließlich darauf geachtet wurde, dass Werte eines einzelnen Tag beisammen bleiben. Die Tage selbst wurden jedoch absichtlich untereinander gemischt, damit das Modell besser eingelernt werden kann und einen repräsentativen Trainingsdatensatz zur Verfügung hat. Folglich befinden sich die nicht abgebildeten Tage im Trainingsdatensatz.} vermerkt. Einbrüche, welche auf Grund schlechterer Wetterbedingungen unausweichlich und normal sind, stimmen bei beiden Graphen überein. Dass die Vorhersagen des Prognosemodells nicht exakt mit den Ist-Werten übereinstimmen ist weder überraschend noch wäre es nötig gewesen. Dass jedoch die ungefähre Solarstromproduktion prognostiziert werden kann und die Differenz hauptsächlich durch sehr viele kleine kummulierte Abweichungen verursacht wird, kann als Erfolg gewertet werden und belegt somit die Realisierbarkeit nachweislich.
 
 
 \begin{figure}[H]
 \centering
 \def\svgwidth{400pt}
 \input{assets/predictions_linthicum.pdf_tex}
-\caption{Einfacher Entscheidungsbaum mit 2 Merkmalen und der Tiefe 5}
-\label{fig:decisiontree_example}
+\caption{Prognose und Ist-Werte des erzeugten Solarstrom einer Solaranlage in Linthicum, Maryland, USA}
+\label{fig:predictions_linthicum}
 \end {figure}
 
 \subsection{Evaluierung der einzelnen Merkmale}
@@ -640,18 +643,26 @@ OPTIMIERUNG DES RASTERS UNTERSUCHEN UND DIE GEFUNDEN HYPERPARAMETER HIER ABBILDE
 
 Die im \fullref{subsubsec:quality_data} zuvor geäußerten Bedenken, dass die Angaben des Wetterdienst bezüglich des Bewölkungsgrad zu fragwürdig sind, sollen anhand der Evaluierung des Lernalgorithmus untersucht werden. Dazu trainieren wir das Modell einmal mit und einmal ohne den Bewölkungsgrad als Teil der Merkmalsmatrix. Anschließend vergleichen wir den Determinierungskoeffizienten. Dabei gilt allerdings zu beachten, dass die Aufteilung des gesamten Datensatzes zu einem Test- und einem Trainingsdatensatz randomisiert stattfindet. Dadurch sind die Ergebnisse nicht reproduzierbar und die Evaluierung der unterschiedlichen Modelle nur bedingt vergleichbar. Um dies Genüge zu leisten, teilen wir die Datensätze in etwa zwei gleichgroße Teilmengen auf. So sinkt die Wahrscheinlichkeit, dass Ausreißer im Testdatensatz den mittleren quadratischen Fehler übermäßig verfälschen. Ausreißer im Trainingsdatensatz werden durch Hyperparameter wie die Mindestanzahl an Proben pro Blatt behandelt und das Modell sodurch geglättet. 
 
-Zudem führen wir die Evaluierung mehrmals durch und erhalten dadurch mehrere Vergleichswerte. Lassen wir den Bewölkungsgrad aus der Merkmalsmatrix außen vor, so erhalten wir für den Determinierungskoeffizienten des Entscheidungsbaum Werte zwischen 0.82 und 0.89. Im Durchschnitt schneidet das Modell um 0.04 besser ab, als wenn der Bewölkungsgrad für die Prognose berücksichtigt wird.
+Zudem führen wir die Evaluierung mehrmals durch und erhalten dadurch mehrere Vergleichswerte. Lassen wir den Bewölkungsgrad aus der Merkmalsmatrix außen vor, so erhalten wir für den Determinierungskoeffizienten des Entscheidungsbaum Werte zwischen 0.82 und 0.89. Im Durchschnitt schneidet das Modell um 0.04 besser ab, als wenn der Bewölkungsgrad für die Prognose berücksichtigt wird. 
 
 
 
 \newpage
 
 \section{Zusammenfassung und Fazit}
+\label{sec:conclusion}
+
+Rekapitulierend lässt sich sagen, dass die Prognose über die Stromerzeugung einer Solaranlage mittels maschinellem Lernen realisierbar ist. Verschiedene Solaranlagen haben dazu zwar unbeständige, jedoch nicht grundverschiedene Ergebnisse geliefert. Man kann davon ausgehen, dass die Ursache der Unbeständigkeit in der wechselhaften Qualität der Wetterdaten liegt. Schließlich lässt sich das Wetter über die Schnittstelle der Website \textit{www.visualcrossing.com} für sämtliche Ortschaften abfragen, jedoch ist eine detaillierte flächendeckende Aufzeichnung von einem einzigem Dienstleister als unwahrscheinlich einzustufen\footnote{Zur Kenntnisnahme: Der deutsche Wetterdienst (DWD) ist in Deutschland im Besitz von 83 Wetterstationen.}. Bedauerlicherweise ist die Entfernung zur nächsten Wetterstation nicht im Datensatz dokumentiert, ebenso wenig lassen sich Informationen über mögliche Messabweisungen in den Datensätzen des Wetterdienstleisters finden.
+
+%https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsuebersicht.html#:~:text=Wetter%20und%20Klima%20%2D%20Deutscher%20Wetterdienst,83%20Messstationen%20(nach%20Stationsname%20sortiert)
 
 
 \newpage
 
 \section{Ausblick}
+\label{sec:outlook}
+
+
 
 
 \end{document}
