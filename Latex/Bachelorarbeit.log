@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.9)  26 JUL 2023 13:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.9)  26 JUL 2023 21:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1059,46 +1059,58 @@ as been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.579 
        <./assets//decisiontree_example.pdf>] [45] [46]
-Overfull \hbox (3.4438pt too wide) in paragraph at lines 628--628
-\T1/phv/m/n/12 Entscheidungsbaum| 
+Underfull \hbox (badness 10000) in paragraph at lines 629--629
+[]\T1/phv/m/n/12 Maximalbetrag
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 628--628
-[]\T1/phv/m/n/12 Maximalanzahl
+Underfull \hbox (badness 10000) in paragraph at lines 629--629
+\T1/phv/m/n/12 Stromer-zeu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 628--628
+Overfull \hbox (11.57126pt too wide) in paragraph at lines 629--629
+\T1/phv/m/n/12 Entscheidungs-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 629--629
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 629--629
+\T1/phv/m/n/12 anzahl
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 629--629
 []\T1/phv/m/n/12 Mindestanzahl
  []
 
 
-Overfull \hbox (3.5379pt too wide) in paragraph at lines 628--628
+Overfull \hbox (3.5379pt too wide) in paragraph at lines 629--629
 \T1/phv/m/n/12 (Trainieren)| 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[47] (./assets/residuals.pdf_tex
+[47
+pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.635 \newpage
+              ] (./assets/residuals.pdf_tex
 <assets//residuals.pdf, id=705, page=1, 1305.87888pt x 633.36626pt>
 File: assets//residuals.pdf Graphic file (type pdf)
 <use assets//residuals.pdf, page 1>
 Package pdftex.def Info: assets//residuals.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 400.0pt x 194.00273pt.
 ) [48
-pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.652 
-      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.652 
+l.653 
        <./assets//residuals.pdf>] (./assets/predictions_linthicum.pdf_tex
 <assets//predictions_linthicum.pdf, id=723, page=1, 1486.55388pt x 892.3337pt>
 File: assets//predictions_linthicum.pdf Graphic file (type pdf)
@@ -1112,9 +1124,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.667 
+l.668 
        <./assets//predictions_linthicum.pdf>] [50]
-Overfull \hbox (4.48138pt too wide) in paragraph at lines 683--684
+Overfull \hbox (4.48138pt too wide) in paragraph at lines 684--685
 []\T1/phv/m/n/12 Um auch lang-fris-tig tref-fen-de Vor-her-sa-gen zu ma-chen, m
 uss das Mo-dell selbst-
  []
@@ -1126,8 +1138,14 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: D0F8F29923C66679A2F4ABA9AA8D8489;9771.
+
+Package rerunfilecheck Warning: File `Bachelorarbeit.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Bachelorarbeit.out':
+(rerunfilecheck)             Before: D0F8F29923C66679A2F4ABA9AA8D8489;9771
+(rerunfilecheck)             After:  B6AE74170CD8C83F98F93B109E7949EF;9317.
  ) 
 Here is how much of TeX's memory you used:
  12363 strings out of 476047
@@ -1137,18 +1155,26 @@ Here is how much of TeX's memory you used:
  555137 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,17n,76p,2238b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
-usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
-r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
-ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
-cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loca
-l/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texli
-ve/2023/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/202
-3/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2023/texmf
--dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Bachelorarbeit.pdf (53 pages, 3322988 bytes).
+
+pdfTeX warning (dest): name{subsubsection.7.2.5} has been referenced but does n
+ot exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsubsection.7.2.4} has been referenced but does n
+ot exist, replaced by a fixed one
+
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
+usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
+al/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
+l/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
+texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive
+/2023/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2023/
+texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2023/texmf-d
+ist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Bachelorarbeit.pdf (53 pages, 3323216 bytes).
 PDF statistics:
  830 PDF objects out of 1000 (max. 8388607)
  661 compressed objects within 7 object streams

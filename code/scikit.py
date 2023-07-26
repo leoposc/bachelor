@@ -146,13 +146,13 @@ class ScikitManager():
         weather_df = dm.select_weather_data(self.location)     
         # merge data on timeepoch
         self.XY_df   = weather_df.merge(solar_df, on='timeepoch')
-        self.XY_df['timeepoch'] = pd.to_datetime(self.XY_df['timeepoch'], unit='s')      
-        # # drop timeepoch column
-        # self.XY_df   = self.XY_df.drop(columns=['timeepoch'])
+        self.XY_df['timeepoch'] = pd.to_datetime(self.XY_df['timeepoch'], unit='s')              
         # print size of dataset
         print(f"Solar dataset size: {solar_df.shape}")
         print(f"Weather dataset size: {weather_df.shape}")
-        print(f"Dataset size: {self.XY_df.shape}") 
+        print(f"Dataset size: {self.XY_df.shape}")
+        # get maximum energy output
+        print(f"Maximum energy output: {self.XY_df['energyoutput'].max()}") 
 
 
     def filter_low_radiation(self):
@@ -239,6 +239,23 @@ class ScikitManager():
     #     # update numpy arrays
     #     self.X_train = self.X_df.values
     #     self.y_train = self.y_df.values.reshape(-1,1)
+
+
+    def scatter_plot(self,features: list):
+        if len(features) != 2:
+            raise Exception('Please specify exactly two features to plot.')
+        location = self.location[0].upper() + self.location[1:]
+        fig = go.Figure(data=go.Scatter(x=self.XY_df[features[0]], y=self.XY_df[features[1]], mode='markers', marker=dict(size=3)))
+        fig.update_layout(title=f'Solarsystem id: {self.solarsystem_id}, Location: {location}')
+        # features[0] = 'solar energy production in watt'
+        # features[1] = 'cloud coverage in percent'
+        fig.update_xaxes(title_text=features[0])
+        fig.update_yaxes(title_text=features[1])
+        fig.show()
+
+        # sns.kdeplot(data=self.XY_df, x=features[0], y=features[1], levels=100, cmap="Blues")
+        # plt.show()
+
 
 
     def visualize_pairwise_correlation(self):

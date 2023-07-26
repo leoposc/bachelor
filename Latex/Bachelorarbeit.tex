@@ -591,14 +591,14 @@ Ob dieses Szenario tatsächlich eintreten könnte, lässt sich nur schwerlich vo
 
 \subsubsection{Maximalanzahl an Blättern}
 
-Die Maximalanzahl an Blättern ähnelt dem Parameter, der die maximale Höhe des Baums bestimmt. Schließlich lässt sich die Anzahl der Blätter bei einem vollständigem Binärbaum durch die Formel $n=2^h$ beschreiben lässt. Folglich können beide Parameter sich gegenseitig begrenzen.
+Die Maximalanzahl an Blättern ähnelt dem Parameter, der die maximale Höhe des Baums bestimmt. Schließlich lässt sich die Anzahl der Blätter bei einem vollständigem Binärbaum durch die Formel $n=2^h$ beschreiben lässt. Folglich können beide Parameter sich gegenseitig aktiv beeinflussen, wobei die Maximalanzahl an Blättern ausschließlich Auswirkungen auf den Entscheidungsbaum hat, wenn die Zahl geringer ist als $n=2^h$.
 
 Durch die Tatsache, dass es sich bei dem erstellten Entscheidungsbaum nicht zwingend um einen vollständigen Binärbaum handeln muss, können die zwei sehr ähnlichen Parameter den Entscheidungsbaum auf verschiedene Weise beeinträchtigen.
 Zusätzlich dazu wurden Zahlen ausgewählt, die möglichst weit von der nächsten Zweierpotenz entfernt sind. So wird im Rahmen der Rastersuche nach den optimalen Parametern sichergestellt, dass voneinander differenzierte Entscheidungsbäume erstellt und überprüft werden.
 
-\subsubsection{Minimaler gewichteter Anteil der Proben}
-
-\subsubsection{Aufteilung der Proben}
+%\subsubsection{Minimaler gewichteter Anteil der Proben}
+%
+%\subsubsection{Aufteilung der Proben}
 
 \subsection{Hyperparameter auswählen}
 
@@ -616,12 +616,13 @@ OPTIMIERUNG DES RASTERS UNTERSUCHEN UND DIE GEFUNDEN HYPERPARAMETER HIER ABBILDE
 \begin{center}
 
 \resizebox{\textwidth}{!}{
-\begin{tabular}{| l | p{3.5cm} | p{3.7cm} | p{3cm} | p{3cm} | p{1.75cm} | p{2cm} |}
+\begin{tabular}{| l | p{3.5cm} | p{3cm} | p{2.5cm} | p{2cm} | p{3cm} | p{1.75cm} | p{2cm} |}
 \hline
-Solaranlage ID & Größe Datensatz\tablefootnote{Die Größe des Datensatzes betitelt die Anzahl an Datenreihen, die für das Trainieren des Modells verwendet wurden.} & Tiefe des \newline Entscheidungsbaum & Maximalanzahl Blätter & Mindestanzahl Proben Blätter & R²-Wert\tablefootnote{Die Bezeichnungen R²-Wert und der Determinierungskoeffizient lassen sich als Synonyme auffassen.} \newline (Testen) & R²-Wert \newline (Trainieren) \\ \hline
-1200 & 1750 & 9 & 1536 &  7 & 0.89 & 0.90 \\ \hline
-1220 &  293 & 5 &   48 & 20 & 0.64 & 0.68 \\ \hline
-1231 & 1055 & 8 &   48 &  7 & 0.74 & 0.86 \\ \hline
+PV-Anlage ID & Größe Datensatz\tablefootnote{Die Größe des Datensatzes betitelt die Anzahl an Datenreihen, die für das Trainieren des Modells verwendet wurden.} & Maximalbetrag Stromerzeugung & Tiefe des \newline Entscheidungs-\newline baum & Maximal-\newline anzahl Blätter & Mindestanzahl Proben Blätter & R²-Wert\tablefootnote{Die Bezeichnungen R²-Wert und der Determinierungskoeffizient lassen sich als Synonyme auffassen.} \newline (Testen) & R²-Wert \newline (Trainieren) \\ \hline
+1199 &  269 & XXXXX & 5 &   48 & 10 & 0.89 & 0.93 \\ \hline
+1200 & 1750 & 46015 & 8 &   48 & 10 & 0.89 & 0.90 \\ \hline
+1220 &  293 &  6816 & 5 &   48 & 20 & 0.64 & 0.68 \\ \hline
+1231 & 1055 &  2660 & 8 &   48 &  7 & 0.74 & 0.86 \\ \hline
 
 
 
