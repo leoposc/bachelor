@@ -45,6 +45,7 @@
 \contentsline {subsubsection}{\numberline {7.2.4}Minimaler gewichteter Anteil der Proben}{47}{subsubsection.7.2.4}%
 \contentsline {subsubsection}{\numberline {7.2.5}Aufteilung der Proben}{47}{subsubsection.7.2.5}%
 \contentsline {subsection}{\numberline {7.3}Hyperparameter auswählen}{47}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Hyperparameter der verwendeten Solaranlagen}{47}{subsection.7.4}%
 \contentsline {section}{\numberline {8}Evaluierung des Lernalgorithmus}{48}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Evaluierung der einzelnen Merkmale}{49}{subsection.8.1}%
 \contentsline {subsubsection}{\numberline {8.1.1}Bewölkungsgrad}{49}{subsubsection.8.1.1}%

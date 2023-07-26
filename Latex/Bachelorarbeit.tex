@@ -15,6 +15,7 @@
 \usepackage{transparent}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{tablefootnote}
 
 % Pfad SVG Bilder
 \graphicspath{{assets/}}
@@ -608,6 +609,27 @@ Da die \textit{Brute-Force-Methode} mit erheblich mehr Rechenaufwand verbunden i
 Um reproduzierbare Ergebnisse zu erhalten, verwenden wir die \textit{Brute-Force-Methode}, um die optimalen Parameter für das jeweilige Modell zu finden. Bei verschiedenen Solaranlagen wurden zwar unterschiedliche Kombinationen an Hyperparametern als optimal bewertet, allerdings waren diese selten weit voneinander entfernt. Folglich können wir das Raster auf ein paar wenige Kombinationen reduzieren und verringern damit gleichzeitig den Rechenaufwand.
 
 OPTIMIERUNG DES RASTERS UNTERSUCHEN UND DIE GEFUNDEN HYPERPARAMETER HIER ABBILDEN
+
+\subsection{Hyperparameter der verwendeten Solaranlagen}
+
+\begin{table}[h]
+\begin{center}
+
+\resizebox{\textwidth}{!}{
+\begin{tabular}{| l | p{3.5cm} | p{3.7cm} | p{3cm} | p{3cm} | p{1.75cm} | p{2cm} |}
+\hline
+Solaranlage ID & Größe Datensatz\tablefootnote{Die Größe des Datensatzes betitelt die Anzahl an Datenreihen, die für das Trainieren des Modells verwendet wurden.} & Tiefe des \newline Entscheidungsbaum & Maximalanzahl Blätter & Mindestanzahl Proben Blätter & R²-Wert\tablefootnote{Die Bezeichnungen R²-Wert und der Determinierungskoeffizient lassen sich als Synonyme auffassen.} \newline (Testen) & R²-Wert \newline (Trainieren) \\ \hline
+1200 & 1750 & 9 & 1536 &  7 & 0.89 & 0.90 \\ \hline
+1220 &  293 & 5 &   48 & 20 & 0.64 & 0.68 \\ \hline
+1231 & 1055 & 8 &   48 &  7 & 0.74 & 0.86 \\ \hline
+
+
+
+\end{tabular}}
+\end{center}
+\caption{Hyperparameter der für diese Arbeit verwendeten Solaranlagen}
+\label{tab:temperaturkoeffizienten} 
+\end{table}
 
 \newpage
 
