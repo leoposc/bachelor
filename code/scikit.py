@@ -254,6 +254,7 @@ class ScikitManager():
         cm = np.corrcoef(self.XY_df[self.features].drop(columns=['timeepoch']).values.T)
         sns.set(font_scale=1.5)
         hm = sns.heatmap(cm, cbar=True, annot=True, square=True, fmt='.2f', annot_kws={'size': 15}, yticklabels=features, xticklabels=features)
+        plt.rcParams['figure.figsize'] = [20, 10]
         plt.show()
 
 
@@ -397,12 +398,15 @@ class ScikitManager():
 
     def find_outlier(self):
         maxima_indices = np.array(get_local_maxima_index(self.y_test_pred))
-        # threshold_arr = self.y_test_pred[maxima_indices] - \
-        #     (np.max(self.y_test[maxima_indices]) / 2)
         threshold = np.max(self.y_test[maxima_indices]) / 2
         outlier_indices = np.array(np.abs(self.y_test_pred[maxima_indices] \
             - self.y_test[maxima_indices]) > threshold)
         self.outliers_indices_test = maxima_indices[outlier_indices]
+        # print(len(self.y_test))
+        # print(len(self.outliers_indices_test))
+        # print(len(outlier_indices))
+        # print(outlier_indices)
+        # print(self.outliers_indices_test)
         # outlier_indices = np.where(self.outliers_indices_test)[0]        
         # self.X_outlier_test = self.X_test[self.outliers_indices_test]
         # self.y_outlier_test = self.y_test[self.outliers_indices_test]        
@@ -432,11 +436,7 @@ class ScikitManager():
 
         figure_outlier_idx = get_local_maxima_index(self.y_test_pred[indices], range_x=11)
         dates = [str(x)[:10] for x in self.timeepoch_test[self.outliers_indices_test]]
-        # print(self.y_test[indices])
-        # print(self.outliers_indices_test)
-        print(figure_outlier_idx)
-        # print(indices)
-        print(dates)
+        
         plt.xticks(figure_outlier_idx, dates, rotation=65)
         plt.plot(rng, self.y_test[indices], label='solar energy prodcution')
         plt.plot(rng, self.y_test_pred[indices], label='solar energy prediction')        

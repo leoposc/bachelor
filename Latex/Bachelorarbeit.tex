@@ -656,6 +656,11 @@ Rekapitulierend lässt sich sagen, dass die Prognose über die Stromerzeugung ei
 
 %https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsuebersicht.html#:~:text=Wetter%20und%20Klima%20%2D%20Deutscher%20Wetterdienst,83%20Messstationen%20(nach%20Stationsname%20sortiert)
 
+Sofern die Messwerte der Wetterstationen die tatsächliche Sonneneinstrahlung im Ort gut repräsentieren, lassen sich schon mit einem kleinen Trainingsdatensatz gute Prognosen erzielen. Bereits nach einem Monat kann ein Determinierungskoeffizient von bis zu 0.89 erreicht werden, wobei die Hälfte dieser Daten für den Testdatensatz abgezweigt wurden und somit der Trainingsdatensatz aus 15 zufälligen Tagen des Monats bestehen. Dabei sollte allerdings nicht vergessen werden, dass die Komplexität des Modells mit mehr Daten aus unterschiedlichen Monaten zunimmt. Schließlich ist die Stromproduktion von der Jahreszeit abhängig. 
+
+Um auch langfristig treffende Vorhersagen zu machen, muss das Modell selbstverständlich regelmäßig aktualisiert werden. Dies bedeutet im Detail, dass sowohl die Trainingsdaten erneuert werden müssen als auch die Hyperparameter angepasst werden müssen. Um alle Jahreszeiten widerzuspiegeln, sollten die Trainingsdaten solange erneuert werden, bis ein ganzes Jahr erfasst wurde. Die Hyperparameter müssen aktualisiert werden, um der zunehmenden Komplexität gerecht zu werden. Vollends haben die Entscheidungsbäume, welche mit einem kleinem Datensatz trainiert wurden, in aller Regel eine geringere Tiefe.
+
+
 
 \newpage
 

@@ -11,6 +11,12 @@ manager = DBManager()
 # manager.fetch_weather_data("applewood", "2022-11-11", "2022-12-20")
 
 # =============================================================================
+# COCKEYSVILLE, 1199
+# =============================================================================
+manager.fetch_solar_data(1199, "2019-04-01", "2019-04-30")
+# manager.fetch_weather_data("cockeysville", "2019-04-01", "2019-04-30")
+
+# =============================================================================
 # LINTHICUM, 1200
 # =============================================================================
 # manager.fetch_solar_data(1200, "2019-04-13", "2019-06-30")
@@ -24,6 +30,18 @@ manager = DBManager()
 # manager.fetch_weather_data("Cherry Hill Townhill", "2019-02-06", "2019-03-15")
 
 # =============================================================================
+# VILLAGE OF PORT CHESTER, 1220
+# =============================================================================
+# manager.fetch_solar_data(1220, "2014-06-01", "2014-06-30")
+# manager.fetch_weather_data("Village of Port Chester", "2014-06-01", "2014-06-30")
+
+# =============================================================================
+# NEW ORLEANS, 1244
+# =============================================================================
+# manager.fetch_solar_data(1244, "2014-07-01", "2014-07-31")
+# manager.fetch_weather_data("New Orleans", "2014-06-01", "2014-07-31")
+
+# =============================================================================
 # NEW SMYRNA BEACH, 1231
 # =============================================================================
 # manager.fetch_solar_data(1231, "2004-05-01", "2004-06-30")
@@ -35,18 +53,6 @@ manager = DBManager()
 # manager.fetch_solar_data(1257, "2014-05-01", "2014-05-31")
 # manager.fetch_weather_data("New Orleans", "2014-05-01", "2014-05-31")
 
-# =============================================================================
-# VILLAGE OF PORT CHESTER, 1220
-# =============================================================================
-# manager.fetch_solar_data(1220, "2014-06-01", "2014-06-30")
-# manager.fetch_weather_data("Village of Port Chester", "2014-06-01", "2014-06-30")
-
-# =============================================================================
-# NEW ORLEANS, 1244
-# =============================================================================
-manager.fetch_solar_data(1244, "2014-07-01", "2014-07-31")
-# manager.fetch_weather_data("New Orleans", "2014-06-01", "2014-07-31")
-
 
 # %%
 
@@ -56,12 +62,14 @@ manager.fetch_solar_data(1244, "2014-07-01", "2014-07-31")
 
 from scikit import ScikitManager
 # sci = ScikitManager(location='applewood', solarsystem_id=10)
+sci = ScikitManager(location='cockeysville', solarsystem_id=1199)
 # sci = ScikitManager(location='linthicum', solarsystem_id=1200)
-# # sci = ScikitManager(location='Cherry Hill Townhill', solarsystem_id=1201)
+# sci = ScikitManager(location='Cherry Hill Townhill', solarsystem_id=1201)
 # sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)
 # sci = ScikitManager(location='Village of Port Chester', solarsystem_id=1220)
-sci = ScikitManager(location='New Orleans', solarsystem_id=1244)
+# sci = ScikitManager(location='New Orleans', solarsystem_id=1244)
 # sci = ScikitManager(location='New Orleans', solarsystem_id=1257)
+
 
 # %%
 
@@ -85,7 +93,7 @@ sci.choose_features(['timeepoch',
 #%%
 sci.filter_low_energyoutput()
 # sci.split_data(0.1)
-sci.split_data_by_days(0.3)
+sci.split_data_by_days(0.5)
 # sci.transform_hours()
 # print(type(sci.timeepoch_test[0]))
 
@@ -101,10 +109,10 @@ sci.evaluate()
 sci.histogram()
 
 # %%
-sci.visualize_residuals()
-# sci.visualize_predictions(xlim_left=250, xlim_right=500)
-# sci.visualize_predictions()
-# sci.plot_outlier()
+# sci.visualize_residuals()
+# sci.visualize_predictions(xlim_left=150, xlim_right=500)
+sci.visualize_predictions()
+sci.plot_outlier()
 
 # sci.visualize_tree()
 # sci.visualize_3d_plot()

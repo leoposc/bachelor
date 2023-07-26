@@ -126,6 +126,8 @@ def scrape_solar_data(start: str, end: str, id: int, power_index=None):
                     hour_entries = data[hours == hour]
                     # calculate mean value for the hour
                     val = mean([int(float(x[target_index])) if x[target_index] != '' else 0 for x in hour_entries])
+                    # ignore the seconds 
+                    hour_entries[0][0] = hour_entries[0][0][:14] + '00:00'   
                     # save the mean value
                     solar_data[data_idx][0] = int(datetime.strptime(hour_entries[0][0], '%Y-%m-%d %H:%M:%S').timestamp())
                     solar_data[data_idx][1] = val if val > 30 else 0
@@ -136,4 +138,4 @@ def scrape_solar_data(start: str, end: str, id: int, power_index=None):
     return solar_data, city, power_index
 
 
-# print(scrape_solar_data('2019-01-01', '2019-01-02', 1201))
+# print(scrape_solar_data('2019-01-01', '2019-01-02', 1199))
