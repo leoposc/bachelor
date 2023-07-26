@@ -63,10 +63,10 @@ manager.fetch_solar_data(1220, "2014-05-01", "2014-06-30")
 from scikit import ScikitManager
 # sci = ScikitManager(location='applewood', solarsystem_id=10)
 # sci = ScikitManager(location='cockeysville', solarsystem_id=1199)
-# sci = ScikitManager(location='linthicum', solarsystem_id=1200)
+sci = ScikitManager(location='linthicum', solarsystem_id=1200)
 # sci = ScikitManager(location='Cherry Hill Townhill', solarsystem_id=1201)
 # sci = ScikitManager(location='Village of Port Chester', solarsystem_id=1220)
-sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)
+# sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)
 # sci = ScikitManager(location='New Orleans', solarsystem_id=1244)
 # sci = ScikitManager(location='New Orleans', solarsystem_id=1257)
 
@@ -89,6 +89,12 @@ sci.choose_features(['timeepoch',
                      'energyoutput'
                      ])
 # sci.update_numpy_arrays()
+features = [
+    'solarradiation',
+    'cloudcoverage'
+    ]
+sci.scatter_plot(features)
+
 
 #%%
 sci.filter_low_energyoutput()
@@ -103,7 +109,7 @@ sci.split_data_by_days(0.5)
 # sci.compare_similar_radiation(550, 600)
 #%%
 sci.model_selection('decisiontreeregressor')
-# sci.grid_search()
+sci.grid_search()
 sci.predict()
 sci.evaluate()
 # sci.plot_histogram_feature_importances()
@@ -136,10 +142,14 @@ sci.features
 # sci.update_panda_dataframe()
 # sci.update_numpy_arrays()
 # sci.visualize_data_range()
-sci.visualize_pairwise_correlation()
-sci.visualize_heatmap()
+# sci.visualize_pairwise_correlation()
+# sci.visualize_heatmap()
 
-
+features = [
+    'solarradiation',
+    'cloudcoverage'
+    ]
+sci.scatter_plot(features)
 
 
 #%%
