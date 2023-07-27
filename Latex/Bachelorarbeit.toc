@@ -45,7 +45,9 @@
 \contentsline {subsection}{\numberline {7.3}Hyperparameter auswählen}{47}{subsection.7.3}%
 \contentsline {subsection}{\numberline {7.4}Hyperparameter der verwendeten Solaranlagen}{47}{subsection.7.4}%
 \contentsline {section}{\numberline {8}Evaluierung des Lernalgorithmus}{48}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Evaluierung der einzelnen Merkmale}{49}{subsection.8.1}%
-\contentsline {subsubsection}{\numberline {8.1.1}Bewölkungsgrad}{49}{subsubsection.8.1.1}%
-\contentsline {section}{\numberline {9}Zusammenfassung und Fazit}{51}{section.9}%
-\contentsline {section}{\numberline {10}Ausblick}{52}{section.10}%
+\contentsline {subsection}{\numberline {8.1}Residuen}{48}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Vergleich Ist-Wert und Soll-Wert}{49}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Evaluierung der einzelnen Merkmale}{50}{subsection.8.3}%
+\contentsline {subsubsection}{\numberline {8.3.1}Bewölkungsgrad}{50}{subsubsection.8.3.1}%
+\contentsline {section}{\numberline {9}Zusammenfassung und Fazit}{52}{section.9}%
+\contentsline {section}{\numberline {10}Ausblick}{53}{section.10}%

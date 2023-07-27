@@ -637,6 +637,9 @@ PV-Anlage ID & Größe Datensatz\tablefootnote{Die Größe des Datensatzes betit
 \section{Evaluierung des Lernalgorithmus}
 \label{sec:evaluation}
 
+\subsection{Residuen}
+
+Unter dem Begriff \textit{Residuen} betitelt man in der Regressionsanalyse die Abweichungen zwischen den prognostizierten und den tatsächlich aufgezeichneten Werten. \autoref{fig:residuals} stellt die Residuen der Solaranlage in Linthicum, Maryland dar. Anhand des Diagramms lassen sich Auffälligkeiten in Bezug auf die Abweichungen erkennen, wodurch sich Fehler innerhalb unseres Modells aufspüren lassen. Schließlich deuten Muster in den Fehlern darauf hin, dass sich noch Informationen in den Datensätzen befinden. Informationen, die bisher noch nicht für die Vorhersage von Werten verwendet wurde. Lediglich eine zufällige Fehlerverteilung deutet darauf, dass die Fehlabweichung keine Besonderheit sind und wir alle zu uns zur Verfügung stehenden Daten für die Prognose der \textit{Stromproduktion} einer PV-Anlage verwendet.
 
 
 \begin{figure}[H]
@@ -646,6 +649,8 @@ PV-Anlage ID & Größe Datensatz\tablefootnote{Die Größe des Datensatzes betit
 \caption{Residuen }
 \label{fig:residuals}
 \end {figure}
+
+\subsection{Vergleich Ist-Wert und Soll-Wert}
 
 Da der Determinierungskoeffizient zwar eine äußerst hilfreiche Methode ist, um die Leistungsfähigkeit des Modells zu bewerten, jedoch auf Grund seiner Einfachheit nur bedingt etwas über die Stärken und Schwächen des Modells verrät, stellen wir die tatsächlichen Prognosewerte und die dazugehörigen Ist-Werte nebeneinander dar. Für die Solaranlage in Linthicum im Bundesstaat Maryland erreichte das Prognosemodell beim Determinierungskoeffizienten, bezogen auf den Testdatensatz, Spitzwerte von bis zu 0.89. Ein Wert von 1 würde bedeuten, dass die Prognosewerte exakt mit den Ist-Werten übereinstimmen. 
 
