@@ -336,6 +336,21 @@ Zum flacheren Einstrahlungswinkel in den höheren Breiten kommt hinzu, dass die 
 
 Die auf der Erde gemessene Globalstrahlung setzt sich aus der Diffusstrahlung und Direktstrahlung zusammen. Unter Diffusstrahlung versteht man jene Strahlung, die auf ihrem Weg von der Sonne zur Erde an anderen Atomen reflektiert und dadurch gestreut wurde. Direktstrahlung hingegen wurde nicht abgelenkt und ist dadurch intensiver und gebündelt. Während die Globalstrahlung schon seit geraumer Zeit protokolliert wird,  vermisst der \textit{Deutsche Wetterdienst} erst seit wenigen Jahren auf die horizontale Ebene bezogene Diffusstrahlung. Aus der Differenz der beiden wird die Direktstrahlung berechnet. 
 
+\subsection{Untersuchte Photovoltaikanlagen}
+
+\begin{table}[h]
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{| p{1.5cm} | p{1.5cm} | p{1.5cm} | p{2cm} | p{1.5cm} | p{2cm} | p{1.5cm} | p{1.7cm} |}
+\hline
+PV-Anlagen ID & Fläche in $m²$ & Nenn- leistung in $kW$ & Ausrichtung in Grad & Neigung in Grad & Höhen- meter ü. NN & Montierung \\ \hline
+10 & 12,06 & 1,12 & 180 & 40,0 & 1792,8 & Fixiert \\ \hline
+\end{tabular}}
+\end{center}
+\caption{Metainformationen der Photovoltaikanlagen}
+\label{tab:solarsystem_metadata} 
+\end{table}
+
 
 \newpage
 
@@ -606,9 +621,28 @@ Da im Vorhinein schwer zu beurteilen ist, welche Hyperparameter am besten zum je
 
 Da die \textit{Brute-Force-Methode} mit erheblich mehr Rechenaufwand verbunden ist - schließlich muss für jeden Kombination das Modell trainiert und evaluiert werden -, ist eine verkürzte Rastersuche eine beliebte Alternative. Dabei werden nicht alle Variationen durchprobiert, sondern eine zufällige Kombination verschiedener Hyperparameter getestet. Sofern man in Kauf nehmen kann, nicht das bestmögliche Ergebnis zu erzielen, kann durch die randomisierte Auswahl der Kombinationen an Hyperparametern erheblich Rechenzeit eingespart werden.
 
-Um reproduzierbare Ergebnisse zu erhalten, verwenden wir die \textit{Brute-Force-Methode}, um die optimalen Parameter für das jeweilige Modell zu finden. Bei verschiedenen Solaranlagen wurden zwar unterschiedliche Kombinationen an Hyperparametern als optimal bewertet, allerdings waren diese selten weit voneinander entfernt. Folglich können wir das Raster auf ein paar wenige Kombinationen reduzieren und verringern damit gleichzeitig den Rechenaufwand.
+Um reproduzierbare Ergebnisse zu erhalten, verwenden wir die \textit{Brute-Force-Methode}, um die optimalen Parameter für das jeweilige Modell zu finden. Bei verschiedenen Solaranlagen wurden zwar unterschiedliche Kombinationen an Hyperparametern als optimal bewertet, allerdings waren diese selten weit voneinander entfernt. Folglich können wir das Raster auf ein paar wenige Kombinationen reduzieren und begrenzen damit den Rechenwand tolerierbares Ausmaß.
 
-OPTIMIERUNG DES RASTERS UNTERSUCHEN UND DIE GEFUNDEN HYPERPARAMETER HIER ABBILDEN
+\autoref{tab:gridsearch} bildet die Hyperparameter ab, die für die automatisierte Suche nach den optimalen Parametern verwendet werden sollen. Die Auswahl dieser Parameter wurde getroffen, indem die gesamte Spanne der gefundenen Hyperparametern der dieser Arbeit vorliegenden Solaranlagen repräsentiert werden. Zudem 
+
+
+\begin{table}[H]
+\begin{center}
+
+%\resizebox{\textwidth}{!}{
+\begin{tabular}{| p{4cm} | p{8cm} |}
+
+\hline
+Maximale Tiefe des Entscheidungsbaum & 5, 6, 7, 8, 9, 11, 12, 13, 15, 17 \\ \hline
+Mindestanzahl an \newline Proben pro Blatt & 5, 7, 8, 9, 10, 11, 12, 13, 15, 17, 20, 25, 30, 35, 40, 45, 50 \\ \hline
+Maximalanzahl \newline an Blättern & 35, 40, 48, 96, 192, 384, 768, 1536 \\ \hline
+
+\end{tabular}
+\end{center}
+
+\caption{Potentielle Hyperparameter für die Rastersuche}
+\label{tab:gridsearch}
+\end{table}
 
 \subsection{Hyperparameter der verwendeten Solaranlagen}
 
@@ -616,9 +650,9 @@ OPTIMIERUNG DES RASTERS UNTERSUCHEN UND DIE GEFUNDEN HYPERPARAMETER HIER ABBILDE
 \begin{center}
 
 \resizebox{\textwidth}{!}{
-\begin{tabular}{| l | p{3.5cm} | p{3cm} | p{2.5cm} | p{2cm} | p{3cm} | p{1.75cm} | p{2cm} |}
+\begin{tabular}{| p{1.5cm} | p{1.5cm} | p{2cm} | p{2.2cm} | p{2cm} | p{1.6cm} | p{1.75cm} | p{2cm} |}
 \hline
-PV-Anlage ID & Größe Datensatz\tablefootnote{Die Größe des Datensatzes betitelt die Anzahl an Datenreihen, die für das Trainieren des Modells verwendet wurden.} & Maximalbetrag Stromerzeugung & Tiefe des \newline Entscheidungs-\newline baum & Maximal-\newline anzahl Blätter & Mindestanzahl Proben Blätter & R²-Wert\tablefootnote{Die Bezeichnungen R²-Wert und der Determinierungskoeffizient lassen sich als Synonyme auffassen.} \newline (Testen) & R²-Wert \newline (Trainieren) \\ \hline
+PV-Anlagen ID & Größe \newline Daten- satz\tablefootnote{Die Größe des Datensatzes betitelt die Anzahl an Datenreihen, die für das Trainieren des Modells verwendet wurden.} & Maximal- betrag Stromerzeugung & Tiefe des \newline Entschei- \newline dungsbaum & Maximal-\newline anzahl Blätter & Mindest- anzahl Proben Blätter & R²-Wert\tablefootnote{Die Bezeichnungen R²-Wert und der Determinierungskoeffizient lassen sich als Synonyme auffassen.} \newline (Testen) & R²-Wert \newline (Trainieren) \\ \hline
 1199 &  269 & XXXXX & 5 &   48 & 10 & 0.89 & 0.93 \\ \hline
 1200 & 1750 & 46015 & 8 &   48 & 10 & 0.89 & 0.90 \\ \hline
 1220 &  293 &  6816 & 5 &   48 & 20 & 0.64 & 0.68 \\ \hline
@@ -639,10 +673,13 @@ PV-Anlage ID & Größe Datensatz\tablefootnote{Die Größe des Datensatzes betit
 
 \subsection{Residuen}
 
-Unter dem Begriff \textit{Residuen} betitelt man in der Regressionsanalyse die Abweichungen zwischen den prognostizierten und den tatsächlich aufgezeichneten Werten. \autoref{fig:residuals} stellt die Residuen der Solaranlage in Linthicum, Maryland dar. Anhand des Diagramms lassen sich Auffälligkeiten in Bezug auf die Abweichungen erkennen, wodurch sich Fehler innerhalb unseres Modells aufspüren lassen. Schließlich deuten Muster in den Fehlern darauf hin, dass sich noch Informationen in den Datensätzen befinden. Informationen, die bisher noch nicht für die Vorhersage von Werten verwendet wurde. Lediglich eine zufällige Fehlerverteilung deutet darauf, dass die Fehlabweichung keine Besonderheit sind und wir alle zu uns zur Verfügung stehenden Daten für die Prognose der \textit{Stromproduktion} einer PV-Anlage verwendet.
+Unter dem Begriff \textit{Residuen} betitelt man in der Regressionsanalyse die Abweichungen zwischen den prognostizierten und den tatsächlich aufgezeichneten Werten. \autoref{fig:residuals} stellt die Residuen der Solaranlage in Linthicum, Maryland dar. 
 
+Mit einem solchem Diagramm lassen sich Auffälligkeiten in Bezug auf die Abweichungen erkennen, wodurch sich Fehler innerhalb unseres Modells aufspüren lassen. Schließlich deuten Muster in den Fehlern darauf hin, dass sich noch Informationen in den Datensätzen befinden. Informationen, die bisher noch nicht für die Vorhersage von Werten verwendet wurde. Lediglich eine zufällige Fehlerverteilung deutet daraufhin, dass sämtliche Informationen aus den zur Verfügung stehenden Daten extrahiert wurden. Durch den Vergleich des Trainings- mit dem Testdatensatz ist ebenfalls erkenntlich, ob bei dem erstellten Modell eine Überanpassungssituation\footnote{Man spricht im Kontext vom maschinellem Lernen von einer Überanpassung, wenn ein Modell die Details und Rauschen des Trainingsdatensatzes zu einem gewissen Grad erlernt, sodass es sich negativ auf die Leistungsfähigkeit des Modells bei zuvor unbekannten Daten auswirkt.} anliegt.
 
-\begin{figure}[H]
+%https://statologie.de/residuen/
+
+\begin{figure}
 \centering
 \def\svgwidth{400pt}
 \input{assets/residuals.pdf_tex}

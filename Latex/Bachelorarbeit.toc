@@ -18,6 +18,7 @@
 \contentsline {subsubsection}{\numberline {2.7.3}Temperatur}{18}{subsubsection.2.7.3}%
 \contentsline {subsubsection}{\numberline {2.7.4}Wind}{19}{subsubsection.2.7.4}%
 \contentsline {subsubsection}{\numberline {2.7.5}Sonneneinstrahlung}{20}{subsubsection.2.7.5}%
+\contentsline {subsection}{\numberline {2.8}Untersuchte Photovoltaikanlagen}{22}{subsection.2.8}%
 \contentsline {section}{\numberline {3}Eigene Fragestellung und methodisches Vorgehen}{23}{section.3}%
 \contentsline {section}{\numberline {4}Zusammenhänge der Merkmale}{26}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Transformation der Daten zu Wissen}{26}{subsection.4.1}%
@@ -43,11 +44,11 @@
 \contentsline {subsubsection}{\numberline {7.2.2}Beschränkung der Merkmale}{45}{subsubsection.7.2.2}%
 \contentsline {subsubsection}{\numberline {7.2.3}Maximalanzahl an Blättern}{46}{subsubsection.7.2.3}%
 \contentsline {subsection}{\numberline {7.3}Hyperparameter auswählen}{47}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Hyperparameter der verwendeten Solaranlagen}{47}{subsection.7.4}%
-\contentsline {section}{\numberline {8}Evaluierung des Lernalgorithmus}{48}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Residuen}{48}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Vergleich Ist-Wert und Soll-Wert}{49}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Evaluierung der einzelnen Merkmale}{50}{subsection.8.3}%
-\contentsline {subsubsection}{\numberline {8.3.1}Bewölkungsgrad}{50}{subsubsection.8.3.1}%
-\contentsline {section}{\numberline {9}Zusammenfassung und Fazit}{52}{section.9}%
-\contentsline {section}{\numberline {10}Ausblick}{53}{section.10}%
+\contentsline {subsection}{\numberline {7.4}Hyperparameter der verwendeten Solaranlagen}{48}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Evaluierung des Lernalgorithmus}{49}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Residuen}{49}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Vergleich Ist-Wert und Soll-Wert}{50}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Evaluierung der einzelnen Merkmale}{51}{subsection.8.3}%
+\contentsline {subsubsection}{\numberline {8.3.1}Bewölkungsgrad}{51}{subsubsection.8.3.1}%
+\contentsline {section}{\numberline {9}Zusammenfassung und Fazit}{53}{section.9}%
+\contentsline {section}{\numberline {10}Ausblick}{54}{section.10}%
