@@ -220,9 +220,9 @@ class DBManager():
         key = "4MZDYZUR9MG5MTY4K8WJVT8K6"
 
         url = f'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{location}/{start}/{end}?unitGroup=metric&elements=datetime%2CdatetimeEpoch%2Ctemp%2Chumidity%2Cwindspeed%2Ccloudcover%2Csolarradiation%2Cuvindex&include=hours%2Cobs%2Cremote&key={key}&contentType=csv'
-                
-        result = requests.get(url)
 
+        result = requests.get(url)
+        
         csv_data = result.text.split('\n')
         csv_reader = csv.reader(csv_data, delimiter=',')
         next(csv_reader)
@@ -506,7 +506,7 @@ class DBManager():
 
 
 # manager = DBManager()
-# manager.fetch_weather_data('Cherry Hill Township', '2019-01-01', '2019-01-01')
+# manager.fetch_weather_data('Cherry Hill Townhill', '2019-01-01', '2019-01-01')
 # manager.create_hp_table()
 # manager.fetch_solar_data(10, "2022-05-30", "2022-06-13")
 # manager.save_hypterparameters(1200, p)

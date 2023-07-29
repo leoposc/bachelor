@@ -32,7 +32,7 @@ manager.fetch_solar_data(1199, "2019-04-01", "2019-04-30")
 # =============================================================================
 # VILLAGE OF PORT CHESTER, 1220
 # =============================================================================
-manager.fetch_solar_data(1220, "2014-05-01", "2014-06-30")
+# manager.fetch_solar_data(1220, "2014-05-01", "2014-06-30")
 # manager.fetch_weather_data("Village of Port Chester", "2014-06-01", "2014-06-30")
 
 # =============================================================================
@@ -62,8 +62,8 @@ manager.fetch_solar_data(1220, "2014-05-01", "2014-06-30")
 
 from scikit import ScikitManager
 # sci = ScikitManager(location='applewood', solarsystem_id=10)
-# sci = ScikitManager(location='cockeysville', solarsystem_id=1199)
-sci = ScikitManager(location='linthicum', solarsystem_id=1200)
+sci = ScikitManager(location='cockeysville', solarsystem_id=1199)
+# sci = ScikitManager(location='linthicum', solarsystem_id=1200)
 # sci = ScikitManager(location='Cherry Hill Townhill', solarsystem_id=1201)
 # sci = ScikitManager(location='Village of Port Chester', solarsystem_id=1220)
 # sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)

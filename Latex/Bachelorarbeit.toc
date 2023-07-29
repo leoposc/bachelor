@@ -20,36 +20,38 @@
 \contentsline {subsubsection}{\numberline {2.7.5}Sonneneinstrahlung}{20}{subsubsection.2.7.5}%
 \contentsline {section}{\numberline {3}Eigene Fragestellung und methodisches Vorgehen}{23}{section.3}%
 \contentsline {section}{\numberline {4}Untersuchte Photovoltaikanlagen}{26}{section.4}%
-\contentsline {section}{\numberline {5}Zusammenhänge der Merkmale}{27}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Transformation der Daten zu Wissen}{27}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Heatmap}{28}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Korrelation und Kausalität}{29}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Nicht-lineare Beziehungen}{30}{subsubsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.3}Streudiagramm}{30}{subsection.5.3}%
-\contentsline {subsubsection}{\numberline {5.3.1}Qualität der Daten}{32}{subsubsection.5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.2}Überflutung von Daten}{33}{subsubsection.5.3.2}%
-\contentsline {section}{\numberline {6}Datenvorverarbeitung und Lernalgorithmus}{35}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Datenvorverarbeitung}{35}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Ausreißer}{35}{subsubsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.2}Lernalgorithmus}{36}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Diskretisierung der Zielvariablen}{36}{subsubsection.6.2.1}%
-\contentsline {subsubsection}{\numberline {6.2.2}Lineare Beziehungen}{37}{subsubsection.6.2.2}%
-\contentsline {subsubsection}{\numberline {6.2.3}Aufbau eines Entscheidungsbaum}{38}{subsubsection.6.2.3}%
-\contentsline {subsubsection}{\numberline {6.2.4}Schlussfolgerungen für das Training des Modells}{41}{subsubsection.6.2.4}%
-\contentsline {paragraph}{Schwierigkeiten bei unbekannten Werten \newline }{42}{paragraph*.1}%
-\contentsline {section}{\numberline {7}Optimierung der Hyperparameter}{43}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Tiefe des Entscheidungsbaum}{43}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Weitere Hyperparameter}{45}{subsection.7.2}%
-\contentsline {subsubsection}{\numberline {7.2.1}Mindestanzahl an Proben pro Blatt}{45}{subsubsection.7.2.1}%
-\contentsline {subsubsection}{\numberline {7.2.2}Beschränkung der Merkmale}{45}{subsubsection.7.2.2}%
-\contentsline {subsubsection}{\numberline {7.2.3}Maximalanzahl an Blättern}{46}{subsubsection.7.2.3}%
-\contentsline {subsection}{\numberline {7.3}Hyperparameter auswählen}{47}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Hyperparameter der verwendeten Solaranlagen}{48}{subsection.7.4}%
-\contentsline {section}{\numberline {8}Evaluierung des Lernalgorithmus}{49}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Residuen}{49}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Vergleich Ist-Wert und Soll-Wert}{50}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Evaluierung der einzelnen Merkmale}{51}{subsection.8.3}%
-\contentsline {subsubsection}{\numberline {8.3.1}Bewölkungsgrad}{51}{subsubsection.8.3.1}%
-\contentsline {section}{\numberline {9}Zusammenfassung und Ausblick}{53}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Fazit}{53}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Ausblick}{55}{subsection.9.2}%
+\contentsline {section}{\numberline {5}Zusammenhänge der Merkmale}{29}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Transformation der Daten zu Wissen}{29}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Heatmap}{30}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Korrelation und Kausalität}{31}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Nicht-lineare Beziehungen}{32}{subsubsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.3}Streudiagramm}{32}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Qualität der Daten}{34}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Überflutung von Daten}{35}{subsubsection.5.3.2}%
+\contentsline {section}{\numberline {6}Datenvorverarbeitung und Lernalgorithmus}{37}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Datenvorverarbeitung}{37}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Ausreißer}{38}{subsubsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.2}Lernalgorithmus}{38}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Diskretisierung der Zielvariablen}{38}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Lineare Beziehungen}{39}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}Aufbau eines Entscheidungsbaum}{40}{subsubsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.4}Schlussfolgerungen für das Training des Modells}{43}{subsubsection.6.2.4}%
+\contentsline {paragraph}{Schwierigkeiten bei unbekannten Werten.}{44}{paragraph*.4}%
+\contentsline {paragraph}{Limitierte Wertemenge für mögliche Prognosen.}{44}{paragraph*.5}%
+\contentsline {section}{\numberline {7}Optimierung der Hyperparameter}{45}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Tiefe des Entscheidungsbaum}{45}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Weitere Hyperparameter}{47}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Mindestanzahl an Proben pro Blatt}{47}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}Beschränkung der Merkmale}{47}{subsubsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.3}Maximalanzahl an Blättern}{48}{subsubsection.7.2.3}%
+\contentsline {subsection}{\numberline {7.3}Hyperparameter auswählen}{49}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Hyperparameter der verwendeten Solaranlagen}{50}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Evaluierung des Lernalgorithmus}{51}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Residuen}{51}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Vergleich Ist-Wert und Soll-Wert}{52}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Evaluierung der einzelnen Merkmale}{53}{subsection.8.3}%
+\contentsline {subsubsection}{\numberline {8.3.1}Sonneneinstrahlung}{53}{subsubsection.8.3.1}%
+\contentsline {subsubsection}{\numberline {8.3.2}Bewölkungsgrad}{54}{subsubsection.8.3.2}%
+\contentsline {section}{\numberline {9}Zusammenfassung und Ausblick}{55}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Fazit}{55}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Ausblick}{57}{subsection.9.2}%

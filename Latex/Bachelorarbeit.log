@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.9)  28 JUL 2023 16:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.9)  29 JUL 2023 21:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -350,8 +350,23 @@ Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 (/usr/local/texlive/2023/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
 Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 )))
-Package hyperref Info: Option `colorlinks' set `true' on input line 35.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 46
+(/usr/local/texlive/2023/texmf-dist/tex/latex/acronym/acronym.sty
+Package: acronym 2020/04/17 v1.47 Support for acronyms (Tobias Oetiker)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/bigfoot/suffix.sty
+Package: suffix 2006/07/15 1.5a Variant command support
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count283
+\decimalpart=\count284
+)
+Package: xstring 2023/01/14 v1.85 String manipulations (CT)
+)
+\AC@clearlist=\toks23
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 37.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 48
 .
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/t1phv.fd
@@ -359,7 +374,7 @@ File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count283
+\l__color_backend_stack_int=\count285
 \l__pdf_internal_box=\box54
 )
 (./Bachelorarbeit.aux
@@ -369,24 +384,24 @@ LaTeX Warning: Label `tab:temperaturkoeffizienten' multiply defined.
 )
 \openout1 = `Bachelorarbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -422,12 +437,12 @@ LaTeX Font Info:    ... okay on input line 46.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 46.
+Package hyperref Info: Link coloring ON on input line 48.
 (./Bachelorarbeit.out) (./Bachelorarbeit.out)
 \@outlinefile=\write3
 \openout3 = `Bachelorarbeit.out'.
 
-\c@maskedRefs=\count284
+\c@maskedRefs=\count286
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/apacite/ngerman.apc
 File: ngerman.apc 2013/07/21 v6.03 apacite language file
@@ -439,17 +454,17 @@ LaTeX Info: Redefining \BHBI on input line 143.
 ))
 (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count285
+\scratchcounter=\count287
 \scratchdimen=\dimen163
 \scratchbox=\box55
-\nofMPsegments=\count286
-\nofMParguments=\count287
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count288
+\nofMPsegments=\count288
+\nofMParguments=\count289
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count290
 \MPscratchDim=\dimen164
-\MPnumerator=\count289
-\makeMPintoPDFobject=\count290
-\everyMPtoPDFconversion=\toks24
+\MPnumerator=\count291
+\makeMPintoPDFobject=\count292
+\everyMPtoPDFconversion=\toks25
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -467,7 +482,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.86 \newpage
+l.88 \newpage
               [1] [2] (./Bachelorarbeit.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 2.
@@ -480,25 +495,28 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout4 = `Bachelorarbeit.toc'.
 
  [4] [5] [6]
-Overfull \hbox (3.27159pt too wide) in paragraph at lines 126--127
+Overfull \hbox (3.27159pt too wide) in paragraph at lines 135--136
 \T1/phv/m/n/12 den. 2022 hin-ge-gen sank der Be-darf und die Er-zeu-gung auf un
 -ge-fähr 490.000.000
  []
 
 [7]
-Overfull \hbox (0.28345pt too wide) in paragraph at lines 150--151
+Package acronym Info: Label `acro:pv' newly defined as it shall be overridden
+although it is yet undefined on input line 159.
+
+Overfull \hbox (0.28345pt too wide) in paragraph at lines 159--160
 \T1/phv/m/n/12 Laut dem Bun-des-mi-nis-te-ri-um für Wirt-schaft und Kli-ma-schu
 tz (Stand 1. April 2020)
  []
 
 
-Overfull \hbox (19.2319pt too wide) in paragraph at lines 150--151
+Overfull \hbox (19.2319pt too wide) in paragraph at lines 159--160
 \T1/phv/m/n/12 ist Deutsch-land im Be-sitz von Stromer-zeu-gungs-an-la-gen mit 
 ei-ner Netto-Nennleistung
  []
 
 (./assets/Strombedarf_Erzeugung_2022.pdf_tex
-<assets//Strombedarf_Erzeugung_2022.pdf, id=305, page=1, 752.8125pt x 376.40625
+<assets//Strombedarf_Erzeugung_2022.pdf, id=328, page=1, 752.8125pt x 376.40625
 pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 1>
@@ -509,91 +527,91 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 57.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 57.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=306, page=2, 752.8125pt x 376.40625
+<assets//Strombedarf_Erzeugung_2022.pdf, id=329, page=2, 752.8125pt x 376.40625
 pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 2>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page2 used on
  input line 58.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=307, page=3, 752.8125pt x 376.40625
+<assets//Strombedarf_Erzeugung_2022.pdf, id=330, page=3, 752.8125pt x 376.40625
 pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 3>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page3 used on
  input line 60.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=308, page=4, 752.8125pt x 376.40625
+<assets//Strombedarf_Erzeugung_2022.pdf, id=331, page=4, 752.8125pt x 376.40625
 pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 4>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page4 used on
  input line 62.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=309, page=5, 752.8125pt x 376.40625
+<assets//Strombedarf_Erzeugung_2022.pdf, id=332, page=5, 752.8125pt x 376.40625
 pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 5>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page5 used on
  input line 64.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=310, page=6, 752.8125pt x 376.40625
+<assets//Strombedarf_Erzeugung_2022.pdf, id=333, page=6, 752.8125pt x 376.40625
 pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 6>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page6 used on
  input line 66.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=311, page=7, 752.8125pt x 376.40625
+<assets//Strombedarf_Erzeugung_2022.pdf, id=334, page=7, 752.8125pt x 376.40625
 pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 7>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page7 used on
  input line 68.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=312, page=8, 752.8125pt x 376.40625
+<assets//Strombedarf_Erzeugung_2022.pdf, id=335, page=8, 752.8125pt x 376.40625
 pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 8>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page8 used on
  input line 70.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=313, page=9, 752.8125pt x 376.40625
+<assets//Strombedarf_Erzeugung_2022.pdf, id=336, page=9, 752.8125pt x 376.40625
 pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 9>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page9 used on
  input line 72.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=314, page=10, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_2022.pdf, id=337, page=10, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 10>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page10 used o
 n input line 74.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=315, page=11, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_2022.pdf, id=338, page=11, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 11>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page11 used o
 n input line 76.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=316, page=12, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_2022.pdf, id=339, page=12, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 12>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page12 used o
 n input line 78.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=317, page=13, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_2022.pdf, id=340, page=13, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 13>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page13 used o
 n input line 80.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_2022.pdf, id=318, page=14, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_2022.pdf, id=341, page=14, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_2022.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_2022.pdf, page 14>
@@ -601,7 +619,7 @@ Package pdftex.def Info: assets//Strombedarf_Erzeugung_2022.pdf , page14 used o
 n input line 82.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
 )
-Overfull \hbox (23.20865pt too wide) in paragraph at lines 102--157
+Overfull \hbox (23.20865pt too wide) in paragraph at lines 102--166
  [][] 
  []
 
@@ -610,7 +628,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.162 
+l.171 
        <./assets//Strombedarf_Erzeugung_2022.pdf> <./assets//Strombedarf_Erzeug
 ung_2022.pdf
 
@@ -665,98 +683,98 @@ pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_2022
 pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_2022
 .pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >] [9] [10] (./assets/Strombedarf_Erzeugung_Woche.pdf_tex
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=375, page=1, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=400, page=1, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 1>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page1 used o
 n input line 56.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=376, page=2, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=401, page=2, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 2>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page2 used o
 n input line 58.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=377, page=3, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=402, page=3, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 3>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page3 used o
 n input line 60.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=378, page=4, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=403, page=4, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 4>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page4 used o
 n input line 62.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=379, page=5, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=404, page=5, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 5>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page5 used o
 n input line 64.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=380, page=6, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=405, page=6, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 6>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page6 used o
 n input line 66.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=381, page=7, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=406, page=7, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 7>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page7 used o
 n input line 68.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=382, page=8, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=407, page=8, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 8>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page8 used o
 n input line 70.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=383, page=9, 752.8125pt x 376.4062
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=408, page=9, 752.8125pt x 376.4062
 5pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 9>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page9 used o
 n input line 72.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=384, page=10, 752.8125pt x 376.406
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=409, page=10, 752.8125pt x 376.406
 25pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 10>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page10 used 
 on input line 74.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=385, page=11, 752.8125pt x 376.406
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=410, page=11, 752.8125pt x 376.406
 25pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 11>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page11 used 
 on input line 76.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=386, page=12, 752.8125pt x 376.406
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=411, page=12, 752.8125pt x 376.406
 25pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 12>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page12 used 
 on input line 78.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=387, page=13, 752.8125pt x 376.406
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=412, page=13, 752.8125pt x 376.406
 25pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 13>
 Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page13 used 
 on input line 80.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
-<assets//Strombedarf_Erzeugung_Woche.pdf, id=388, page=14, 752.8125pt x 376.406
+<assets//Strombedarf_Erzeugung_Woche.pdf, id=413, page=14, 752.8125pt x 376.406
 25pt>
 File: assets//Strombedarf_Erzeugung_Woche.pdf Graphic file (type pdf)
 <use assets//Strombedarf_Erzeugung_Woche.pdf, page 14>
@@ -764,18 +782,18 @@ Package pdftex.def Info: assets//Strombedarf_Erzeugung_Woche.pdf , page14 used
 on input line 82.
 (pdftex.def)             Requested size: 450.0pt x 225.00693pt.
 )
-Overfull \hbox (23.20865pt too wide) in paragraph at lines 104--198
+Overfull \hbox (23.20865pt too wide) in paragraph at lines 104--207
  [][] 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 202.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 211.
 [11
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.207 
+l.216 
        <./assets//Strombedarf_Erzeugung_Woche.pdf> <./assets//Strombedarf_Erzeu
 gung_Woche.pdf
 
@@ -830,31 +848,37 @@ e.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_Woch
 e.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-Overfull \hbox (0.72495pt too wide) in paragraph at lines 217--218
+Overfull \hbox (0.72495pt too wide) in paragraph at lines 226--227
 []\T1/phv/m/n/12 In Be-zug auf die Rah-men-pa-ra-me-ter der So-lar-an-la-ge ist
  die rei-ne Grö-ÿe selbst-
  []
 
 [12]
-Overfull \hbox (5.45285pt too wide) in paragraph at lines 227--228
+Overfull \hbox (5.45285pt too wide) in paragraph at lines 236--237
 []\T1/phv/m/n/12 Die Aus-rich-tung der So-lar-mo-du-le hat nicht nur auf die ge
 -sam-te er-zeug-te Strom-
  []
 
 
-Overfull \hbox (3.7519pt too wide) in paragraph at lines 227--228
+Overfull \hbox (3.7519pt too wide) in paragraph at lines 236--237
 \T1/phv/m/n/12 gleich-ba-rer Ge-samt-leis-tung zu un-ter-schied-li-chen Uhr-zei
 -ten kon-tras-tiert Strom pro-
  []
 
-[13] [14] [15]
-Overfull \hbox (6.8483pt too wide) in paragraph at lines 262--263
+[13]
+Overfull \hbox (5.16719pt too wide) in paragraph at lines 249--250
+\T1/phv/m/n/12 Sogenannte nach-ge-führ-te [][]-Anlagen fol-gen selbst-stän-dig 
+und au-to-ma-ti-siert dem
+ []
+
+[14] [15]
+Overfull \hbox (6.8483pt too wide) in paragraph at lines 272--273
 \T1/phv/m/n/12 lung aus. Zu-dem ge-hö-ren Wol-ken zu den un-be-stän-di-gen Fak-
 to-ren, die sich sprung-
  []
 
 (./assets/Cloud_types_en.pdf_tex
-<assets//Cloud_types_en.pdf, id=453, page=1, 722.76022pt x 444.27832pt>
+<assets//Cloud_types_en.pdf, id=488, page=1, 722.76022pt x 444.27832pt>
 File: assets//Cloud_types_en.pdf Graphic file (type pdf)
 <use assets//Cloud_types_en.pdf, page 1>
 Package pdftex.def Info: assets//Cloud_types_en.pdf , page1 used on input line 
@@ -865,9 +889,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.284 
+l.294 
        <./assets//Cloud_types_en.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 291--292
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
 
  []
 
@@ -876,16 +900,16 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [18]
 
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 321.
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 331.
 
 
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 3
-21.
+31.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 321.
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 331.
 
 
 Missing character: There is no ² in font cmr12!
@@ -894,9 +918,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.322 
+l.332 
       ] (./assets/sonneneinstrahlung_deutschland.pdf_tex
-<assets//sonneneinstrahlung_deutschland.pdf, id=482, page=1, 597.51802pt x 844.
+<assets//sonneneinstrahlung_deutschland.pdf, id=517, page=1, 597.51802pt x 844.
 65562pt>
 File: assets//sonneneinstrahlung_deutschland.pdf Graphic file (type pdf)
 <use assets//sonneneinstrahlung_deutschland.pdf, page 1>
@@ -908,168 +932,165 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.338 
+l.348 
        <./assets//sonneneinstrahlung_deutschland.pdf>] [22]
-Overfull \hbox (17.80351pt too wide) in paragraph at lines 345--346
-\T1/phv/m/n/12 sitz des ame-ri-ka-ni-schen Ener-gie-mi-nis-te-ri-um ist, stellt
- ei-ne groÿ an-ge-leg-te Zeitreihen-
+Package acronym Info: Label `acro:nrel' newly defined as it shall be overridden
+
+although it is yet undefined on input line 355.
+
+Overfull \hbox (6.36473pt too wide) in paragraph at lines 355--356
+[]\T1/phv/m/n/12 Das ame-ri-ka-ni-sche na-tio-na-le La-bor für er-neu-er-ba-re 
+Ener-gi-en (zu engl. [][][]National
  []
 
-[23]
-
-LaTeX Warning: Hyper reference `sec:outlook' on page 24 undefined on input line
- 353.
-
-
-LaTeX Warning: Reference `sec:outlook' on page 24 undefined on input line 353.
-
-
-LaTeX Warning: Reference `sec:outlook' on page 24 undefined on input line 353.
-
-[24] [25]
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-[]\T1/phv/m/n/12 PV-
+[23] [24] [25]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
+69.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+Overfull \hbox (38.22159pt too wide) in paragraph at lines 369--370
+[][]$\T1/cmtt/m/n/12 https :// data [] .openei [] .org / s3 [] []viewer [] ?buc
+ket = oedi [] -data [] -lake&prefix = pvdaq$[][] \T1/phv/m/n/12 stammt. 
  []
 
 
-Overfull \hbox (1.34834pt too wide) in paragraph at lines 364--364
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
+[][][]\T1/phv/m/n/12 -
+ []
+
+
+Overfull \hbox (1.34834pt too wide) in paragraph at lines 381--381
 \T1/phv/m/n/12 Anlagen
  []
 
 
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 364.
-
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 364.
-
-
-Missing character: There is no ² in font cmr12!
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
 []\T1/phv/m/n/12 Fläche
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
 []\T1/phv/m/n/12 Nenn-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
 \T1/phv/m/n/12 leis-tung
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
 []\T1/phv/m/n/12 Ausrichtung
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
 []\T1/phv/m/n/12 Höhen-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
 \T1/phv/m/n/12 me-ter ü.
  []
 
 
-Overfull \hbox (1.62729pt too wide) in paragraph at lines 364--364
+Overfull \hbox (1.62729pt too wide) in paragraph at lines 381--381
 []\T1/phv/m/n/12 Koordinaten| 
  []
 
 
-Overfull \hbox (3.29764pt too wide) in paragraph at lines 364--364
+Overfull \hbox (3.29764pt too wide) in paragraph at lines 381--381
 []\T1/phv/m/n/12 Montierung| 
  []
 
 
-Overfull \hbox (27.0944pt too wide) in paragraph at lines 362--376
+Overfull \hbox (27.0944pt too wide) in paragraph at lines 379--392
  [] 
  []
 
-[26
+[26{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
+}] [27
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.382 \newpage
-              ] [27] (./assets/heatmap.pdf_tex
-<assets//heatmap.pdf, id=535, page=1, 824.07881pt x 696.6025pt>
+l.407 I
+       m Kontext von \ac{pv}-Anlagen wird die Bedeutung von Luft durch die s...
+] [28] [29] (./assets/heatmap.pdf_tex
+<assets//heatmap.pdf, id=608, page=1, 824.07881pt x 696.6025pt>
 File: assets//heatmap.pdf Graphic file (type pdf)
 <use assets//heatmap.pdf, page 1>
 Package pdftex.def Info: assets//heatmap.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 375.0pt x 316.98653pt.
-) [28
+) [30
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.410 
+l.438 
        <./assets//heatmap.pdf>]
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 418.
- [29] (./assets/pairplot_all.pdf_tex
-<assets//pairplot_all.pdf, id=555, page=1, 1058.95638pt x 1058.95638pt>
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 446.
+ [31] (./assets/pairplot_all.pdf_tex
+<assets//pairplot_all.pdf, id=629, page=1, 1058.95638pt x 1058.95638pt>
 File: assets//pairplot_all.pdf Graphic file (type pdf)
 <use assets//pairplot_all.pdf, page 1>
 Package pdftex.def Info: assets//pairplot_all.pdf , page1 used on input line 56
 .
 (pdftex.def)             Requested size: 450.0pt x 449.99396pt.
 )
-Overfull \hbox (23.20865pt too wide) in paragraph at lines 57--437
+Overfull \hbox (23.20865pt too wide) in paragraph at lines 57--465
  [][] 
  []
 
-[30] [31
+[32] [33
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.451 
+l.479 
        <./assets//pairplot_all.pdf>]
-Overfull \hbox (13.1726pt too wide) in paragraph at lines 456--457
+Overfull \hbox (13.1726pt too wide) in paragraph at lines 484--485
 \T1/phv/m/n/12 Durch die groÿe Men-ge an Da-ten-punk-te wer-den Streu-dia-gram-
 me, die zwei schwach
  []
 
-[32] (./assets/pairplot_filtered.pdf_tex
-<assets//pairplot_filtered.pdf, id=584, page=1, 1064.97887pt x 1063.975pt>
+[34] (./assets/pairplot_filtered.pdf_tex
+<assets//pairplot_filtered.pdf, id=657, page=1, 1064.97887pt x 1063.975pt>
 File: assets//pairplot_filtered.pdf Graphic file (type pdf)
 <use assets//pairplot_filtered.pdf, page 1>
 Package pdftex.def Info: assets//pairplot_filtered.pdf , page1 used on input li
 ne 56.
 (pdftex.def)             Requested size: 450.0pt x 449.5777pt.
 )
-Overfull \hbox (23.20865pt too wide) in paragraph at lines 57--462
+Overfull \hbox (23.20865pt too wide) in paragraph at lines 57--490
  [][] 
  []
 
-[33] [34
+[35] [36
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.472 \newpage
-               <./assets//pairplot_filtered.pdf>] [35] [36]
+l.500 \newpage
+               <./assets//pairplot_filtered.pdf>] [37] [38]
 (./assets/decisiontree_linear.pdf_tex
-<assets//decisiontree_linear.pdf, id=607, page=1, 611.28375pt x 388.45125pt>
+<assets//decisiontree_linear.pdf, id=680, page=1, 611.28375pt x 388.45125pt>
 File: assets//decisiontree_linear.pdf Graphic file (type pdf)
 <use assets//decisiontree_linear.pdf, page 1>
 Package pdftex.def Info: assets//decisiontree_linear.pdf , page1 used on input 
 line 56.
 (pdftex.def)             Requested size: 350.0pt x 222.40936pt.
-) [37
+) [39] [40
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.519 
+l.555 
        <./assets//decisiontree_linear.pdf>]
 (./assets/binary_tree_linthicum_zoom_v2.pdf_tex
-<assets//binary_tree_linthicum_zoom_v2.pdf, id=621, page=1, 721.06271pt x 443.5
+<assets//binary_tree_linthicum_zoom_v2.pdf, id=699, page=1, 721.06271pt x 443.5
 7544pt>
 File: assets//binary_tree_linthicum_zoom_v2.pdf Graphic file (type pdf)
 <use assets//binary_tree_linthicum_zoom_v2.pdf, page 1>
@@ -1077,71 +1098,55 @@ Package pdftex.def Info: assets//binary_tree_linthicum_zoom_v2.pdf , page1 used
  on input line 56.
 (pdftex.def)             Requested size: 425.0pt x 261.4568pt.
 )
+Package acronym Info: Label `acro:cart' newly defined as it shall be overridden
+
+although it is yet undefined on input line 564.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 533.
- [38] [39
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 564.
+ [41
 pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.540 
+l.567 
        <./assets//binary_tree_linthicum_zoom_v2.pdf>]
 (./assets/histogram_feature_quantity.pdf_tex
-<assets//histogram_feature_quantity.pdf, id=649, page=1, 383.4325pt x 334.24875
+<assets//histogram_feature_quantity.pdf, id=725, page=1, 383.4325pt x 334.24875
 pt>
 File: assets//histogram_feature_quantity.pdf Graphic file (type pdf)
 <use assets//histogram_feature_quantity.pdf, page 1>
 Package pdftex.def Info: assets//histogram_feature_quantity.pdf , page1 used on
  input line 56.
 (pdftex.def)             Requested size: 400.0pt x 348.71214pt.
-) [40]
-Overfull \hbox (3.86563pt too wide) in paragraph at lines 552--553
+) [42]
+Overfull \hbox (3.86563pt too wide) in paragraph at lines 583--584
 \T1/phv/m/sl/12 Anweisungen \T1/phv/m/n/12 bil-det, ver-leiht dem Ge-wicht der 
 Son-nen-ein-strah-lung wei-te-ren Nach-
  []
 
-[41
+[43
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.563 
-       <./assets//histogram_feature_quantity.pdf>]
-Runaway argument?
-{
-! Paragraph ended before \ttl@straight@i was complete.
-<to be read again> 
-                   \par 
-l.567 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Too many }'s.
-\@xdblarg #1#2->#1[{#2}
-                       ]{#2}
-l.567 
-      
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-[42] (./assets/decisiontree_example_2.pdf_tex
-<assets//decisiontree_example_2.pdf, id=671, page=1, 602.25pt x 451.6875pt>
+l.594 
+       <./assets//histogram_feature_quantity.pdf>] [44]
+(./assets/decisiontree_example_2.pdf_tex
+<assets//decisiontree_example_2.pdf, id=751, page=1, 602.25pt x 451.6875pt>
 File: assets//decisiontree_example_2.pdf Graphic file (type pdf)
 <use assets//decisiontree_example_2.pdf, page 1>
 Package pdftex.def Info: assets//decisiontree_example_2.pdf , page1 used on inp
 ut line 56.
 (pdftex.def)             Requested size: 350.0pt x 262.50963pt.
-) [43
+) [45
 pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.588 
+l.617 
        <./assets//decisiontree_example_2.pdf>]
 (./assets/decisiontree_example.pdf_tex
-<assets//decisiontree_example.pdf, id=682, page=1, 450.9347pt x 338.76563pt>
+<assets//decisiontree_example.pdf, id=762, page=1, 450.9347pt x 338.76563pt>
 File: assets//decisiontree_example.pdf Graphic file (type pdf)
 <use assets//decisiontree_example.pdf, page 1>
 Package pdftex.def Info: assets//decisiontree_example.pdf , page1 used on input
@@ -1149,121 +1154,174 @@ Package pdftex.def Info: assets//decisiontree_example.pdf , page1 used on input
 (pdftex.def)             Requested size: 350.0pt x 262.94899pt.
 )
 
-LaTeX Warning: Reference `fig:binary_tree' on page 44 undefined on input line 6
-04.
+LaTeX Warning: Reference `fig:binary_tree' on page 46 undefined on input line 6
+33.
 
-[44
+[46
 pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.605 
-       <./assets//decisiontree_example.pdf>] [45] [46]
-Underfull \hbox (badness 1648) in paragraph at lines 647--647
+l.634 
+       <./assets//decisiontree_example.pdf>] [47] [48]
+Underfull \hbox (badness 1648) in paragraph at lines 676--676
 []\T1/phv/m/n/12 Maximale Tie-fe des
  []
 
-[47]
-Underfull \hbox (badness 10000) in paragraph at lines 674--674
-[]\T1/phv/m/n/12 PV-
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 708--708
+[][][]\T1/phv/m/n/12 -
  []
 
 
-Overfull \hbox (1.34834pt too wide) in paragraph at lines 674--674
+Overfull \hbox (1.34834pt too wide) in paragraph at lines 708--708
 \T1/phv/m/n/12 Anlagen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 674--674
+Underfull \hbox (badness 10000) in paragraph at lines 708--708
 \T1/phv/m/n/12 Daten-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 674--674
+Underfull \hbox (badness 10000) in paragraph at lines 708--708
 []\T1/phv/m/n/12 Maximal-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 674--674
+Underfull \hbox (badness 10000) in paragraph at lines 708--708
 \T1/phv/m/n/12 be-trag
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 674--674
+Underfull \hbox (badness 10000) in paragraph at lines 708--708
 \T1/phv/m/n/12 Stromer-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 674--674
+Underfull \hbox (badness 10000) in paragraph at lines 708--708
+\T1/phv/m/n/12 zeu-gung
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 708--708
 \T1/phv/m/n/12 anzahl
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 674--674
+Underfull \hbox (badness 10000) in paragraph at lines 708--708
 \T1/phv/m/n/12 an-zahl
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 674--674
+Underfull \hbox (badness 10000) in paragraph at lines 708--708
 \T1/phv/m/n/12 Pro-ben
  []
 
 
-Overfull \hbox (3.5379pt too wide) in paragraph at lines 674--674
+Underfull \hbox (badness 10000) in paragraph at lines 708--708
+[]\T1/phv/m/n/12 R\TS1/phv/m/n/12 ²\T1/phv/m/n/12 -
+ []
+
+
+Overfull \hbox (3.5379pt too wide) in paragraph at lines 708--708
 \T1/phv/m/n/12 (Trainieren)| 
  []
 
-[48
+
+Overfull \hbox (7.3602pt too wide) in paragraph at lines 708--708
+[]\T1/phv/m/n/12 1392:640| 
+ []
+
+
+Overfull \hbox (0.68828pt too wide) in paragraph at lines 708--708
+[]\T1/phv/m/n/12 256:115| 
+ []
+
+
+Overfull \hbox (14.03212pt too wide) in paragraph at lines 708--708
+[]\T1/phv/m/n/12 1750:1750| 
+ []
+
+
+Overfull \hbox (0.68828pt too wide) in paragraph at lines 708--708
+[]\T1/phv/m/n/12 293:293| 
+ []
+
+
+Overfull \hbox (14.03212pt too wide) in paragraph at lines 708--708
+[]\T1/phv/m/n/12 1055:1055| 
+ []
+
+
+Overfull \hbox (0.68828pt too wide) in paragraph at lines 708--708
+[]\T1/phv/m/n/12 790:346| 
+ []
+
+
+Overfull \hbox (0.68828pt too wide) in paragraph at lines 708--708
+[]\T1/phv/m/n/12 452:190| 
+ []
+
+[50
 pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.680 \newpage
+l.714 \newpage
               
 pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.680 \newpage
+l.714 \newpage
               ]
-Overfull \hbox (5.0241pt too wide) in paragraph at lines 687--688
+Overfull \hbox (5.0241pt too wide) in paragraph at lines 721--722
 \T1/phv/m/n/12 chun-gen zwi-schen den pro-gno-s-ti-zier-ten und den tat-säch-li
 ch auf-ge-zeich-ne-ten Wer-
  []
 
 (./assets/residuals.pdf_tex
-<assets//residuals.pdf, id=721, page=1, 1305.87888pt x 633.36626pt>
+<assets//residuals.pdf, id=801, page=1, 1305.87888pt x 633.36626pt>
 File: assets//residuals.pdf Graphic file (type pdf)
 <use assets//residuals.pdf, page 1>
 Package pdftex.def Info: assets//residuals.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 400.0pt x 194.00273pt.
-) [49
+) [51
 pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.704 
+l.738 
        <./assets//residuals.pdf>] (./assets/predictions_linthicum.pdf_tex
-<assets//predictions_linthicum.pdf, id=736, page=1, 1486.55388pt x 892.3337pt>
+<assets//predictions_linthicum.pdf, id=816, page=1, 1486.55388pt x 892.3337pt>
 File: assets//predictions_linthicum.pdf Graphic file (type pdf)
 <use assets//predictions_linthicum.pdf, page 1>
 Package pdftex.def Info: assets//predictions_linthicum.pdf , page1 used on inpu
 t line 56.
 (pdftex.def)             Requested size: 400.0pt x 240.10275pt.
 )
-[50] [51
+[52]
+Package acronym Info: Label `acro:api' newly defined as it shall be overridden
+although it is yet undefined on input line 754.
+
+
+LaTeX Warning: Reference `fig:predictions_1244' on page 53 undefined on input l
+ine 754.
+
+[53
 pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.723 
-       <./assets//predictions_linthicum.pdf>] [52]
-Overfull \hbox (4.48138pt too wide) in paragraph at lines 739--740
+l.755 
+       <./assets//predictions_linthicum.pdf>] [54]
+Overfull \hbox (4.48138pt too wide) in paragraph at lines 779--780
 []\T1/phv/m/n/12 Um auch lang-fris-tig tref-fen-de Vor-her-sa-gen zu ma-chen, m
 uss das Mo-dell selbst-
  []
 
-[53] [54] [55] (./Bachelorarbeit.aux)
+[55] [56] [57] (./Bachelorarbeit.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1271,31 +1329,34 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: B74DE325316679527AF85BC92026F7B5;9710.
+(rerunfilecheck)             Checksum: 766432CFE3CCFC003B0C67353D5F2C3C;9868.
  ) 
 Here is how much of TeX's memory you used:
- 12377 strings out of 476047
- 204897 string characters out of 5791252
- 1871248 words of memory out of 5000000
- 32425 multiletter control sequences out of 15000+600000
- 555137 words of font info for 71 fonts, out of 8000000 for 9000
+ 13022 strings out of 476047
+ 214547 string characters out of 5791252
+ 1873248 words of memory out of 5000000
+ 33037 multiletter control sequences out of 15000+600000
+ 555450 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,17n,76p,2238b,619s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,17n,76p,2233b,676s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
-usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
-r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
-ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
-cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loca
-l/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texli
-ve/2023/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/202
-3/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2023/texmf
--dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Bachelorarbeit.pdf (56 pages, 3327950 bytes).
+></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
+l/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
+exlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/tex
+live/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/20
+23/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2023/tex
+mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2023/texmf-dist
+/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Bachelorarbeit.pdf (58 pages, 3386268 bytes).
 PDF statistics:
- 855 PDF objects out of 1000 (max. 8388607)
- 683 compressed objects within 7 object streams
- 141 named destinations out of 1000 (max. 500000)
- 625 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 959 PDF objects out of 1000 (max. 8388607)
+ 778 compressed objects within 8 object streams
+ 156 named destinations out of 1000 (max. 500000)
+ 633 words of extra memory for PDF output out of 10000 (max. 10000000)
 
