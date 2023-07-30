@@ -152,23 +152,15 @@ class ScikitManager():
         print(f"Weather dataset size: {weather_df.shape}")
         print(f"Dataset size: {self.XY_df.shape}")
         # get maximum energy output
-        print(f"Maximum energy output: {self.XY_df['energyoutput'].max()}") 
+        print(f"Maximum energy output: {self.XY_df['energyoutput'].max()}")
 
 
-    def filter_low_radiation(self):
-        # filter out rows with low radiation
-        self.XY_df   = self.XY_df[self.XY_df['solarradiation'] > 10]
-
-
-    def filter_low_energyoutput(self):
-        # filter out rows with low energy output
-        self.XY_df   = self.XY_df[self.XY_df['energyoutput'] > 10]
-
-
-    def compare_similar_radiation(self, lower_limit: int, upper_limit: int):
-        # filter out rows with similar radiation
-        self.XY_df   = self.XY_df[self.XY_df['solarradiation'] > lower_limit]
-        self.XY_df   = self.XY_df[self.XY_df['solarradiation'] < upper_limit]
+    def filter_by(self, feature: str, lower_limit=None, upper_limit=None):
+        # filter out rows which do not meet the criteria
+        if lower_limit is not None:
+            self.XY_df   = self.XY_df[self.XY_df[feature] > lower_limit]
+        if upper_limit is not None:
+            self.XY_df   = self.XY_df[self.XY_df[feature] < upper_limit]
 
 
     def choose_features(self, features: list):
@@ -257,7 +249,7 @@ class ScikitManager():
         # plt.show()
 
 
-    def histogram_specifig_feature(self, feature: str):
+    def histogram_one_feature(self, feature: str):
         values = self.XY_df[feature].values
         plt.hist(values, bins=50, alpha=0.5)
         plt.xlabel('Cloud coverage (%)')
@@ -280,10 +272,10 @@ class ScikitManager():
     def visualize_heatmap(self):
         features = self.features.copy()
         features.remove('timeepoch')
+        plt.figure(figsize=(10,10))
         cm = np.corrcoef(self.XY_df[self.features].drop(columns=['timeepoch']).values.T)
         sns.set(font_scale=1.5)
         hm = sns.heatmap(cm, cbar=True, annot=True, square=True, fmt='.2f', annot_kws={'size': 15}, yticklabels=features, xticklabels=features)
-        plt.rcParams['figure.figsize'] = [20, 10]
         plt.show()
 
 

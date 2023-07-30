@@ -63,9 +63,9 @@ manager.fetch_solar_data(1199, "2019-04-01", "2019-04-30")
 from scikit import ScikitManager
 # sci = ScikitManager(location='applewood', solarsystem_id=10)
 # sci = ScikitManager(location='cockeysville', solarsystem_id=1199)
-# sci = ScikitManager(location='linthicum', solarsystem_id=1200)                # TOWER
+sci = ScikitManager(location='linthicum', solarsystem_id=1200)                # TOWER
 # sci = ScikitManager(location='Cherry Hill Townhill', solarsystem_id=1201)
-sci = ScikitManager(location='Village of Port Chester', solarsystem_id=1220)  # TOWER
+# sci = ScikitManager(location='Village of Port Chester', solarsystem_id=1220)  # TOWER
 # sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)         # TOWER
 # sci = ScikitManager(location='New Orleans', solarsystem_id=1244)
 # sci = ScikitManager(location='New Orleans', solarsystem_id=1257)
@@ -83,9 +83,9 @@ sci.choose_features(['timeepoch',
                      'calendarweek',
                      'hour',
                      'temperature',
-                    #  'wind',
-                     'humidity',
-                     'cloudcoverage',
+                     'wind',
+                    #  'humidity',
+                    #  'cloudcoverage',
                      'energyoutput'
                      ])
 # sci.update_numpy_arrays()
@@ -94,21 +94,25 @@ features = [
     'cloudcoverage'
     ]
 # sci.scatter_plot(features)
-sci.histogram_specifig_feature('cloudcoverage')
+# sci.histogram_one_feature('cloudcoverage')
 
 
 #%%
-sci.filter_low_energyoutput()
-# sci.filter_low_radiation()
+
+sci.filter_by('solarradiation', lower_limit=850, upper_limit=1000)
+# sci.filter_by('energyoutput', lower_limit=10)
+sci.filter_by('temperature', lower_limit=25, upper_limit=30)
+
 # sci.split_data(0.1)
-sci.split_data_by_days(0.5)
+# sci.split_data_by_days(0.001)
 # sci.transform_hours()
 # print(type(sci.timeepoch_test[0]))
 
 #%%
+sci.visualize_pairwise_correlation()
 
-# sci.compare_similar_radiation(550, 600)
 #%%
+
 sci.model_selection('decisiontreeregressor')
 # sci.grid_search()
 sci.predict()
@@ -144,7 +148,7 @@ sci.features
 # sci.update_numpy_arrays()
 # sci.visualize_data_range()
 sci.visualize_pairwise_correlation()
-sci.visualize_heatmap()
+# sci.visualize_heatmap()
 
 # features = [
 #     'solarradiation',
