@@ -246,9 +246,9 @@ class ScikitManager():
             raise Exception('Please specify exactly two features to plot.')
         location = self.location[0].upper() + self.location[1:]
         fig = go.Figure(data=go.Scatter(x=self.XY_df[features[0]], y=self.XY_df[features[1]], mode='markers', marker=dict(size=3)))
-        fig.update_layout(title=f'Solarsystem id: {self.solarsystem_id}, Location: {location}')
-        # features[0] = 'solar energy production in watt'
-        # features[1] = 'cloud coverage in percent'
+        fig.update_layout(title=f'Location: {location}')
+        features[0] = 'Daytime (h)'
+        features[1] = 'Cloud coverage (%)'
         fig.update_xaxes(title_text=features[0])
         fig.update_yaxes(title_text=features[1])
         fig.show()
@@ -257,7 +257,19 @@ class ScikitManager():
         # plt.show()
 
 
-
+    def histogram_specifig_feature(self, feature: str):
+        values = self.XY_df[feature].values
+        plt.hist(values, bins=50, alpha=0.5)
+        plt.xlabel('Cloud coverage (%)')
+        plt.ylabel('Quantity')
+        feature = feature[0].upper() + feature[1:]
+        location = self.location[0].upper() + self.location[1:]
+        plt.title(f'Histogram of {feature} in {location}', y=1.05)
+        plt.rcParams.update({'font.size': 15})
+        plt.tight_layout()
+        plt.show()
+        
+        
     def visualize_pairwise_correlation(self):
         sns.set(font_scale=1.3)
         sns.pairplot(self.XY_df[self.features], height=2.5)

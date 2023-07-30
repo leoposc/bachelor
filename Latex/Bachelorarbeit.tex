@@ -18,6 +18,7 @@
 \usepackage{tablefootnote}
 \usepackage{hyperref}
 \usepackage{acronym}
+\usepackage{caption}
 
 % Pfad SVG Bilder
 \graphicspath{{assets/}}
@@ -462,7 +463,7 @@ Ein Korrelationskoeffizient, der sich im Nullbereich befindet, muss nicht unbedi
 \centering
 \def\svgwidth{450pt}
 \input{assets/pairplot_all.pdf_tex}
-\caption{Streudiagramme zur Visualisierung der Korrelationen zwischen den Merkmalen}
+\caption{Streudiagramme zur Visualisierung der Korrelationen zwischen den Merkmalen, zugehörig zur \ac{pv}-Anlage $1200$ in Linthicum, Maryland}
 \label{fig:pairplot_all}
 \end {figure}
 
@@ -473,11 +474,33 @@ Da im Gegensatz zu Computern Menschen visuelle Grafiken an Stelle einer mit Zahl
 \subsubsection{Qualität der Daten}
 \label{subsubsec:quality_data}
 
-In der Diagonalen der \autoref{fig:pairplot_all} sind Balkendiagramme abgebildet, die die Verteilung der einzelnen Merkmale aufweisen. Besonders interessant ist hierbei das Balkendiagramm zum Bewölkungsgrad in Prozent. Die auffällige Verteilung spiegelt die in \autoref{subsubsec:clouds} bereits erwähnte Problematik die Bewölkung am Himmel anhand einer Prozentzahl darzustellen wider. Bei einem Index, der die Bewölkung einer Ortschaft wiedergeben soll, würden wir erwarten, dass die Verteilung keine größeren Ausreißer beinhaltet. Selbstverständlich ist die Bewölkung von Ort zu Ort unabhängig. So haben Städte in der Nähe von Flüssen in der Regel einen höheren Niederschlag, da sich über den Stadtflächen durch den Asphalt und die Betonflächen die Luft stärker erwärmt als über Grünflächen. Folglich verdunstet mehr Wasser, worauf die Wolken zu schwer werden können und letztendlich abregnen. Das bedeutet, dass es kein einheitliches Schaubild gibt, dass wir als Referenz verwenden könnten. Dass einige Werte jedoch eklatant auftreten, währenddessen deren benachbarte Werte überhaupt nicht in der Statistik vertreten sind, ist ein recht starkes Indiz dafür, dass es sich bei den Angaben zu der Bewölkung um Schätzwerte\footnote{Die Dokumentation des Wetterdienstleisters beschreibt den Wert wie folgt: "Die Wolkenbedeckung ist der Anteil des Himmels, der von Wolken bedeckt ist, ausgedrückt in Prozent. Die Wolkenbedeckung gilt für alle Höhenlagen. Die Tageswerte umfassen den Mittelwert der stündlichen Werte der Wolkenbedeckung."
+In der Diagonalen der \autoref{fig:pairplot_all} sind Balkendiagramme abgebildet, die die Verteilung der einzelnen Merkmale aufweisen. Besonders interessant ist hierbei das Balkendiagramm zum Bewölkungsgrad in Prozent. Die auffällige Verteilung spiegelt die in \fullref{subsubsec:clouds} bereits erwähnte Problematik die Bewölkung am Himmel anhand einer Prozentzahl darzustellen wider. Bei einem Index, der die Bewölkung einer Ortschaft wiedergeben soll, würden wir erwarten, dass die Verteilung keine größeren Ausreißer beinhaltet. Selbstverständlich ist die Bewölkung von Ort zu Ort unabhängig. So haben Städte in der Nähe von Flüssen in der Regel einen höheren Niederschlag, da sich über den Stadtflächen durch den Asphalt und die Betonflächen die Luft stärker erwärmt als über Grünflächen. Folglich verdunstet mehr Wasser, worauf die Wolken zu schwer werden können und letztendlich abregnen. Das bedeutet, dass es kein einheitliches Schaubild gibt, dass wir als Referenz verwenden könnten. Dass einige Werte jedoch eklatant auftreten, währenddessen deren benachbarte Werte überhaupt nicht in der Statistik vertreten sind, ist ein recht starkes Indiz dafür, dass es sich bei den Angaben zu der Bewölkung um Schätzwerte\footnote{Die Dokumentation des Wetterdienstleisters beschreibt den Wert wie folgt: "Die Wolkenbedeckung ist der Anteil des Himmels, der von Wolken bedeckt ist, ausgedrückt in Prozent. Die Wolkenbedeckung gilt für alle Höhenlagen. Die Tageswerte umfassen den Mittelwert der stündlichen Werte der Wolkenbedeckung."
 
 Wie dieser Wert zu Stande kommt oder ob verschiedene Wolkentypen unterschiedlich bewertet werden, bleibt dabei unklar.} handelt.
 
-Da bei den anderen Werten keine Auffälligkeiten zu verzeichnen sind und deren Messung vergleichsweise einfach und standardisiert ist, können wir davon ausgehen, dass sie vertrauenswürdig sind. Für den Bewölkungsgrad könnte es eine mögliche Konsequenz sein ihn aus der Merkmalsliste des Lernalgorithmus zu streichen. Schließlich wird die Bewölkung, zwar nicht vollständig, aber zumindest teilweise durch die zuverlässigeren Messwerte über die Feuchtigkeit und des Einstrahlungswertes repräsentiert. In \autoref{fig:pairplot_filtered} ist erkenntlich, dass ein höhere Feuchtigkeit mit mehr Bewölkung einhergeht, gleichzeitig kommen weniger Sonnenstrahlen auf der Erdoberfläche an. 
+Da bei den anderen Werten keine Auffälligkeiten zu verzeichnen sind und deren Messung vergleichsweise einfach und standardisiert ist, können wir davon ausgehen, dass sie vertrauenswürdig sind. Für den Bewölkungsgrad könnte es eine mögliche Konsequenz sein ihn aus der Merkmalsliste des Lernalgorithmus zu streichen. Schließlich wird die Bewölkung, zwar nicht vollständig, aber zumindest teilweise durch die zuverlässigeren Messwerte über die Feuchtigkeit und des Einstrahlungswertes repräsentiert. In \autoref{fig:pairplot_filtered} ist erkenntlich, dass ein höhere Feuchtigkeit mit mehr Bewölkung einhergeht, gleichzeitig kommen infolge vermehrter Bewölkung weniger Sonnenstrahlen auf der Erdoberfläche an. 
+
+\begin{figure}
+\centering
+\begin{minipage}[t]{0.45\linewidth}
+\centering
+\def\svgwidth{210pt}
+\input{assets/histogram_cc_1220.pdf_tex}
+\caption{Bewölkung in Port Chester bei New York City, New York}
+\label{fig:histogram_cc_1220}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\linewidth}
+\centering
+\def\svgwidth{200pt}
+\input{assets/histogram_cc_1231.pdf_tex}
+\caption{Bewölkung in New Smyrna Beach bei Orlando, Florida}
+\label{fig:histogram_cc_1231}
+\end{minipage}
+\end {figure}
+
+
+Der Kontrast zwischen \autoref{fig:histogram_cc_1220} und \autoref{fig:histogram_cc_1231} könnte kaum deutlicher sein. Die Verteilung in beiden Histogrammen ist nicht gleichmäßig, allerdings sind die Balken in \autoref{fig:histogram_cc_1220} doch sehr auffällig. Die Werte häufen sich exakt an 5 Stellen, was bedeuten würde, dass sich die Bewölkung in der Stadt Port Chester geradezu sprunghaft verändern würde. Selbst wenn die die Werte nur in einem Zeitintervall von einer Stunde dokumentiert sind, ist die Wahrscheinlichkeit, dass der Wert die tatsächlichen Wetterbedingungen am Himmel widerspiegeln abwegig.
 
 \subsubsection{Überflutung von Daten}
 
@@ -747,12 +770,23 @@ Da der Determinierungskoeffizient zwar eine äußerst hilfreiche Methode ist, um
 \label{fig:predictions_linthicum}
 \end {figure}
 
-\subsection{Evaluierung der einzelnen Merkmale}
+\subsection{Evaluierung einzelner Merkmale}
 
 \subsubsection{Sonneneinstrahlung}
 
-Unumstritten ist die Sonneneinstrahlung das wichtigste Merkmal für das Prognosemodell, um eine akkurate Aussage über die zu erwartende Solarstromproduktion zu treffen. Die Bedeutung von diesem Wetterfaktor wurde bereits in \fullref{subsubsec:decisiontree_structure} erläutert und ist durch das \autoref{fig:histogram_feature_quantity} klar ersichtlich. Ebenso wurde bereits des häufigeren erwähnt, dass die Wetterfaktoren sich gegenseitig untereinander beeinflussen. Dass diese Multikollinearität zwischen den verschieden Merkmalen auch von Nutzen sein kann, wird durch die beiden \ac{pv}-Anlagen mit der Indenfikationsnummer $1244$ und $1257$ bewiesen. Die Datenbank von \ac{nrel} umfasst für die beiden \ac{pv}-Anlagen Messwerte für das Jahr 2014, allerdings sind für diese Zeitspanne und der jeweiligen Position der Anlage keine Werte über die Sonneneinstrahlung festgehalten. Die \ac{api} von \textit{wwww.visualcrossing.com} liefert für die beiden Orte Nullwerte für die Sonneneinstrahlung. Der \ac{cart}-Algorithmus erkennt, dass dadurch keine Aufteilung der Datenreihen möglich ist und ignoriert die Sonneneinstrahlung für die Erstellung des Entscheidungsbaum. Folglich wird das Merkmal bei keiner einzigen \textit{Wenn-Sonst-Anweisung} verwendet. Dennoch erzielen die beiden Prognosemodelle einen Determinierungskoeffizienten von bis zu $0.67$. \autoref{fig:predictions_1244} zeigt, dass die Abweichungen vor allem durch viele, kleinere entstehen, wodurch die kumulierten Abweichungen die Aussagekraft des Modells schlechter darstellen als sie eigentlich sind.
+Unumstritten ist die Sonneneinstrahlung das wichtigste Merkmal für das Prognosemodell, um eine akkurate Aussage über die zu erwartende Solarstromproduktion zu treffen. Die Bedeutung von diesem Wetterfaktor wurde bereits in \fullref{subsubsec:decisiontree_structure} erläutert und ist durch die \autoref{fig:histogram_feature_quantity} klar ersichtlich. Ebenso wurde bereits des Öfteren erwähnt, dass die Wetterfaktoren sich gegenseitig untereinander beeinflussen. Dass diese Multikollinearität zwischen den verschieden Merkmalen auch von Nutzen sein kann, wird durch die beiden \ac{pv}-Anlagen mit der Indenfikationsnummer $1244$ und $1257$ bewiesen. In diesem Unterabschnitt sollen die Konsequenzen von unzureichenden Messwerten beziehungsweise Wetterprognosen über die Sonneneinstrahlung betrachtet werden. Denn die Datenbank von \ac{nrel} umfasst für die beiden \ac{pv}-Anlagen Messwerte für das Jahr 2014, allerdings sind für diese Zeitspanne und der jeweiligen Position der Anlage keine Werte über die Sonneneinstrahlung festgehalten. Die \ac{api} der Webseite \textit{wwww.visualcrossing.com} liefert für die Sonneneinstrahlung der beiden Orte Nullwerte. Der \ac{cart}-Algorithmus erkennt, dass dadurch keine Aufteilung der Datenreihen möglich ist und ignoriert die Sonneneinstrahlung für die Erstellung des Entscheidungsbaum. Folglich wird das Merkmal bei keiner einzigen \textit{Wenn-Sonst-Anweisung} verwendet. Dennoch erzielen die beiden Prognosemodelle einen Determinierungskoeffizienten von bis zu $0.67$. \autoref{fig:predictions_1244} zeigt, dass die Abweichungen vor allem durch viele, kleinere entstehen, wodurch die kumulierten Abweichungen die Aussagekraft des Modells schlechter darstellen als sie tatsächlich ist. 
 
+Selbst wenn es ohne die Berücksichtigung der Sonneneinstrahlung gelingt die Stromproduktion annähernd zu prognostizieren, ist es dennoch empfehlenswert sie zu berücksichtigen. Einbrüche in der Stromversorgung werden zwar erkannt, jedoch lässt sich der Wert mit einem Augenmerk auf die Sonnenstrahlung präziser bestimmen.
+
+\begin{figure}
+\centering
+\def\svgwidth{400pt}
+\input{assets/predictions_1244.pdf_tex}
+\caption{Prognose und Ist-Werte des erzeugten Solarstrom einer Solaranlage in New Orleans, Louisiana, USA}
+\label{fig:predictions_1244}
+\end {figure}
+
+Da nur sehr wenige Solaranlagen der Datenbank von \ac{nrel} aktuelle Solardaten beinhalten und über die \ac{api} von \textit{www.visualcrossing.com} keine historischen Wetter-Prognose-Daten abrufbar sind, wird die Prognose über den Solarstrom mittels tatsächlichen Wetterprognosen nicht getestet. Allerdings ist für die Netzstabilität die verfügbare Menge an Strom innerhalb der nächsten Stunden von besonderem Interesse. Erfreulicherweise ist die kurzzeitige Wetterprognose dank kontinuierlich verbesserten Wettersatelliten immer präziser geworden. Weiterhin ist vorstellbar, dass die Wetterprognose der Sonneneinstrahlung nicht gleichermaßen profund wie sie bei anderen Faktoren sein könnte. Dementsprechend ist es von Vorteil, wenn sich die Vorhersage auf die Zuverlässigkeit anderer Faktoren ebenfalls stützen kann, ohne auf die Sonneneinstrahlung als Anhaltspunkt für die zu erwartende Solarstromproduktion gänzlich verzichten zu müssen.
 
 
 \subsubsection{Bewölkungsgrad}
