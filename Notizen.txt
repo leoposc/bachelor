@@ -231,8 +231,12 @@ INTERESSANTE ARTIKEL/ LINKS:
 
 + Datenvorverarbeitung
 
+	- nicht nötig, da...
+		-> 
 
 + Maschinelles Lernen - Auswahl des Modells
+
+	
 
 
 

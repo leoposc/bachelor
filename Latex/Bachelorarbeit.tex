@@ -504,7 +504,7 @@ Der Kontrast zwischen \autoref{fig:histogram_cc_1220} und \autoref{fig:histogram
 
 Diese Auffälligkeiten konnten insgesamt an zwei von sieben Wetterstandorten beobachtet werden. Infolgedessen gilt es zu untersuchen, ob die Wetterdaten des jeweiligen Standortes für die Aufnahme in die Merkmalsmatrix qualifiziert sind. Schließlich kann der Bewölkungsgrad sowohl eine Bereicherung für die Prognose sein als auch ein Fluch, wenn es sich bei der Angabe um einen undifferenzierten Schätzwert handelt.
 
-\subsubsection{Überflutung von Daten}
+\subsubsection{Betrachtung der Daten im Detail}
 
 Anhand der Kalenderwochen lässt sich ablesen, dass für die Erstellung der Streudiagramme verwendete Datensatz die Zeitspanne eines halben Jahres umfasst. Durch die große Menge an Datenpunkte werden Streudiagramme, die zwei schwach miteinander korrelierende Variablen beinhalten, häufig unübersichtlich. Die vielen Datenpunkte im Diagramm färben das gesamte Schaubild ein, sodass sich kein Muster mehr erkennen lässt. Wie bei der Heatmap kommt hinzu, dass die Sonneneinstrahlung andere Wetterfaktoren als auch selbst von diesen stark beeinflusst wird. Um Abhilfe zu schaffen, können wir die Daten filtern. Der Zusammenhang zwischen Sonneneinstrahlung und Stromproduktion ist gut erkenntlich. Ohne Zweifel besitzt dieses Merkmal die größte Hebelwirkung auf die Stromproduktion einer Solaranlage. Um besser die Auswirkungen der anderen Merkmale zu studieren, betrachten wir nun ausschließlich Datenreihen in denen der Einstrahlungswert zwischen 550 und 600 $W/ M^2$ liegt. Zuvor umfasste der Datensatz Werte von 0 bis zu 1000 $W/ M^2$.
 
@@ -516,11 +516,32 @@ Anhand der Kalenderwochen lässt sich ablesen, dass für die Erstellung der Stre
 \label{fig:pairplot_filtered}
 \end {figure}
 
-Betrachten wir nun nochmals die Korrelation zwischen der Temperatur und der Stromproduktion, ist eine negative lineare Beziehung deutlich zu erkennen. Der negative Temperaturkoeffizient $P_MPP$ zeigt sich in der Heatmap ebenfalls ersichtlich, dort erhalten wir diesmal den Wert -0.68. Nachdem wir den Datensatz nach Datenreihen mit ähnlicher Sonneneinstrahlung gefiltert haben, bilden Temperatur und Stromertrag den absolut höchsten Korrelationskoeffizienten innerhalb der Heatmap. Dementsprechend ist die Temperatur nach der Sonneneinstrahlung der zweitwichtigste Wetterfaktor. Wie bereits zuvor erwähnt können Windböen dabei helfen, die Wärme auf den Solarmodule abzutransportieren und somit die Effizienz der Module erhöhen. Inwiefern dies tatsächlich der Fall ist, soll auf die gleiche Art untersucht werden. Folglich schauen wir uns Datenreihen mit ähnlicher Sonneneinstrahlung einer geringen Temperaturschwankung an.
+Betrachten wir nun nochmals die Korrelation zwischen der Temperatur und der Stromproduktion, ist eine negative lineare Beziehung deutlich zu erkennen. Der negative Temperaturkoeffizient $P_MPP$ zeigt sich in der Heatmap ebenfalls ersichtlich, dort erhalten wir diesmal den Wert -0.68. Nachdem wir den Datensatz nach Datenreihen mit ähnlicher Sonneneinstrahlung gefiltert haben, bilden Temperatur und Stromertrag den absolut höchsten Korrelationskoeffizienten innerhalb der Heatmap. Dementsprechend ist die Temperatur nach der Sonneneinstrahlung der zweit wichtigste Wetterfaktor. Die Temperatur nimmt insbesondere auf Grund ihres entgegengesetztem Effekt eine besondere Rolle für die Prognose der Stromproduktion ein. Damit ist gemeint, dass der wichtigste Faktor, die Sonneneinstrahlung, einen positiven Korrelationskoeffizienten zu der Temperatur hat. Mit erhöhter Sonneneinstrahlung steigt die Temperatur, wobei die zunehmende Wärme selbst sich negativ auf die Stromerzeugung auswirkt und somit die Temperatur einen negativen Korrelationskoeffizienten in Bezug auf die Stromerzeugung hat. Dies gilt nicht für den Bewölkungsgrad oder die relative Luftfeuchtigkeit. Zwar haben diese beiden Wetterfaktoren ebenfalls einen negativen Korrelationskoeffizienten bezogen auf die Stromerzeugung, allerdings bleibt dieser auch in Bezug auf die Sonneneinstrahlung negativ.
 
-PLOT SIMILAR TEMPERATURE AND RADIATION
+\begin{figure}
+\centering
+\def\svgwidth{425pt}
+\input{assets/pairplot_filtered_radiation_temperature_1200.pdf_tex}
+\caption{Streudiagramme zur Visualisierung der Korrelationen zwischen den Merkmalen bei einer Sonneneinstrahlung zwischen 550 und 600 $W/ M^2$ und Temperatur zwischen 25°C und 30°C}
+\label{fig:pairplot_filtered_radiation_temperature_1200}
+\end {figure}
 
-  
+Wie bereits zuvor erwähnt können Windböen dabei helfen, die Wärme auf den Solarmodule abzutransportieren und somit die Effizienz der Module erhöhen. Inwiefern dies tatsächlich der Fall ist, soll auf die gleiche Art untersucht werden. Folglich schauen wir uns Datenreihen mit ähnlicher Sonneneinstrahlung und einer geringen Temperaturschwankung an. Wie das zuvor betrachte Streudiagramm dient auch \autoref{fig:pairplot_filtered_radiation_temperature_1200} der Visualisierung der Zusammenhänge zwischen den Wetterfaktoren und der Solarstromerzeugung. Nachdem Datenreihen, die die beiden Kriterien Sonneneinstrahlung zwischen 850 und 1000 $W/ m^2$ und Temperatur zwischen 25°C und 30°C nicht erfüllen, gefiltert wurden, können wir die Beeinträchtigung durch den Wind besser analysieren. Die Daten, die im Streudiagramm enthalten sind, gehören zu der Solaranlage mit der Idenfikationsnummer $1200$, welche sich in Linthicum bei Baltimore, Maryland befindet. Obwohl die \ac{pv}-Anlage über eine Fläche von über 360 $m^2$ mit einer Nennleistung von 51,85 $kW$ umfasst und somit eine große Angriffsfläche für den Wind bietet, um Effekt zu zeigen, lassen sich in dem Streudiagramm infolge höherer Windgeschwindigkeiten keine Veränderung in der Stromproduktion verzeichnen. 
+
+%https://www.google.com/maps/place/1739+W+Nursery+Rd,+Linthicum+Heights,+MD+21090,+USA/@39.1957005,-76.6815477,201m/data=!3m1!1e3!4m6!3m5!1s0x89b7e28c89326b8b:0xbf3ac3b4e494e552!8m2!3d39.1958527!4d-76.6804761!16s%2Fg%2F11bw40qz24?entry=ttu
+
+\begin{figure}
+\centering
+\def\svgwidth{425pt}
+\input{assets/solarsystem_1200_picture.pdf_tex}
+\caption{Dreidimensionale Darstellung des Hotels mit der \ac{pv}-Anlage $1200$ auf dem vorderen Flachdach}
+\label{pic:solarsystem_1200_picture}
+\end {figure}
+
+Satellitenaufnahmen zeigen, dass die \ac{pv}-Anlage auf einem von mehreren verschieden hohen Flachdächern eines Hotels befestigt ist. Mit Hilfe von Aufnahmen von \textit{Google Street View} lässt sich erkennen, dass sich bis auf einer deutlich höheren Hauswand nördlich der Anlage keine weiteren Hindernisse aufzufinden sind, die einen Windzug blockieren könnten.
+
+Da bei anderen \ac{pv}-Anlagen ebenfalls keine Anzeichen in den Datensätzen gefunden werden konnten, dass ein starker Windzug bei hohen Temperaturen die Solarstromproduktion fördern könnte, soll der Wind nicht mit in die Merkmalsmatrix aufgenommen werden. Überlegungen, die Prognose zu optimieren, indem die gefühlte Temperatur oder die Temperatur innerhalb der Datenvorverarbeitung algorithmisch anzupassen statt die gemessene beziehungsweise prognostizierte Temperatur als Merkmal zu verwenden, haben zu keinen besseren Ergebnissen geführt und wurden infolgedessen verworfen. Dies hätte den Vorteil gehabt, dass durch die regelbasierte Programmierung der Effekt des Windes stets in die theoretisch zu erwartende Richtung gelenkt wird. Da die Theorie praktisch in den analysierten Datensätzen nicht wiederzufinden ist, wird der Wind als Wetterfaktor gänzlich beiseite gelassen und nicht für die Prognose des Solarstroms verwendet.
+
 
 \newpage
 
@@ -532,6 +553,10 @@ Die Datenvorverarbeitung und der Lernalgorithmus sind eng miteinander verknüpft
 \subsection{Datenvorverarbeitung}
 
 Für die Forschung dieser Arbeit wurden ein paar Solaranlagen ausgewählt, um zu untersuchen, wie gut anhand von Wetterdaten sich die Solarstromproduktion prognostizieren lässt. Selbst bei den wenigen Solaranlagen, die für diese Forschung verwendet wurden, konnte festgestellt werden, dass die Zusammenhänge zwischen den einzelnen Wettermerkmalen und der erzeugten Strommenge sehr unterschiedlich sein können.
+
+\subsubsection{Korrelationen abhängig von den Gegebenheiten der Photovoltaikanlage}
+
+Betrachten wir zum Beispiel die Jahreszeit und die sich damit ändernde Elevation der Sonne. Zudem werfen wir ein Augenmerk auf die in \fullref{subsec:tracked_systems} beschriebenen Eigenschaften solcher \ac{pv}-Anlagen. Astronomisch gesteuerte \ac{pv}-Anlagen können sich dem variierendem Höhenwinkel der Sonne in Bezug auf die Erdoberfläche anpassen. Demgemäß ist zu erwarten, dass sich die Jahreszeit als Faktor in der Merkmalsmatrix weniger stark bemerkbar macht als bei fixierten Solarsystemen. 
 
 Auf Grund der Gegebenheit, dass die Zusammenhänge zwischen den Merkmalen und der Zielvariablen je nach Solaranlage unterschiedlich sind, entscheiden wir uns für einen Lernalgorithmus, der möglichst wenig Datenvorverarbeitung benötigt. Dies soll zu dem Ziel dieser Arbeit beitragen, dass für beliebige Solaranlagen ein qualitativ hochwertiges Prognosemodell erstellt werden kann, dass in der Lage ist den erzeugten Solarstrom vorherzusagen. Schließlich ist das Vorhaben dieser Arbeit nicht ein Vorhersagemodell für sämtliche \ac{pv}-Anlagen zu generieren, sondern die Erstellung einzelner Prognosemodelle automatisieren zu können.
 
@@ -715,27 +740,39 @@ Maximalanzahl \newline an Blättern & 35, 40, 48, 96, 192, 384, 768, 1536 \\ \hl
 \begin{center}
 
 \resizebox{\textwidth}{!}{
-\begin{tabular}{| p{1.5cm} | p{1.5cm} | p{2cm} | p{2.2cm} | p{2cm} | p{1.6cm} | p{1.75cm} | p{2cm} |}
+\begin{tabular}{| p{1.5cm} | p{2.1cm} | p{2cm} | p{2.2cm} | p{2cm} | p{1.6cm} | p{1.75cm} | p{2cm} |}
 \hline
-\ac{pv}-Anlagen ID & Größe \newline Daten- satz\tablefootnote{Die Größe des Datensatzes betitelt die Anzahl an Datenreihen, die für das Trainieren des Modells verwendet wurden.} & Maximal- betrag Stromerzeugung in $kW$ & Tiefe des \newline Entschei- \newline dungsbaum & Maximal-\newline anzahl Blätter & Mindest- anzahl Proben Blätter & R²-Wert\tablefootnote{Die Bezeichnungen R²-Wert und der Determinierungskoeffizient lassen sich als Synonyme auffassen.} \newline (Testen) & R²-Wert \newline (Trainieren) \\ \hline
+\ac{pv}-Anlagen ID & Daten- satz \newline (Training-/ Testgröße) & Maximal- betrag Stromerzeugung in $kW$ & Tiefe des \newline Entschei- \newline dungsbaum & Maximal-\newline anzahl Blätter & Mindest- anzahl Proben Blätter & R²-Wert\tablefootnote{Die Bezeichnungen R²-Wert und der Determinierungskoeffizient lassen sich als Synonyme auffassen.} \newline (Testen) & R²-Wert \newline (Trainieren) \\ \hline
 
 
   10 & 1392:640  &  1381 & 7 &   96 &  8 & 0.71 & 0.81 \\ \hline
 1199 &  256:115  &  6905 & 5 &   48 & 10 & 0.89 & 0.93 \\ \hline
 1200 & 1750:1750 & 46015 & 8 &   48 & 10 & 0.89 & 0.90 \\ \hline
 1201 &  		 & 		 &   &		&    &      &      \\ \hline
-1220 &  293:293  &  6816 & 5 &   48 & 20 & 0.64 & 0.68 \\ \hline
-1231 & 1055:1055 &  2660 & 8 &   48 &  7 & 0.74 & 0.86 \\ \hline
-1244 & 	790:346  &  2691 & 6 & 3540 &  7 & 0.67 & 0.78 \\ \hline % no solarradiation data
+1220 &  193:207  &  6816 & 5 &   48 &  9 & 0.75 & 0.84 \\ \hline
+1231 & 1055:1055 &  2660 & 8 &   48 &  7 & 0.74 & 0.86 \\ \hline 
+%\multicolumn{8}{|c|}{Keine Aufzeichnungen über die Sonneneinstrahlung vorhanden} \\ \hline
+1244 & 	790:346  &  2691 & 6 &   48 &  9 & 0.67 & 0.78 \\ \hline % no solarradiation data
 1257 & 	452:190  &   434 & 7 &   48 &  7 & 0.63 & 0.76 \\ \hline % no solarradiation data
 
 
 \end{tabular}}
 \end{center}
 \caption{Hyperparameter der für diese Arbeit verwendeten Solaranlagen}
-\label{tab:temperaturkoeffizienten} 
+\label{tab:hyperparameters} 
 \end{table}
 
+
+Die Implementierung des Entscheidungsbaum aus der \textit{scikit-learn Bibliothek} ermöglicht es, Fließkommazahl als Wert für den Parameter \textit{Mindestanzahl an Proben pro Blatt} zu übergeben. \autoref{eqn:min_samples_leaf} 
+
+\begin{equation}
+\label{eqn:min_samples_leaf}
+min\_samples\_leaf=ceil(min\_samples\_leaf*n\_samples)
+\end{equation}
+
+Für viele Solaranlagen scheint die Beschränkung auf maximal 48 Blätter gut zu funktionieren. Der Entscheidungsbaum muss allerdings mindestens die Tiefe 6 besitzen, damit dieser Hyperparameter tatsächlich in die Gestaltung des Baums eingreift. Schließlich kann ein Binärbaum der Tiefe 5 höchstens 32 Blätter besitzen.
+
+Die letzten beiden Solaranlagen $1244$ und $1257$ haben in der Evaluierung des Lernalgorithmus am schlechtesten abgeschnitten, allerdings darf man nicht vergessen, dass für den Wetterstandort der beiden \ac{pv}-Anlagen keine Aufzeichnung über die Sonneneinstrahlung zur Bestimmung der Solarstromproduktion zur Verfügung stand.
 \newpage
 
 \section{Evaluierung des Lernalgorithmus}

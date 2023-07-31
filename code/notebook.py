@@ -13,7 +13,7 @@ manager = DBManager()
 # =============================================================================
 # COCKEYSVILLE, 1199
 # =============================================================================
-manager.fetch_solar_data(1199, "2019-04-01", "2019-04-30")
+# manager.fetch_solar_data(1199, "2019-04-01", "2019-04-30")
 # manager.fetch_weather_data("cockeysville", "2019-04-01", "2019-04-30")
 
 # =============================================================================
@@ -32,8 +32,8 @@ manager.fetch_solar_data(1199, "2019-04-01", "2019-04-30")
 # =============================================================================
 # VILLAGE OF PORT CHESTER, 1220
 # =============================================================================
-# manager.fetch_solar_data(1220, "2014-05-01", "2014-06-30")
-# manager.fetch_weather_data("Village of Port Chester", "2014-06-01", "2014-06-30")
+manager.fetch_solar_data(1220, "2014-05-01", "2014-07-31")
+manager.fetch_weather_data("Village of Port Chester", "2014-06-01", "2014-07-31")
 
 # =============================================================================
 # NEW ORLEANS, 1244
@@ -63,15 +63,15 @@ manager.fetch_solar_data(1199, "2019-04-01", "2019-04-30")
 from scikit import ScikitManager
 # sci = ScikitManager(location='applewood', solarsystem_id=10)
 # sci = ScikitManager(location='cockeysville', solarsystem_id=1199)
-sci = ScikitManager(location='linthicum', solarsystem_id=1200)                # TOWER
+# sci = ScikitManager(location='linthicum', solarsystem_id=1200)                # TOWER
 # sci = ScikitManager(location='Cherry Hill Townhill', solarsystem_id=1201)
-# sci = ScikitManager(location='Village of Port Chester', solarsystem_id=1220)  # TOWER
+sci = ScikitManager(location='Village of Port Chester', solarsystem_id=1220)  # TOWER
 # sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)         # TOWER
 # sci = ScikitManager(location='New Orleans', solarsystem_id=1244)
 # sci = ScikitManager(location='New Orleans', solarsystem_id=1257)
 
 
-# %%
+''# %%
 
 # sci = ScikitManager(location='linthicum', solarsystem_id=1200)
 sci.get_data()
@@ -83,33 +83,33 @@ sci.choose_features(['timeepoch',
                      'calendarweek',
                      'hour',
                      'temperature',
-                     'wind',
-                    #  'humidity',
+                    #  'wind',
+                     'humidity',
                     #  'cloudcoverage',
                      'energyoutput'
                      ])
 # sci.update_numpy_arrays()
-features = [
-    'hour',
-    'cloudcoverage'
-    ]
-# sci.scatter_plot(features)
+# features = [
+#     'hour',
+#     'cloudcoverage'
+#     ]
+# # sci.scatter_plot(features)
 # sci.histogram_one_feature('cloudcoverage')
 
 
 #%%
 
-sci.filter_by('solarradiation', lower_limit=850, upper_limit=1000)
+sci.filter_by('solarradiation', lower_limit=20)
 # sci.filter_by('energyoutput', lower_limit=10)
-sci.filter_by('temperature', lower_limit=25, upper_limit=30)
+# sci.filter_by('temperature', lower_limit=25, upper_limit=30)
 
 # sci.split_data(0.1)
-# sci.split_data_by_days(0.001)
+sci.split_data_by_days(0.5)
 # sci.transform_hours()
 # print(type(sci.timeepoch_test[0]))
 
 #%%
-sci.visualize_pairwise_correlation()
+# sci.visualize_pairwise_correlation()
 
 #%%
 
@@ -118,11 +118,11 @@ sci.model_selection('decisiontreeregressor')
 sci.predict()
 sci.evaluate()
 # sci.plot_histogram_feature_importances()
-sci.histogram()
+# sci.histogram()
 
 # %%
 # sci.visualize_residuals()
-sci.visualize_predictions(xlim_left=250, xlim_right=400)
+# sci.visualize_predictions(xlim_left=250, xlim_right=400)
 sci.visualize_predictions()
 sci.plot_outlier()
 
