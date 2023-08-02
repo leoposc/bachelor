@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.9)  31 JUL 2023 18:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.9)  1 AUG 2023 12:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1145,93 +1145,93 @@ Package pdftex.def Info: assets//decisiontree_example.pdf , page1 used on input
 )
 
 LaTeX Warning: Reference `fig:binary_tree' on page 48 undefined on input line 6
-83.
+84.
 
 [48 <./assets//decisiontree_example.pdf>] [49] [50]
-Underfull \hbox (badness 1648) in paragraph at lines 726--726
+Underfull \hbox (badness 1648) in paragraph at lines 727--727
 []\T1/phv/m/n/12 Maximale Tie-fe des
  []
 
 [51]
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 760--760
 [][][]\T1/phv/m/n/12 -
  []
 
 
-Overfull \hbox (1.34834pt too wide) in paragraph at lines 759--759
+Overfull \hbox (1.34834pt too wide) in paragraph at lines 760--760
 \T1/phv/m/n/12 Anlagen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 760--760
 []\T1/phv/m/n/12 Daten-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 760--760
 \T1/phv/m/n/12 (Training-/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 760--760
 []\T1/phv/m/n/12 Maximal-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 760--760
 \T1/phv/m/n/12 be-trag
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 760--760
 \T1/phv/m/n/12 Stromer-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 760--760
 \T1/phv/m/n/12 zeu-gung
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 760--760
 \T1/phv/m/n/12 anzahl
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 760--760
 \T1/phv/m/n/12 an-zahl
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 760--760
 \T1/phv/m/n/12 Pro-ben
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 760--760
 []\T1/phv/m/n/12 R\TS1/phv/m/n/12 ²\T1/phv/m/n/12 -
  []
 
 
-Overfull \hbox (3.5379pt too wide) in paragraph at lines 759--759
+Overfull \hbox (3.5379pt too wide) in paragraph at lines 760--760
 \T1/phv/m/n/12 (Trainieren)| 
  []
 
 [52] [53]
-Overfull \hbox (5.0241pt too wide) in paragraph at lines 783--784
+Overfull \hbox (5.0241pt too wide) in paragraph at lines 786--787
 \T1/phv/m/n/12 chun-gen zwi-schen den pro-gno-s-ti-zier-ten und den tat-säch-li
 ch auf-ge-zeich-ne-ten Wer-
  []
 
 (./assets/residuals.pdf_tex
-<assets//residuals.pdf, id=865, page=1, 1305.87888pt x 633.36626pt>
+<assets//residuals.pdf, id=867, page=1, 1305.87888pt x 633.36626pt>
 File: assets//residuals.pdf Graphic file (type pdf)
 <use assets//residuals.pdf, page 1>
 Package pdftex.def Info: assets//residuals.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 400.0pt x 194.00273pt.
 ) [54 <./assets//residuals.pdf>]
 (./assets/predictions_linthicum.pdf_tex
-<assets//predictions_linthicum.pdf, id=881, page=1, 1486.55388pt x 892.3337pt>
+<assets//predictions_linthicum.pdf, id=883, page=1, 1486.55388pt x 892.3337pt>
 File: assets//predictions_linthicum.pdf Graphic file (type pdf)
 <use assets//predictions_linthicum.pdf, page 1>
 Package pdftex.def Info: assets//predictions_linthicum.pdf , page1 used on inpu
@@ -1239,16 +1239,16 @@ t line 56.
 (pdftex.def)             Requested size: 400.0pt x 240.10275pt.
 ) [55]
 Package acronym Info: Label `acro:api' newly defined as it shall be overridden
-although it is yet undefined on input line 816.
+although it is yet undefined on input line 819.
  [56 <./assets//predictions_linthicum.pdf>] (./assets/predictions_1244.pdf_tex
-<assets//predictions_1244.pdf, id=907, page=1, 1383.1675pt x 776.9025pt>
+<assets//predictions_1244.pdf, id=909, page=1, 1383.1675pt x 776.9025pt>
 File: assets//predictions_1244.pdf Graphic file (type pdf)
 <use assets//predictions_1244.pdf, page 1>
 Package pdftex.def Info: assets//predictions_1244.pdf , page1 used on input lin
 e 56.
 (pdftex.def)             Requested size: 400.0pt x 224.66765pt.
 ) [57 <./assets//predictions_1244.pdf>] [58]
-Overfull \hbox (4.48138pt too wide) in paragraph at lines 852--853
+Overfull \hbox (4.48138pt too wide) in paragraph at lines 855--856
 []\T1/phv/m/n/12 Um auch lang-fris-tig tref-fen-de Vor-her-sa-gen zu ma-chen, m
 uss das Mo-dell selbst-
  []
@@ -1258,13 +1258,13 @@ uss das Mo-dell selbst-
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 3540FA414BECFB1DAEBF09F345E72F07;10322.
+(rerunfilecheck)             Checksum: 942FC60235F819174FB38338983B10A6;10446.
  ) 
 Here is how much of TeX's memory you used:
- 14394 strings out of 476047
- 243105 string characters out of 5791252
- 1875248 words of memory out of 5000000
- 34379 multiletter control sequences out of 15000+600000
+ 14395 strings out of 476047
+ 243140 string characters out of 5791252
+ 1876248 words of memory out of 5000000
+ 34380 multiletter control sequences out of 15000+600000
  555450 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,17n,76p,2233b,676s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1282,10 +1282,10 @@ live/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/20
 23/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2023/tex
 mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2023/texmf-dist
 /fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Bachelorarbeit.pdf (62 pages, 4604355 bytes).
+Output written on Bachelorarbeit.pdf (62 pages, 4604887 bytes).
 PDF statistics:
- 1040 PDF objects out of 1200 (max. 8388607)
- 839 compressed objects within 9 object streams
+ 1042 PDF objects out of 1200 (max. 8388607)
+ 841 compressed objects within 9 object streams
  165 named destinations out of 1000 (max. 500000)
  666 words of extra memory for PDF output out of 10000 (max. 10000000)
 

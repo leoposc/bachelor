@@ -232,7 +232,8 @@ INTERESSANTE ARTIKEL/ LINKS:
 + Datenvorverarbeitung
 
 	- nicht nötig, da...
-		-> 
+		-> fixierte vs. nachgeführte Anlagen -> unterschiedliche Auswirkungen 
+		    je nach Jahreszeit 
 
 + Maschinelles Lernen - Auswahl des Modells
 

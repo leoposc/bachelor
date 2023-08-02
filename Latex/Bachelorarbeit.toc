@@ -30,7 +30,7 @@
 \contentsline {subsubsection}{\numberline {5.3.2}Betrachtung der Daten im Detail}{34}{subsubsection.5.3.2}%
 \contentsline {section}{\numberline {6}Datenvorverarbeitung und Lernalgorithmus}{39}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Datenvorverarbeitung}{39}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Korrelationen abhängig von den Gegebenheiten der Photovoltaikanlage}{39}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Korrelationen zwischen den Merkmalen abhängig von den Gegebenheiten der Photovoltaikanlage}{39}{subsubsection.6.1.1}%
 \contentsline {subsubsection}{\numberline {6.1.2}Ausreißer}{40}{subsubsection.6.1.2}%
 \contentsline {subsection}{\numberline {6.2}Lernalgorithmus}{40}{subsection.6.2}%
 \contentsline {subsubsection}{\numberline {6.2.1}Diskretisierung der Zielvariablen}{41}{subsubsection.6.2.1}%

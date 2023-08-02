@@ -179,6 +179,24 @@ class ScikitManager():
         self.X_train = mmsc.fit_transform(self.X_train)
         self.X_test = mmsc.transform(self.X_test)
 
+
+    def analyze_cloudcover_quality(self):
+        data = self.XY_df['cloudcoverage'].values
+        min_unique  = 50 if len(data) < 350 else 70
+        num_uniques = len(np.unique(data))
+        # plot histogram
+        print(f"Number of unique values: {num_uniques}")
+        self.histogram_one_feature('cloudcoverage')
+        if min_unique < num_uniques:
+            print("Cloudcoverage kept in features")
+        else:
+            # remove cloudcoverage from features
+            self.features.remove('cloudcoverage')
+            self.XY_df = self.XY_df.drop(columns=['cloudcoverage'])
+            print("Cloudcoverage removed from features")
+        
+            
+
     
     # warning: check if the column order stays in the same order
     # transform the feature hour into a polynomial feature 

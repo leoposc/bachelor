@@ -554,7 +554,7 @@ Die Datenvorverarbeitung und der Lernalgorithmus sind eng miteinander verknüpft
 
 Für die Forschung dieser Arbeit wurden ein paar Solaranlagen ausgewählt, um zu untersuchen, wie gut anhand von Wetterdaten sich die Solarstromproduktion prognostizieren lässt. Selbst bei den wenigen Solaranlagen, die für diese Forschung verwendet wurden, konnte festgestellt werden, dass die Zusammenhänge zwischen den einzelnen Wettermerkmalen und der erzeugten Strommenge sehr unterschiedlich sein können.
 
-\subsubsection{Korrelationen abhängig von den Gegebenheiten der Photovoltaikanlage}
+\subsubsection{Korrelationen zwischen den Merkmalen abhängig von den Gegebenheiten der Photovoltaikanlage}
 
 Betrachten wir zum Beispiel die Jahreszeit und die sich damit ändernde Elevation der Sonne. Zudem werfen wir ein Augenmerk auf die in \fullref{subsec:tracked_systems} beschriebenen Eigenschaften solcher \ac{pv}-Anlagen. Astronomisch gesteuerte \ac{pv}-Anlagen können sich dem variierendem Höhenwinkel der Sonne in Bezug auf die Erdoberfläche anpassen. Demgemäß ist zu erwarten, dass sich die Jahreszeit als Faktor in der Merkmalsmatrix weniger stark bemerkbar macht als bei fixierten Solarsystemen. 
 
@@ -635,6 +635,7 @@ Anhand der Häufigkeit, in der das Merkmal Sonneneinstrahlung auftritt, lässt s
 
 
 \subsubsection{Schlussfolgerungen für das Training des Modells}
+\label{subsubsec:conclusion_for_training}
 
 Aus dieser Eigenschaft von Entscheidungsbäumen müssen zwei Schlussfolgerungen für die Prognose über die Stromerzeugung von \ac{pv}-Anlagen gezogen werden. 
 
@@ -763,12 +764,14 @@ Maximalanzahl \newline an Blättern & 35, 40, 48, 96, 192, 384, 768, 1536 \\ \hl
 \end{table}
 
 
-Die Implementierung des Entscheidungsbaum aus der \textit{scikit-learn Bibliothek} ermöglicht es, Fließkommazahl als Wert für den Parameter \textit{Mindestanzahl an Proben pro Blatt} zu übergeben. \autoref{eqn:min_samples_leaf} 
+Die Implementierung des Entscheidungsbaum aus der \textit{scikit-learn Bibliothek} ermöglicht es, eine Fließkommazahl als Wert für den Parameter \textit{Mindestanzahl an Proben pro Blatt} zu übergeben. Wie es anhand \autoref{eqn:min_samples_leaf} zu erkennen ist, ist der endgültige Wert von der Anzahl an Proben im Trainingsdatensatz abhängig. 
 
 \begin{equation}
 \label{eqn:min_samples_leaf}
 min\_samples\_leaf=ceil(min\_samples\_leaf*n\_samples)
 \end{equation}
+
+Wie bereits in \fullref{subsubsec:conclusion_for_training} beschrieben, muss der Trainingsdatensatz und somit auch das Modell regelmäßig aktualisiert werden. Durch die Abhängigkeit des Parameters an die Größe des Datensatzes birgt sich die Hoffnung, dass ausschließlich das Modell und nicht auch dessen Hyperparameter angepasst werden müssen oder zumindest das Zeitintervall größer gestaltet werden kann. Letzten Endes müsste für die Anpassung der Hyperparameter eine erneute Rastersuche durchgeführt werden, welche mit erhöhtem Rechenaufwand verbunden ist.
 
 Für viele Solaranlagen scheint die Beschränkung auf maximal 48 Blätter gut zu funktionieren. Der Entscheidungsbaum muss allerdings mindestens die Tiefe 6 besitzen, damit dieser Hyperparameter tatsächlich in die Gestaltung des Baums eingreift. Schließlich kann ein Binärbaum der Tiefe 5 höchstens 32 Blätter besitzen.
 

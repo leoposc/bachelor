@@ -32,8 +32,8 @@ manager = DBManager()
 # =============================================================================
 # VILLAGE OF PORT CHESTER, 1220
 # =============================================================================
-manager.fetch_solar_data(1220, "2014-05-01", "2014-07-31")
-manager.fetch_weather_data("Village of Port Chester", "2014-06-01", "2014-07-31")
+# manager.fetch_solar_data(1220, "2014-05-01", "2014-09-10")
+manager.fetch_weather_data("Village of Port Chester", "2014-06-01", "2014-09-10")
 
 # =============================================================================
 # NEW ORLEANS, 1244
@@ -63,19 +63,18 @@ manager.fetch_weather_data("Village of Port Chester", "2014-06-01", "2014-07-31"
 from scikit import ScikitManager
 # sci = ScikitManager(location='applewood', solarsystem_id=10)
 # sci = ScikitManager(location='cockeysville', solarsystem_id=1199)
-# sci = ScikitManager(location='linthicum', solarsystem_id=1200)                # TOWER
+sci = ScikitManager(location='linthicum', solarsystem_id=1200)                # TOWER
 # sci = ScikitManager(location='Cherry Hill Townhill', solarsystem_id=1201)
-sci = ScikitManager(location='Village of Port Chester', solarsystem_id=1220)  # TOWER
+# sci = ScikitManager(location='Village of Port Chester', solarsystem_id=1220)  # TOWER
 # sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)         # TOWER
 # sci = ScikitManager(location='New Orleans', solarsystem_id=1244)
 # sci = ScikitManager(location='New Orleans', solarsystem_id=1257)
 
 
-''# %%
+# %%
 
 # sci = ScikitManager(location='linthicum', solarsystem_id=1200)
 sci.get_data()
-
 # sci.calculate_energyoutput_index()
 sci.choose_features(['timeepoch',
                      'solarradiation',
@@ -85,9 +84,10 @@ sci.choose_features(['timeepoch',
                      'temperature',
                     #  'wind',
                      'humidity',
-                    #  'cloudcoverage',
+                     'cloudcoverage',
                      'energyoutput'
                      ])
+sci.analyze_cloudcover_quality()
 # sci.update_numpy_arrays()
 # features = [
 #     'hour',
