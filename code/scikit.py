@@ -13,7 +13,7 @@ from datetime import datetime
 import seaborn as sns
 import pandas as pd
 import numpy as np
-
+import math
 
 def timer(start_time=None):
     if not start_time:
@@ -140,10 +140,16 @@ class ScikitManager():
         self.XY_df['timeepoch'] = self.timeepoch_train
 
 
-    def get_data(self):
+    def get_data(self, start=None, end=None):
+        # convert start and end to datetime.datetime object
+        if start is not None:
+            start = int(datetime.strptime(start, '%Y-%m-%d').timestamp())
+        if end is not None:
+            end = int(datetime.strptime(end, '%Y-%m-%d').timestamp())
         dm = DBManager()
-        solar_df = dm.select_solar_data(self.solarsystem_id)
-        weather_df = dm.select_weather_data(self.location)     
+
+        solar_df = dm.select_solar_data(self.solarsystem_id, start, end)
+        weather_df = dm.select_weather_data(self.location, start, end)     
         # merge data on timeepoch
         self.XY_df   = weather_df.merge(solar_df, on='timeepoch')
         self.XY_df['timeepoch'] = pd.to_datetime(self.XY_df['timeepoch'], unit='s')              
@@ -180,14 +186,52 @@ class ScikitManager():
         self.X_test = mmsc.transform(self.X_test)
 
 
-    def analyze_cloudcover_quality(self):
-        data = self.XY_df['cloudcoverage'].values
-        min_unique  = 50 if len(data) < 350 else 70
-        num_uniques = len(np.unique(data))
-        # plot histogram
-        print(f"Number of unique values: {num_uniques}")
+    # def validate_cloudcover_quality(self):
+    #     ADAPT_TO_DATA_SIZE = 20 # 1/20 of the data size
+    #     MAX_THRESHOLD = 70      # max possible number of unique values is 100
+
+    #     data = self.XY_df['cloudcoverage'].values
+    #     min_unique = min(len(data) // ADAPT_TO_DATA_SIZE, MAX_THRESHOLD) 
+    #     num_uniques = len(np.unique(data))
+        
+    #     # plot histogram for test validation
+    #     self.histogram_one_feature('cloudcoverage')
+    #     print(f"Number of unique values: {num_uniques}\n Threshhold for the minimum number of unique values: {min_unique}")
+        
+    #     if min_unique < num_uniques:
+    #         print("Cloudcoverage kept in features")
+    #     else:
+    #         # remove cloudcoverage from features
+    #         self.features.remove('cloudcoverage')
+    #         self.XY_df = self.XY_df.drop(columns=['cloudcoverage'])
+    #         print("Cloudcoverage removed from features")
+
+        
+
+    def validate_cloudcover_quality(self):
+        MAX_THRESHOLD = 100 # max possible number of unique values is 100
+        MAX_SAMPLES = 3000       # MAX_THRESHOLD is maximized to 4000
+
+        def f(x):
+            c = 0.25 * math.log(15*x +1)
+            print(f"Input value: {x}")
+            print(f"Function value: {c}")
+            return c
+        
+        data = self.XY_df['cloudcoverage'].values        
+        n_samples = min(len(data), MAX_SAMPLES)
+        min_unique = f(n_samples / MAX_SAMPLES) * MAX_THRESHOLD
+        uniques = np.unique(data)
+        # calculate the variety of cloudcoverage and weight it
+        cc_variety_weight = (np.max(uniques) - np.min(uniques)) / 100
+        min_unique = int(cc_variety_weight * min_unique)
+        num_uniques = len(uniques)
+        print(f"Cloudcoverage variety weight: {cc_variety_weight}")
+        # plot histogram for test validation
         self.histogram_one_feature('cloudcoverage')
-        if min_unique < num_uniques:
+        print(f"Number of unique values: {num_uniques}\nThreshhold for the minimum number of unique values: {min_unique}")
+        
+        if min_unique <= num_uniques:
             print("Cloudcoverage kept in features")
         else:
             # remove cloudcoverage from features

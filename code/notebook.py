@@ -63,18 +63,18 @@ manager.fetch_weather_data("Village of Port Chester", "2014-06-01", "2014-09-10"
 from scikit import ScikitManager
 # sci = ScikitManager(location='applewood', solarsystem_id=10)
 # sci = ScikitManager(location='cockeysville', solarsystem_id=1199)
-sci = ScikitManager(location='linthicum', solarsystem_id=1200)                # TOWER
+# sci = ScikitManager(location='linthicum', solarsystem_id=1200)                # TOWER
 # sci = ScikitManager(location='Cherry Hill Townhill', solarsystem_id=1201)
 # sci = ScikitManager(location='Village of Port Chester', solarsystem_id=1220)  # TOWER
-# sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)         # TOWER
+sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)         # TOWER
 # sci = ScikitManager(location='New Orleans', solarsystem_id=1244)
 # sci = ScikitManager(location='New Orleans', solarsystem_id=1257)
 
 
-# %%
+
 
 # sci = ScikitManager(location='linthicum', solarsystem_id=1200)
-sci.get_data()
+sci.get_data(end='2004-04-20')
 # sci.calculate_energyoutput_index()
 sci.choose_features(['timeepoch',
                      'solarradiation',
@@ -87,7 +87,7 @@ sci.choose_features(['timeepoch',
                      'cloudcoverage',
                      'energyoutput'
                      ])
-sci.analyze_cloudcover_quality()
+sci.validate_cloudcover_quality()
 # sci.update_numpy_arrays()
 # features = [
 #     'hour',

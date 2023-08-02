@@ -279,7 +279,7 @@ class DBManager():
 
 
     @connect
-    def select_solar_data(cur, self, solarsystem_id: str):
+    def select_solar_data(cur, self, solarsystem_id: str, start, end):
         
         cur.execute("""
             SELECT table_name FROM information_schema.tables
@@ -305,11 +305,27 @@ class DBManager():
         # assert (table_name,) in tables, f"The table '{table_name}' does not exist."
         assert table_name != 'Unknown', f"The table '{table_name}' does not exist."
 
-        # get data from db
-        cur.execute("""
-            SELECT * FROM %s
-        """, (AsIs(table_name),))
-
+        # get data from db where timeepoch is between start and end
+        if start is None and end is None:
+            cur.execute("""
+                SELECT * FROM %s
+            """, (AsIs(table_name),))
+        elif start is None:
+            cur.execute("""
+                SELECT * FROM %s
+                WHERE timeepoch <= %s
+            """, (AsIs(table_name), end))
+        elif end is None:
+            cur.execute("""
+                SELECT * FROM %s
+                WHERE timeepoch >= %s
+            """, (AsIs(table_name), start))
+        else:
+            cur.execute("""
+                SELECT * FROM %s
+                WHERE timeepoch BETWEEN %s AND %s
+            """, (AsIs(table_name), start, end))
+        
         solar_data = cur.fetchall()
 
         #convert to pandas dataframe
@@ -318,7 +334,7 @@ class DBManager():
     
 
     @connect
-    def select_weather_data(cur, self, location: str):
+    def select_weather_data(cur, self, location: str, start, end):
 
         
 
@@ -333,10 +349,27 @@ class DBManager():
 
         assert (table_name,) in tables, f"The table '{table_name}' does not exist."
 
-        # get data from db
-        cur.execute("""
-            SELECT * FROM %s
-        """, (AsIs(table_name),))
+        # get data from db where timeepoch is between start and end,
+        if start is None and end is None:
+            cur.execute("""
+                SELECT * FROM %s
+            """, (AsIs(table_name),))
+        elif start is None:
+            cur.execute("""
+                SELECT * FROM %s
+                WHERE timeepoch <= %s
+            """, (AsIs(table_name), end))
+        elif end is None:
+            cur.execute("""
+                SELECT * FROM %s
+                WHERE timeepoch >= %s
+            """, (AsIs(table_name), start))
+        else:
+            cur.execute("""
+                SELECT * FROM %s
+                WHERE timeepoch BETWEEN %s AND %s
+            """, (AsIs(table_name), start, end))
+                
 
         weather_data = cur.fetchall()
 

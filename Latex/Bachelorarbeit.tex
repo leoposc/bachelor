@@ -19,6 +19,7 @@
 \usepackage{hyperref}
 \usepackage{acronym}
 \usepackage{caption}
+\usepackage{listings}
 
 % Pfad SVG Bilder
 \graphicspath{{assets/}}
@@ -36,6 +37,7 @@
     filecolor=magenta,      
     urlcolor=black,
 }
+\lstset{language=Python}
 \titleformat{\section} % Anpassungen an Überschriftenebene 1
     {\fontsize{14}{16}\bfseries}{\thesection}{0.5em}{}
 \titleformat{\subsection} % Anpassungen an Überschriftenebene 2
@@ -500,9 +502,69 @@ Da bei den anderen Werten keine Auffälligkeiten zu verzeichnen sind und deren M
 \end {figure}
 
 
-Der Kontrast zwischen \autoref{fig:histogram_cc_1220} und \autoref{fig:histogram_cc_1231} könnte kaum deutlicher sein. Die Verteilung in beiden Histogrammen ist nicht gleichmäßig, allerdings sind die Balken in \autoref{fig:histogram_cc_1220} doch sehr auffällig. Die Werte häufen sich exakt an 5 Stellen, was bedeuten würde, dass sich die Bewölkung in der Stadt Port Chester geradezu sprunghaft verändern würde. Selbst wenn die die Werte nur in einem Zeitintervall von einer Stunde dokumentiert sind, ist die Wahrscheinlichkeit, dass der Wert die tatsächlichen Wetterbedingungen am Himmel widerspiegeln abwegig.
+Der Kontrast zwischen \autoref{fig:histogram_cc_1220} und \autoref{fig:histogram_cc_1231} könnte kaum deutlicher sein. Die Verteilung in beiden Histogrammen ist nicht gleichmäßig, allerdings sind die Balken in \autoref{fig:histogram_cc_1220} doch sehr auffällig. Die Werte häufen sich exakt an 5 Stellen, was bedeuten würde, dass sich die Bewölkung in der Stadt Port Chester geradezu sprunghaft verändern würde. Selbst wenn die Werte nur in einem Zeitintervall von einer Stunde dokumentiert sind, ist die Wahrscheinlichkeit, dass der Wert die tatsächlichen Wetterbedingungen am Himmel widerspiegeln abwegig.
 
 Diese Auffälligkeiten konnten insgesamt an zwei von sieben Wetterstandorten beobachtet werden. Infolgedessen gilt es zu untersuchen, ob die Wetterdaten des jeweiligen Standortes für die Aufnahme in die Merkmalsmatrix qualifiziert sind. Schließlich kann der Bewölkungsgrad sowohl eine Bereicherung für die Prognose sein als auch ein Fluch, wenn es sich bei der Angabe um einen undifferenzierten Schätzwert handelt.
+
+Die Validierung des Bewölkungsgrades soll ebenfalls automatisiert stattfinden. Dazu betrachten wir uns die Verteilung der Daten, indem wir die Summe einmaligen Bewölkungswerte ausrechnen. Sofern die Summe einen Grenzwert unterschreitet, werden die Daten über den Bewölkungsgrad nicht validiert und schlussendlich aus der Merkmalsmatrix des Modells entfernt. Der Grenzwert ist von der Größe des Datensatzes abhängig, da die Wahrscheinlichkeit, dass sich die gleichen Werte mehrfach wiederholen, mit der Größe der Datenmenge steigt. 
+
+%Das Geburtstagsparadoxon besagt, dass ab einer Gruppe von 23 Personen die Wahrscheinlichkeit über 50\% beträgt, dass zwei Personen innerhalb dieser Gruppe am selben Tag ihren Geburtstag haben. Zwar sind die Geburtenraten über das Jahr ebenso nicht gleich verteilt, wie es auch die Bewölkungsgrade der verschiedenen Wetterstandorte es nicht sind. Allerdings sind bestimmte 
+
+Bestimmte Wetterstandorte sind für ihre Trockenheit beziehungsweise ihre überdurchschnittlich hohe Menge an Niederschlage bekannt. Insofern muss nicht nur berücksichtigt werden, dass der Datensatz nicht nur unterschiedlich groß sein kann, des Weiteren ist es nicht für jeden Wetterstandort gegeben, dass der Minimalwert 0\% und der Maximalwert des Bewölkunggrades 100\% entspricht. Anhand des folgenden Programmiercode in \autoref{lst:validate_cloudcover} soll die Validierung der Bewölkungsdaten erläutert werden. Vorerst betrachten wir dazu \autoref{eqn:logarithm}, wodurch die Größe des Datensatzes bewertet wird.
+
+\begin{equation}
+\label{eqn:logarithm}
+h(x)=0.25\ln(15x+1)
+\end{equation}
+
+\autoref{fig:geogebra_cloudcover} zeigt die \autoref{eqn:logarithm} als Schaubild. Bei der Funktion handelt es sich um eine Logarithmusfunktion, die um den Wert 1 nach links verschoben wurde. Somit verläuft der Graph durch den Ursprung des Koordinatensystems. Zudem wird sie um den Faktor 15 in $x-$Richtung und den Faktor 0.25 in $y-$Richtung gestaucht.
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{425pt}
+\input{assets/geogebra_cloudcover.pdf_tex}
+\caption{Logarithmusfunktion}
+\label{fig:geogebra_cloudcover}
+\end {figure}
+
+Die Logarithmusfunktion dient dazu, einen optimalen Grenzwert für unterschiedlich große Datensätze zu finden. Da die Wahrscheinlichkeit, dass sich gleiche Werte häufen, mit der Anzahl an Daten zunimmt und somit die Anzahl an Unikaten\footnote{Die Anzahl an Unikaten bezeichnet in diesem Kontext die Summe der unterschiedlichen Messwerte im Datensatz.} langsamer steigt, eignet sich die abnehmende, jedoch stets positive Steigung der Logarithmusfunktion, um einen optimalen Grenzwert zu finden. Ab 3000 Messwerten wird der Grenzwert für die Mindestanzahl an Unikaten maximal. Sofern dieser Grenzwert nicht unterschritten wird, wird der Datensatz validiert und der Bewölkungsgrad wird in die Merkmalsmatrix aufgenommen. 
+
+Im Programmcode wird ersichtlich, dass die Anzahl an Messdaten \textit{n\_sampes} durch 3000 geteilt und das Ergebnis an die Logarithmusfunktion übergeben. Da die Variable \textit{n\_samples} auf 3000 begrenzt ist und \textit{n\_samples} nicht negativ werden kann, führt dies dazu, dass ausschließlich Zahlen zwischen 0 und 1 an die Logarithmusfunktion übergeben werden. Das Ergebnis der zuvor beschriebenen Logarithmusfunktion liegt zwischen 0.0 und 0.6931. Die anschließende Multiplikation mit 100 führt dazu, dass je nach Größe des Datensatzes unterschiedlich viele Unikate in diesem enthalten sein müssen. ab 3000 Messwerten gilt, dass mindestens 69 Unikate von dem Datensatz umfasst werden müssen.
+
+Wie bereits zuvor erwähnt, gibt es Wetterstandorte, die zum Beispiel unter besonderer Trockenheit leiden. Da die Angabe über den Bewölkungsgrad nicht relativ ist, könnte dies bedeuten, dass für diesen Standort lediglich Messwerte zwischen 0 und 50 zu verzeichnen sind. Damit die 
+
+\begin{lstlisting}[basicstyle=\small,label={lst:validate_cloudcover}, caption={Funktion zur Validierung der Bewölkungsdaten}]
+def validate_cloudcover_quality(self):
+        # max possible number of unique values is 100
+        MAX_THRESHOLD = 100
+	# MAX_THRESHOLD is maximized to 3000
+        MAX_SAMPLES = 3000       
+        
+        def f(x):            
+            return 0.25 * math.log(15*x +1)
+        
+        data = self.XY_df['cloudcoverage'].values        
+        n_samples = min(len(data), MAX_SAMPLES)
+        min_unique = f(n_samples/ MAX_SAMPLES) * MAX_THRESHOLD
+        uniques = np.unique(data)
+        # calculate the variety of cloudcoverage and weight it
+        cc_variety_weight = (np.max(uniques) - np.min(uniques)) / 100
+        min_unique = int(cc_variety_weight * min_unique)
+        num_uniques = len(uniques)
+        
+        # plot histogram for test validation
+        self.histogram_one_feature('cloudcoverage')
+                
+        if min_unique <= num_uniques:
+            print("Cloudcoverage kept in features")
+        else:
+            # remove cloudcoverage from features
+            self.features.remove('cloudcoverage')
+            self.XY_df = self.XY_df.drop(columns=['cloudcoverage'])
+            print("Cloudcoverage removed from features")
+\end{lstlisting}
+
+
 
 \subsubsection{Betrachtung der Daten im Detail}
 
