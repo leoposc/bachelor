@@ -9,7 +9,7 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 from itertools import product
-from datetime import datetime
+from datetime import datetime, timedelta
 import seaborn as sns
 import pandas as pd
 import numpy as np
@@ -159,6 +159,19 @@ class ScikitManager():
         print(f"Dataset size: {self.XY_df.shape}")
         # get maximum energy output
         print(f"Maximum energy output: {self.XY_df['energyoutput'].max()}")
+
+
+    def simulate_weather_forecast_data(self):
+        # split data into train and test set, test set is the last 14 days
+        first_day = self.XY_df['timeepoch'].max() - timedelta(days=14)
+        train_df = self.XY_df[self.XY_df['timeepoch'] < first_day]
+        self.X_train = train_df.drop(columns=['energyoutput', 'timeepoch']).to_numpy()
+        self.y_train = train_df['energyoutput'].to_numpy().flatten()
+        self.timeepoch_train = train_df['timeepoch'].to_numpy().flatten()
+        test_df = self.XY_df[self.XY_df['timeepoch'] >= first_day]
+        self.X_test = test_df.drop(columns=['energyoutput', 'timeepoch']).to_numpy()
+        self.y_test = test_df['energyoutput'].to_numpy().flatten()
+        self.timeepoch_test = test_df['timeepoch'].to_numpy().flatten()
 
 
     def filter_by(self, feature: str, lower_limit=None, upper_limit=None):
@@ -594,8 +607,8 @@ class ScikitManager():
         ax_1.legend(loc='upper left')
         plt.title(f'Solarsystem id: {self.solarsystem_id}, Location: {self.location}')
         plt.ylabel('Solar energy production')
-        plt.rcParams.update({'font.size': 32}) 
-        plt.rcParams['figure.figsize'] = [20, 10]
+        plt.rcParams.update({'font.size': 24}) 
+        # plt.rcParams['figure.figsize'] = [20, 10]
         plt.xlim([xlim_left, xlim_right])
         plt.show()
 

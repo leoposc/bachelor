@@ -32,8 +32,8 @@ manager = DBManager()
 # =============================================================================
 # VILLAGE OF PORT CHESTER, 1220
 # =============================================================================
-# manager.fetch_solar_data(1220, "2014-05-01", "2014-09-10")
-manager.fetch_weather_data("Village of Port Chester", "2014-06-01", "2014-09-10")
+manager.fetch_solar_data(1220, "2014-05-01", "2014-10-20")
+manager.fetch_weather_data("Village of Port Chester", "2014-06-01", "2014-10-20")
 
 # =============================================================================
 # NEW ORLEANS, 1244
@@ -65,8 +65,8 @@ from scikit import ScikitManager
 # sci = ScikitManager(location='cockeysville', solarsystem_id=1199)
 # sci = ScikitManager(location='linthicum', solarsystem_id=1200)                # TOWER
 # sci = ScikitManager(location='Cherry Hill Townhill', solarsystem_id=1201)
-# sci = ScikitManager(location='Village of Port Chester', solarsystem_id=1220)  # TOWER
-sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)         # TOWER
+sci = ScikitManager(location='Village of Port Chester', solarsystem_id=1220)  # TOWER
+# sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)         # TOWER
 # sci = ScikitManager(location='New Orleans', solarsystem_id=1244)
 # sci = ScikitManager(location='New Orleans', solarsystem_id=1257)
 
@@ -74,8 +74,9 @@ sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)         # 
 
 
 # sci = ScikitManager(location='linthicum', solarsystem_id=1200)
-sci.get_data(end='2004-04-20')
+sci.get_data()
 # sci.calculate_energyoutput_index()
+sci.simulate_weather_forecast_data()
 sci.choose_features(['timeepoch',
                      'solarradiation',
                     #  'energyoutput_index',
@@ -87,7 +88,7 @@ sci.choose_features(['timeepoch',
                      'cloudcoverage',
                      'energyoutput'
                      ])
-sci.validate_cloudcover_quality()
+# sci.validate_cloudcover_quality()
 # sci.update_numpy_arrays()
 # features = [
 #     'hour',
@@ -104,7 +105,7 @@ sci.filter_by('solarradiation', lower_limit=20)
 # sci.filter_by('temperature', lower_limit=25, upper_limit=30)
 
 # sci.split_data(0.1)
-sci.split_data_by_days(0.5)
+# sci.split_data_by_days(0.5)
 # sci.transform_hours()
 # print(type(sci.timeepoch_test[0]))
 
@@ -114,7 +115,7 @@ sci.split_data_by_days(0.5)
 #%%
 
 sci.model_selection('decisiontreeregressor')
-# sci.grid_search()
+sci.grid_search()
 sci.predict()
 sci.evaluate()
 # sci.plot_histogram_feature_importances()
@@ -124,7 +125,7 @@ sci.evaluate()
 # sci.visualize_residuals()
 # sci.visualize_predictions(xlim_left=250, xlim_right=400)
 sci.visualize_predictions()
-sci.plot_outlier()
+# sci.plot_outlier()
 
 # sci.visualize_tree()
 # sci.visualize_3d_plot()

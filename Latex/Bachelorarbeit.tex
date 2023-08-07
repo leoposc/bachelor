@@ -96,7 +96,7 @@
 \begin{acronym}
 \acro{api}[API]{Application Programming Interface}
 \acro{cart}[CART]{Classification and Regression Trees}
-\acro{eeg}{EEG}{Erneuerbare-Energien-Gesetz}
+\acro{eeg}[EEG]{Erneuerbare-Energien-Gesetz}
 \acro{nrel}[NREL]{National Renewable Energy Laboratory}
 \acro{pv}[PV]{Photovoltaik}
 \end{acronym}
@@ -196,7 +196,7 @@ Heutzutage sind Verbraucher längst nicht mehr nur Verbraucher, stattdessen werd
 
 Dementsprechend ist es für uns unverzichtbar, die Wichtigkeit einer stabilen \linebreak Stromerzeugung richtig einzuschätzen und anhand dessen Maßnahmen zu ergreifen, um Spannungsschwankungen im Netz so weit wie möglich zu reduzieren.
 
-Der stetig schwankende Strombedarf und die ebenso fluktuierende Stromerzeugung führen dazu, dass von einzelnen Ländern in größeren Dimensionen Strom sowohl exportiert als auch importiert werden müssen. Dies hilft dabei, im gesamten Stromnetz die Netzspannung beständig und konstant zu halten. In 2019 konnte Deutschland 72,4 TWh Strom an verschiedene Nachbarländer exportieren und hat im selben Jahr etwa die Hälfte (39,8 TWh) davon importiert.
+Der stetig schwankende Strombedarf und die ebenso fluktuierende Stromerzeugung führen dazu, dass von einzelnen Ländern in größeren Dimensionen Strom sowohl exportiert als auch importiert werden müssen. Dies hilft dabei, im gesamten Stromnetz die Netzspannung beständig und konstant zu halten. In 2019 konnte Deutschland 72,4 $TWh$ Strom an verschiedene Nachbarländer exportieren und hat im selben Jahr etwa die Hälfte (39,8 $TWh$) davon importiert.
 %https://www.bmwk.de/Redaktion/DE/Dossier/strommarkt-der-zukunft.html#:~:text=Aufgrund%20der%20zunehmenden%20Elektrifizierung%20in,2045%20wurde%20im%20Energiewirtschaftsgesetz%20verankert.
 
 Auf Grund von stark schwankendem Verbrauchs der Privathaushalten sowie weiten Teilen der Industrie ist der Strombedarf je nach Uhrzeit unterschiedlich. So ist Tatsache, dass der Strombedarf tagsüber nahezu doppelt so hoch ist im Vergleich zur Nacht. Von Frühling bis in die späten Sommermonate kann der zusätzliche Bedarf häufig durch \ac{pv} gedeckt werden und somit bildet Sonnenenergie eine gute Ergänzung für die anderen Energieerzeuger. 
@@ -216,7 +216,7 @@ Auf Grund von stark schwankendem Verbrauchs der Privathaushalten sowie weiten Te
 
 Zuvor wurde thematisiert, wie wichtig es ist, dass das Stromnetz auf internationaler Ebene miteinander verknüpft ist. Ebenso ist es notwendig, das Netz auf lokaler Ebene zu betrachten. Um die Netzstabilität zu gewährleisten, führen Übertragungsnetzbetreiber sogenanntes \textit{Redispatching} durch. Dabei wird gezielt die Einspeisung von Erzeugungsanlagen gedrosselt, um Überlastungen an Engstellen im Stromnetz zu vermeiden. Da dies äußerst kurzfristig passiert und die zuvor gekaufte mit der tatsächlich erzeugten Strommenge übereinstimmen muss, beauftragen die Netzbetreiber andere Erzeugungsanlagen, die hinter den Engpässen liegen, mehr Strom zu produzieren.
 
-Durch eine Neuerung des Netzausbaubeschleunigungsgesetzes (NABEG) im Jahr 2019 wurde \textit{Redispatch} weiterhin optimiert. Die Neuerung besagt, dass ab Oktober 2021 die Netzbetreiber mehr Erzeugungs- und Speicheranlagen für das Unterbinden von Netzengpässen miteinbeziehen dürfen. Zuvor konnten sich Anlagen mit einer installierten Leistung unter 10 MW der Teilnahmepflicht am \textit{Redispatch} entziehen. Der Grenzwert wurde nicht nur auf 100kW herabgesetzt, des Weiteren sind sämtliche steuerbaren Anlagen, unabhängig von deren installierten Leistung, gleichfalls an der Teilnahme verpflichtet.
+Durch eine Neuerung des Netzausbaubeschleunigungsgesetzes (NABEG) im Jahr 2019 wurde \textit{Redispatch} weiterhin optimiert. Die Neuerung besagt, dass ab Oktober 2021 die Netzbetreiber mehr Erzeugungs- und Speicheranlagen für das Unterbinden von Netzengpässen miteinbeziehen dürfen. Zuvor konnten sich Anlagen mit einer installierten Leistung unter 10 $MW$der Teilnahmepflicht am \textit{Redispatch} entziehen. Der Grenzwert wurde nicht nur auf 100 $kW$ herabgesetzt, des Weiteren sind sämtliche steuerbaren Anlagen, unabhängig von deren installierten Leistung, gleichfalls an der Teilnahme verpflichtet.
 
 %https://www.bmwk.de/Redaktion/DE/Dossier/strommarkt-der-zukunft.html#:~:text=Aufgrund%20der%20zunehmenden%20Elektrifizierung%20in,2045%20wurde%20im%20Energiewirtschaftsgesetz%20verankert.
 
@@ -370,9 +370,7 @@ Um dieses Ziel zu erreichen, werden zuerst die Wetter- und Solardaten analysiert
 
 \section{Untersuchte Photovoltaikanlagen}
 
-Die in \autoref{tab:solarsystem_metadata} gelisteten Identifikationsnummern von \ac{pv}-Anlagen und den dazugehörigen Metadaten beziehen sich auf den Datensatz, der von der Webseite \url{https://data.openei.org/s3_viewer?bucket=oedi-data-lake&prefix=pvdaq} stammt.
-
-Das \ac{nrel} bringt hervor, dass der Datensatz sowohl experimentelle als auch öffentliche, kommerziell genutzte \ac{pv}-Anlagen beinhaltet. Die Fläche aller Solarmodule der Anlage sowie die Nennleistung\footnote{???} sind ein idealer Indikator, um die Funktion der Anlage einzuschätzen. Dies ist hilfreich um zu beweisen, dass die Prognose bei größeren Solarsystemen, die einen stärkeren Einfluss auf die Netzspannung haben, gleichermaßen funktioniert. Zwar ist die Funktionsweise unabhängig von der Größe und somit identisch, allerdings ist die Wertemenge der potentiell erzeugten Strommenge größer. Schließlich kann der erzeugte Solarstrom Werte zwischen $0 \ kW$ und der jeweiligen Nennleistung des Solarsystems einnehmen. 
+Die in \autoref{tab:solarsystem_metadata} gelisteten Identifikationsnummern von \ac{pv}-Anlagen und den dazugehörigen Metadaten beziehen sich auf den Datensatz, der von der Webseite \url{https://data.openei.org/s3_viewer?bucket=oedi-data-lake&prefix=pvdaq} \newline stammt. Das \ac{nrel} bringt hervor, dass der Datensatz sowohl experimentelle als auch öffentliche, kommerziell genutzte \ac{pv}-Anlagen beinhaltet. Die Fläche aller Solarmodule der Anlage sowie die Nennleistung\footnote{???} sind ein idealer Indikator, um die Funktion der Anlage einzuschätzen. Dies ist hilfreich um zu beweisen, dass die Prognose bei größeren Solarsystemen, die einen stärkeren Einfluss auf die Netzspannung haben, gleichermaßen funktioniert. Zwar ist die Funktionsweise unabhängig von der Größe und somit identisch, allerdings ist die Wertemenge der potentiell erzeugten Strommenge größer. Schließlich kann der erzeugte Solarstrom Werte zwischen $0 \ kW$ und der jeweiligen Nennleistung des Solarsystems einnehmen. 
 
 Die \ac{pv}-Anlage mit der Identifikationsnummer $1201$ zählt mit einer installierten Nennleistung von $140,14 \ kW$ zu den größeren Solarstromlösungen. Um dies besser einordnen zu können, sei an dieser Stelle angemerkt, dass sich die Nennleistung von Solaranlagen auf meisten deutschen Einfamilienhäusern zwischen $4 - 10 \ kWp$ \footnote{$Kilowattpeak (kWp)$ ist eine Maßeinheit, die die Nennleistung einer \ac{pv}-Anlage unter den standardisierten Testbedingungen betitelt.} beläuft. In \fullref{sec:evaluation} wird die Leistungsfähigkeit des Prognosemodells für die \ac{pv}-Anlage $1201$ analysiert.
 
@@ -892,7 +890,7 @@ Selbst wenn es ohne die Berücksichtigung der Sonneneinstrahlung gelingt die Str
 \label{fig:predictions_1244}
 \end {figure}
 
-Da nur sehr wenige Solaranlagen der Datenbank von \ac{nrel} aktuelle Solardaten beinhalten und über die \ac{api} von \textit{www.visualcrossing.com} keine historischen Wetter-Prognose-Daten abrufbar sind, wird die Prognose über den Solarstrom mittels tatsächlichen Wetterprognosen nicht getestet. Allerdings ist für die Netzstabilität die verfügbare Menge an Strom innerhalb der nächsten Stunden von besonderem Interesse. Erfreulicherweise ist die kurzzeitige Wetterprognose dank kontinuierlich verbesserten Wettersatelliten immer präziser geworden. Weiterhin ist vorstellbar, dass die Wetterprognose der Sonneneinstrahlung nicht gleichermaßen profund wie sie bei anderen Faktoren sein könnte. Dementsprechend ist es von Vorteil, wenn sich die Vorhersage auf die Zuverlässigkeit anderer Faktoren ebenfalls stützen kann, ohne auf die Sonneneinstrahlung als Anhaltspunkt für die zu erwartende Solarstromproduktion gänzlich verzichten zu müssen.
+Da nur sehr wenige Solaranlagen der Datenbank von \ac{nrel} aktuelle Solardaten beinhalten und über die \ac{api} von \textit{www.visualcrossing.com} keine historischen Wetter-Prognose-Daten abrufbar sind, wird die Prognose über den Solarstrom mittels tatsächlichen Wetterprognosen nicht getestet. Allerdings ist für die Netzstabilität die verfügbare Menge an Strom innerhalb der nächsten Stunden von besonderem Interesse. Erfreulicherweise ist die kurzzeitige Wetterprognose dank kontinuierlich verbesserten Wettersatelliten immer präziser geworden. Weiterhin ist vorstellbar, dass die Wetterprognose der Sonneneinstrahlung nicht die gleiche Qualität wie die Vorhersage für andere Wetterfaktoren aufweist. Schließlich wird zwar die Menge der Sonnenstrahlen, die auf die Atmosphäre treffen, durch die Solarkonstante beschrieben, die unterschiedliche Messwerte über die Sonneneinstrahlung lassen sich somit auf die Einflüsse innerhalb der Atmosphäre zurückführen. Fehler in der Prognose über die Bewölkung, Feuchtigkeit oder Luftdichte führen demnach zu Folgefehlern in der Vorhersage über die Sonneneinstrahlung. Dementsprechend ist es von Vorteil, wenn sich die Vorhersage auf die Zuverlässigkeit anderer Faktoren ebenfalls stützen kann, ohne auf die Sonneneinstrahlung als Anhaltspunkt für die zu erwartende Solarstromproduktion gänzlich verzichten zu müssen.
 
 \subsubsection{Bewölkungsgrad}
 
@@ -902,26 +900,46 @@ Zudem führen wir die Evaluierung mehrmals durch und erhalten dadurch mehrere Ve
 
 \subsection{Ausreißer in der Prognose}
 
+
+
 Im \fullref{subsubsec:outlier} haben wir bereits über die Problematik von Ausreißern in den Datensätzen gesprochen und dass diese idealerweise vor dem Training des Lernalgorithmus aus dem Trainingsdatensatz entfernt werden sollten. Wir interessieren uns schlichtweg nicht für diese und müssen sie nicht weiter beachten. Anders sieht es aus, wenn zwischen der Prognose und den tatsächlichen Werten Unstimmigkeiten auftreten. 
 
 Insbesondere wenn diese Abweichungen an mehreren Tagen hintereinander auftreten, werden aus den Ausreißern viel eher Auffälligkeiten. Auffälligkeiten, die auf einen Defekt hindeuten und dementsprechend gesondert Aufmerksamkeit fordern. Ein nicht funktionierender Wechselrichter reicht aus, um die Solarstromproduktion gänzlich zum Erliegen zu bringen. In diesem Fall verlieren die Betreiber der \ac{pv}-Anlage mit jeder vergangenen Stunde Geld. Umso schneller die Probleme erkannt werden, desto höher ist die Wirtschaftlichkeit der \ac{pv}-Anlage.
 
-Zweifellos gibt es pragmatischere Lösungen, um einen Totalausfall einer \ac{pv}-Anlage zu erkennen, die mit weniger Aufwand verbunden sind. Allerdings können genauso einzelne Solarmodule einen Defekt aufweisen. 
-
-In einem Solarsystem sind häufig eine Gruppe von Solarmodulen, einem sogenannten Strang, in einer Reihenschaltung miteinander verknüpft. Die Verkettung der Module hilft dabei, den produzierten Strom effizient zum Wechselrichter zu leiten. Allerdings wird die Gesamtleistung des Strangs durch das schwächste Glied in der Kette bestimmt.
-
-\begin{figure}
+\begin{figure}[h]
 \centering
 \def\svgwidth{400pt}
 \input{assets/predictions_1244.pdf_tex}
 \caption{Erkannte Ausreißer innerhalb des Testdatensatzes der Solaranlage in New Orleans, Louisiana, USA}
 \label{fig:predictions_outlier_xxxx}
-\end {figure}
+\end{figure}
+
+Zweifellos gibt es pragmatischere Lösungen, um einen Totalausfall einer \ac{pv}-Anlage zu erkennen, die mit weniger Aufwand verbunden sind. Allerdings können genauso einzelne Solarmodule einen Defekt aufweisen. 
+
+In einem Solarsystem sind häufig eine Gruppe von Solarmodulen, einem sogenannten Strang, in einer Reihenschaltung miteinander verknüpft. Die Verkettung der Module hilft dabei, den produzierten Strom effizient zum Wechselrichter zu leiten. Allerdings wird die Gesamtleistung des Strangs durch das schwächste Glied in der Kette bestimmt.
+
+
 
 \begin{lstlisting}[basicstyle=\small,label={lst:outlier_detection}, caption={Funktion zur Erkennung von Ausreißern}]
 def plot_outlier(self):        
 \end{lstlisting}
 
+\subsection{Prognose von bisher unbekannten Werten}
+
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{400pt}
+\input{assets/predictions_forecast_1220_v2.pdf_tex}
+\caption{Prognose für einen Zeitraum außerhalb des Trainingsdatensatzes}
+\label{fig:predictions_forecast_1220}
+\end{figure}
+
+Unter \fullref{subsubsec:conclusion_for_training} wurde bereits angesprochen, dass Werte, die zuvor nicht im Trainingsdatensatzes enthalten waren, insbesondere bei dem \ac{cart}-Algorithmus problematisch sind. Da die Dauer der Datenerfassung nicht ein Jahr lang andauern soll, bevor das Modell für die Prognose zum Einsatz kommt, müssen Vorhersagen für Kalenderwochen die nicht im Datensatz enthalten waren, getroffen werden. Die Kalenderwoche repräsentiert die Jahreszeit, welche wiederum mit der stetig ändernden Elevation der Sonne und somit auch dem Einstrahlungswinkel verknüpft ist.
+
+In \autoref{fig:predictions_forecast_1220} sehen wir die Prognose für die \ac{pv}-Anlage mit der Idenfikationsnummer $1220$ in Port Chester, New York. Die Abbildung zeigt, dass die Residuen tendenziell, jedoch nur geringfügig größer sind als bei einem durchmischten Test-/ Trainingsdatensatz.
+
+%Ferner gilt es zu untersuchen, wie sehr die Abweichungen in der Wetterprognose sich auf die Qualität der Solarenergieprognose auswirken. Die \ac{api} des verwendeten Wetterdienstes bietet keine Aufzeichnung über die vergangenen Wettervorhersagen. Aktuelle Wetterprognosen können nicht verwendet werden, da für viele der \ac{pv}-Anlagen keine Daten aus dem Jahr 2023 vorhanden sind. Dementsprechend ist kein Testdatensatz zur Verfügung, um die Ergebnisse des Modells zu evaluieren.
 
 
 \newpage

@@ -54,6 +54,7 @@
 \contentsline {subsubsection}{\numberline {8.3.1}Sonneneinstrahlung}{60}{subsubsection.8.3.1}%
 \contentsline {subsubsection}{\numberline {8.3.2}Bewölkungsgrad}{62}{subsubsection.8.3.2}%
 \contentsline {subsection}{\numberline {8.4}Ausreißer in der Prognose}{63}{subsection.8.4}%
-\contentsline {section}{\numberline {9}Fazit und Ausblick}{64}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Fazit}{64}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Ausblick}{67}{subsection.9.2}%
+\contentsline {subsection}{\numberline {8.5}Prognose von bisher unbekannten Werten}{64}{subsection.8.5}%
+\contentsline {section}{\numberline {9}Fazit und Ausblick}{66}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Fazit}{66}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Ausblick}{68}{subsection.9.2}%
