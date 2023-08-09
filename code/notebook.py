@@ -63,9 +63,9 @@ manager.fetch_weather_data("Village of Port Chester", "2014-06-01", "2014-10-20"
 from scikit import ScikitManager
 # sci = ScikitManager(location='applewood', solarsystem_id=10)
 # sci = ScikitManager(location='cockeysville', solarsystem_id=1199)
-# sci = ScikitManager(location='linthicum', solarsystem_id=1200)                # TOWER
+sci = ScikitManager(location='linthicum', solarsystem_id=1200)                # TOWER
 # sci = ScikitManager(location='Cherry Hill Townhill', solarsystem_id=1201)
-sci = ScikitManager(location='Village of Port Chester', solarsystem_id=1220)  # TOWER
+# sci = ScikitManager(location='Village of Port Chester', solarsystem_id=1220)  # TOWER
 # sci = ScikitManager(location='New Smyrna beach', solarsystem_id=1231)         # TOWER
 # sci = ScikitManager(location='New Orleans', solarsystem_id=1244)
 # sci = ScikitManager(location='New Orleans', solarsystem_id=1257)
@@ -76,7 +76,7 @@ sci = ScikitManager(location='Village of Port Chester', solarsystem_id=1220)  # 
 # sci = ScikitManager(location='linthicum', solarsystem_id=1200)
 sci.get_data()
 # sci.calculate_energyoutput_index()
-sci.simulate_weather_forecast_data()
+# sci.simulate_weather_forecast_data()
 sci.choose_features(['timeepoch',
                      'solarradiation',
                     #  'energyoutput_index',
@@ -105,7 +105,7 @@ sci.filter_by('solarradiation', lower_limit=20)
 # sci.filter_by('temperature', lower_limit=25, upper_limit=30)
 
 # sci.split_data(0.1)
-# sci.split_data_by_days(0.5)
+sci.split_data_by_days(0.5)
 # sci.transform_hours()
 # print(type(sci.timeepoch_test[0]))
 
@@ -115,7 +115,7 @@ sci.filter_by('solarradiation', lower_limit=20)
 #%%
 
 sci.model_selection('decisiontreeregressor')
-sci.grid_search()
+# sci.grid_search()
 sci.predict()
 sci.evaluate()
 # sci.plot_histogram_feature_importances()
@@ -123,9 +123,9 @@ sci.evaluate()
 
 # %%
 # sci.visualize_residuals()
-# sci.visualize_predictions(xlim_left=250, xlim_right=400)
-sci.visualize_predictions()
-# sci.plot_outlier()
+sci.visualize_predictions(xlim_left=0, xlim_right=400)
+# sci.visualize_predictions()
+sci.plot_outlier()
 
 # sci.visualize_tree()
 # sci.visualize_3d_plot()
@@ -213,4 +213,39 @@ print(sci.outliers_indices_test)
 
 sci.visualize_tree()
 # %%
+# %%
+import numpy as np
+
+def get_local_maxima_index_for_each_day(data: np.array, hours: np.array):
+    local_maxima, i = [], 1
+    while i < len(hours):
+        start = i
+        print(i)
+        while i < len(hours) and hours[i] > hours[i-1]:
+            i += 1
+        end = i
+        print(start, end)
+        local_maxima.append(np.argmax(data[start:end]) + start)
+        i += 1
+    return local_maxima
+
+
+def get_local_maxima_index_for_each_day(data: np.array, hours: np.array):
+    local_maxima, i = [], 1
+    start, end = 0, 0
+    for i in range(1,len(hours)):
+        if hours[i] > hours[i-1]:
+            end += 1
+        else:
+            local_maxima.append(np.argmax(data[start:end]) + start)
+            end = i + 1
+            start = i
+        i += 1
+    local_maxima.append(np.argmax(data[start:end]) + start)
+    return local_maxima
+
+hours = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
+data = [1, 23, 1, 1, 1, 2, 3, 5, 10, 12, 1, 1]
+
+get_local_maxima_index_for_each_day(data, hours)
 # %%

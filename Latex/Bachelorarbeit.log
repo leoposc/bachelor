@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.9)  8 AUG 2023 00:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.9)  8 AUG 2023 18:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1022,6 +1022,11 @@ Package pdftex.def Info: assets//heatmap.pdf , page1 used on input line 56.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 448.
 
+Overfull \hbox (4.66064pt too wide) in paragraph at lines 454--455
+[]\T1/phv/m/n/12 Die tat-säch-li-che Rea-li-tät ist, dass Tem-pe-ra-tur und Str
+o-mer-trag ei-ner [][]-Anlage
+ []
+
 [31] (./assets/pairplot_all.pdf_tex
 <assets//pairplot_all.pdf, id=647, page=1, 1058.95638pt x 1058.95638pt>
 File: assets//pairplot_all.pdf Graphic file (type pdf)
@@ -1035,7 +1040,7 @@ Overfull \hbox (23.20865pt too wide) in paragraph at lines 57--467
  []
 
 [32] [33 <./assets//pairplot_all.pdf>] (./assets/histogram_cc_1220.pdf_tex
-<assets//histogram_cc_1220.pdf, id=671, page=1, 502.87875pt x 269.005pt>
+<assets//histogram_cc_1220.pdf, id=670, page=1, 502.87875pt x 269.005pt>
 File: assets//histogram_cc_1220.pdf Graphic file (type pdf)
 <use assets//histogram_cc_1220.pdf, page 1>
 Package pdftex.def Info: assets//histogram_cc_1220.pdf , page1 used on input li
@@ -1047,7 +1052,7 @@ Overfull \hbox (17.9452pt too wide) in paragraph at lines 57--490
  []
 
 (./assets/histogram_cc_1231.pdf_tex
-<assets//histogram_cc_1231.pdf, id=672, page=1, 475.7775pt x 269.005pt>
+<assets//histogram_cc_1231.pdf, id=671, page=1, 475.7775pt x 269.005pt>
 File: assets//histogram_cc_1231.pdf Graphic file (type pdf)
 <use assets//histogram_cc_1231.pdf, page 1>
 Package pdftex.def Info: assets//histogram_cc_1231.pdf , page1 used on input li
@@ -1068,13 +1073,13 @@ Underfull \hbox (badness 2698) in paragraph at lines 498--498
 pdfTeX warning: /opt/texbin/pdflatex (file ./assets//histogram_cc_1231.pdf): PD
 F inclusion: multiple pdfs with page group included in a single page
 >] (./assets/geogebra_cloudcover.pdf_tex
-<assets//geogebra_cloudcover.pdf, id=702, page=1, 1145.02782pt x 682.80093pt>
+<assets//geogebra_cloudcover.pdf, id=701, page=1, 1145.02782pt x 682.80093pt>
 File: assets//geogebra_cloudcover.pdf Graphic file (type pdf)
 <use assets//geogebra_cloudcover.pdf, page 1>
 Package pdftex.def Info: assets//geogebra_cloudcover.pdf , page1 used on input 
 line 56.
 (pdftex.def)             Requested size: 425.0pt x 253.43462pt.
-<assets//geogebra_cloudcover.pdf, id=703, page=2, 1145.02782pt x 682.80093pt>
+<assets//geogebra_cloudcover.pdf, id=702, page=2, 1145.02782pt x 682.80093pt>
 File: assets//geogebra_cloudcover.pdf Graphic file (type pdf)
 <use assets//geogebra_cloudcover.pdf, page 2>
 Package pdftex.def Info: assets//geogebra_cloudcover.pdf , page2 used on input 
@@ -1086,40 +1091,34 @@ pdfTeX warning: /opt/texbin/pdflatex (file ./assets//geogebra_cloudcover.pdf):
 PDF inclusion: multiple pdfs with page group included in a single page
 >]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 535.
+nput line 537.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 537.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 539.
  [37]
-Overfull \hbox (26.54231pt too wide) in paragraph at lines 550--551
+Overfull \hbox (26.54231pt too wide) in paragraph at lines 552--553
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (13.4022pt too wide) in paragraph at lines 562--563
+Overfull \hbox (13.4022pt too wide) in paragraph at lines 564--565
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (13.1726pt too wide) in paragraph at lines 570--571
-\T1/phv/m/n/12 Durch die groÿe Men-ge an Da-ten-punk-te wer-den Streu-dia-gram-
-me, die zwei schwach
- []
-
 [38] (./assets/pairplot_filtered.pdf_tex
-<assets//pairplot_filtered.pdf, id=759, page=1, 1064.97887pt x 1063.975pt>
+<assets//pairplot_filtered.pdf, id=758, page=1, 1064.97887pt x 1063.975pt>
 File: assets//pairplot_filtered.pdf Graphic file (type pdf)
 <use assets//pairplot_filtered.pdf, page 1>
 Package pdftex.def Info: assets//pairplot_filtered.pdf , page1 used on input li
 ne 56.
 (pdftex.def)             Requested size: 450.0pt x 449.5777pt.
 )
-Overfull \hbox (23.20865pt too wide) in paragraph at lines 57--576
+Overfull \hbox (23.20865pt too wide) in paragraph at lines 57--578
  [][] 
  []
 
 [39 <./assets//pairplot_filtered.pdf>]
 (./assets/pairplot_filtered_radiation_temperature_1200.pdf_tex
-<assets//pairplot_filtered_radiation_temperature_1200.pdf, id=768, page=1, 1064
+<assets//pairplot_filtered_radiation_temperature_1200.pdf, id=767, page=1, 1064
 .97887pt x 212.25766pt>
 File: assets//pairplot_filtered_radiation_temperature_1200.pdf Graphic file (ty
 pe pdf)
@@ -1129,7 +1128,7 @@ df , page1 used on input line 56.
 (pdftex.def)             Requested size: 425.0pt x 84.70398pt.
 ) [40 <./assets//pairplot_filtered_radiation_temperature_1200.pdf>]
 (./assets/solarsystem_1200_picture.pdf_tex
-<assets//solarsystem_1200_picture.pdf, id=783, page=1, 646.66594pt x 405.76593p
+<assets//solarsystem_1200_picture.pdf, id=782, page=1, 646.66594pt x 405.76593p
 t>
 File: assets//solarsystem_1200_picture.pdf Graphic file (type pdf)
 <use assets//solarsystem_1200_picture.pdf, page 1>
@@ -1138,7 +1137,7 @@ nput line 56.
 (pdftex.def)             Requested size: 425.0pt x 266.67949pt.
 ) [41 <./assets//solarsystem_1200_picture.pdf>] [42] [43] [44] (./assets/decisi
 ontree_linear.pdf_tex
-<assets//decisiontree_linear.pdf, id=815, page=1, 611.28375pt x 388.45125pt>
+<assets//decisiontree_linear.pdf, id=814, page=1, 611.28375pt x 388.45125pt>
 File: assets//decisiontree_linear.pdf Graphic file (type pdf)
 <use assets//decisiontree_linear.pdf, page 1>
 Package pdftex.def Info: assets//decisiontree_linear.pdf , page1 used on input 
@@ -1146,7 +1145,7 @@ line 56.
 (pdftex.def)             Requested size: 350.0pt x 222.40936pt.
 ) [45] [46 <./assets//decisiontree_linear.pdf>] (./assets/binary_tree_linthicum
 _zoom_v2.pdf_tex
-<assets//binary_tree_linthicum_zoom_v2.pdf, id=834, page=1, 721.06271pt x 443.5
+<assets//binary_tree_linthicum_zoom_v2.pdf, id=833, page=1, 721.06271pt x 443.5
 7544pt>
 File: assets//binary_tree_linthicum_zoom_v2.pdf Graphic file (type pdf)
 <use assets//binary_tree_linthicum_zoom_v2.pdf, page 1>
@@ -1156,12 +1155,12 @@ Package pdftex.def Info: assets//binary_tree_linthicum_zoom_v2.pdf , page1 used
 )
 Package acronym Info: Label `acro:cart' newly defined as it shall be overridden
 
-although it is yet undefined on input line 676.
+although it is yet undefined on input line 678.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 676.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 678.
  [47 <./assets//binary_tree_linthicum_zoom_v2.pdf>] [48]
 (./assets/histogram_feature_quantity.pdf_tex
-<assets//histogram_feature_quantity.pdf, id=865, page=1, 383.4325pt x 334.24875
+<assets//histogram_feature_quantity.pdf, id=864, page=1, 383.4325pt x 334.24875
 pt>
 File: assets//histogram_feature_quantity.pdf Graphic file (type pdf)
 <use assets//histogram_feature_quantity.pdf, page 1>
@@ -1169,14 +1168,14 @@ Package pdftex.def Info: assets//histogram_feature_quantity.pdf , page1 used on
  input line 56.
 (pdftex.def)             Requested size: 400.0pt x 348.71214pt.
 )
-Overfull \hbox (3.86563pt too wide) in paragraph at lines 695--696
+Overfull \hbox (3.86563pt too wide) in paragraph at lines 697--698
 \T1/phv/m/sl/12 Anweisungen \T1/phv/m/n/12 bil-det, ver-leiht dem Ge-wicht der 
 Son-nen-ein-strah-lung wei-te-ren Nach-
  []
 
 [49 <./assets//histogram_feature_quantity.pdf>] [50]
 (./assets/decisiontree_example_2.pdf_tex
-<assets//decisiontree_example_2.pdf, id=886, page=1, 602.25pt x 451.6875pt>
+<assets//decisiontree_example_2.pdf, id=885, page=1, 602.25pt x 451.6875pt>
 File: assets//decisiontree_example_2.pdf Graphic file (type pdf)
 <use assets//decisiontree_example_2.pdf, page 1>
 Package pdftex.def Info: assets//decisiontree_example_2.pdf , page1 used on inp
@@ -1184,7 +1183,7 @@ ut line 56.
 (pdftex.def)             Requested size: 350.0pt x 262.50963pt.
 ) [51 <./assets//decisiontree_example_2.pdf>] (./assets/decisiontree_example.pd
 f_tex
-<assets//decisiontree_example.pdf, id=897, page=1, 450.9347pt x 338.76563pt>
+<assets//decisiontree_example.pdf, id=896, page=1, 450.9347pt x 338.76563pt>
 File: assets//decisiontree_example.pdf Graphic file (type pdf)
 <use assets//decisiontree_example.pdf, page 1>
 Package pdftex.def Info: assets//decisiontree_example.pdf , page1 used on input
@@ -1193,93 +1192,93 @@ Package pdftex.def Info: assets//decisiontree_example.pdf , page1 used on input
 )
 
 LaTeX Warning: Reference `fig:binary_tree' on page 52 undefined on input line 7
-46.
+48.
 
 [52 <./assets//decisiontree_example.pdf>] [53] [54]
-Underfull \hbox (badness 1648) in paragraph at lines 789--789
+Underfull \hbox (badness 1648) in paragraph at lines 791--791
 []\T1/phv/m/n/12 Maximale Tie-fe des
  []
 
 [55]
-Underfull \hbox (badness 10000) in paragraph at lines 822--822
+Underfull \hbox (badness 10000) in paragraph at lines 824--824
 [][][]\T1/phv/m/n/12 -
  []
 
 
-Overfull \hbox (1.34834pt too wide) in paragraph at lines 822--822
+Overfull \hbox (1.34834pt too wide) in paragraph at lines 824--824
 \T1/phv/m/n/12 Anlagen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 822--822
+Underfull \hbox (badness 10000) in paragraph at lines 824--824
 []\T1/phv/m/n/12 Daten-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 822--822
+Underfull \hbox (badness 10000) in paragraph at lines 824--824
 \T1/phv/m/n/12 (Training-/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 822--822
+Underfull \hbox (badness 10000) in paragraph at lines 824--824
 []\T1/phv/m/n/12 Maximal-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 822--822
+Underfull \hbox (badness 10000) in paragraph at lines 824--824
 \T1/phv/m/n/12 be-trag
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 822--822
+Underfull \hbox (badness 10000) in paragraph at lines 824--824
 \T1/phv/m/n/12 Stromer-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 822--822
+Underfull \hbox (badness 10000) in paragraph at lines 824--824
 \T1/phv/m/n/12 zeu-gung
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 822--822
+Underfull \hbox (badness 10000) in paragraph at lines 824--824
 \T1/phv/m/n/12 anzahl
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 822--822
+Underfull \hbox (badness 10000) in paragraph at lines 824--824
 \T1/phv/m/n/12 an-zahl
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 822--822
+Underfull \hbox (badness 10000) in paragraph at lines 824--824
 \T1/phv/m/n/12 Pro-ben
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 822--822
+Underfull \hbox (badness 10000) in paragraph at lines 824--824
 []\T1/phv/m/n/12 R\TS1/phv/m/n/12 ²\T1/phv/m/n/12 -
  []
 
 
-Overfull \hbox (3.5379pt too wide) in paragraph at lines 822--822
+Overfull \hbox (3.5379pt too wide) in paragraph at lines 824--824
 \T1/phv/m/n/12 (Trainieren)| 
  []
 
 [56] [57]
-Overfull \hbox (5.0241pt too wide) in paragraph at lines 848--849
+Overfull \hbox (5.0241pt too wide) in paragraph at lines 850--851
 \T1/phv/m/n/12 chun-gen zwi-schen den pro-gno-s-ti-zier-ten und den tat-säch-li
 ch auf-ge-zeich-ne-ten Wer-
  []
 
 (./assets/residuals.pdf_tex
-<assets//residuals.pdf, id=944, page=1, 1305.87888pt x 633.36626pt>
+<assets//residuals.pdf, id=943, page=1, 1305.87888pt x 633.36626pt>
 File: assets//residuals.pdf Graphic file (type pdf)
 <use assets//residuals.pdf, page 1>
 Package pdftex.def Info: assets//residuals.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 400.0pt x 194.00273pt.
 ) [58 <./assets//residuals.pdf>]
 (./assets/predictions_linthicum.pdf_tex
-<assets//predictions_linthicum.pdf, id=959, page=1, 1486.55388pt x 892.3337pt>
+<assets//predictions_linthicum.pdf, id=958, page=1, 1486.55388pt x 892.3337pt>
 File: assets//predictions_linthicum.pdf Graphic file (type pdf)
 <use assets//predictions_linthicum.pdf, page 1>
 Package pdftex.def Info: assets//predictions_linthicum.pdf , page1 used on inpu
@@ -1287,9 +1286,9 @@ t line 56.
 (pdftex.def)             Requested size: 400.0pt x 240.10275pt.
 ) [59]
 Package acronym Info: Label `acro:api' newly defined as it shall be overridden
-although it is yet undefined on input line 881.
+although it is yet undefined on input line 883.
  [60 <./assets//predictions_linthicum.pdf>] (./assets/predictions_1244.pdf_tex
-<assets//predictions_1244.pdf, id=987, page=1, 1383.1675pt x 776.9025pt>
+<assets//predictions_1244.pdf, id=986, page=1, 1383.1675pt x 776.9025pt>
 File: assets//predictions_1244.pdf Graphic file (type pdf)
 <use assets//predictions_1244.pdf, page 1>
 Package pdftex.def Info: assets//predictions_1244.pdf , page1 used on input lin
@@ -1303,7 +1302,7 @@ e 56.
 (pdftex.def)             Requested size: 400.0pt x 224.66765pt.
 ) [63]
 (./assets/predictions_forecast_1220_v2.pdf_tex
-<assets//predictions_forecast_1220_v2.pdf, id=1013, page=1, 1411.27263pt x 836.
+<assets//predictions_forecast_1220_v2.pdf, id=1012, page=1, 1411.27263pt x 836.
 12381pt>
 File: assets//predictions_forecast_1220_v2.pdf Graphic file (type pdf)
 <use assets//predictions_forecast_1220_v2.pdf, page 1>
@@ -1311,19 +1310,19 @@ Package pdftex.def Info: assets//predictions_forecast_1220_v2.pdf , page1 used
 on input line 56.
 (pdftex.def)             Requested size: 400.0pt x 236.98366pt.
 )
-Overfull \hbox (13.00053pt too wide) in paragraph at lines 938--939
-[]\T1/phv/m/n/12 Unter [][]Un-ter-un-ter-ab-schnitt 6.2.4[] Schluss-fol-ge-run-
-gen für das Trai-ning des Modells[][][]
+Overfull \hbox (13.00053pt too wide) in paragraph at lines 940--941
+[]\T1/phv/m/n/12 Unter [][]Un-ter-un-ter-ab-schnitt 6.2.4[] \T1/phv/m/sl/12 Sch
+luss-fol-ge-run-gen für das Trai-ning des Modells[][][]
  []
 
 [64 <./assets//predictions_forecast_1220_v2.pdf>] [65]
-Overfull \hbox (11.97235pt too wide) in paragraph at lines 958--959
+Overfull \hbox (11.97235pt too wide) in paragraph at lines 961--962
 \T1/phv/m/n/12 lich lässt sich das Wet-ter über die Schnitt-stel-le der Web-si-
 te \T1/phv/m/sl/12 www.visualcrossing.com
  []
 
 [66]
-Overfull \hbox (4.48138pt too wide) in paragraph at lines 964--965
+Overfull \hbox (4.48138pt too wide) in paragraph at lines 967--968
 []\T1/phv/m/n/12 Um auch lang-fris-tig tref-fen-de Vor-her-sa-gen zu ma-chen, m
 uss das Mo-dell selbst-
  []
@@ -1338,7 +1337,7 @@ Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
 Here is how much of TeX's memory you used:
  16290 strings out of 476047
  269096 string characters out of 5791252
- 1885248 words of memory out of 5000000
+ 1887248 words of memory out of 5000000
  36201 multiletter control sequences out of 15000+600000
  564399 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1357,10 +1356,10 @@ live/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/20
 23/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2023/tex
 mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2023/texmf-dist
 /fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Bachelorarbeit.pdf (70 pages, 4832181 bytes).
+Output written on Bachelorarbeit.pdf (70 pages, 4831979 bytes).
 PDF statistics:
- 1168 PDF objects out of 1200 (max. 8388607)
- 951 compressed objects within 10 object streams
+ 1165 PDF objects out of 1200 (max. 8388607)
+ 948 compressed objects within 10 object streams
  212 named destinations out of 1000 (max. 500000)
  697 words of extra memory for PDF output out of 10000 (max. 10000000)
 

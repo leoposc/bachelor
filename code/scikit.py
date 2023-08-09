@@ -37,8 +37,22 @@ def consider_wind(ds: pd.Series):
 def consider_temperature(df: pd.DataFrame):
     energyoutput_index = df['solarradiation'] - (df['temperature'] * 5.0)
     return energyoutput_index
+   
 
-
+def get_local_maxima_index_for_each_day(data: np.array, hours: np.array):
+    local_maxima, i = [], 1
+    start, end = 0, 0
+    for i in range(1,len(hours)):
+        if hours[i] > hours[i-1]:
+            end += 1
+        else:
+            local_maxima.append(np.argmax(data[start:end]) + start)
+            end = i + 1
+            start = i
+        i += 1
+    local_maxima.append(np.argmax(data[start:end]) + start)
+    return local_maxima
+     
 # get index of local maxima within a range of 9 entries
 # def get_local_maxima_index(np_series: np.array):
 #     local_maxima = []
@@ -492,12 +506,13 @@ class ScikitManager():
         # self.score = self.model.score(self.X_test, self.y_test
 
 
-    def find_outlier(self):
-        maxima_indices = np.array(get_local_maxima_index(self.y_test_pred))
-        threshold = np.max(self.y_test[maxima_indices]) / 2
-        outlier_indices = np.array(np.abs(self.y_test_pred[maxima_indices] \
-            - self.y_test[maxima_indices]) > threshold)
-        self.outliers_indices_test = maxima_indices[outlier_indices]
+    # def find_outlier(self):
+    #     r_2 = self.model.score(self.X_test, self.y_test)
+    #     maxima_indices = np.array(get_local_maxima_index(self.y_test_pred))
+    #     threshold = np.max(self.y_test[maxima_indices]) / 2
+    #     outlier_indices = np.array(np.abs(self.y_test_pred[maxima_indices] \
+    #         - self.y_test[maxima_indices]) > threshold)
+    #     self.outliers_indices_test = maxima_indices[outlier_indices]
         # print(len(self.y_test))
         # print(len(self.outliers_indices_test))
         # print(len(outlier_indices))
@@ -516,6 +531,15 @@ class ScikitManager():
         # self.X_outlier_train = self.X_train[self.outliers_indices_train]
         # self.y_outlier_train = self.y_train[self.outliers_indices_train]
 
+
+    def find_outlier(self):
+        r_2 = self.model.score(self.X_test, self.y_test)
+        hours = self.X_test[:,2]
+        maxima_indices = np.array(get_local_maxima_index_for_each_day(self.y_test_pred, hours))
+        threshold = np.max(self.y_test[maxima_indices]) / 2
+        outlier_indices = np.array(np.abs(self.y_test_pred[maxima_indices] \
+            - self.y_test[maxima_indices]) > threshold)
+        self.outliers_indices_test = maxima_indices[outlier_indices]
 
     # plot outliers and their surrouding data
     def plot_outlier(self, xlim_left=0, xlim_right=None):
