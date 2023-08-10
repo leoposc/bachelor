@@ -37,6 +37,19 @@ def consider_wind(ds: pd.Series):
 def consider_temperature(df: pd.DataFrame):
     energyoutput_index = df['solarradiation'] - (df['temperature'] * 5.0)
     return energyoutput_index
+
+
+def get_same_day_indices(indices, hours):
+    complete_indices = []
+    for i in indices:
+        j,k = 1,1
+        while hours[i-j] < hours[i]:
+            j += 1            
+        while hours[i+k] > hours[i]:
+            k += 1
+        
+        complete_indices += list(range(i-j+1,i+k))
+    return complete_indices
    
 
 def get_local_maxima_index_for_each_day(data: np.array, hours: np.array):
@@ -49,7 +62,6 @@ def get_local_maxima_index_for_each_day(data: np.array, hours: np.array):
             local_maxima.append(np.argmax(data[start:end]) + start)
             end = i + 1
             start = i
-        i += 1
     local_maxima.append(np.argmax(data[start:end]) + start)
     return local_maxima
      
@@ -506,77 +518,105 @@ class ScikitManager():
         # self.score = self.model.score(self.X_test, self.y_test
 
 
-    # def find_outlier(self):
+    # def find_discrepancies(self):
     #     r_2 = self.model.score(self.X_test, self.y_test)
     #     maxima_indices = np.array(get_local_maxima_index(self.y_test_pred))
     #     threshold = np.max(self.y_test[maxima_indices]) / 2
-    #     outlier_indices = np.array(np.abs(self.y_test_pred[maxima_indices] \
+    #     discrepancies_indices = np.array(np.abs(self.y_test_pred[maxima_indices] \
     #         - self.y_test[maxima_indices]) > threshold)
-    #     self.outliers_indices_test = maxima_indices[outlier_indices]
+    #     self.discrepancies_indices_test = maxima_indices[discrepancies_indices]
         # print(len(self.y_test))
-        # print(len(self.outliers_indices_test))
-        # print(len(outlier_indices))
-        # print(outlier_indices)
-        # print(self.outliers_indices_test)
-        # outlier_indices = np.where(self.outliers_indices_test)[0]        
-        # self.X_outlier_test = self.X_test[self.outliers_indices_test]
-        # self.y_outlier_test = self.y_test[self.outliers_indices_test]        
+        # print(len(self.discrepancies_indices_test))
+        # print(len(discrepancies_indices))
+        # print(discrepancies_indices)
+        # print(self.discrepancies_indices_test)
+        # discrepancies_indices = np.where(self.discrepancies_indices_test)[0]        
+        # self.X_discrepancies_test = self.X_test[self.discrepancies_indices_test]
+        # self.y_discrepancies_test = self.y_test[self.discrepancies_indices_test]        
 
         # maxima_indices = get_local_maxima_index(self.y_train)
         # threshhold_arr = self.y_train_pred[maxima_indices] - \
         #     (np.max(self.y_train[maxima_indices]) / 3)
-        # outlier_indices = np.abs(self.y_train[maxima_indices] \
+        # discrepancies_indices = np.abs(self.y_train[maxima_indices] \
         #     - self.y_train_pred[maxima_indices]) > threshhold_arr
-        # self.outliers_indices_train = maxima_indices[outlier_indices]
-        # self.X_outlier_train = self.X_train[self.outliers_indices_train]
-        # self.y_outlier_train = self.y_train[self.outliers_indices_train]
+        # self.discrepancies_indices_train = maxima_indices[discrepancies_indices]
+        # self.X_discrepancies_train = self.X_train[self.discrepancies_indices_train]
+        # self.y_discrepancies_train = self.y_train[self.discrepancies_indices_train]
 
 
-    def find_outlier(self):
+    # find discrepancies between prediction and actual data, 
+    
+    def find_discrepancies(self):
+        # get the mean value for the maxima and its nearby values
+        def get_mean_maxima(data, indices):
+            avg_data = np.zeros(len(indices))
+            for idx,indice in enumerate(indices):
+                if indice > 1 and indice < len(data)-2:
+                    avg_data[idx] = np.mean(data[indice-2:indice+3])
+                else:
+                    avg_data[idx] = data[indice]
+            return avg_data
+        
+        def f(x):
+            return 0.3*x +0.5
+        
+        # get local maxima indices
+        maxima_indices = np.array(get_local_maxima_index_for_each_day(
+            self.y_test_pred, hours=self.X_test[:,2]))
+        
+        actual_data = get_mean_maxima(self.y_test, maxima_indices)
+        pred_data = get_mean_maxima(self.y_test_pred, maxima_indices)
+        quotients = actual_data / pred_data
+        # use r_2 score to evaluate the residuals
         r_2 = self.model.score(self.X_test, self.y_test)
-        hours = self.X_test[:,2]
-        maxima_indices = np.array(get_local_maxima_index_for_each_day(self.y_test_pred, hours))
-        threshold = np.max(self.y_test[maxima_indices]) / 2
-        outlier_indices = np.array(np.abs(self.y_test_pred[maxima_indices] \
-            - self.y_test[maxima_indices]) > threshold)
-        self.outliers_indices_test = maxima_indices[outlier_indices]
+        r_2 = r_2 * f(quotients)
+        self.discrepancies_indices_test = maxima_indices[quotients < r_2]
 
-    # plot outliers and their surrouding data
-    def plot_outlier(self, xlim_left=0, xlim_right=None):
-        self.find_outlier()
-        # abort if self.outliers_indices_test is empty
-        if len(self.outliers_indices_test) == 0:
-            print('\nNo outliers found.\n')
+        # threshold = np.max(self.y_test[maxima_indices]) / 2        
+        # discrepancies_indices = np.array(np.abs(self.y_test_pred[maxima_indices] \
+        #     - self.y_test[maxima_indices]) > threshold)
+        # self.discrepancies_indices_test = maxima_indices[discrepancies_indices]
+
+
+    # plot discrepancies and their surrouding data
+    def plot_discrepancies(self, xlim_left=0, xlim_right=None):
+        self.find_discrepancies()
+        # abort if self.discrepancies_indices_test is empty
+        if len(self.discrepancies_indices_test) == 0:
+            print('\nNo discrepancies found.\n')
             return
-        # enrichen outliers_indices with the surrounding 11 data points
-        indices = np.array([[y for y in range(x-5,x+6)] for x in \
-            self.outliers_indices_test]).flatten()
 
+        indices = get_same_day_indices(self.discrepancies_indices_test, hours=self.X_test[:,2])
+        figure_discrepancies_idx = get_local_maxima_index_for_each_day(self.y_test_pred[indices],
+            hours=self.X_test[indices,2])
+        dates = [str(x)[:10] for x in self.timeepoch_test[self.discrepancies_indices_test]]
+        
         rng = range(len(self.y_test[indices]))
 
-        figure_outlier_idx = get_local_maxima_index(self.y_test_pred[indices], range_x=11)
-        dates = [str(x)[:10] for x in self.timeepoch_test[self.outliers_indices_test]]
-        
-        plt.xticks(figure_outlier_idx, dates, rotation=65)
+        print(len(figure_discrepancies_idx))
+        print(len(dates))
+
+        plt.rcParams.update({'font.size': 26})
+        plt.rcParams['figure.figsize'] = [20, 10] 
+        plt.xticks(figure_discrepancies_idx, dates, rotation=65)
         plt.plot(rng, self.y_test[indices], label='solar energy prodcution')
         plt.plot(rng, self.y_test_pred[indices], label='solar energy prediction')        
         [plt.axvline(x=x_loc, color='red', linestyle='--')
-            for x_loc in figure_outlier_idx]
-        plt.plot([], [], color='red', linestyle='--', label='outlier')
+            for x_loc in figure_discrepancies_idx]
+        plt.plot([], [], color='red', linestyle='--', label='discrepancies')
         plt.title(f'Solarsystem id: {self.solarsystem_id}, Location: {self.location}')
         plt.ylabel('Solar energy production')
         plt.legend(loc='lower right')
-        plt.xlim([xlim_left, xlim_right ])
-        plt.rcParams['figure.figsize'] = [20, 10] 
+        plt.xlim([xlim_left, xlim_right])
         plt.show()
         
 
 
-    def drum_off_outlier(self):
+    def drum_off_discrepancies(self):
         threshold_arr = self.y_test_pred - (np.max(self.y_test) / 2)
-        outliers_indices = self.y_test < threshold_arr
-        new_dataset = self.X_test[~outliers_indices]
-        new_labels = self.y_test[~outliers_indices]
+        discrepancies_indices = self.y_test < threshold_arr
+        new_dataset = self.X_test[~discrepancies_indices]
+        new_labels = self.y_test[~discrepancies_indices]
 
 
     def analyze_feature_importance(self):
@@ -620,19 +660,18 @@ class ScikitManager():
 
     def visualize_predictions(self, xlim_left=0, xlim_right=None):
 
-        date_indices = get_local_maxima_index(self.y_test, range_x=11)        
+        date_indices = get_local_maxima_index_for_each_day(self.y_test_pred, hours=self.X_test[:,2])        
         dates = [str(x)[:10] for x in self.timeepoch_test[date_indices]] # convert timeepoch to date
         fig_1 = plt.figure(figsize=(20,10))
         ax_1 = fig_1.add_axes([0.1,0.1,0.9,0.9])
         ax_1.set_xticks(date_indices)
-        ax_1.set_xticklabels(dates, rotation=65)
+        ax_1.set_xticklabels(dates, rotation=75)
         ax_1.plot(range(len(self.y_test)), self.y_test, label='Actual')
         ax_1.plot(range(len(self.y_test_pred)), self.y_test_pred, label='Predicted')        
         ax_1.legend(loc='upper left')
         plt.title(f'Solarsystem id: {self.solarsystem_id}, Location: {self.location}')
         plt.ylabel('Solar energy production')
         plt.rcParams.update({'font.size': 24}) 
-        # plt.rcParams['figure.figsize'] = [20, 10]
         plt.xlim([xlim_left, xlim_right])
         plt.show()
 

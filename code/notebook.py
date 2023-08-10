@@ -123,15 +123,15 @@ sci.evaluate()
 
 # %%
 # sci.visualize_residuals()
-sci.visualize_predictions(xlim_left=0, xlim_right=400)
+sci.visualize_predictions(xlim_left=0, xlim_right=250)
 # sci.visualize_predictions()
-sci.plot_outlier()
+sci.plot_discrepancies()
 
 # sci.visualize_tree()
 # sci.visualize_3d_plot()
 #%%
 
-sci.features
+# sci.features
 # sci.model.feature_importances_
 # sci.model.n_features_in_
 # sci.model.n_outputs_
@@ -212,40 +212,4 @@ print(sci.outliers_indices_test)
 # %%
 
 sci.visualize_tree()
-# %%
-# %%
-import numpy as np
-
-def get_local_maxima_index_for_each_day(data: np.array, hours: np.array):
-    local_maxima, i = [], 1
-    while i < len(hours):
-        start = i
-        print(i)
-        while i < len(hours) and hours[i] > hours[i-1]:
-            i += 1
-        end = i
-        print(start, end)
-        local_maxima.append(np.argmax(data[start:end]) + start)
-        i += 1
-    return local_maxima
-
-
-def get_local_maxima_index_for_each_day(data: np.array, hours: np.array):
-    local_maxima, i = [], 1
-    start, end = 0, 0
-    for i in range(1,len(hours)):
-        if hours[i] > hours[i-1]:
-            end += 1
-        else:
-            local_maxima.append(np.argmax(data[start:end]) + start)
-            end = i + 1
-            start = i
-        i += 1
-    local_maxima.append(np.argmax(data[start:end]) + start)
-    return local_maxima
-
-hours = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
-data = [1, 23, 1, 1, 1, 2, 3, 5, 10, 12, 1, 1]
-
-get_local_maxima_index_for_each_day(data, hours)
 # %%
