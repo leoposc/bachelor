@@ -1,12 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.13)  9 AUG 2023 11:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.9)  11 AUG 2023 01:28
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **Bachelorarbeit.tex
 (./Bachelorarbeit.tex
 LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-02-22>
+L3 programming layer <2023-05-05>
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/size12.clo
@@ -33,7 +32,7 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
 (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2023/02/13 3.86 The Babel package
+Package: babel 2023/04/18 3.88 The Babel package
 \babel@savecnt=\count193
 \U@D=\dimen141
 \l@unhyphenated=\language87
@@ -100,7 +99,7 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@dimlist=\toks20
 )
 (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+Package: hyperref 2023-04-22 v7.00x Hypertext links for LaTeX
 
 (/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
@@ -148,42 +147,43 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count198
 )
+(/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count199
+)
 \@linkdim=\dimen155
-\Hy@linkcounter=\count199
-\Hy@pagecounter=\count266
+\Hy@linkcounter=\count266
+\Hy@pagecounter=\count267
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2023-04-22 v7.00x Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
 (/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-(/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty
-Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)
-\Hy@SavedSpaceFactor=\count267
+\Hy@SavedSpaceFactor=\count268
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2023-04-22 v7.00x Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4177.
-Package hyperref Info: Link nesting OFF on input line 4182.
-Package hyperref Info: Hyper index ON on input line 4185.
-Package hyperref Info: Plain pages OFF on input line 4192.
-Package hyperref Info: Backreferencing OFF on input line 4197.
+Package hyperref Info: Hyper figures OFF on input line 4182.
+Package hyperref Info: Link nesting OFF on input line 4187.
+Package hyperref Info: Hyper index ON on input line 4190.
+Package hyperref Info: Plain pages OFF on input line 4197.
+Package hyperref Info: Backreferencing OFF on input line 4202.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4425.
-\c@Hy@tempcnt=\count268
+Package hyperref Info: Bookmarks ON on input line 4449.
+\c@Hy@tempcnt=\count269
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4763.
+LaTeX Info: Redefining \url on input line 4787.
 \XeTeXLinkMargin=\dimen156
 
 (/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty
@@ -193,37 +193,37 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count269
+\Fld@menulength=\count270
 \Field@Width=\dimen157
 \Fld@charsize=\dimen158
-Package hyperref Info: Hyper figures OFF on input line 6042.
-Package hyperref Info: Link nesting OFF on input line 6047.
-Package hyperref Info: Hyper index ON on input line 6050.
-Package hyperref Info: backreferencing OFF on input line 6057.
-Package hyperref Info: Link coloring OFF on input line 6062.
-Package hyperref Info: Link coloring with OCG OFF on input line 6067.
-Package hyperref Info: PDF/A mode OFF on input line 6072.
+Package hyperref Info: Hyper figures OFF on input line 6066.
+Package hyperref Info: Link nesting OFF on input line 6071.
+Package hyperref Info: Hyper index ON on input line 6074.
+Package hyperref Info: backreferencing OFF on input line 6081.
+Package hyperref Info: Link coloring OFF on input line 6086.
+Package hyperref Info: Link coloring with OCG OFF on input line 6091.
+Package hyperref Info: PDF/A mode OFF on input line 6096.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count270
-\c@Item=\count271
-\c@Hfootnote=\count272
+\Hy@abspage=\count271
+\c@Item=\count272
+\c@Hfootnote=\count273
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
+File: hpdftex.def 2023-04-22 v7.00x Hyperref driver for pdfTeX
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count273
-\c@bookmark@seq@number=\count274
+\Fld@listcount=\count274
+\c@bookmark@seq@number=\count275
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
@@ -264,8 +264,8 @@ Package tocloft Info: The document has section divisions on input line 51.
 \cftbeforefigskip=\skip76
 \cftfigindent=\skip77
 \cftfignumwidth=\skip78
-\c@lofdepth=\count275
-\c@lotdepth=\count276
+\c@lofdepth=\count276
+\c@lotdepth=\count277
 \cftbeforelottitleskip=\skip79
 \cftafterlottitleskip=\skip80
 \cftbeforetabskip=\skip81
@@ -274,7 +274,7 @@ Package tocloft Info: The document has section divisions on input line 51.
 )
 (/usr/local/texlive/2023/texmf-dist/tex/latex/apacite/apacite.sty
 Package: apacite 2013/07/21 v6.03 APA citation
-\c@BibCnt=\count277
+\c@BibCnt=\count278
 \bibleftmargin=\skip84
 \bibindent=\skip85
 \bibparsep=\skip86
@@ -319,7 +319,7 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 )
 (/usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count278
+\c@float@type=\count279
 \float@exts=\toks21
 \float@box=\box52
 \@float@everytoks=\toks22
@@ -333,15 +333,15 @@ Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count279
-\calc@Bcount=\count280
+\calc@Acount=\count280
+\calc@Bcount=\count281
 \calc@Adimen=\dimen161
 \calc@Bdimen=\dimen162
 \calc@Askip=\skip89
 \calc@Bskip=\skip90
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count281
+\calc@Ccount=\count282
 \calc@Cskip=\skip91
 )
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
@@ -349,11 +349,7 @@ Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
 (/usr/local/texlive/2023/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
 Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
-))
-(/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count282
-))
+)))
 (/usr/local/texlive/2023/texmf-dist/tex/latex/acronym/acronym.sty
 Package: acronym 2020/04/17 v1.47 Support for acronyms (Tobias Oetiker)
 
@@ -425,7 +421,7 @@ LaTeX Font Info:    Trying to load font information for T1+phv on input line 51
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count295
 \l__pdf_internal_box=\box56
 )
@@ -688,69 +684,56 @@ Overfull \hbox (23.20865pt too wide) in paragraph at lines 102--171
 [8] [9 <./assets//Strombedarf_Erzeugung_2022.pdf> <./assets//Strombedarf_Erzeug
 ung_2022.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
-e page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_2022
+.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_2022.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
-e page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_2022
+.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_2022.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
-e page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_2022
+.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_2022.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
-e page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_2022
+.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_2022.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
-e page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_2022
+.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_2022.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
-e page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_2022
+.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_2022.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
-e page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_2022
+.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_2022.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
-e page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_2022
+.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_2022.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
-e page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_2022
+.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_2022.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
-e page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_2022
+.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_2022.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
-e page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_2022
+.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_2022.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
-e page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_2022
+.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_2022.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_2022.pdf): PDF inclusion: multiple pdfs with page group included in a singl
-e page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_2022
+.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >] [10] (./assets/Strombedarf_Erzeugung_Woche.pdf_tex
 <assets//Strombedarf_Erzeugung_Woche.pdf, id=419, page=1, 752.8125pt x 376.4062
 5pt>
@@ -860,69 +843,56 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
 [11 <./assets//Strombedarf_Erzeugung_Woche.pdf> <./assets//Strombedarf_Erzeugun
 g_Woche.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
-le page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_Woch
+e.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_Woche.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
-le page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_Woch
+e.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_Woche.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
-le page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_Woch
+e.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_Woche.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
-le page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_Woch
+e.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_Woche.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
-le page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_Woch
+e.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_Woche.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
-le page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_Woch
+e.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_Woche.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
-le page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_Woch
+e.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_Woche.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
-le page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_Woch
+e.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_Woche.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
-le page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_Woch
+e.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_Woche.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
-le page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_Woch
+e.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_Woche.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
-le page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_Woch
+e.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_Woche.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
-le page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_Woch
+e.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./assets//Strombedarf_Erzeugung_Woche.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//Strombedarf_Erzeug
-ung_Woche.pdf): PDF inclusion: multiple pdfs with page group included in a sing
-le page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//Strombedarf_Erzeugung_Woch
+e.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
 Overfull \hbox (0.72495pt too wide) in paragraph at lines 230--231
 []\T1/phv/m/n/12 In Be-zug auf die Rah-men-pa-ra-me-ter der So-lar-an-la-ge ist
@@ -1100,8 +1070,8 @@ Underfull \hbox (badness 2698) in paragraph at lines 498--498
 
 [34] [35 <./assets//histogram_cc_1220.pdf> <./assets//histogram_cc_1231.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//histogram_cc_1231.
-pdf): PDF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//histogram_cc_1231.pdf): PD
+F inclusion: multiple pdfs with page group included in a single page
 >] (./assets/geogebra_cloudcover.pdf_tex
 <assets//geogebra_cloudcover.pdf, id=701, page=1, 1145.02782pt x 682.80093pt>
 File: assets//geogebra_cloudcover.pdf Graphic file (type pdf)
@@ -1117,8 +1087,8 @@ line 126.
 (pdftex.def)             Requested size: 425.0pt x 253.43462pt.
 ) [36 <./assets//geogebra_cloudcover.pdf> <./assets//geogebra_cloudcover.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./assets//geogebra_cloudcove
-r.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: /opt/texbin/pdflatex (file ./assets//geogebra_cloudcover.pdf): 
+PDF inclusion: multiple pdfs with page group included in a single page
 >]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 537.
@@ -1326,22 +1296,66 @@ t line 56.
 ) [59]
 Package acronym Info: Label `acro:api' newly defined as it shall be overridden
 although it is yet undefined on input line 884.
- [60 <./assets//predictions_linthicum.pdf>] (./assets/predictions_1244.pdf_tex
+
+Overfull \hbox (10.01625pt too wide) in paragraph at lines 884--885
+\T1/phv/m/n/12 Da-bei stel-len die ku-mu-lier-ten Ab-wei-chun-gen die Aus-sa-ge
+-kraft des Mo-dells schlech-
+ []
+
+[60 <./assets//predictions_linthicum.pdf>] (./assets/predictions_1244.pdf_tex
 <assets//predictions_1244.pdf, id=987, page=1, 1383.1675pt x 776.9025pt>
 File: assets//predictions_1244.pdf Graphic file (type pdf)
 <use assets//predictions_1244.pdf, page 1>
 Package pdftex.def Info: assets//predictions_1244.pdf , page1 used on input lin
 e 56.
 (pdftex.def)             Requested size: 400.0pt x 224.66765pt.
-) [61 <./assets//predictions_1244.pdf>] [62] (./assets/predictions_1244.pdf_tex
+)
+[61 <./assets//predictions_1244.pdf>] [62] (./assets/predictions_1244.pdf_tex
 File: assets//predictions_1244.pdf Graphic file (type pdf)
 <use assets//predictions_1244.pdf, page 1>
 Package pdftex.def Info: assets//predictions_1244.pdf , page1 used on input lin
 e 56.
 (pdftex.def)             Requested size: 400.0pt x 224.66765pt.
-) [63]
+)
+[63] [64]
+Overfull \hbox (1.16196pt too wide) in paragraph at lines 939--940
+[]\T1/phv/m/n/12 Durch die li-nea-re Glei-chung $\OML/cmm/m/it/12 f\OT1/cmr/m/n
+/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )$ \T1/phv/m/n/12 in-ner-halb der lo-ka-
+len Funk-ti-on wird die Stren-
+ []
+
+
+Overfull \hbox (0.2621pt too wide) in paragraph at lines 944--945
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (19.97226pt too wide) in paragraph at lines 949--950
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (33.11237pt too wide) in paragraph at lines 958--959
+[][][][][][][][][][][][][][] 
+ []
+
+[65]
+Overfull \hbox (6.83215pt too wide) in paragraph at lines 961--962
+[][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (26.54231pt too wide) in paragraph at lines 962--963
+[][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (52.82253pt too wide) in paragraph at lines 967--968
+[][][][][][][][][][][][][][][][][][] 
+ []
+
 (./assets/predictions_forecast_1220_v2.pdf_tex
-<assets//predictions_forecast_1220_v2.pdf, id=1013, page=1, 1411.27263pt x 836.
+<assets//predictions_forecast_1220_v2.pdf, id=1043, page=1, 1411.27263pt x 836.
 12381pt>
 File: assets//predictions_forecast_1220_v2.pdf Graphic file (type pdf)
 <use assets//predictions_forecast_1220_v2.pdf, page 1>
@@ -1349,44 +1363,29 @@ Package pdftex.def Info: assets//predictions_forecast_1220_v2.pdf , page1 used
 on input line 56.
 (pdftex.def)             Requested size: 400.0pt x 236.98366pt.
 )
-Overfull \hbox (13.00053pt too wide) in paragraph at lines 941--942
+Overfull \hbox (13.00053pt too wide) in paragraph at lines 981--982
 []\T1/phv/m/n/12 Unter [][]Un-ter-un-ter-ab-schnitt 6.2.4[] \T1/phv/m/sl/12 Sch
 luss-fol-ge-run-gen für das Trai-ning des Modells[][][]
  []
 
-[64 <./assets//predictions_forecast_1220_v2.pdf>] [65]
-Overfull \hbox (11.97235pt too wide) in paragraph at lines 962--963
-\T1/phv/m/n/12 lich lässt sich das Wet-ter über die Schnitt-stel-le der Web-si-
-te \T1/phv/m/sl/12 www.visualcrossing.com
- []
-
-[66]
-Overfull \hbox (4.48138pt too wide) in paragraph at lines 968--969
+[66 <./assets//predictions_forecast_1220_v2.pdf>] [67] [68]
+Overfull \hbox (4.48138pt too wide) in paragraph at lines 1008--1009
 []\T1/phv/m/n/12 Um auch lang-fris-tig tref-fen-de Vor-her-sa-gen zu ma-chen, m
 uss das Mo-dell selbst-
  []
 
-[67] [68] [69] (./Bachelorarbeit.aux)
+[69] [70] [71] (./Bachelorarbeit.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `Bachelorarbeit.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Bachelorarbeit.out':
-(rerunfilecheck)             Before: 4417C2617D38A950E71D9A8789974121;10856
-(rerunfilecheck)             After:  16B756AAFB51CB7ADCCBF9DFB464C0B5;10836.
+Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
+(rerunfilecheck)             Checksum: 16B756AAFB51CB7ADCCBF9DFB464C0B5;10836.
  ) 
 Here is how much of TeX's memory you used:
- 16299 strings out of 476025
- 269218 string characters out of 5790017
- 1885388 words of memory out of 5000000
- 36231 multiletter control sequences out of 15000+600000
+ 16338 strings out of 476047
+ 269760 string characters out of 5791252
+ 1886248 words of memory out of 5000000
+ 36222 multiletter control sequences out of 15000+600000
  564399 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,17n,76p,2281b,2139s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1404,10 +1403,10 @@ live/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/20
 23/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2023/tex
 mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2023/texmf-dist
 /fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Bachelorarbeit.pdf (70 pages, 4832070 bytes).
+Output written on Bachelorarbeit.pdf (72 pages, 4837653 bytes).
 PDF statistics:
- 1166 PDF objects out of 1200 (max. 8388607)
- 949 compressed objects within 10 object streams
- 212 named destinations out of 1000 (max. 500000)
+ 1209 PDF objects out of 1440 (max. 8388607)
+ 990 compressed objects within 10 object streams
+ 239 named destinations out of 1000 (max. 500000)
  697 words of extra memory for PDF output out of 10000 (max. 10000000)
 

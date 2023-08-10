@@ -903,7 +903,7 @@ Zudem wird die Evaluierung mehrmals durchgeführt, wodurch mehrere Vergleichswer
 
 \subsection{Ausreißer in der Prognose}
 
-Im \fullref{subsubsec:outlier} haben wir bereits über die Problematik von Ausreißern in den Datensätzen gesprochen und dass diese idealerweise vor dem Training des Lernalgorithmus aus dem Trainingsdatensatz entfernt werden sollten. Wir interessieren uns schlichtweg nicht für diese und müssen sie nicht weiter beachten. Anders sieht es aus, wenn zwischen der Prognose und den tatsächlichen Werten Unstimmigkeiten auftreten. 
+Im \fullref{subsubsec:outlier} wurde bereits die Problematik von Ausreißern in den Datensätzen thematisiert und dass diese idealerweise vor dem Training des Lernalgorithmus aus dem Trainingsdatensatz entfernt werden sollten. Für das Training sind sie nicht von Interesse. Unstimmigkeiten zwischen der Prognose und den tatsächlichen Werten verdienen allerdings separater Analyse.
 
 Insbesondere wenn diese Abweichungen an mehreren Tagen hintereinander auftreten, werden aus den Ausreißern viel eher Auffälligkeiten. Auffälligkeiten, die auf einen Defekt hindeuten und dementsprechend gesondert Aufmerksamkeit fordern. Ein nicht funktionierender Wechselrichter reicht aus, um die Solarstromproduktion gänzlich zum Erliegen zu bringen. In diesem Fall verlieren die Betreiber der \ac{pv}-Anlage mit jeder vergangenen Stunde Geld. Umso schneller die Probleme erkannt werden, desto höher ist die Wirtschaftlichkeit der \ac{pv}-Anlage.
 
@@ -915,14 +915,56 @@ Insbesondere wenn diese Abweichungen an mehreren Tagen hintereinander auftreten,
 \label{fig:predictions_outlier_xxxx}
 \end{figure}
 
-Zweifellos gibt es pragmatischere Lösungen, um einen Totalausfall einer \ac{pv}-Anlage zu erkennen, die mit weniger Aufwand verbunden sind. Allerdings können genauso einzelne Solarmodule einen Defekt aufweisen. 
+Zweifellos gibt es pragmatischere Lösungen, um einen Totalausfall einer \ac{pv}-Anlage zu erkennen, die mit weniger Aufwand verbunden sind. Allerdings können genauso einzelne Solarmodule einen Defekt aufweisen, wodurch die Leistung der \ac{pv}-Anlage lediglich gemindert wird. 
 
-In einem Solarsystem sind häufig eine Gruppe von Solarmodulen, einem sogenannten Strang, in einer Reihenschaltung miteinander verknüpft. Die Verkettung der Module hilft dabei, den produzierten Strom effizient zum Wechselrichter zu leiten. Allerdings wird die Gesamtleistung des Strangs durch das schwächste Glied in der Kette bestimmt.
+Ein einziges defektes Solarmodul reicht jedoch aus, um die erheblichen Auswirkungen auf die Gesamtleistung der Anlage zu bemerken. Schließlich sind in einem Solarsystem häufig eine Gruppe von Solarmodulen, einem sogenannten Strang, in einer Reihenschaltung miteinander verknüpft. Die Verkettung der Module hilft dabei, den produzierten Strom effizient zum Wechselrichter zu leiten. Allerdings wird die Gesamtleistung des Strangs durch das schwächste Glied in der Kette bestimmt. Das defekte Solarmodul definiert den in diesem Strang maximal möglichen Stromfluss.
+
+Anhand des Programmcodes in  \autoref{lst:discrepancies_detection} soll die Funktion zur Erkennung von Unstimmigkeiten beziehungsweise Defekten erläutert werden. Um Unstimmigkeiten zu erkennen, werden alle Tage separat betrachtet. An den jeweiligen Tagen wird ein Augenmerk auf den maximal zu erwartenden Stromertrag und dessen benachbarte Werte geworfen. Die lokale Funktion \textit{get\_mean\_maxima(data, indices)} liefert uns den Durchschnitt des Tagesmaximum und den Messwerten zwei Stunden davor und danach. Analog dazu werden die korrespondierenden tatsächlichen Werte gemittelt.
+
+Von besonderem Interesse sind jene Messwerte, bei denen der tatsächlich erzeugte Solarstrom signifikant unter dem jeweiligen Prognosewert liegt. Mittels der vektorisierten Division der tatsächlichen Werte durch die entsprechenden Prognosewerte werden größere Abweichungen erkannt. Wichtig ist, dass die tatsächlichen Daten dabei den Dividend und die Prognosedaten den Divisor bilden. Relevant sind die Quotienten, die sich zwischen 0 und 1 befinden. Schließlich besagen sie, dass an diesem Tag weniger Solarstrom als erwartet produziert wurde.
+
+Ein Nachteil der Division ist, dass die absolute Abweichung an den jeweiligen Tagen abhängig von der zu erwartenden Stromproduktion bewertet wird. Dass heißt, wird an einem Tag auf Grund eines bewölkten Himmels eine geringe Stromproduktion prognostiziert, so wird die absolute Abweichung schneller als auffällig bewertet. Im Gegensatz dazu würde der gleiche absolute Fehler an einem sonnigen Tag - auf Grund des geringeren relativen Fehlers - für den Algorithmus nicht ungewöhnlich erscheinen.
+
+Der zuvor beschriebene Missstand, dass kleine absolute Fehler an einem Tag mit einem niedrigen Erwartungswert schnell als auffällig bewertet werden, soll durch die lineare \autoref{eqn:linear} behoben werden.
+
+\begin{equation}
+\label{eqn:linear}
+f(x)=0.3*x+0.5
+\end{equation}
+
+Relevant sind die $y-$Werte für Eingabewerte zwischen 0 und 1. Für 0 gibt die Funktion $f(x)$ 0.5 und für 1 den Wert 0.8 zurück. Demnach dürfen die Quotienten, je nach gemitteltem Tageswert, zwischen 20 und 50 Prozent unter dem Determinierungskoeffizieten des Modells liegen.
 
 
 
-\begin{lstlisting}[basicstyle=\small,label={lst:outlier_detection}, caption={Funktion zur Erkennung von Ausreißern}]
-def plot_outlier(self):        
+Durch die lineare Gleichung $f(x)$ innerhalb der lokalen Funktion wird die Strenge des Algorithmus angepasst. 
+
+
+\begin{lstlisting}[basicstyle=\small,label={lst:discrepancies_detection}, caption={Funktion zur Erkennung von Ausreißern}]
+def find_discrepancies(self):
+        # get the mean value for the maxima and its nearby values
+        def get_mean_maxima(data, indices):
+            avg_data = np.zeros(len(indices))
+            for idx,indice in enumerate(indices):
+                if indice > 1 and indice < len(data)-2:
+                    avg_data[idx] = np.mean(data[indice-2:indice+3])
+                else:
+                    avg_data[idx] = data[indice]
+            return avg_data
+        
+        def f(x):
+            return 0.3*x +0.5
+        
+        # get local maxima indices
+        maxima_indices = np.array(get_local_maxima_index_for_each_day(
+            self.y_test_pred, hours=self.X_test[:,2]))
+        
+        actual_data = get_mean_maxima(self.y_test, maxima_indices)
+        pred_data = get_mean_maxima(self.y_test_pred, maxima_indices)
+        quotients = actual_data / pred_data
+        # use r_2 score to evaluate the residuals
+        r_2 = self.model.score(self.X_test, self.y_test)
+        r_2 = r_2 * f(pred_data / np.max(pred_data))
+        self.discrepancies_indices_test = maxima_indices[quotients < r_2]        
 \end{lstlisting}
 
 \subsection{Prognose von bisher unbekannten Werten}

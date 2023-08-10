@@ -544,8 +544,7 @@ class ScikitManager():
         # self.y_discrepancies_train = self.y_train[self.discrepancies_indices_train]
 
 
-    # find discrepancies between prediction and actual data, 
-    
+    # find discrepancies between prediction and actual data     
     def find_discrepancies(self):
         # get the mean value for the maxima and its nearby values
         def get_mean_maxima(data, indices):
@@ -569,7 +568,7 @@ class ScikitManager():
         quotients = actual_data / pred_data
         # use r_2 score to evaluate the residuals
         r_2 = self.model.score(self.X_test, self.y_test)
-        r_2 = r_2 * f(quotients)
+        r_2 = r_2 * f(pred_data / np.max(pred_data))
         self.discrepancies_indices_test = maxima_indices[quotients < r_2]
 
         # threshold = np.max(self.y_test[maxima_indices]) / 2        
