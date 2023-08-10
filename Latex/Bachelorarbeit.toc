@@ -41,15 +41,15 @@
 \contentsline {paragraph}{Limitierte Wertemenge für mögliche Prognosen.}{50}{paragraph*.21}%
 \contentsline {section}{\numberline {7}Optimierung der Hyperparameter}{51}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Tiefe des Entscheidungsbaums}{51}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Weitere Hyperparameter}{53}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.2}Weitere Hyperparameter}{52}{subsection.7.2}%
 \contentsline {subsubsection}{\numberline {7.2.1}Mindestanzahl an Proben je Blatt}{53}{subsubsection.7.2.1}%
 \contentsline {subsubsection}{\numberline {7.2.2}Beschränkung der Merkmale}{53}{subsubsection.7.2.2}%
 \contentsline {subsubsection}{\numberline {7.2.3}Maximalanzahl an Blättern}{54}{subsubsection.7.2.3}%
-\contentsline {subsection}{\numberline {7.3}Hyperparameter auswählen}{55}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Hyperparameter der verwendeten Solaranlagen}{56}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.3}Hyperparameter auswählen}{54}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Hyperparameter der verwendeten Solaranlagen}{55}{subsection.7.4}%
 \contentsline {section}{\numberline {8}Evaluierung des Lernalgorithmus}{58}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Residuen}{58}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Vergleich Ist-Wert und Soll-Wert}{59}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.2}Vergleich Ist- und Soll-Wert}{59}{subsection.8.2}%
 \contentsline {subsection}{\numberline {8.3}Evaluierung einzelner Merkmale}{60}{subsection.8.3}%
 \contentsline {subsubsection}{\numberline {8.3.1}Sonneneinstrahlung}{60}{subsubsection.8.3.1}%
 \contentsline {subsubsection}{\numberline {8.3.2}Bewölkungsgrad}{62}{subsubsection.8.3.2}%
