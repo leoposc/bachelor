@@ -105,7 +105,7 @@ sci.filter_by('solarradiation', lower_limit=20)
 # sci.filter_by('temperature', lower_limit=25, upper_limit=30)
 
 # sci.split_data(0.1)
-sci.split_data_by_days(0.5)
+sci.split_data_by_days(0.4)
 # sci.transform_hours()
 # print(type(sci.timeepoch_test[0]))
 

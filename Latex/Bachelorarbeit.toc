@@ -27,7 +27,7 @@
 \contentsline {subsubsection}{\numberline {5.2.2}Nicht-lineare Beziehungen}{32}{subsubsection.5.2.2}%
 \contentsline {subsection}{\numberline {5.3}Streudiagramm}{32}{subsection.5.3}%
 \contentsline {subsubsection}{\numberline {5.3.1}Qualität der Daten}{34}{subsubsection.5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.2}Betrachtung der Daten im Detail}{38}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2}Betrachtung der Daten im Detail}{39}{subsubsection.5.3.2}%
 \contentsline {section}{\numberline {6}Datenvorverarbeitung und Lernalgorithmus}{43}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Datenvorverarbeitung}{43}{subsection.6.1}%
 \contentsline {subsubsection}{\numberline {6.1.1}Korrelationen zwischen den Merkmalen abhängig von den Gegebenheiten der Photovoltaikanlage}{43}{subsubsection.6.1.1}%
@@ -37,8 +37,8 @@
 \contentsline {subsubsection}{\numberline {6.2.2}Lineare Beziehungen}{45}{subsubsection.6.2.2}%
 \contentsline {subsubsection}{\numberline {6.2.3}Aufbau eines Entscheidungsbaums}{47}{subsubsection.6.2.3}%
 \contentsline {subsubsection}{\numberline {6.2.4}Schlussfolgerungen für das Training des Modells}{50}{subsubsection.6.2.4}%
-\contentsline {paragraph}{Schwierigkeiten bei unbekannten Werten.}{50}{paragraph*.20}%
-\contentsline {paragraph}{Limitierte Wertemenge für mögliche Prognosen.}{50}{paragraph*.21}%
+\contentsline {paragraph}{Schwierigkeiten bei unbekannten Werten.}{50}{paragraph*.21}%
+\contentsline {paragraph}{Limitierte Wertemenge für mögliche Prognosen.}{50}{paragraph*.22}%
 \contentsline {section}{\numberline {7}Optimierung der Hyperparameter}{51}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Tiefe des Entscheidungsbaums}{51}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Weitere Hyperparameter}{52}{subsection.7.2}%
@@ -53,8 +53,8 @@
 \contentsline {subsection}{\numberline {8.3}Evaluierung einzelner Merkmale}{60}{subsection.8.3}%
 \contentsline {subsubsection}{\numberline {8.3.1}Sonneneinstrahlung}{60}{subsubsection.8.3.1}%
 \contentsline {subsubsection}{\numberline {8.3.2}Bewölkungsgrad}{62}{subsubsection.8.3.2}%
-\contentsline {subsection}{\numberline {8.4}Ausreißer in der Prognose}{63}{subsection.8.4}%
-\contentsline {subsection}{\numberline {8.5}Prognose von bisher unbekannten Werten}{66}{subsection.8.5}%
-\contentsline {section}{\numberline {9}Fazit und Ausblick}{68}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Fazit}{68}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Ausblick}{70}{subsection.9.2}%
+\contentsline {subsection}{\numberline {8.4}Auffällige Abweichungen der Prognose}{63}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Prognose von bisher unbekannten Werten}{68}{subsection.8.5}%
+\contentsline {section}{\numberline {9}Fazit und Ausblick}{70}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Fazit}{70}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Ausblick}{72}{subsection.9.2}%

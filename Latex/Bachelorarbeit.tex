@@ -64,10 +64,10 @@
         \Large{Vorgelegt von}
         
         \vspace{0.5cm}
-        \Large{Leopold Schmid}
+        \Large{Leopold Julius Schmid}
         
         \vspace{1.5cm}
-        \Large{Matrikelnummer:79776}
+        \Large{Matrikelnummer: 79776}
         
         \vfill
         
@@ -97,6 +97,7 @@
 \acro{api}[API]{Application Programming Interface}
 \acro{cart}[CART]{Classification and Regression Trees}
 \acro{eeg}[EEG]{Erneuerbare-Energien-Gesetz}
+\acro{kwp}[kWp]{Kilowattpeak}
 \acro{nrel}[NREL]{National Renewable Energy Laboratory}
 \acro{pv}[PV]{Photovoltaik}
 \end{acronym}
@@ -332,7 +333,7 @@ Wind kann als eine Art natürlicher Ventilator dienen. Die entstehende Luftbeweg
 
 \subsubsection{Sonneneinstrahlung}
 
-Die Sonne emittiert Energie in sämtliche Richtungen über den gesamten elektromagnetischen Strahlungsbereich. Ungefähr 20 Kilometer über der Erdoberfläche treffen im Mittel (???) $S = 1367 W/M^2$ auf die Atmosphäre. Messungen im Weltraum haben gezeigt, dass dieser Wert nur geringfügig um vage 0,1\% über die letzten Jahrzehnte geschwankt ist, weswegen er als die Solarkonstante betitelt wird. 
+Die Sonne emittiert Energie in sämtliche Richtungen über den gesamten elektromagnetischen Strahlungsbereich. Ungefähr 20 Kilometer über der Erdoberfläche treffen im Mittel Sonnenstrahlung mit einer Energieflussdichte von $1367 W/M^2$ auf die Atmosphäre. Messungen im Weltraum haben gezeigt, dass dieser Wert nur geringfügig um vage 0,1\% über die letzten Jahrzehnte geschwankt ist, weswegen er als die \textit{Solarkonstante} betitelt wird. 
 
 \begin{figure}
 \centering
@@ -354,7 +355,9 @@ Die auf der Erde gemessene Globalstrahlung setzt sich aus der Diffusstrahlung un
 
 \section{Eigene Fragestellung und methodisches Vorgehen}
 
-Um die zukünftigen Herausforderungen der Energieversorgung zu bewältigen, befasst sich diese Arbeit mit \ac{pv}-Anlagen als fluktuierende Stromerzeuger. Diese sollen möglichst optimal in das bestehende Stromnetz integriert werden. Die zentrale Fragestellung lautet hierbei, wie man präzise den erzeugten Solarstrom prognostizieren kann. Um dieses Ziel zu erreichen, sollen zuerst die entscheidenden Parameter ermittelt werden, die die Stromerzeugung einer Solaranlage beeinflussen. Allerdings liegt der Fokus ebenfalls darauf, dass die Berechnung der Prognose für beliebige \ac{pv}-Anlagen anwendbar ist, indem möglichst wenige spezifische Informationen über die Anlage in die Berechnung einfließen. Selbstverständlich spielen verschiedenste Eigenschaften der Solaranlage eine entscheidende Rolle, jedoch werden diese im Datenmodell nicht berücksichtigt. (???) Zunehmende Rechenkapazitäten und kostengünstigere Speichermöglichkeiten ermöglichen es, dass für jede einzelne Solaranlage ein eigenes Datenmodell angelegt wird. Somit können die Gegebenheiten der \ac{pv}-Anlage, wie Quantität und Qualität der Solarpanele, vernachlässigt werden. Durch die Trainingsdaten ist das Datenmodell selbstständig in der Lage, die Leistungsfähigkeit der Solaranlage zu beurteilen. Ein weiterer Vorteil ist, dass hierdurch schwer zu beschaffende Datensätze über die spezifischen Informationen der jeweiligen Solaranlagen nicht weiter benötigt werden. Stattdessen wird das Modell fast ausschließlich von Wetterdaten trainiert, welche von verschiedensten Institutionen flächenmäßig und umfangreich aufgezeichnet werden. Die für das Trainieren des Lernalgorithmus benötigten Wetterdaten werden von der Website \textit{https://www.visualcrossing.com} extrahiert. Die Website bietet einen kostenfreien Zugang zu detaillierten historischen Wetterdaten der letzten 50 Jahre.
+Um die zukünftigen Herausforderungen der Energieversorgung zu bewältigen, befasst sich diese Arbeit mit \ac{pv}-Anlagen als fluktuierende Stromerzeuger. Diese sollen möglichst optimal in das bestehende Stromnetz integriert werden. Die zentrale Fragestellung lautet hierbei, wie man präzise den erzeugten Solarstrom prognostizieren kann. Um dieses Ziel zu erreichen, sollen zuerst die entscheidenden Parameter ermittelt werden, die die Stromerzeugung einer Solaranlage beeinflussen. Allerdings liegt der Fokus ebenfalls darauf, dass die Berechnung der Prognose für beliebige \ac{pv}-Anlagen anwendbar ist, indem möglichst wenige spezifische Informationen über die Anlage in die Berechnung einfließen. Selbstverständlich spielen verschiedenste Eigenschaften der Solaranlage eine entscheidende Rolle, jedoch werden diese im Datenmodell nicht berücksichtigt. Schließlich sind diese spezifischen Informationen über die jeweiligen Solaranlagen in der Regel aufwendig zu beschaffen oder nicht in der notwendigen Qualität dokumentiert.
+
+Zudem ermöglichen zunehmende Rechenkapazitäten und kostengünstigere Speichermöglichkeiten, dass für jede einzelne Solaranlage ein eigenes Datenmodell angelegt wird. Somit können die Gegebenheiten der \ac{pv}-Anlage, wie Quantität und Qualität der Solarpanele, vernachlässigt werden. Durch die Trainingsdaten ist das Datenmodell selbstständig in der Lage, die Leistungsfähigkeit der Solaranlage zu beurteilen. Das Modell wird fast ausschließlich von Wetterdaten trainiert, welche von verschiedenen Institutionen flächenmäßig und umfangreich aufgezeichnet werden. Die für das Trainieren des Lernalgorithmus benötigten Wetterdaten werden von der Website \textit{https://www.visualcrossing.com} extrahiert. Die Website bietet einen kostenfreien Zugang zu detaillierten historischen Wetterdaten der letzten 50 Jahre.
 
 Das amerikanische nationale Labor für erneuerbare Energien (zu engl. \ac{nrel}), welches im Besitz des amerikanischen Energieministeriums ist, stellt eine groß angelegte Zeitreihen-Datenbank zu Verfügung, die System-Metadaten und Leistungswerte von sowohl experimentellen als auch öffentlichen, kommerziell genutzten Solaranlagen enthält.  Der Datensatz besteht aus einer Sammlung von Dateien, die jedem System zugeordnet sind. Die Metadaten umfassen Informationen über die Einzelheiten der Systemhardware und über den geografischen Standort. Diese Arbeit macht von diesen Datensätzen Gebrauch, um die Realisierbarkeit der eigenen Thesis zu überprüfen. 
 
@@ -370,9 +373,9 @@ Um dieses Ziel zu erreichen, werden zuerst die Wetter- und Solardaten analysiert
 
 \section{Untersuchte Photovoltaikanlagen}
 
-Die in \autoref{tab:solarsystem_metadata} gelisteten Identifikationsnummern von \ac{pv}-Anlagen und den dazugehörigen Metadaten beziehen sich auf den Datensatz, der von der Webseite \url{https://data.openei.org/s3_viewer?bucket=oedi-data-lake&prefix=pvdaq} \newline stammt. Das \ac{nrel} bringt hervor, dass der Datensatz sowohl experimentelle als auch öffentliche, kommerziell genutzte \ac{pv}-Anlagen beinhaltet. Die Fläche aller Solarmodule der Anlage sowie die Nennleistung\footnote{???} sind ein idealer Indikator, um die Funktion der Anlage einzuschätzen. Dies ist hilfreich um zu beweisen, dass die Prognose bei größeren Solarsystemen, die einen stärkeren Einfluss auf die Netzspannung haben, gleichermaßen funktioniert. Zwar ist die Funktionsweise unabhängig von der Größe und somit identisch, allerdings ist die Wertemenge der potentiell erzeugten Strommenge größer. Schließlich kann der erzeugte Solarstrom Werte zwischen $0 \ kW$ und der jeweiligen Nennleistung des Solarsystems einnehmen. 
+Die in \autoref{tab:solarsystem_metadata} gelisteten Identifikationsnummern von \ac{pv}-Anlagen und den dazugehörigen Metadaten beziehen sich auf den Datensatz, der von der Webseite \url{https://data.openei.org/s3_viewer?bucket=oedi-data-lake&prefix=pvdaq} \newline stammt. Das \ac{nrel} bringt hervor, dass der Datensatz sowohl experimentelle als auch öffentliche, kommerziell genutzte \ac{pv}-Anlagen beinhaltet. Die Fläche aller Solarmodule der Anlage sowie die Nennleistung\footnote{Die Nennleistung gibt die maximale Leistung an, die eine \ac{pv}-Anlage erzeugen kann.} sind ein idealer Indikator, um die Funktion der Anlage einzuschätzen. Dies ist hilfreich um zu beweisen, dass die Prognose bei größeren Solarsystemen, die einen stärkeren Einfluss auf die Netzspannung haben, gleichermaßen funktioniert. Zwar ist die Funktionsweise unabhängig von der Größe und somit identisch, allerdings ist die Wertemenge der potentiell erzeugten Strommenge größer. Schließlich kann der erzeugte Solarstrom Werte zwischen $0 \ kW$ und der jeweiligen Nennleistung des Solarsystems einnehmen. 
 
-Die \ac{pv}-Anlage mit der Identifikationsnummer $1201$ zählt mit einer installierten Nennleistung von $140,14 \ kW$ zu den größeren Solarstromlösungen. Um dies besser einordnen zu können, sei an dieser Stelle angemerkt, dass sich die Nennleistung von Solaranlagen auf meisten deutschen Einfamilienhäusern zwischen $4 - 10 \ kWp$ \footnote{$Kilowattpeak (kWp)$ ist eine Maßeinheit, die die Nennleistung einer \ac{pv}-Anlage unter den standardisierten Testbedingungen betitelt.} beläuft. In \fullref{sec:evaluation} wird die Leistungsfähigkeit des Prognosemodells für die \ac{pv}-Anlage $1201$ analysiert.
+Die \ac{pv}-Anlage mit der Identifikationsnummer $1201$ zählt mit einer installierten Nennleistung von $140,14 \ kW$ zu den größeren Solarstromlösungen. Um dies besser einordnen zu können, sei an dieser Stelle angemerkt, dass sich die Nennleistung von Solaranlagen auf meisten deutschen Einfamilienhäusern zwischen $4 - 10 \ \ac{kwp}$ \footnote{\textit{\ac{kwp}} ist eine Maßeinheit, die die Nennleistung einer \ac{pv}-Anlage unter den standardisierten Testbedingungen betitelt.} beläuft. In \fullref{sec:evaluation} wird die Leistungsfähigkeit des Prognosemodells für die \ac{pv}-Anlage $1201$ analysiert.
 
 
 \begin{table}
@@ -505,11 +508,15 @@ Der Kontrast zwischen \autoref{fig:histogram_cc_1220} und \autoref{fig:histogram
 
 Diese Auffälligkeiten konnten insgesamt an zwei von sieben Wetterstandorten beobachtet werden. Infolgedessen gilt es zu untersuchen, ob die Wetterdaten des jeweiligen Standortes für die Aufnahme in die Merkmalsmatrix qualifiziert sind. Schließlich kann der Bewölkungsgrad sowohl eine Bereicherung für die Prognose sein als auch ein Fluch, wenn es sich bei der Angabe um einen undifferenzierten Schätzwert handelt.
 
-Die Validierung des Bewölkungsgrades soll ebenfalls automatisiert stattfinden. Dazu wird die Verteilung der Daten betrachtet, indem die Summe einmaliger Bewölkungswerte ausrechnet wird. Sofern die Summe einen Grenzwert unterschreitet, werden die Daten über den Bewölkungsgrad nicht validiert und schlussendlich aus der Merkmalsmatrix des Modells entfernt. Der Grenzwert ist von der Größe des Datensatzes abhängig, da die Wahrscheinlichkeit, dass sich die gleichen Werte mehrfach wiederholen, mit der Größe der Datenmenge steigt. 
+Die Validierung des Bewölkungsgrades soll ebenfalls automatisiert stattfinden. Dazu wird die Verteilung der Daten betrachtet, indem die Summe einmaliger Bewölkungswerte ausrechnet wird. Sofern die Summe einen Grenzwert unterschreitet, werden die Daten über den Bewölkungsgrad nicht validiert und schlussendlich aus der Merkmalsmatrix des Modells entfernt. 
 
+Bestimmte Wetterstandorte sind für ihre Trockenheit beziehungsweise ihre überdurchschnittlich hohe Menge an Niederschlägen bekannt. Insofern ist es nicht für jeden Wetterstandort gegeben, dass der Minimalwert 0\% und der Maximalwert 100\% entspricht. Dies hat die Folge, dass die Verteilung für diesen Wetterstandort zwangsläufig geringer ausfällt.
+
+Zudem muss der Grenzwert von der Größe des Datensatzes abhängig sein, da die Wahrscheinlichkeit, dass sich die gleichen Werte mehrfach wiederholen, mit der Größe der Datenmenge steigt.  Damit Wetterstandorte, zu denen nur wenige Daten gesammelt wurden, adäquat bewertet werden, muss bei diesen der Grenzwert herunter gesetzt werden. 
+ 
 %Das Geburtstagsparadoxon besagt, dass ab einer Gruppe von 23 Personen die Wahrscheinlichkeit über 50\% beträgt, dass zwei Personen innerhalb dieser Gruppe am selben Tag ihren Geburtstag haben. Zwar sind die Geburtenraten über das Jahr ebenso nicht gleich verteilt, wie es auch die Bewölkungsgrade der verschiedenen Wetterstandorte es nicht sind. Allerdings sind bestimmte 
-(???)
-Bestimmte Wetterstandorte sind für ihre Trockenheit beziehungsweise ihre überdurchschnittlich hohe Menge an Niederschlägen bekannt. Insofern muss berücksichtigt werden, dass der Datensatz unterschiedlich groß sein kann. Des Weiteren ist es nicht für jeden Wetterstandort gegeben, dass der Minimalwert 0\% und der Maximalwert 100\% entspricht. Anhand des folgenden Programmiercodes in \autoref{lst:validate_cloudcover} soll die Validierung der Bewölkungsdaten erläutert werden. Vorerst betrachten wir dazu \autoref{eqn:logarithm}, wodurch die Größe des Datensatzes bewertet wird.
+
+Insofern muss sowohl die Größe des Datensatzes als auch eine mögliche, ungleiche Verteilung auf Grund von umweltbedingten Faktoren berücksichtigt werden. Anhand des folgenden Programmiercodes in \autoref{lst:validate_cloudcover} soll die Validierung der Bewölkungsdaten erläutert werden. Vorerst betrachten wir dazu \autoref{eqn:logarithm}, wodurch die Bewertung des Algorithmus an die Größe des Datensatzes angepasst wird.
 
 \begin{equation}
 \label{eqn:logarithm}
@@ -530,9 +537,11 @@ Die Logarithmusfunktion dient dazu, einen optimalen Grenzwert für unterschiedli
 
 Im Programmcode ist ersichtlich, dass die Anzahl an Messdaten \textit{n\_sampes} durch 3000 geteilt und das Ergebnis der Division an die Logarithmusfunktion übergeben wird. Da die Variable \textit{n\_samples} auf 3000 begrenzt ist und \textit{n\_samples} nicht negativ werden kann, führt dies dazu, dass ausschließlich Zahlen zwischen 0 und 1 an die Logarithmusfunktion übergeben werden. Das Ergebnis der zuvor beschriebenen Logarithmusfunktion liegt zwischen 0.0 und 0.6931. Die anschließende Multiplikation mit 100 führt dazu, dass je nach Größe des Datensatzes unterschiedlich viele Unikate in diesem enthalten sein müssen. ab 3000 Messwerten gilt, dass mindestens 69 Unikate von dem Datensatz umfasst werden müssen.
 
-Wie bereits zuvor erwähnt, gibt es Wetterstandorte, die zum Beispiel unter besonderer Trockenheit leiden. Da die Angabe über den Bewölkungsgrad nicht relativ ist, könnte dies bedeuten, dass für diese Standorte lediglich Messwerte zwischen 0 und 50 Prozent zu verzeichnen sind. Dementsprechend schneiden solche Wetterstandorte automatisch schlechter ab und könnten dadurch möglicherweise zu unrecht als mangelhaft markiert werden. Dieser Missstand kann ausgeglichen werden, indem das Minimum von dem Maximum der Messwerte subtrahiert wird. Eine darauf folgende Division durch 100 führt dazu, dass wir ein Ergebnis zwischen 0 und 1 erhalten. Der erhaltene Wert wird mit der zuvor errechneten Mindestanzahl an Unikaten multipliziert. Betrachten wir nochmals das Beispiel, indem die Werte sich ausschließlich auf Zahlen zwischen 0 und 50 belaufen. Demnach können nur halb so viele Unikate auftreten. Die eben beschriebene Rechnung führt dazu, dass der Grenzwert für den Bewölkungsgrad ebenfalls halbiert wird. (???)
+Wie bereits zuvor erwähnt, gibt es Wetterstandorte, die zum Beispiel unter besonderer Trockenheit leiden. Da die Angabe über den Bewölkungsgrad nicht relativ ist, könnte dies bedeuten, dass für diese Standorte lediglich Messwerte zwischen 0 und 50 Prozent zu verzeichnen sind. Dementsprechend schneiden solche Wetterstandorte automatisch schlechter ab und könnten dadurch möglicherweise zu unrecht als mangelhaft markiert werden. Dieser Missstand kann ausgeglichen werden, indem das Minimum von dem Maximum der Messwerte subtrahiert wird. Eine darauf folgende Division durch 100 führt dazu, dass wir ein Ergebnis zwischen 0 und 1 erhalten. Der erhaltene Wert wird mit der zuvor errechneten Mindestanzahl an Unikaten multipliziert. 
 
-Zuletzt wird die Verteilung als Histogram dargestellt und abhängig von dem Ergebnis, wird der Bewölkungsgrad aus der Merlmalsmatrix entfernt.
+In dem Beispiel, in dem ausschließlich Bewölkungswerte zwischen 0 und 50 Prozent auftreten, führt die Multiplikation mit dem Grenzwert und anschließende Neuzuweisung zu einer Halbierung jenes Grenzwertes. 
+
+Sollte das Ergebnis unter dem Grenzwert liegen, so wird der Bewölkungsgrad aus der Merkmalsmatrix entfernt. Um das Ergebnis der Funktion zu evaluieren, wird  die Verteilung als Histogram dargestellt. 
 
 \begin{lstlisting}[basicstyle=\small,label={lst:validate_cloudcover}, caption={Funktion zur Validierung der Bewölkungsdaten}]
 def validate_cloudcover_quality(self):
@@ -901,43 +910,42 @@ Die im \fullref{subsubsec:quality_data} zuvor geäußerten Bedenken, dass die An
 
 Zudem wird die Evaluierung mehrmals durchgeführt, wodurch mehrere Vergleichswerte erzielt werden. Wird der Bewölkungsgrad aus der Merkmalsmatrix außen vorgelassen, so wird für den Determinierungskoeffizienten des Entscheidungsbaum Werte zwischen 0.82 und 0.89 erhalten. Im Durchschnitt schneidet das Modell um 0.04 besser ab, als wenn der Bewölkungsgrad für die Prognose mitberücksichtigt wird. 
 
-\subsection{Ausreißer in der Prognose}
+\subsection{Auffällige Abweichungen der Prognose}
 
 Im \fullref{subsubsec:outlier} wurde bereits die Problematik von Ausreißern in den Datensätzen thematisiert und dass diese idealerweise vor dem Training des Lernalgorithmus aus dem Trainingsdatensatz entfernt werden sollten. Für das Training sind sie nicht von Interesse. Unstimmigkeiten zwischen der Prognose und den tatsächlichen Werten verdienen allerdings separater Analyse.
 
 Insbesondere wenn diese Abweichungen an mehreren Tagen hintereinander auftreten, werden aus den Ausreißern viel eher Auffälligkeiten. Auffälligkeiten, die auf einen Defekt hindeuten und dementsprechend gesondert Aufmerksamkeit fordern. Ein nicht funktionierender Wechselrichter reicht aus, um die Solarstromproduktion gänzlich zum Erliegen zu bringen. In diesem Fall verlieren die Betreiber der \ac{pv}-Anlage mit jeder vergangenen Stunde Geld. Umso schneller die Probleme erkannt werden, desto höher ist die Wirtschaftlichkeit der \ac{pv}-Anlage.
 
-\begin{figure}[h]
-\centering
-\def\svgwidth{400pt}
-\input{assets/predictions_1244.pdf_tex}
-\caption{Erkannte Ausreißer innerhalb des Testdatensatzes der Solaranlage in New Orleans, Louisiana, USA}
-\label{fig:predictions_outlier_xxxx}
-\end{figure}
-
-Zweifellos gibt es pragmatischere Lösungen, um einen Totalausfall einer \ac{pv}-Anlage zu erkennen, die mit weniger Aufwand verbunden sind. Allerdings können genauso einzelne Solarmodule einen Defekt aufweisen, wodurch die Leistung der \ac{pv}-Anlage lediglich gemindert wird. 
+Zweifellos gibt es pragmatischere Lösungen als mittels maschinelles Lernen ein Prognosemodell anzulegen, um einen Totalausfall einer \ac{pv}-Anlage zu erkennen, die mit weniger Aufwand verbunden sind. Allerdings können genauso einzelne Solarmodule einen Defekt aufweisen, wodurch die Leistung der \ac{pv}-Anlage lediglich gemindert wird. 
 
 Ein einziges defektes Solarmodul reicht jedoch aus, um die erheblichen Auswirkungen auf die Gesamtleistung der Anlage zu bemerken. Schließlich sind in einem Solarsystem häufig eine Gruppe von Solarmodulen, einem sogenannten Strang, in einer Reihenschaltung miteinander verknüpft. Die Verkettung der Module hilft dabei, den produzierten Strom effizient zum Wechselrichter zu leiten. Allerdings wird die Gesamtleistung des Strangs durch das schwächste Glied in der Kette bestimmt. Das defekte Solarmodul definiert den in diesem Strang maximal möglichen Stromfluss.
 
-Anhand des Programmcodes in  \autoref{lst:discrepancies_detection} soll die Funktion zur Erkennung von Unstimmigkeiten beziehungsweise Defekten erläutert werden. Um Unstimmigkeiten zu erkennen, werden alle Tage separat betrachtet. An den jeweiligen Tagen wird ein Augenmerk auf den maximal zu erwartenden Stromertrag und dessen benachbarte Werte geworfen. Die lokale Funktion \textit{get\_mean\_maxima(data, indices)} liefert uns den Durchschnitt des Tagesmaximum und den Messwerten zwei Stunden davor und danach. Analog dazu werden die korrespondierenden tatsächlichen Werte gemittelt.
+Anhand des Programmcodes in  \autoref{lst:discrepancies_detection} soll die Funktion zur Erkennung von Unstimmigkeiten beziehungsweise Defekten erläutert werden. Um Unstimmigkeiten zu erkennen, werden alle Tage separat betrachtet. An den jeweiligen Tagen wird ein Augenmerk auf den maximal zu erwartenden Stromertrag und dessen benachbarte Werte geworfen. Die lokale Funktion \textit{get\_mean\_maxima(data, indices)} liefert uns den Durchschnitt des Tagesmaximum und den Messwerten zwei Stunden vor und nach jenem Maximum. Analog dazu werden die korrespondierenden tatsächlichen Werte gemittelt.
 
 Von besonderem Interesse sind jene Messwerte, bei denen der tatsächlich erzeugte Solarstrom signifikant unter dem jeweiligen Prognosewert liegt. Mittels der vektorisierten Division der tatsächlichen Werte durch die entsprechenden Prognosewerte werden größere Abweichungen erkannt. Wichtig ist, dass die tatsächlichen Daten dabei den Dividend und die Prognosedaten den Divisor bilden. Relevant sind die Quotienten, die sich zwischen 0 und 1 befinden. Schließlich besagen sie, dass an diesem Tag weniger Solarstrom als erwartet produziert wurde.
 
-Ein Nachteil der Division ist, dass die absolute Abweichung an den jeweiligen Tagen abhängig von der zu erwartenden Stromproduktion bewertet wird. Dass heißt, wird an einem Tag auf Grund eines bewölkten Himmels eine geringe Stromproduktion prognostiziert, so wird die absolute Abweichung schneller als auffällig bewertet. Im Gegensatz dazu würde der gleiche absolute Fehler an einem sonnigen Tag - auf Grund des geringeren relativen Fehlers - für den Algorithmus nicht ungewöhnlich erscheinen.
+Infolgedessen können Tage als auffällig markiert werden, wenn der Quotient der Division des tatsächlich erzeugten Solarstroms durch den Erwartungswert, einen bestimmten Grenzwert unterschreitet. Die Evaluierung von sieben verschiedenen \ac{pv}-Anlagen hat ergeben, dass nicht alle Modelle die gleiche Leistungsfähigkeit aufweisen. Demnach soll die Detektion von Auffälligkeiten in Abhängigkeit der Leistungsfähigkeit des Modells stehen. Die Leistungsfähigkeit eines Modells wird durch den Determinierungskoeffizienten repräsentiert. \autoref{eqn:determinationcoefficient} zeigt, wie der Determinierungskoeffizient berechnet wird.
 
-Der zuvor beschriebene Missstand, dass kleine absolute Fehler an einem Tag mit einem niedrigen Erwartungswert schnell als auffällig bewertet werden, soll durch die lineare \autoref{eqn:linear} behoben werden.
+\begin{equation}
+\label{eqn:determinationcoefficient}
+R^2=1-\frac{\sum_{i=0}^n(y_i\_true-y_i\_pred)^2}{\sum_{i=0}^n(y_i\_true-\bar{y}\_true)^2}
+\end{equation}
+
+
+Da sich für den Koeffizienten in den Untersuchungen dieser Arbeit Werte zwischen 0.6 und 0.9 ergeben, eignet sich dieser besonders gut als Grenzwert. Durch den höheren Grenzwert von besonders leistungsfähigen Modellen, können diese die Unstimmigkeiten strenger bewerten. Die Anzahl an Falsch-Positive-Ergebnissen\footnote{Falsche-Positive bezeichnen in diesem Kontext jene Tage, die als auffällig markiert wurden, obwohl kein Defekt der \ac{pv}-Anlage vorliegt.} kann dank des dynamischen Grenzwertes reduziert werden.
+
+Ein Nachteil der Division der tatsächlichen Strommenge durch deren Erwartungswert ist, dass die absolute Abweichung an den jeweiligen Tagen abhängig von der zu erwartenden Stromproduktion bewertet wird. Dass heißt, wird an einem Tag auf Grund eines bewölkten Himmels eine geringe Stromproduktion prognostiziert, so wird die absolute Abweichung schneller als auffällig bewertet. Im Gegensatz dazu würde der gleiche absolute Fehler an einem sonnigen Tag - auf Grund des geringeren relativen Fehlers - für den Algorithmus nicht ungewöhnlich erscheinen. Grundsätzlich ist es allerdings nicht verkehrt, die Bewertungen der Abweichungen von der erwarteten Stromproduktion abhängig zu machen. Um die Unstimmigkeiten richtig zu klassifizieren, sollte sowohl relativer Fehler als auch absoluter Fehler berücksichtigt werden.  
+
+Die verschiedenen Nennleistungen der Solaranlagen führen zu unterschiedlich großen, absoluten Residuen. Der zuvor beschriebene Missstand, dass kleine absolute Fehler an einem Tag mit einem niedrigen Erwartungswert schnell als auffällig bewertet werden, soll durch die lineare \autoref{eqn:linear} behoben werden. An die Funktion wird der Quotient, der sich durch die Division der Prognosedaten durch den Maximalbetrag der Prognosedaten ergibt, übergeben werden. Folglich wird der Grenzwert, den der relative Fehler nicht unterschreiten darf, an die für den Tag prognostizierte Stromproduktion angepasst.
 
 \begin{equation}
 \label{eqn:linear}
 f(x)=0.3*x+0.5
 \end{equation}
 
-Relevant sind die $y-$Werte für Eingabewerte zwischen 0 und 1. Für 0 gibt die Funktion $f(x)$ 0.5 und für 1 den Wert 0.8 zurück. Demnach dürfen die Quotienten, je nach gemitteltem Tageswert, zwischen 20 und 50 Prozent unter dem Determinierungskoeffizieten des Modells liegen.
+Relevant sind die $y-$Werte für Eingabewerte zwischen 0 und 1. Für 0 gibt die Funktion $f(x)$ 0.5 und für 1 den Wert 0.8 zurück. Demnach dürfen die Quotienten, je nach gemitteltem Tageswert, zwischen 20 und 50 Prozent unter dem Determinierungskoeffizieten des Modells liegen. Somit kann durch die lineare Gleichung $f(x)$ die Strenge des Algorithmus angepasst werden.
 
-
-
-Durch die lineare Gleichung $f(x)$ innerhalb der lokalen Funktion wird die Strenge des Algorithmus angepasst. 
-
+\newpage
 
 \begin{lstlisting}[basicstyle=\small,label={lst:discrepancies_detection}, caption={Funktion zur Erkennung von Ausreißern}]
 def find_discrepancies(self):
@@ -966,6 +974,28 @@ def find_discrepancies(self):
         r_2 = r_2 * f(pred_data / np.max(pred_data))
         self.discrepancies_indices_test = maxima_indices[quotients < r_2]        
 \end{lstlisting}
+
+\begin{figure}[H]
+\centering
+\def\svgwidth{400pt}
+\input{assets/predictions_outlier_1200.pdf_tex}
+\caption{Erkannte Unstimmigkeiten im Testdatensatz der Solaranlage in Linthicum, Maryland, USA}
+\label{fig:predictions_outlier_1200}
+\end{figure}
+
+\autoref{fig:predictions_outlier_1200} stellt die durch die Funktion lokalisierten Auffälligkeiten innerhalb des Testdatensatzes der Solaranlage mit der ID 1200. \autoref{fig:predictions_all_outlier_1200} hingegen zeigt die gesamte Solarstromprognose für den von der Funktion untersuchten Abschnitt. 
+
+\begin{figure}[H]
+\centering
+\def\svgwidth{400pt}
+\input{assets/predictions_all_outlier_1200.pdf_tex}
+\caption{Prognose der Stromerzeugung für den Testdatensatz der Solaranlage in Linthicum, Maryland, USA}
+\label{fig:predictions_all_outlier_1200}
+\end{figure}
+
+Fehlende Aufzeichnungen über Defekte der Solarsysteme schränken die fundierte Überprüfung der in \autoref{lst:discrepancies_detection} aufgeführten Funktion ein. Eine induktive Denkweise, die auf grundlegenden Prinzipien und bekannten Mustern basiert, führt zu der Annahme, dass bei den erkannten Unstimmigkeiten tatsächlich Defekte innerhalb des Solarsystems vorliegen. Der Vergleich zwischen \autoref{fig:predictions_all_outlier_1200} und \autoref{fig:predictions_outlier_1200} bringt hervor, dass sämtliche Auffälligkeiten durch die Funktion lokalisiert wurden.
+
+
 
 \subsection{Prognose von bisher unbekannten Werten}
 
