@@ -639,7 +639,7 @@ Sinn und Zweck der Datenvorverarbeitung ist es, die Daten für den jeweiligen Le
 
 Selbst wenn für ein Entscheidungsbaum die Datenvorverarbeitung nicht zwingend notwendig, ist es dennoch zu empfehlen, Unstimmigkeiten in den Daten zu beseitigen.
 
-Unstimmigkeiten innerhalb des Datensatzes werden häufig als Ausreißer betitelt, da sie nicht zum Muster zwischen ihresgleichen und der Zielvariablen passen. Da solche Ausreißer unausweichlich und in sämtlichen Datensätzen auftauchen können, dürfen diese nicht unbeachtet bleiben. Ein möglicher Grund für etwaige Ausreißer kann ein defektes Bauteil des Solarsystems sein. Zum Beispiel ein Defekt im Wechselrichter könnte dazu führen, dass trotz idealer Wetterbedingungen die erzeugte Wechselspannung ausbleibt. Umso länger das Solarsystem nicht repariert wird, desto wahrscheinlicher ist es, dass das Prognosemodell den Fehler übersieht und die Kalenderwoche für die übermäßige Abweichung verantwortlich gemacht wird.
+Unstimmigkeiten innerhalb des Datensatzes werden als Ausreißer betitelt, da sie nicht zum Muster zwischen ihresgleichen und der Zielvariablen passen. Da solche Ausreißer unausweichlich und in sämtlichen Datensätzen auftauchen können, dürfen diese nicht unbeachtet bleiben. Ein möglicher Grund für etwaige Ausreißer kann ein defektes Bauteil des Solarsystems sein. Zum Beispiel ein Defekt im Wechselrichter könnte dazu führen, dass trotz idealer Wetterbedingungen die erzeugte Wechselspannung ausbleibt. Umso länger das Solarsystem nicht repariert wird und die verringerte Stromproduktion in den Trainingsdatensatz des Modells aufgenommen wird, desto wahrscheinlicher ist es, dass das Prognosemodell den Fehler verinnerlicht und die Kalenderwoche für die übermäßige Abweichung verantwortlich macht.
 ???
 \subsection{Lernalgorithmus}
 
@@ -676,7 +676,7 @@ Die Tatsache, dass nichtlineare Beziehungen gut erkannt werden können ist sowoh
 Künstliche Intelligenz nimmt eine immer bedeutendere Rolle in unserer heutigen Gesellschaft ein. Bereiche unseres täglichen Lebens werden bereits durch sie erheblich erleichtert. Dennoch schreckt ein Teil der Gesellschaft vor den noch unerforschten Begleiterscheinungen der neuen Technologie zurück. Nicht selten sind die Ergebnisse dieser Algorithmen schwer zu verstehen, wodurch Ungewissheiten hervorgerufen werden. 
 Ein Entscheidungsbaum ist ein Modell aus dem Bereich des maschinellem Lernens, welches wiederum ein Teilgebiet von künstlicher Intelligenz ist. Obwohl Entscheidungsbäume derzeit als äußerst mächtige Lernalgorithmen angesehen werden, sind ihre Prognosen äußerst leicht nachzuvollziehen. Im Grunde genommen ist ein Entscheidungsbaum eine Verkettung von \textit{Wenn-Sonst-Anweisungen}, die schlussendlich zum Ergebnis führen. 
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \def\svgwidth{425pt}
 \input{assets/binary_tree_linthicum_zoom_v2.pdf_tex}
@@ -684,7 +684,7 @@ Ein Entscheidungsbaum ist ein Modell aus dem Bereich des maschinellem Lernens, w
 \label{fig:binary_tree_linthicum}
 \end {figure}
 
-Da der komplette Binärbaum mit der Tiefe 11 zu groß für eine Abbildung innerhalb dieser Arbeit ist, zeigt \autoref{fig:binary_tree_linthicum} einen kleinen Ausschnitt des Entscheidungsbaums für die Solaranlage in Linthicum, Maryland, welcher der \textit{\ac{cart}-Algorithmus}\footnote{Die Funktion des \textit{\ac{cart}-Algorithmus} ist es, eine optimale zweiteilige Trennung zu finden, indem ein Merkmal und ein Grenzwert gesucht wird, wodurch der mittlere quadratische Fehler der zwei neuen Teilmengen minimal wird. Erstmals wurde dieser Algorithmus von Leo Breiman 1984 publiziert.} erstellt hat. In der ersten Zeile eines jeden Knotenpunktes steht die \textit{Wenn-Sonst-Anweisung}, die den weiteren Verlauf bestimmt. Falls die Bedingung erfüllt wird, so wird die Bedingung des linken Kinderknotens als nächstes überprüft, oder die des rechten Kinderknotens, falls ihr nicht nachgekommen werden konnte. Dieses Verfahren dauert so lange an, bis das Ende des Binärbaums, einem sogenannten Blatt, erreicht wurde.
+Da der komplette Binärbaum mit der Tiefe 11 zu groß für eine Abbildung innerhalb dieser Arbeit ist, zeigt \autoref{fig:binary_tree_linthicum} einen kleinen Ausschnitt des Entscheidungsbaums für die Solaranlage in Linthicum, Maryland, welcher mit Hilfe des \textit{\ac{cart}-Algorithmus}\footnote{Die Funktion des \textit{\ac{cart}-Algorithmus} ist es, eine optimale zweiteilige Trennung zu finden, indem ein Merkmal und ein Grenzwert gesucht wird, wodurch der mittlere quadratische Fehler der zwei neuen Teilmengen minimal wird. Erstmals wurde dieser Algorithmus von Leo Breiman 1984 publiziert.} erstellt wurde. In der ersten Zeile eines jeden Knotenpunktes steht die \textit{Wenn-Sonst-Anweisung}, die den weiteren Verlauf bestimmt. Falls die Bedingung erfüllt wird, so wird die Bedingung des linken Kinderknotens als nächstes überprüft, oder die des rechten Kinderknotens, falls ihr nicht nachgekommen werden konnte. Dieses Verfahren dauert so lange an, bis das Ende des Binärbaums, einem sogenannten Blatt, erreicht wurde.
 (???)
 Das Feld \textit{squared\_error} gibt den mittleren quadratischen Fehler, der sich in diesem Feld befindenden Proben in Bezug auf den Wert des Feldes an. Wie viele Proben des Trainingsdatensatz diese Bedingungen und demzufolge die darüber liegenden Bedingungen ebenso erfüllen, lässt sich aus den Knotenpunkten ablesen. Der dort zu sehende Wert wäre die Prognose für die jeweiligen Datenreihen, wenn der Knotenpunkt keine Kinderknoten mehr hätte.
 
@@ -787,8 +787,7 @@ Da die \textit{Brute-Force-Methode} mit erheblich mehr Rechenaufwand verbunden i
 
 Um reproduzierbare Ergebnisse zu erhalten, verwenden wir die \textit{Brute-Force-Methode}, um die optimalen Parameter für das jeweilige Modell zu finden. Bei verschiedenen Solaranlagen wurden zwar unterschiedliche Kombinationen an Hyperparametern als optimal bewertet, allerdings waren diese selten weit voneinander entfernt. Folglich kann das Raster auf ein paar wenige Kombinationen reduziert werden und begrenzt damit den Rechenaufwand auf ein tolerierbares Ausmaß.
 
-\autoref{tab:gridsearch} bildet die Hyperparameter ab, die für die automatisierte Suche nach den optimalen Parametern verwendet werden sollen. Die Auswahl dieser Parameter wurde getroffen, indem die gesamte Spanne der gefundenen Hyperparametern der dieser Arbeit vorliegenden Solaranlagen repräsentiert werden. Zudem (???)
-
+\autoref{tab:gridsearch} bildet die Hyperparameter ab, die für die automatisierte Suche nach den optimalen Parametern verwendet werden sollen. Die Auswahl der Zahlenreihen wurde getroffen, indem die gesamte Spanne der für optimal erachteten Hyperparametern der untersuchten Solaranlagen mit einem zusätzlichen Toleranzbereich repräsentiert werden. 
 
 \begin{table}[H]
 \begin{center}
