@@ -1,0 +1,613 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{ws:bmwk}{online}{}
+      \name{author}{1}{}{%
+        {{hash=5229eca570d642fbd784398ef815624b}{%
+           family={bmwk.de},
+           familyi={b\bibinitperiod}}}%
+      }
+      \strng{namehash}{5229eca570d642fbd784398ef815624b}
+      \strng{fullhash}{5229eca570d642fbd784398ef815624b}
+      \strng{bibnamehash}{5229eca570d642fbd784398ef815624b}
+      \strng{authorbibnamehash}{5229eca570d642fbd784398ef815624b}
+      \strng{authornamehash}{5229eca570d642fbd784398ef815624b}
+      \strng{authorfullhash}{5229eca570d642fbd784398ef815624b}
+      \field{labelalpha}{bmw}
+      \field{sortinit}{b}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugegriffen am 30.03.2023}
+      \field{title}{Unser Strommarkt für die Energiewende}
+      \verb{urlraw}
+      \verb https://www.bmwk.de/Redaktion/DE/Dossier/strommarkt-der-zukunft.html#:~:text=Aufgrund%20der%20zunehmenden%20Elektrifizierung%20in,2045%20wurde%20im%20Energiewirtschaftsgesetz%20verankert.
+      \endverb
+      \verb{url}
+      \verb https://www.bmwk.de/Redaktion/DE/Dossier/strommarkt-der-zukunft.html#:~:text=Aufgrund%20der%20zunehmenden%20Elektrifizierung%20in,2045%20wurde%20im%20Energiewirtschaftsgesetz%20verankert.
+      \endverb
+    \endentry
+    \entry{ws:destatis}{online}{}
+      \name{author}{1}{}{%
+        {{hash=fd17f7dce20314001ac56a2700f1a22b}{%
+           family={Bundesamt},
+           familyi={B\bibinitperiod},
+           given={Statistisches},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd17f7dce20314001ac56a2700f1a22b}
+      \strng{fullhash}{fd17f7dce20314001ac56a2700f1a22b}
+      \strng{bibnamehash}{fd17f7dce20314001ac56a2700f1a22b}
+      \strng{authorbibnamehash}{fd17f7dce20314001ac56a2700f1a22b}
+      \strng{authornamehash}{fd17f7dce20314001ac56a2700f1a22b}
+      \strng{authorfullhash}{fd17f7dce20314001ac56a2700f1a22b}
+      \field{labelalpha}{Bun}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Aktualisiert am 21. Juni 2022, Zugegriffen am 30.03.2023}
+      \field{title}{2,2 Millionen Photovoltaik-Anlagen in Deutschland installiert}
+      \verb{urlraw}
+      \verb https://www.destatis.de/DE/Presse/Pressemitteilungen/2022/06/PD22_N037_43.html#:~:text=2020%20hatten%20etwa%201%2C4,Jahr%20der%20Erhebung%20dieser%20Angabe.
+      \endverb
+      \verb{url}
+      \verb https://www.destatis.de/DE/Presse/Pressemitteilungen/2022/06/PD22_N037_43.html#:~:text=2020%20hatten%20etwa%201%2C4,Jahr%20der%20Erhebung%20dieser%20Angabe.
+      \endverb
+    \endentry
+    \entry{ws:smard}{online}{}
+      \name{author}{1}{}{%
+        {{hash=f14c047a6d7b5ab04859ac05104798dc}{%
+           family={Bundesnetzagentur},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{f14c047a6d7b5ab04859ac05104798dc}
+      \strng{fullhash}{f14c047a6d7b5ab04859ac05104798dc}
+      \strng{bibnamehash}{f14c047a6d7b5ab04859ac05104798dc}
+      \strng{authorbibnamehash}{f14c047a6d7b5ab04859ac05104798dc}
+      \strng{authornamehash}{f14c047a6d7b5ab04859ac05104798dc}
+      \strng{authorfullhash}{f14c047a6d7b5ab04859ac05104798dc}
+      \field{labelalpha}{Bun}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugegriffen am 20.03.2023}
+      \field{title}{Stromerzeugung und -verbrauch in Deutschland}
+      \verb{urlraw}
+      \verb https://www.smard.de/home/marktdaten
+      \endverb
+      \verb{url}
+      \verb https://www.smard.de/home/marktdaten
+      \endverb
+    \endentry
+    \entry{ws:bundesregierung}{online}{}
+      \name{author}{1}{}{%
+        {{hash=27607990751ab153146480644c517e82}{%
+           family={bundesregierung.de},
+           familyi={b\bibinitperiod}}}%
+      }
+      \strng{namehash}{27607990751ab153146480644c517e82}
+      \strng{fullhash}{27607990751ab153146480644c517e82}
+      \strng{bibnamehash}{27607990751ab153146480644c517e82}
+      \strng{authorbibnamehash}{27607990751ab153146480644c517e82}
+      \strng{authornamehash}{27607990751ab153146480644c517e82}
+      \strng{authorfullhash}{27607990751ab153146480644c517e82}
+      \field{labelalpha}{bun}
+      \field{sortinit}{b}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Aktualisiert am 16.11.2022, Zugegriffen am 26.03.2023}
+      \field{title}{Mit Wärmepumpen Tempo machen für die Klimawende}
+      \verb{urlraw}
+      \verb https://www.bundesregierung.de/breg-de/aktuelles/kanzler-viessmann-2070096#:~:text=W%C3%A4rmepumpen%20k%C3%B6nnen%20sowohl%20Alt%2D%20als%20auch%20Neubauten%20klimafreundlich%20beheizen.&text=Die%20Bundesregierung%20hat%20sich%20das,weniger%20Treibhausgas%2DEmissionen%20zu%20verursachen.
+      \endverb
+      \verb{url}
+      \verb https://www.bundesregierung.de/breg-de/aktuelles/kanzler-viessmann-2070096#:~:text=W%C3%A4rmepumpen%20k%C3%B6nnen%20sowohl%20Alt%2D%20als%20auch%20Neubauten%20klimafreundlich%20beheizen.&text=Die%20Bundesregierung%20hat%20sich%20das,weniger%20Treibhausgas%2DEmissionen%20zu%20verursachen.
+      \endverb
+    \endentry
+    \entry{meyerburger}{online}{}
+      \name{author}{1}{}{%
+        {{hash=6d639a3e5abd0c40366a495bbbee782f}{%
+           family={Burger},
+           familyi={B\bibinitperiod},
+           given={Meyer},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{6d639a3e5abd0c40366a495bbbee782f}
+      \strng{fullhash}{6d639a3e5abd0c40366a495bbbee782f}
+      \strng{bibnamehash}{6d639a3e5abd0c40366a495bbbee782f}
+      \strng{authorbibnamehash}{6d639a3e5abd0c40366a495bbbee782f}
+      \strng{authornamehash}{6d639a3e5abd0c40366a495bbbee782f}
+      \strng{authorfullhash}{6d639a3e5abd0c40366a495bbbee782f}
+      \field{labelalpha}{Bur}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugegriffen am 23.06.2023}
+      \field{title}{Solarmodul White Datenblatt}
+      \verb{urlraw}
+      \verb https://www.meyerburger.com/fileadmin/user_upload/PDFs/Produktdatenblaetter/DE/DS_Meyer_Burger_White_de.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.meyerburger.com/fileadmin/user_upload/PDFs/Produktdatenblaetter/DE/DS_Meyer_Burger_White_de.pdf
+      \endverb
+    \endentry
+    \entry{pic:wikipedia}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0f7f16555f3865378608b7caaf2963b3}{%
+           family={Commons},
+           familyi={C\bibinitperiod},
+           given={Wikipedia},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{0f7f16555f3865378608b7caaf2963b3}
+      \strng{fullhash}{0f7f16555f3865378608b7caaf2963b3}
+      \strng{bibnamehash}{0f7f16555f3865378608b7caaf2963b3}
+      \strng{authorbibnamehash}{0f7f16555f3865378608b7caaf2963b3}
+      \strng{authornamehash}{0f7f16555f3865378608b7caaf2963b3}
+      \strng{authorfullhash}{0f7f16555f3865378608b7caaf2963b3}
+      \field{labelalpha}{Com}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugegriffen am 19.05.2023}
+      \field{title}{Wolkentypen}
+      \verb{urlraw}
+      \verb https://commons.wikimedia.org/w/index.php?search=cloud+types&title=Special:MediaSearch&go=Go&type=image
+      \endverb
+      \verb{url}
+      \verb https://commons.wikimedia.org/w/index.php?search=cloud+types&title=Special:MediaSearch&go=Go&type=image
+      \endverb
+    \endentry
+    \entry{ws:dwdweatherstations}{online}{}
+      \name{author}{1}{}{%
+        {{hash=417265cb094d4fef79bf5b7302850f29}{%
+           family={dwd.de},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{417265cb094d4fef79bf5b7302850f29}
+      \strng{fullhash}{417265cb094d4fef79bf5b7302850f29}
+      \strng{bibnamehash}{417265cb094d4fef79bf5b7302850f29}
+      \strng{authorbibnamehash}{417265cb094d4fef79bf5b7302850f29}
+      \strng{authornamehash}{417265cb094d4fef79bf5b7302850f29}
+      \strng{authorfullhash}{417265cb094d4fef79bf5b7302850f29}
+      \field{labelalpha}{dwd}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugegriffen am 27.06.2023}
+      \field{title}{Stationsliste der 83 Messstationen}
+      \verb{urlraw}
+      \verb https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsuebersicht.html#:~:text=Wetter%20und%20Klima%20%2D%20Deutscher%20Wetterdienst,83%20Messstationen%20(nach%20Stationsname%20sortiert)
+      \endverb
+      \verb{url}
+      \verb https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsuebersicht.html#:~:text=Wetter%20und%20Klima%20%2D%20Deutscher%20Wetterdienst,83%20Messstationen%20(nach%20Stationsname%20sortiert)
+      \endverb
+    \endentry
+    \entry{faz2023stromnetz}{article}{}
+      \name{author}{1}{}{%
+        {{hash=69d4cc417400d3a7292ab16eb2fc56d2}{%
+           family={Frey},
+           familyi={F\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{69d4cc417400d3a7292ab16eb2fc56d2}
+      \strng{fullhash}{69d4cc417400d3a7292ab16eb2fc56d2}
+      \strng{bibnamehash}{69d4cc417400d3a7292ab16eb2fc56d2}
+      \strng{authorbibnamehash}{69d4cc417400d3a7292ab16eb2fc56d2}
+      \strng{authornamehash}{69d4cc417400d3a7292ab16eb2fc56d2}
+      \strng{authorfullhash}{69d4cc417400d3a7292ab16eb2fc56d2}
+      \field{labelalpha}{Fre23}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{9}
+      \field{journaltitle}{Franfurter Allgemeine Zeitung}
+      \field{month}{7}
+      \field{title}{Eine Frage der Verteilung}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{pages}{Wissenschaft}
+      \range{pages}{-1}
+    \endentry
+    \entry{geron2022hands}{book}{}
+      \name{author}{1}{}{%
+        {{hash=e54e6c9ce5d233c7046a00f7b3faa6c0}{%
+           family={Géron},
+           familyi={G\bibinitperiod},
+           given={Aurélien},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {" O'Reilly Media, Inc."}%
+      }
+      \strng{namehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{fullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{bibnamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authorbibnamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authornamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authorfullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \field{labelalpha}{Gér22}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Hands-on machine learning with Scikit-Learn, Keras, and TensorFlow}
+      \field{year}{2022}
+    \endentry
+    \entry{pic:googlemaps}{online}{}
+      \name{author}{1}{}{%
+        {{hash=2a014119e8afff015371d3d7c1e74fb5}{%
+           family={Maps},
+           familyi={M\bibinitperiod},
+           given={Google},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{2a014119e8afff015371d3d7c1e74fb5}
+      \strng{fullhash}{2a014119e8afff015371d3d7c1e74fb5}
+      \strng{bibnamehash}{2a014119e8afff015371d3d7c1e74fb5}
+      \strng{authorbibnamehash}{2a014119e8afff015371d3d7c1e74fb5}
+      \strng{authornamehash}{2a014119e8afff015371d3d7c1e74fb5}
+      \strng{authorfullhash}{2a014119e8afff015371d3d7c1e74fb5}
+      \field{labelalpha}{Map}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugegriffen am 06.07.2023}
+      \field{title}{Dredimensionale Ansicht der PV-Anlage 1200}
+      \verb{urlraw}
+      \verb {https://www.google.com/maps/place/1739+W+Nursery+Rd,+Linthicum+Heights,+MD+21090,+USA/@39.1957005,-76.6815477,201m/data=!3m1!1e3!4m6!3m5!1s0x89b7e28c89326b8b:0xbf3ac3b4e494e552!8m2!3d39.1958527!4d-76.6804761!16s%2Fg%2F11bw40qz24?entry=ttu}
+      \endverb
+      \verb{url}
+      \verb %7Bhttps://www.google.com/maps/place/1739+W+Nursery+Rd,+Linthicum+Heights,+MD+21090,+USA/@39.1957005,-76.6815477,201m/data=!3m1!1e3!4m6!3m5!1s0x89b7e28c89326b8b:0xbf3ac3b4e494e552!8m2!3d39.1958527!4d-76.6804761!16s%2Fg%2F11bw40qz24?entry=ttu%7D
+      \endverb
+    \endentry
+    \entry{marks2021young}{article}{}
+      \name{author}{9}{}{%
+        {{hash=98ce5cf296adce6178775ca5302a6630}{%
+           family={Marks},
+           familyi={M\bibinitperiod},
+           given={Elizabeth},
+           giveni={E\bibinitperiod}}}%
+        {{hash=b5d60fd4216f041683549dd6d874d88a}{%
+           family={Hickman},
+           familyi={H\bibinitperiod},
+           given={Caroline},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4a0693ea3e1937597d43609cbb3674fc}{%
+           family={Pihkala},
+           familyi={P\bibinitperiod},
+           given={Panu},
+           giveni={P\bibinitperiod}}}%
+        {{hash=3b37a1a99f301779639ec97e66672359}{%
+           family={Clayton},
+           familyi={C\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b590698403f3ec013002f0ebd707e481}{%
+           family={Lewandowski},
+           familyi={L\bibinitperiod},
+           given={Eric\bibnamedelima R},
+           giveni={E\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=cd354d585fc166eab8545571f540720f}{%
+           family={Mayall},
+           familyi={M\bibinitperiod},
+           given={Elouise\bibnamedelima E},
+           giveni={E\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=2e952d847c7d8c2530f699aee6de5aac}{%
+           family={Wray},
+           familyi={W\bibinitperiod},
+           given={Britt},
+           giveni={B\bibinitperiod}}}%
+        {{hash=5de73a460e0c773ff0b220e5e897a298}{%
+           family={Mellor},
+           familyi={M\bibinitperiod},
+           given={Catriona},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c3f552065b04e63a6dffd6ed415781f6}{%
+           family={Susteren},
+           familyi={S\bibinitperiod},
+           given={Lise},
+           giveni={L\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \strng{namehash}{94b8851b536c9054eccc193ff1e2df80}
+      \strng{fullhash}{7a164f38132213e13d544cd98b7cd421}
+      \strng{bibnamehash}{94b8851b536c9054eccc193ff1e2df80}
+      \strng{authorbibnamehash}{94b8851b536c9054eccc193ff1e2df80}
+      \strng{authornamehash}{94b8851b536c9054eccc193ff1e2df80}
+      \strng{authorfullhash}{7a164f38132213e13d544cd98b7cd421}
+      \field{labelalpha}{Mar+21}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Government betrayal and moral injury: A global phenomenon}
+      \field{title}{Young people's voices on climate anxiety, government betrayal and moral injury: A global phenomenon}
+      \field{year}{2021}
+    \endentry
+    \entry{faz2023waermepumpe}{article}{}
+      \name{author}{1}{}{%
+        {{hash=544261538611b8beb0463ce08e05837d}{%
+           family={Marcus\bibnamedelima Theurer},
+           familyi={M\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Dennis\bibnamedelima Kremer},
+           giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{544261538611b8beb0463ce08e05837d}
+      \strng{fullhash}{544261538611b8beb0463ce08e05837d}
+      \strng{bibnamehash}{544261538611b8beb0463ce08e05837d}
+      \strng{authorbibnamehash}{544261538611b8beb0463ce08e05837d}
+      \strng{authornamehash}{544261538611b8beb0463ce08e05837d}
+      \strng{authorfullhash}{544261538611b8beb0463ce08e05837d}
+      \field{labelalpha}{Mar23}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{16}
+      \field{journaltitle}{Franfurter Allgemeine Zeitung}
+      \field{month}{7}
+      \field{title}{Wie kriege ich mein Haus kalt?}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{pages}{Wert und Wohnen}
+      \range{pages}{-1}
+    \endentry
+    \entry{ws:meteoschweiz}{online}{}
+      \name{author}{1}{}{%
+        {{hash=fbe7d2b20da8881d92a490fbf68de9eb}{%
+           family={Meteorologie\bibnamedelimb und\bibnamedelimb Klimatologie\bibnamedelima MeteoSchweiz},
+           familyi={M\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Bundesamt},
+           giveni={B\bibinitperiod},
+           prefix={für},
+           prefixi={f\bibinitperiod}}}%
+      }
+      \strng{namehash}{fbe7d2b20da8881d92a490fbf68de9eb}
+      \strng{fullhash}{fbe7d2b20da8881d92a490fbf68de9eb}
+      \strng{bibnamehash}{fbe7d2b20da8881d92a490fbf68de9eb}
+      \strng{authorbibnamehash}{fbe7d2b20da8881d92a490fbf68de9eb}
+      \strng{authornamehash}{fbe7d2b20da8881d92a490fbf68de9eb}
+      \strng{authorfullhash}{fbe7d2b20da8881d92a490fbf68de9eb}
+      \field{labelalpha}{Met}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugegriffen am 17.04.2023}
+      \field{title}{Temperaturabnahme mit der Höhe}
+      \verb{urlraw}
+      \verb https://www.meteoschweiz.admin.ch/wetter/wetter-und-klima-von-a-bis-z/temperatur/temperaturabnahme-mit-der-hoehe.html#:~:text=Aufsteigende%20warme%20Luft%20k%C3%BChlt%20ab,die%20aufsteigende%20Luft%20immer%20k%C3%BChler.
+      \endverb
+      \verb{url}
+      \verb https://www.meteoschweiz.admin.ch/wetter/wetter-und-klima-von-a-bis-z/temperatur/temperaturabnahme-mit-der-hoehe.html#:~:text=Aufsteigende%20warme%20Luft%20k%C3%BChlt%20ab,die%20aufsteigende%20Luft%20immer%20k%C3%BChler.
+      \endverb
+    \endentry
+    \entry{mueller2021machine}{book}{}
+      \name{author}{2}{}{%
+        {{hash=1f168b5d2b2d56e0f974372e66aaa8be}{%
+           family={Mueller},
+           familyi={M\bibinitperiod},
+           given={John\bibnamedelima Paul},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=cef91ddee94b96aa6af21102fc323743}{%
+           family={Massaron},
+           familyi={M\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{8c51ada1a87e13472ca8a479e4c4b25a}
+      \strng{fullhash}{8c51ada1a87e13472ca8a479e4c4b25a}
+      \strng{bibnamehash}{8c51ada1a87e13472ca8a479e4c4b25a}
+      \strng{authorbibnamehash}{8c51ada1a87e13472ca8a479e4c4b25a}
+      \strng{authornamehash}{8c51ada1a87e13472ca8a479e4c4b25a}
+      \strng{authorfullhash}{8c51ada1a87e13472ca8a479e4c4b25a}
+      \field{labelalpha}{MM21}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Machine learning for dummies}
+      \field{year}{2021}
+    \endentry
+    \entry{raschka2019python}{book}{}
+      \name{author}{2}{}{%
+        {{hash=bb679961e3f3f4bba79fc1cf3aa7df1c}{%
+           family={Raschka},
+           familyi={R\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ea5b3d38b4b9dc9c54ee2a9c3d6c7437}{%
+           family={Mirjalili},
+           familyi={M\bibinitperiod},
+           given={Vahid},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Packt Publishing Ltd}%
+      }
+      \strng{namehash}{70b021b69c6a4d9d9ffa597a634487d5}
+      \strng{fullhash}{70b021b69c6a4d9d9ffa597a634487d5}
+      \strng{bibnamehash}{70b021b69c6a4d9d9ffa597a634487d5}
+      \strng{authorbibnamehash}{70b021b69c6a4d9d9ffa597a634487d5}
+      \strng{authornamehash}{70b021b69c6a4d9d9ffa597a634487d5}
+      \strng{authorfullhash}{70b021b69c6a4d9d9ffa597a634487d5}
+      \field{labelalpha}{RM19}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Python machine learning: Machine learning and deep learning with Python, scikit-learn, and TensorFlow 2}
+      \field{year}{2019}
+    \endentry
+    \entry{ws:scikit}{online}{}
+      \name{author}{1}{}{%
+        {{hash=298aea7f14b2a3e5d8821b06d1eced9c}{%
+           family={scikit-learn.org},
+           familyi={s\bibinithyphendelim l\bibinitperiod}}}%
+      }
+      \strng{namehash}{298aea7f14b2a3e5d8821b06d1eced9c}
+      \strng{fullhash}{298aea7f14b2a3e5d8821b06d1eced9c}
+      \strng{bibnamehash}{298aea7f14b2a3e5d8821b06d1eced9c}
+      \strng{authorbibnamehash}{298aea7f14b2a3e5d8821b06d1eced9c}
+      \strng{authornamehash}{298aea7f14b2a3e5d8821b06d1eced9c}
+      \strng{authorfullhash}{298aea7f14b2a3e5d8821b06d1eced9c}
+      \field{labelalpha}{sci}
+      \field{sortinit}{s}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugegriffen am 02.05.2023}
+      \field{title}{Decision Tree Regression Documentation}
+      \verb{urlraw}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html
+      \endverb
+      \verb{url}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html
+      \endverb
+    \endentry
+    \entry{ws:tagesschau}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0102f4bb9dac7a0bcbcbe782222446da}{%
+           family={tagesschau.de},
+           familyi={t\bibinitperiod}}}%
+      }
+      \strng{namehash}{0102f4bb9dac7a0bcbcbe782222446da}
+      \strng{fullhash}{0102f4bb9dac7a0bcbcbe782222446da}
+      \strng{bibnamehash}{0102f4bb9dac7a0bcbcbe782222446da}
+      \strng{authorbibnamehash}{0102f4bb9dac7a0bcbcbe782222446da}
+      \strng{authornamehash}{0102f4bb9dac7a0bcbcbe782222446da}
+      \strng{authorfullhash}{0102f4bb9dac7a0bcbcbe782222446da}
+      \field{labelalpha}{tag}
+      \field{sortinit}{t}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Aktualisiert am 10.01.2023, Zugegriffen am 25.03.2023}
+      \field{title}{Spitzenrunde bekräftigt 2030-Ziel für E-Autos}
+      \verb{urlraw}
+      \verb https://www.tagesschau.de/inland/spitzenrunde-mobilitaet-e-autos-101.html
+      \endverb
+      \verb{url}
+      \verb https://www.tagesschau.de/inland/spitzenrunde-mobilitaet-e-autos-101.html
+      \endverb
+    \endentry
+    \entry{ws:vitalflux}{online}{}
+      \name{author}{1}{}{%
+        {{hash=6dcb987b7482e7288a5959a7624fe0ba}{%
+           family={vitalflux.com},
+           familyi={v\bibinitperiod}}}%
+      }
+      \strng{namehash}{6dcb987b7482e7288a5959a7624fe0ba}
+      \strng{fullhash}{6dcb987b7482e7288a5959a7624fe0ba}
+      \strng{bibnamehash}{6dcb987b7482e7288a5959a7624fe0ba}
+      \strng{authorbibnamehash}{6dcb987b7482e7288a5959a7624fe0ba}
+      \strng{authornamehash}{6dcb987b7482e7288a5959a7624fe0ba}
+      \strng{authorfullhash}{6dcb987b7482e7288a5959a7624fe0ba}
+      \field{labelalpha}{vit}
+      \field{sortinit}{v}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Aktualisiert am 16.04.2022, Zugegriffen am 14.05.2023}
+      \field{title}{Correlation Concepts, Matrix and Heatmap using Seaborn}
+      \verb{urlraw}
+      \verb https://vitalflux.com/correlation-heatmap-with-seaborn-pandas/
+      \endverb
+      \verb{url}
+      \verb https://vitalflux.com/correlation-heatmap-with-seaborn-pandas/
+      \endverb
+    \endentry
+    \entry{ws:dwd}{online}{}
+      \name{author}{1}{}{%
+        {{hash=a7ab45465b534bf0cad7b2b1daa586c4}{%
+           family={Wetterdienst},
+           familyi={W\bibinitperiod},
+           given={Deutscher},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{a7ab45465b534bf0cad7b2b1daa586c4}
+      \strng{fullhash}{a7ab45465b534bf0cad7b2b1daa586c4}
+      \strng{bibnamehash}{a7ab45465b534bf0cad7b2b1daa586c4}
+      \strng{authorbibnamehash}{a7ab45465b534bf0cad7b2b1daa586c4}
+      \strng{authornamehash}{a7ab45465b534bf0cad7b2b1daa586c4}
+      \strng{authorfullhash}{a7ab45465b534bf0cad7b2b1daa586c4}
+      \field{labelalpha}{Wet}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Aktualisiert am 06.11.2020, Zugegriffen am 13.04.2023}
+      \field{title}{Die Schichten der Atmosphäre}
+      \verb{urlraw}
+      \verb https://www.dwd.de/DE/wetter/thema_des_tages/2020/11/6.html
+      \endverb
+      \verb{url}
+      \verb https://www.dwd.de/DE/wetter/thema_des_tages/2020/11/6.html
+      \endverb
+    \endentry
+    \entry{faz2023wind}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b4008932d52ac3d94b6c0d4b7138ec0c}{%
+           family={Winterhagen},
+           familyi={W\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b4008932d52ac3d94b6c0d4b7138ec0c}
+      \strng{fullhash}{b4008932d52ac3d94b6c0d4b7138ec0c}
+      \strng{bibnamehash}{b4008932d52ac3d94b6c0d4b7138ec0c}
+      \strng{authorbibnamehash}{b4008932d52ac3d94b6c0d4b7138ec0c}
+      \strng{authornamehash}{b4008932d52ac3d94b6c0d4b7138ec0c}
+      \strng{authorfullhash}{b4008932d52ac3d94b6c0d4b7138ec0c}
+      \field{labelalpha}{Win23}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{14}
+      \field{journaltitle}{Franfurter Allgemeine Zeitung}
+      \field{month}{3}
+      \field{title}{Fünf am Tag}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{pages}{Technik und Motor}
+      \range{pages}{-1}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
