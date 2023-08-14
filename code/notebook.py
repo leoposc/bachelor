@@ -115,7 +115,7 @@ sci.split_data_by_days(0.4)
 #%%
 
 sci.model_selection('decisiontreeregressor')
-# sci.grid_search()
+sci.grid_search()
 sci.predict()
 sci.evaluate()
 # sci.plot_histogram_feature_importances()

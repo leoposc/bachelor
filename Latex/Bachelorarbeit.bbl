@@ -19,6 +19,32 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
+    \entry{ws:bildungsserverhamburg}{online}{}
+      \name{author}{1}{}{%
+        {{hash=336e9af6e76d0709769f7aae55c44a4b}{%
+           family={bildungsserver.hamburg.de},
+           familyi={b\bibinitperiod}}}%
+      }
+      \strng{namehash}{336e9af6e76d0709769f7aae55c44a4b}
+      \strng{fullhash}{336e9af6e76d0709769f7aae55c44a4b}
+      \strng{bibnamehash}{336e9af6e76d0709769f7aae55c44a4b}
+      \strng{authorbibnamehash}{336e9af6e76d0709769f7aae55c44a4b}
+      \strng{authornamehash}{336e9af6e76d0709769f7aae55c44a4b}
+      \strng{authorfullhash}{336e9af6e76d0709769f7aae55c44a4b}
+      \field{labelalpha}{bil}
+      \field{sortinit}{b}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugegriffen am 04.04.2023}
+      \field{title}{Wolken im Klimasystem}
+      \verb{urlraw}
+      \verb https://bildungsserver.hamburg.de/wolken-im-klimasystem-60164
+      \endverb
+      \verb{url}
+      \verb https://bildungsserver.hamburg.de/wolken-im-klimasystem-60164
+      \endverb
+    \endentry
     \entry{ws:bmwk}{online}{}
       \name{author}{1}{}{%
         {{hash=5229eca570d642fbd784398ef815624b}{%
@@ -183,30 +209,30 @@
       \verb https://commons.wikimedia.org/w/index.php?search=cloud+types&title=Special:MediaSearch&go=Go&type=image
       \endverb
     \endentry
-    \entry{ws:dwdweatherstations}{online}{}
+    \entry{ws:fraunhofer}{online}{}
       \name{author}{1}{}{%
-        {{hash=417265cb094d4fef79bf5b7302850f29}{%
-           family={dwd.de},
-           familyi={d\bibinitperiod}}}%
+        {{hash=c76511f83332b93baf714b0f6741099e}{%
+           family={Fraunhofer-Gesellschaft},
+           familyi={F\bibinithyphendelim G\bibinitperiod}}}%
       }
-      \strng{namehash}{417265cb094d4fef79bf5b7302850f29}
-      \strng{fullhash}{417265cb094d4fef79bf5b7302850f29}
-      \strng{bibnamehash}{417265cb094d4fef79bf5b7302850f29}
-      \strng{authorbibnamehash}{417265cb094d4fef79bf5b7302850f29}
-      \strng{authornamehash}{417265cb094d4fef79bf5b7302850f29}
-      \strng{authorfullhash}{417265cb094d4fef79bf5b7302850f29}
-      \field{labelalpha}{dwd}
-      \field{sortinit}{d}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \strng{namehash}{c76511f83332b93baf714b0f6741099e}
+      \strng{fullhash}{c76511f83332b93baf714b0f6741099e}
+      \strng{bibnamehash}{c76511f83332b93baf714b0f6741099e}
+      \strng{authorbibnamehash}{c76511f83332b93baf714b0f6741099e}
+      \strng{authornamehash}{c76511f83332b93baf714b0f6741099e}
+      \strng{authorfullhash}{c76511f83332b93baf714b0f6741099e}
+      \field{labelalpha}{Fra}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Zugegriffen am 27.06.2023}
-      \field{title}{Stationsliste der 83 Messstationen}
+      \field{note}{Zugegriffen am 18.06.2023}
+      \field{title}{Kurzfristprognose der PV-Leistung mit Wolkenkameras}
       \verb{urlraw}
-      \verb https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsuebersicht.html#:~:text=Wetter%20und%20Klima%20%2D%20Deutscher%20Wetterdienst,83%20Messstationen%20(nach%20Stationsname%20sortiert)
+      \verb https://www.ise.fraunhofer.de/de/geschaeftsfelder/photovoltaik/photovoltaische-module-und-kraftwerke/solare-einstrahlungs-und-leistungsprognose/kurzfristprognose-der-pv-leistung-mit-wolkenkameras.html
       \endverb
       \verb{url}
-      \verb https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsuebersicht.html#:~:text=Wetter%20und%20Klima%20%2D%20Deutscher%20Wetterdienst,83%20Messstationen%20(nach%20Stationsname%20sortiert)
+      \verb https://www.ise.fraunhofer.de/de/geschaeftsfelder/photovoltaik/photovoltaische-module-und-kraftwerke/solare-einstrahlungs-und-leistungsprognose/kurzfristprognose-der-pv-leistung-mit-wolkenkameras.html
       \endverb
     \endentry
     \entry{faz2023stromnetz}{article}{}
@@ -261,6 +287,32 @@
       \field{labeltitlesource}{title}
       \field{title}{Hands-on machine learning with Scikit-Learn, Keras, and TensorFlow}
       \field{year}{2022}
+    \endentry
+    \entry{ws:leifiphysik}{online}{}
+      \name{author}{1}{}{%
+        {{hash=aca9b4421545c4c92ce2c7cb8adca254}{%
+           family={leifiphysik.de},
+           familyi={l\bibinitperiod}}}%
+      }
+      \strng{namehash}{aca9b4421545c4c92ce2c7cb8adca254}
+      \strng{fullhash}{aca9b4421545c4c92ce2c7cb8adca254}
+      \strng{bibnamehash}{aca9b4421545c4c92ce2c7cb8adca254}
+      \strng{authorbibnamehash}{aca9b4421545c4c92ce2c7cb8adca254}
+      \strng{authornamehash}{aca9b4421545c4c92ce2c7cb8adca254}
+      \strng{authorfullhash}{aca9b4421545c4c92ce2c7cb8adca254}
+      \field{labelalpha}{lei}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugegriffen am 07.05.2023}
+      \field{title}{Energieübertragung durch Hochspannung}
+      \verb{urlraw}
+      \verb https://www.leifiphysik.de/elektrizitaetslehre/induktion-und-transformator/grundwissen/energieuebertragung-durch-hochspannung
+      \endverb
+      \verb{url}
+      \verb https://www.leifiphysik.de/elektrizitaetslehre/induktion-und-transformator/grundwissen/energieuebertragung-durch-hochspannung
+      \endverb
     \endentry
     \entry{pic:googlemaps}{online}{}
       \name{author}{1}{}{%
@@ -443,6 +495,46 @@
       \field{title}{Machine learning for dummies}
       \field{year}{2021}
     \endentry
+    \entry{pukhrem2017enhanced}{article}{}
+      \name{author}{4}{}{%
+        {{hash=9b1198c720ea86d631bf69ea00bb97b9}{%
+           family={Pukhrem},
+           familyi={P\bibinitperiod},
+           given={Shivananda},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7cf2c59473459eb6ee95fe721b482c30}{%
+           family={Basu},
+           familyi={B\bibinitperiod},
+           given={Malabika},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ba75b5e5305de6ad25ba952bc54c9b5d}{%
+           family={Conlon},
+           familyi={C\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c6f01c0fa258c549b12760ddf46214c9}{%
+           family={Sunderland},
+           familyi={S\bibinitperiod},
+           given={Keith},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Technological University Dublin}%
+      }
+      \strng{namehash}{be85b1c0a70b7d9543771864fdf52af4}
+      \strng{fullhash}{24afc933a3a645090f094fdc357e4cc6}
+      \strng{bibnamehash}{be85b1c0a70b7d9543771864fdf52af4}
+      \strng{authorbibnamehash}{be85b1c0a70b7d9543771864fdf52af4}
+      \strng{authornamehash}{be85b1c0a70b7d9543771864fdf52af4}
+      \strng{authorfullhash}{24afc933a3a645090f094fdc357e4cc6}
+      \field{labelalpha}{Puk+17}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Enhanced Network Voltage Management (NVM) Techniques Under the Proliferation of Rooftop Solar PV Installation in Low Voltage Distribution Network (LVDN)}
+      \field{year}{2017}
+    \endentry
     \entry{raschka2019python}{book}{}
       \name{author}{2}{}{%
         {{hash=bb679961e3f3f4bba79fc1cf3aa7df1c}{%
@@ -565,9 +657,11 @@
       \strng{authorbibnamehash}{a7ab45465b534bf0cad7b2b1daa586c4}
       \strng{authornamehash}{a7ab45465b534bf0cad7b2b1daa586c4}
       \strng{authorfullhash}{a7ab45465b534bf0cad7b2b1daa586c4}
+      \field{extraname}{1}
       \field{labelalpha}{Wet}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extraalpha}{1}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Aktualisiert am 06.11.2020, Zugegriffen am 13.04.2023}
@@ -577,6 +671,66 @@
       \endverb
       \verb{url}
       \verb https://www.dwd.de/DE/wetter/thema_des_tages/2020/11/6.html
+      \endverb
+    \endentry
+    \entry{ws:dwdradiation}{online}{}
+      \name{author}{1}{}{%
+        {{hash=a7ab45465b534bf0cad7b2b1daa586c4}{%
+           family={Wetterdienst},
+           familyi={W\bibinitperiod},
+           given={Deutscher},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{a7ab45465b534bf0cad7b2b1daa586c4}
+      \strng{fullhash}{a7ab45465b534bf0cad7b2b1daa586c4}
+      \strng{bibnamehash}{a7ab45465b534bf0cad7b2b1daa586c4}
+      \strng{authorbibnamehash}{a7ab45465b534bf0cad7b2b1daa586c4}
+      \strng{authornamehash}{a7ab45465b534bf0cad7b2b1daa586c4}
+      \strng{authorfullhash}{a7ab45465b534bf0cad7b2b1daa586c4}
+      \field{extraname}{2}
+      \field{labelalpha}{Wet}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugegriffen am 11.05.2023}
+      \field{title}{Dredimensionale Ansicht der PV-Anlage 1200}
+      \verb{urlraw}
+      \verb https://www.dwd.de/DE/leistungen/solarenergie/strahlungskarten_sum.html?nn=16102
+      \endverb
+      \verb{url}
+      \verb https://www.dwd.de/DE/leistungen/solarenergie/strahlungskarten_sum.html?nn=16102
+      \endverb
+    \endentry
+    \entry{ws:dwdweatherstations}{online}{}
+      \name{author}{1}{}{%
+        {{hash=a7ab45465b534bf0cad7b2b1daa586c4}{%
+           family={Wetterdienst},
+           familyi={W\bibinitperiod},
+           given={Deutscher},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{a7ab45465b534bf0cad7b2b1daa586c4}
+      \strng{fullhash}{a7ab45465b534bf0cad7b2b1daa586c4}
+      \strng{bibnamehash}{a7ab45465b534bf0cad7b2b1daa586c4}
+      \strng{authorbibnamehash}{a7ab45465b534bf0cad7b2b1daa586c4}
+      \strng{authornamehash}{a7ab45465b534bf0cad7b2b1daa586c4}
+      \strng{authorfullhash}{a7ab45465b534bf0cad7b2b1daa586c4}
+      \field{extraname}{3}
+      \field{labelalpha}{Wet}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extraalpha}{3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugegriffen am 27.06.2023}
+      \field{title}{Stationsliste der 83 Messstationen}
+      \verb{urlraw}
+      \verb https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsuebersicht.html#:~:text=Wetter%20und%20Klima%20%2D%20Deutscher%20Wetterdienst,83%20Messstationen%20(nach%20Stationsname%20sortiert)
+      \endverb
+      \verb{url}
+      \verb https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsuebersicht.html#:~:text=Wetter%20und%20Klima%20%2D%20Deutscher%20Wetterdienst,83%20Messstationen%20(nach%20Stationsname%20sortiert)
       \endverb
     \endentry
     \entry{faz2023wind}{article}{}

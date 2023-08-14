@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'Bachelorarbeit.blg'
-[64] biber:340> INFO - === Sa Aug 12, 2023, 19:30:17
-[76] Biber.pm:419> INFO - Reading 'Bachelorarbeit.bcf'
-[140] Biber.pm:979> INFO - Found 20 citekeys in bib section 0
-[159] Biber.pm:4419> INFO - Processing section 0
-[168] Biber.pm:4610> INFO - Looking for bibtex file 'literature.bib' for section 0
-[169] bibtex.pm:1713> INFO - LaTeX decoding ...
-[182] bibtex.pm:1519> INFO - Found BibTeX data source 'literature.bib'
-[293] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[293] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[293] Biber.pm:4239> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'de-DE'
-[293] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
+[58] biber:340> INFO - === Mo Aug 14, 2023, 05:00:45
+[70] Biber.pm:419> INFO - Reading 'Bachelorarbeit.bcf'
+[129] Biber.pm:979> INFO - Found 25 citekeys in bib section 0
+[141] Biber.pm:4419> INFO - Processing section 0
+[149] Biber.pm:4610> INFO - Looking for bibtex file 'literature.bib' for section 0
+[150] bibtex.pm:1713> INFO - LaTeX decoding ...
+[165] bibtex.pm:1519> INFO - Found BibTeX data source 'literature.bib'
+[290] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[290] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[290] Biber.pm:4239> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'de-DE'
+[290] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
 [312] bbl.pm:660> INFO - Writing 'Bachelorarbeit.bbl' with encoding 'UTF-8'
-[320] bbl.pm:763> INFO - Output to Bachelorarbeit.bbl
+[322] bbl.pm:763> INFO - Output to Bachelorarbeit.bbl

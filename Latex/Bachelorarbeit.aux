@@ -23,17 +23,22 @@
 \newacro{api}[\AC@hyperlink{api}{API}]{Application Programming Interface}
 \newacro{bmwk}[\AC@hyperlink{bmwk}{BMWK}]{Bundesministerium für Wirtschaft und Klimaschutz}
 \newacro{cart}[\AC@hyperlink{cart}{CART}]{Classification and Regression Trees}
+\newacro{dwd}[\AC@hyperlink{dwd}{DWD}]{Deutsche Wetterdienst}
 \newacro{eeg}[\AC@hyperlink{eeg}{EEG}]{Erneuerbare-Energien-Gesetz}
+\newacro{fise}[\AC@hyperlink{fise}{Fraunhofer ISE}]{Fraunhofer Institut für Solare Energiesysteme}
 \newacro{kwp}[\AC@hyperlink{kwp}{kWp}]{Kilowattpeak}
 \newacro{nabeg}[\AC@hyperlink{nabeg}{NABEG}]{Netzausbaubeschleunigungsgesetz}
 \newacro{nrel}[\AC@hyperlink{nrel}{NREL}]{National Renewable Energy Laboratory}
 \newacro{pv}[\AC@hyperlink{pv}{PV}]{Photovoltaik}
+\newacro{pvgis}[\AC@hyperlink{pvgis}{PVGIS}]{Photovoltaic Geographical Information System}
 \newacro{stc}[\AC@hyperlink{stc}{STC}]{Standard Test Conditions}
 \abx@aux@cite{0}{marks2021young}
 \abx@aux@segm{0}{0}{marks2021young}
 \abx@aux@cite{0}{faz2023wind}
 \abx@aux@segm{0}{0}{faz2023wind}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Einführung}{5}{section.1}\protected@file@percent }
+\abx@aux@cite{0}{pukhrem2017enhanced}
+\abx@aux@segm{0}{0}{pukhrem2017enhanced}
 \abx@aux@cite{0}{ws:smard}
 \abx@aux@segm{0}{0}{ws:smard}
 \abx@aux@cite{0}{faz2023waermepumpe}
@@ -45,6 +50,11 @@
 \newlabel{subsec:energy_need}{{2.1}{7}{Strombedarf in Deutschland}{subsection.2.1}{}}
 \abx@aux@cite{0}{ws:bundesregierung}
 \abx@aux@segm{0}{0}{ws:bundesregierung}
+\abx@aux@cite{0}{ws:smard}
+\abx@aux@segm{0}{0}{ws:smard}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Stromerzeugung und -bedarf, Deutschland 2022\relax }}{8}{figure.caption.3}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:stromerzeugung_de_2022}{{1}{8}{Stromerzeugung und -bedarf, Deutschland 2022\relax }{figure.caption.3}{}}
 \AC@undonewlabel{acro:bmwk}
 \newlabel{acro:bmwk}{{2.1}{8}{Strombedarf in Deutschland}{section*.1}{}}
 \acronymused{bmwk}
@@ -55,23 +65,24 @@
 \acronymused{pv}
 \acronymused{pv}
 \acronymused{pv}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Stromerzeugung und -bedarf, Deutschland 2022\relax }}{9}{figure.caption.3}\protected@file@percent }
-\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:stromerzeugung_de_2022}{{1}{9}{Stromerzeugung und -bedarf, Deutschland 2022\relax }{figure.caption.3}{}}
 \abx@aux@cite{0}{faz2023stromnetz}
 \abx@aux@segm{0}{0}{faz2023stromnetz}
+\abx@aux@cite{0}{ws:leifiphysik}
+\abx@aux@segm{0}{0}{ws:leifiphysik}
 \abx@aux@cite{0}{ws:destatis}
 \abx@aux@segm{0}{0}{ws:destatis}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Aufbau des Stromnetzes}{10}{subsection.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Schwankungen im Stromnetz}{10}{subsection.2.4}\protected@file@percent }
 \abx@aux@cite{0}{ws:bmwk}
 \abx@aux@segm{0}{0}{ws:bmwk}
+\abx@aux@cite{0}{ws:smard}
+\abx@aux@segm{0}{0}{ws:smard}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Realisierte Erzeugung Deutschland im Juli 2022\relax }}{11}{figure.caption.4}\protected@file@percent }
 \newlabel{fig:stromerzeugung_de_mai}{{2}{11}{Realisierte Erzeugung Deutschland im Juli 2022\relax }{figure.caption.4}{}}
 \acronymused{pv}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.1}Redispatch}{11}{subsubsection.2.4.1}\protected@file@percent }
 \abx@aux@cite{0}{ws:bmwk}
 \abx@aux@segm{0}{0}{ws:bmwk}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.1}Redispatch}{12}{subsubsection.2.4.1}\protected@file@percent }
 \AC@undonewlabel{acro:nabeg}
 \newlabel{acro:nabeg}{{2.4.1}{12}{Redispatch}{section*.5}{}}
 \acronymused{nabeg}
@@ -99,33 +110,61 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.7}Wetter-abhängige Faktoren}{17}{subsection.2.7}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.1}Wolkenarten}{17}{subsubsection.2.7.1}\protected@file@percent }
 \newlabel{subsubsec:clouds}{{2.7.1}{17}{Wolkenarten}{subsubsection.2.7.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.2}Relative Luftfeuchtigkeit und Luftdruck}{18}{subsubsection.2.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.3}Temperatur}{18}{subsubsection.2.7.3}\protected@file@percent }
+\abx@aux@cite{0}{ws:bildungsserverhamburg}
+\abx@aux@segm{0}{0}{ws:bildungsserverhamburg}
+\abx@aux@cite{0}{ws:fraunhofer}
+\abx@aux@segm{0}{0}{ws:fraunhofer}
+\AC@undonewlabel{acro:fise}
+\newlabel{acro:fise}{{2.7.1}{18}{Wolkenarten}{section*.7}{}}
+\acronymused{fise}
 \acronymused{pv}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.2}Relative Luftfeuchtigkeit und Luftdruck}{18}{subsubsection.2.7.2}\protected@file@percent }
 \abx@aux@cite{0}{meyerburger}
 \abx@aux@segm{0}{0}{meyerburger}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Temperaturkoeffizienten Solarmodule Meyer Burger White\relax }}{19}{table.caption.7}\protected@file@percent }
-\newlabel{tab:temperaturkoeffizienten}{{1}{19}{Temperaturkoeffizienten Solarmodule Meyer Burger White\relax }{table.caption.7}{}}
-\abx@aux@cite{0}{ws:dwd}
-\abx@aux@segm{0}{0}{ws:dwd}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.3}Temperatur}{19}{subsubsection.2.7.3}\protected@file@percent }
+\acronymused{pv}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Temperaturkoeffizienten Solarmodule Meyer Burger White\relax }}{19}{table.caption.8}\protected@file@percent }
+\newlabel{tab:temperaturkoeffizienten}{{1}{19}{Temperaturkoeffizienten Solarmodule Meyer Burger White\relax }{table.caption.8}{}}
+\abx@aux@cite{0}{ws:dwdradiation}
+\abx@aux@segm{0}{0}{ws:dwdradiation}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.4}Wind}{20}{subsubsection.2.7.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.5}Sonneneinstrahlung}{20}{subsubsection.2.7.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Sonneneinstrahlung Deutschland, Juli 2022\relax }}{21}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:sonneneinstrahlung}{{4}{21}{Sonneneinstrahlung Deutschland, Juli 2022\relax }{figure.caption.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Eigene Fragestellung und methodisches Vorgehen}{23}{section.3}\protected@file@percent }
-\acronymused{pv}
-\acronymused{pv}
-\acronymused{pv}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Sonneneinstrahlung Deutschland, Juli 2022\relax }}{21}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:sonneneinstrahlung}{{4}{21}{Sonneneinstrahlung Deutschland, Juli 2022\relax }{figure.caption.9}{}}
+\abx@aux@cite{0}{ws:dwd}
+\abx@aux@segm{0}{0}{ws:dwd}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.8}Bestehende Prognosemodelle}{22}{subsection.2.8}\protected@file@percent }
+\newlabel{subsec:existing_predictions}{{2.8}{22}{Bestehende Prognosemodelle}{subsection.2.8}{}}
 \AC@undonewlabel{acro:nrel}
-\newlabel{acro:nrel}{{3}{23}{Eigene Fragestellung und methodisches Vorgehen}{section*.9}{}}
+\newlabel{acro:nrel}{{2.8}{22}{Bestehende Prognosemodelle}{section*.10}{}}
 \acronymused{nrel}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Untersuchte Photovoltaikanlagen}{26}{section.4}\protected@file@percent }
+\AC@undonewlabel{acro:dwd}
+\newlabel{acro:dwd}{{2.8}{22}{Bestehende Prognosemodelle}{section*.11}{}}
+\acronymused{dwd}
+\AC@undonewlabel{acro:pvgis}
+\newlabel{acro:pvgis}{{2.8}{22}{Bestehende Prognosemodelle}{section*.12}{}}
+\acronymused{pvgis}
+\acronymused{pv}
+\acronymused{pv}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Eigene Fragestellung und methodisches Vorgehen}{24}{section.3}\protected@file@percent }
+\acronymused{pv}
+\acronymused{pv}
+\acronymused{pv}
+\acronymused{nrel}
+\abx@aux@cite{0}{raschka2019python}
+\abx@aux@segm{0}{0}{raschka2019python}
+\abx@aux@cite{0}{geron2022hands}
+\abx@aux@segm{0}{0}{geron2022hands}
+\abx@aux@cite{0}{mueller2021machine}
+\abx@aux@segm{0}{0}{mueller2021machine}
+\acronymused{pv}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Untersuchte Photovoltaikanlagen}{27}{section.4}\protected@file@percent }
 \acronymused{pv}
 \acronymused{nrel}
 \acronymused{pv}
 \acronymused{pv}
 \AC@undonewlabel{acro:kwp}
-\newlabel{acro:kwp}{{4}{26}{Untersuchte Photovoltaikanlagen}{section*.10}{}}
+\newlabel{acro:kwp}{{4}{27}{Untersuchte Photovoltaikanlagen}{section*.13}{}}
 \acronymused{kwp}
 \acronymused{pv}
 \acronymused{pv}
@@ -134,181 +173,181 @@
 \abx@aux@cite{0}{ws:meteoschweiz}
 \abx@aux@segm{0}{0}{ws:meteoschweiz}
 \acronymused{pv}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Metainformationen der Photovoltaikanlagen\relax }}{27}{table.caption.11}\protected@file@percent }
-\newlabel{tab:solarsystem_metadata}{{2}{27}{Metainformationen der Photovoltaikanlagen\relax }{table.caption.11}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Metainformationen der Photovoltaikanlagen\relax }}{28}{table.caption.14}\protected@file@percent }
+\newlabel{tab:solarsystem_metadata}{{2}{28}{Metainformationen der Photovoltaikanlagen\relax }{table.caption.14}{}}
 \acronymused{pv}
 \AC@undonewlabel{acro:stc}
-\newlabel{acro:stc}{{4}{28}{Untersuchte Photovoltaikanlagen}{section*.12}{}}
+\newlabel{acro:stc}{{4}{29}{Untersuchte Photovoltaikanlagen}{section*.15}{}}
 \acronymused{stc}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Zusammenhänge der Merkmale}{29}{section.5}\protected@file@percent }
-\newlabel{sec:features}{{5}{29}{Zusammenhänge der Merkmale}{section.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Zusammenhänge der Merkmale}{30}{section.5}\protected@file@percent }
+\newlabel{sec:features}{{5}{30}{Zusammenhänge der Merkmale}{section.5}{}}
 \acronymused{pv}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Transformation der Daten zu Wissen}{29}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Transformation der Daten zu Wissen}{30}{subsection.5.1}\protected@file@percent }
 \abx@aux@cite{0}{ws:vitalflux}
 \abx@aux@segm{0}{0}{ws:vitalflux}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Heatmap}{30}{subsection.5.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Heatmap zur Visualisierung der Korrelationen zwischen den Merkmalen\relax }}{30}{figure.caption.13}\protected@file@percent }
-\newlabel{fig:heatmap}{{5}{30}{Heatmap zur Visualisierung der Korrelationen zwischen den Merkmalen\relax }{figure.caption.13}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}Korrelation und Kausalität}{31}{subsubsection.5.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Heatmap}{31}{subsection.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Heatmap zur Visualisierung der Korrelationen zwischen den Merkmalen\relax }}{31}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:heatmap}{{5}{31}{Heatmap zur Visualisierung der Korrelationen zwischen den Merkmalen\relax }{figure.caption.16}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}Korrelation und Kausalität}{32}{subsubsection.5.2.1}\protected@file@percent }
 \acronymused{pv}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}Nicht-lineare Beziehungen}{32}{subsubsection.5.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Streudiagramm}{32}{subsection.5.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Streudiagramme zur Visualisierung der Korrelationen zwischen den Merkmalen, zugehörig zur \ac {pv}-Anlage $1200$ in Linthicum, Maryland\relax }}{33}{figure.caption.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}Nicht-lineare Beziehungen}{33}{subsubsection.5.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Streudiagramm}{33}{subsection.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Streudiagramme zur Visualisierung der Korrelationen zwischen den Merkmalen, zugehörig zur \ac {pv}-Anlage $1200$ in Linthicum, Maryland\relax }}{34}{figure.caption.17}\protected@file@percent }
 \acronymused{pv}
-\newlabel{fig:pairplot_all}{{6}{33}{Streudiagramme zur Visualisierung der Korrelationen zwischen den Merkmalen, zugehörig zur \ac {pv}-Anlage $1200$ in Linthicum, Maryland\relax }{figure.caption.14}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}Qualität der Daten}{34}{subsubsection.5.3.1}\protected@file@percent }
-\newlabel{subsubsec:quality_data}{{5.3.1}{34}{Qualität der Daten}{subsubsection.5.3.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Bewölkung in Port Chester bei New York City, New York\relax }}{35}{figure.caption.15}\protected@file@percent }
-\newlabel{fig:histogram_cc_1220}{{7}{35}{Bewölkung in Port Chester bei New York City, New York\relax }{figure.caption.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Bewölkung in New Smyrna Beach bei Orlando, Florida\relax }}{35}{figure.caption.15}\protected@file@percent }
-\newlabel{fig:histogram_cc_1231}{{8}{35}{Bewölkung in New Smyrna Beach bei Orlando, Florida\relax }{figure.caption.15}{}}
-\newlabel{eqn:logarithm}{{2}{36}{Qualität der Daten}{equation.5.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Logarithmusfunktion\relax }}{36}{figure.caption.16}\protected@file@percent }
-\newlabel{fig:geogebra_cloudcover}{{9}{36}{Logarithmusfunktion\relax }{figure.caption.16}{}}
-\newlabel{lst:validate_cloudcover}{{1}{38}{Funktion zur Validierung der Bewölkungsdaten}{lstlisting.1}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}{\ignorespaces Funktion zur Validierung der Bewölkungsdaten}}{38}{lstlisting.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Betrachtung der Daten im Detail}{39}{subsubsection.5.3.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Streudiagramme zur Visualisierung der Korrelationen zwischen den Merkmalen bei einer Sonneneinstrahlung zwischen 550 und 600 $W/ M^2$\relax }}{40}{figure.caption.17}\protected@file@percent }
-\newlabel{fig:pairplot_filtered}{{10}{40}{Streudiagramme zur Visualisierung der Korrelationen zwischen den Merkmalen bei einer Sonneneinstrahlung zwischen 550 und 600 $W/ M^2$\relax }{figure.caption.17}{}}
+\newlabel{fig:pairplot_all}{{6}{34}{Streudiagramme zur Visualisierung der Korrelationen zwischen den Merkmalen, zugehörig zur \ac {pv}-Anlage $1200$ in Linthicum, Maryland\relax }{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}Qualität der Daten}{35}{subsubsection.5.3.1}\protected@file@percent }
+\newlabel{subsubsec:quality_data}{{5.3.1}{35}{Qualität der Daten}{subsubsection.5.3.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Bewölkung in Port Chester bei New York City, New York\relax }}{36}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:histogram_cc_1220}{{7}{36}{Bewölkung in Port Chester bei New York City, New York\relax }{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Bewölkung in New Smyrna Beach bei Orlando, Florida\relax }}{36}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:histogram_cc_1231}{{8}{36}{Bewölkung in New Smyrna Beach bei Orlando, Florida\relax }{figure.caption.18}{}}
+\newlabel{eqn:logarithm}{{2}{37}{Qualität der Daten}{equation.5.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Logarithmusfunktion\relax }}{37}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:geogebra_cloudcover}{{9}{37}{Logarithmusfunktion\relax }{figure.caption.19}{}}
+\newlabel{lst:validate_cloudcover}{{1}{39}{Funktion zur Validierung der Bewölkungsdaten}{lstlisting.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}{\ignorespaces Funktion zur Validierung der Bewölkungsdaten}}{39}{lstlisting.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Betrachtung der Daten im Detail}{40}{subsubsection.5.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Streudiagramme zur Visualisierung der Korrelationen zwischen den Merkmalen bei einer Sonneneinstrahlung zwischen 550 und 600 $W/ M^2$\relax }}{41}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:pairplot_filtered}{{10}{41}{Streudiagramme zur Visualisierung der Korrelationen zwischen den Merkmalen bei einer Sonneneinstrahlung zwischen 550 und 600 $W/ M^2$\relax }{figure.caption.20}{}}
 \abx@aux@cite{0}{pic:googlemaps}
 \abx@aux@segm{0}{0}{pic:googlemaps}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Streudiagramme zur Visualisierung der Korrelationen zwischen den Merkmalen bei einer Sonneneinstrahlung zwischen 550-600 $W/ M^2$ und einer Temperatur zwischen 25°C-30°C\relax }}{41}{figure.caption.18}\protected@file@percent }
-\newlabel{fig:pairplot_filtered_radiation_temperature_1200}{{11}{41}{Streudiagramme zur Visualisierung der Korrelationen zwischen den Merkmalen bei einer Sonneneinstrahlung zwischen 550-600 $W/ M^2$ und einer Temperatur zwischen 25°C-30°C\relax }{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Streudiagramme zur Visualisierung der Korrelationen zwischen den Merkmalen bei einer Sonneneinstrahlung zwischen 550-600 $W/ M^2$ und einer Temperatur zwischen 25°C-30°C\relax }}{42}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:pairplot_filtered_radiation_temperature_1200}{{11}{42}{Streudiagramme zur Visualisierung der Korrelationen zwischen den Merkmalen bei einer Sonneneinstrahlung zwischen 550-600 $W/ M^2$ und einer Temperatur zwischen 25°C-30°C\relax }{figure.caption.21}{}}
 \acronymused{pv}
 \acronymused{pv}
 \acronymused{pv}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Dreidimensionale Darstellung des Hotels mit der \ac {pv}-Anlage $1200$ auf dem vorderen Flachdach\relax }}{42}{figure.caption.19}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Dreidimensionale Darstellung des Hotels mit der \ac {pv}-Anlage $1200$ auf dem vorderen Flachdach\relax }}{43}{figure.caption.22}\protected@file@percent }
 \acronymused{pv}
-\newlabel{pic:solarsystem_1200_picture}{{12}{42}{Dreidimensionale Darstellung des Hotels mit der \ac {pv}-Anlage $1200$ auf dem vorderen Flachdach\relax }{figure.caption.19}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Datenvorverarbeitung und Lernalgorithmus}{43}{section.6}\protected@file@percent }
-\newlabel{sec:data_algorithm}{{6}{43}{Datenvorverarbeitung und Lernalgorithmus}{section.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Datenvorverarbeitung}{43}{subsection.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.1}Korrelationen zwischen den Merkmalen abhängig von den Gegebenheiten der Photovoltaikanlage}{43}{subsubsection.6.1.1}\protected@file@percent }
+\newlabel{pic:solarsystem_1200_picture}{{12}{43}{Dreidimensionale Darstellung des Hotels mit der \ac {pv}-Anlage $1200$ auf dem vorderen Flachdach\relax }{figure.caption.22}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Datenvorverarbeitung und Lernalgorithmus}{44}{section.6}\protected@file@percent }
+\newlabel{sec:data_algorithm}{{6}{44}{Datenvorverarbeitung und Lernalgorithmus}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Datenvorverarbeitung}{44}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.1}Korrelationen zwischen den Merkmalen abhängig von den Gegebenheiten der Photovoltaikanlage}{44}{subsubsection.6.1.1}\protected@file@percent }
 \acronymused{pv}
 \acronymused{pv}
 \acronymused{pv}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.2}Ausreißer}{44}{subsubsection.6.1.2}\protected@file@percent }
-\newlabel{subsubsec:outlier}{{6.1.2}{44}{Ausreißer}{subsubsection.6.1.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Lernalgorithmus}{44}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.2}Ausreißer}{45}{subsubsection.6.1.2}\protected@file@percent }
+\newlabel{subsubsec:outlier}{{6.1.2}{45}{Ausreißer}{subsubsection.6.1.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Lernalgorithmus}{45}{subsection.6.2}\protected@file@percent }
 \abx@aux@cite{0}{ws:scikit}
 \abx@aux@segm{0}{0}{ws:scikit}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}Diskretisierung der Zielvariablen}{45}{subsubsection.6.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.2}Lineare Beziehungen}{45}{subsubsection.6.2.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Einfacher Entscheidungsbaum mit einem Merkmal und der Tiefe 2\relax }}{46}{figure.caption.20}\protected@file@percent }
-\newlabel{fig:decisiontree_linear}{{13}{46}{Einfacher Entscheidungsbaum mit einem Merkmal und der Tiefe 2\relax }{figure.caption.20}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.3}Aufbau eines Entscheidungsbaums}{47}{subsubsection.6.2.3}\protected@file@percent }
-\newlabel{subsubsec:decisiontree_structure}{{6.2.3}{47}{Aufbau eines Entscheidungsbaums}{subsubsection.6.2.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Ausschnitt des Entscheidungsbaums für die Prognose der Solaranlage in Linthicum, Maryland\relax }}{47}{figure.caption.21}\protected@file@percent }
-\newlabel{fig:binary_tree_linthicum}{{14}{47}{Ausschnitt des Entscheidungsbaums für die Prognose der Solaranlage in Linthicum, Maryland\relax }{figure.caption.21}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}Diskretisierung der Zielvariablen}{46}{subsubsection.6.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.2}Lineare Beziehungen}{46}{subsubsection.6.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Einfacher Entscheidungsbaum mit einem Merkmal und der Tiefe 2\relax }}{47}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:decisiontree_linear}{{13}{47}{Einfacher Entscheidungsbaum mit einem Merkmal und der Tiefe 2\relax }{figure.caption.23}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.3}Aufbau eines Entscheidungsbaums}{48}{subsubsection.6.2.3}\protected@file@percent }
+\newlabel{subsubsec:decisiontree_structure}{{6.2.3}{48}{Aufbau eines Entscheidungsbaums}{subsubsection.6.2.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Ausschnitt des Entscheidungsbaums für die Prognose der Solaranlage in Linthicum, Maryland\relax }}{48}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:binary_tree_linthicum}{{14}{48}{Ausschnitt des Entscheidungsbaums für die Prognose der Solaranlage in Linthicum, Maryland\relax }{figure.caption.24}{}}
 \AC@undonewlabel{acro:cart}
-\newlabel{acro:cart}{{6.2.3}{48}{Aufbau eines Entscheidungsbaums}{section*.22}{}}
+\newlabel{acro:cart}{{6.2.3}{49}{Aufbau eines Entscheidungsbaums}{section*.25}{}}
 \acronymused{cart}
 \acronymused{cart}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Verwendung der jeweiligen Merkmale im Entscheidungsbaum\relax }}{49}{figure.caption.23}\protected@file@percent }
-\newlabel{fig:histogram_feature_quantity}{{15}{49}{Verwendung der jeweiligen Merkmale im Entscheidungsbaum\relax }{figure.caption.23}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.4}Schlussfolgerungen für das Training des Modells}{50}{subsubsection.6.2.4}\protected@file@percent }
 \newlabel{subsubsec:conclusion_for_training}{{6.2.4}{50}{Schlussfolgerungen für das Training des Modells}{subsubsection.6.2.4}{}}
 \acronymused{pv}
-\@writefile{toc}{\contentsline {paragraph}{Schwierigkeiten bei unbekannten Werten.}{50}{paragraph*.24}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Limitierte Wertemenge für mögliche Prognosen.}{50}{paragraph*.25}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Schwierigkeiten bei unbekannten Werten.}{50}{paragraph*.26}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Limitierte Wertemenge für mögliche Prognosen.}{50}{paragraph*.27}\protected@file@percent }
 \acronymused{pv}
 \acronymused{pv}
 \@writefile{toc}{\contentsline {section}{\numberline {7}Optimierung der Hyperparameter}{52}{section.7}\protected@file@percent }
 \newlabel{sec:hyperparameters}{{7}{52}{Optimierung der Hyperparameter}{section.7}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Tiefe des Entscheidungsbaums}{52}{subsection.7.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Einfacher Entscheidungsbaum mit 2 Merkmalen und der Tiefe 2\relax }}{52}{figure.caption.26}\protected@file@percent }
-\newlabel{fig:decisiontree_example_2}{{16}{52}{Einfacher Entscheidungsbaum mit 2 Merkmalen und der Tiefe 2\relax }{figure.caption.26}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Einfacher Entscheidungsbaum mit 2 Merkmalen und der Tiefe 5\relax }}{53}{figure.caption.27}\protected@file@percent }
-\newlabel{fig:decisiontree_example}{{17}{53}{Einfacher Entscheidungsbaum mit 2 Merkmalen und der Tiefe 5\relax }{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Einfacher Entscheidungsbaum mit 2 Merkmalen und der Tiefe 2\relax }}{52}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:decisiontree_example_2}{{15}{52}{Einfacher Entscheidungsbaum mit 2 Merkmalen und der Tiefe 2\relax }{figure.caption.28}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Einfacher Entscheidungsbaum mit 2 Merkmalen und der Tiefe 5\relax }}{53}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:decisiontree_example}{{16}{53}{Einfacher Entscheidungsbaum mit 2 Merkmalen und der Tiefe 5\relax }{figure.caption.29}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Weitere Hyperparameter}{53}{subsection.7.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.1}Mindestanzahl an Proben je Blatt}{54}{subsubsection.7.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.2}Beschränkung der Merkmale}{54}{subsubsection.7.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.3}Maximalanzahl an Blättern}{55}{subsubsection.7.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Hyperparameter auswählen}{55}{subsection.7.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Potentielle Hyperparameter für die Rastersuche\relax }}{56}{table.caption.28}\protected@file@percent }
-\newlabel{tab:gridsearch}{{3}{56}{Potentielle Hyperparameter für die Rastersuche\relax }{table.caption.28}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Potentielle Hyperparameter für die Rastersuche\relax }}{56}{table.caption.30}\protected@file@percent }
+\newlabel{tab:gridsearch}{{3}{56}{Potentielle Hyperparameter für die Rastersuche\relax }{table.caption.30}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Hyperparameter der verwendeten Solaranlagen}{56}{subsection.7.4}\protected@file@percent }
 \acronymused{pv}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Hyperparameter der für diese Arbeit verwendeten Solaranlagen\relax }}{57}{table.caption.29}\protected@file@percent }
-\newlabel{tab:hyperparameters}{{4}{57}{Hyperparameter der für diese Arbeit verwendeten Solaranlagen\relax }{table.caption.29}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Hyperparameter der für diese Arbeit verwendeten Solaranlagen\relax }}{57}{table.caption.31}\protected@file@percent }
+\newlabel{tab:hyperparameters}{{4}{57}{Hyperparameter der für diese Arbeit verwendeten Solaranlagen\relax }{table.caption.31}{}}
 \newlabel{eqn:min_samples_leaf}{{3}{57}{Hyperparameter der verwendeten Solaranlagen}{equation.7.3}{}}
 \acronymused{pv}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Residuen \relax }}{59}{figure.caption.30}\protected@file@percent }
-\newlabel{fig:residuals}{{18}{59}{Residuen \relax }{figure.caption.30}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Residuen \relax }}{59}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:residuals}{{17}{59}{Residuen \relax }{figure.caption.32}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {8}Evaluierung des Lernalgorithmus}{59}{section.8}\protected@file@percent }
 \newlabel{sec:evaluation}{{8}{59}{Evaluierung des Lernalgorithmus}{section.8}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Residuen}{59}{subsection.8.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Vergleich Ist- und Soll-Wert}{60}{subsection.8.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Prognose und Ist-Werte des erzeugten Solarstroms einer Solaranlage in Linthicum, Maryland, USA\relax }}{61}{figure.caption.31}\protected@file@percent }
-\newlabel{fig:predictions_linthicum}{{19}{61}{Prognose und Ist-Werte des erzeugten Solarstroms einer Solaranlage in Linthicum, Maryland, USA\relax }{figure.caption.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Prognose und Ist-Werte des erzeugten Solarstroms einer Solaranlage in Linthicum, Maryland, USA\relax }}{60}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:predictions_linthicum}{{18}{60}{Prognose und Ist-Werte des erzeugten Solarstroms einer Solaranlage in Linthicum, Maryland, USA\relax }{figure.caption.33}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Evaluierung einzelner Merkmale}{61}{subsection.8.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.3.1}Sonneneinstrahlung}{61}{subsubsection.8.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Verwendung der jeweiligen Merkmale im Entscheidungsbaum\relax }}{61}{figure.caption.34}\protected@file@percent }
+\newlabel{fig:histogram_feature_quantity}{{19}{61}{Verwendung der jeweiligen Merkmale im Entscheidungsbaum\relax }{figure.caption.34}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.3.1}Sonneneinstrahlung}{62}{subsubsection.8.3.1}\protected@file@percent }
 \acronymused{pv}
 \acronymused{nrel}
 \acronymused{pv}
 \AC@undonewlabel{acro:api}
-\newlabel{acro:api}{{8.3.1}{61}{Sonneneinstrahlung}{section*.32}{}}
+\newlabel{acro:api}{{8.3.1}{62}{Sonneneinstrahlung}{section*.35}{}}
 \acronymused{api}
-\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Prognose und Ist-Werte des erzeugten Solarstroms einer Solaranlage in New Orleans, Louisiana, USA\relax }}{62}{figure.caption.33}\protected@file@percent }
-\newlabel{fig:predictions_1244}{{20}{62}{Prognose und Ist-Werte des erzeugten Solarstroms einer Solaranlage in New Orleans, Louisiana, USA\relax }{figure.caption.33}{}}
 \acronymused{cart}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Prognose und Ist-Werte des erzeugten Solarstroms einer Solaranlage in New Orleans, Louisiana, USA\relax }}{63}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:predictions_1244}{{20}{63}{Prognose und Ist-Werte des erzeugten Solarstroms einer Solaranlage in New Orleans, Louisiana, USA\relax }{figure.caption.36}{}}
 \acronymused{nrel}
 \acronymused{api}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.3.2}Bewölkungsgrad}{63}{subsubsection.8.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.3.2}Bewölkungsgrad}{64}{subsubsection.8.3.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {8.4}Auffällige Abweichungen der Prognose}{64}{subsection.8.4}\protected@file@percent }
 \acronymused{pv}
 \acronymused{pv}
 \acronymused{pv}
 \acronymused{pv}
 \acronymused{pv}
-\newlabel{eqn:determinationcoefficient}{{4}{65}{Auffällige Abweichungen der Prognose}{equation.8.4}{}}
-\newlabel{eqn:linear}{{5}{66}{Auffällige Abweichungen der Prognose}{equation.8.5}{}}
+\newlabel{eqn:determinationcoefficient}{{4}{66}{Auffällige Abweichungen der Prognose}{equation.8.4}{}}
 \acronymused{pv}
-\newlabel{lst:discrepancies_detection}{{2}{67}{Funktion zur Erkennung von Ausreißern}{lstlisting.2}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}{\ignorespaces Funktion zur Erkennung von Ausreißern}}{67}{lstlisting.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Erkannte Unstimmigkeiten im Testdatensatz der Solaranlage in Linthicum, Maryland, USA\relax }}{68}{figure.caption.34}\protected@file@percent }
-\newlabel{fig:predictions_outlier_1200}{{21}{68}{Erkannte Unstimmigkeiten im Testdatensatz der Solaranlage in Linthicum, Maryland, USA\relax }{figure.caption.34}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Prognose der Stromerzeugung für den Testdatensatz der Solaranlage in Linthicum, Maryland, USA\relax }}{68}{figure.caption.35}\protected@file@percent }
-\newlabel{fig:predictions_all_outlier_1200}{{22}{68}{Prognose der Stromerzeugung für den Testdatensatz der Solaranlage in Linthicum, Maryland, USA\relax }{figure.caption.35}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Prognose von bisher unbekannten Werten}{69}{subsection.8.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Prognose für einen Zeitraum außerhalb des Trainingsdatensatzes\relax }}{69}{figure.caption.36}\protected@file@percent }
-\newlabel{fig:predictions_forecast_1220}{{23}{69}{Prognose für einen Zeitraum außerhalb des Trainingsdatensatzes\relax }{figure.caption.36}{}}
+\newlabel{eqn:linear}{{5}{67}{Auffällige Abweichungen der Prognose}{equation.8.5}{}}
+\newlabel{lst:discrepancies_detection}{{2}{68}{Funktion zur Erkennung von Ausreißern}{lstlisting.2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}{\ignorespaces Funktion zur Erkennung von Ausreißern}}{68}{lstlisting.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Erkannte Unstimmigkeiten im Testdatensatz der Solaranlage in Linthicum, Maryland, USA\relax }}{69}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:predictions_outlier_1200}{{21}{69}{Erkannte Unstimmigkeiten im Testdatensatz der Solaranlage in Linthicum, Maryland, USA\relax }{figure.caption.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Prognose der Stromerzeugung für den Testdatensatz der Solaranlage in Linthicum, Maryland, USA\relax }}{69}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:predictions_all_outlier_1200}{{22}{69}{Prognose der Stromerzeugung für den Testdatensatz der Solaranlage in Linthicum, Maryland, USA\relax }{figure.caption.38}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Prognose von bisher unbekannten Werten}{70}{subsection.8.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Prognose für einen Zeitraum außerhalb des Trainingsdatensatzes\relax }}{70}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:predictions_forecast_1220}{{23}{70}{Prognose für einen Zeitraum außerhalb des Trainingsdatensatzes\relax }{figure.caption.39}{}}
 \acronymused{cart}
 \acronymused{pv}
 \abx@aux@cite{0}{ws:dwdweatherstations}
 \abx@aux@segm{0}{0}{ws:dwdweatherstations}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Fazit und Ausblick}{71}{section.9}\protected@file@percent }
-\newlabel{sec:conclusion_outlook}{{9}{71}{Fazit und Ausblick}{section.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Fazit}{71}{subsection.9.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}Fazit und Ausblick}{72}{section.9}\protected@file@percent }
+\newlabel{sec:conclusion_outlook}{{9}{72}{Fazit und Ausblick}{section.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Fazit}{72}{subsection.9.1}\protected@file@percent }
+\acronymused{dwd}
 \acronymused{pv}
 \acronymused{pv}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}Ausblick}{73}{subsection.9.2}\protected@file@percent }
-\newlabel{subsec:outlook}{{9.2}{73}{Ausblick}{subsection.9.2}{}}
-\abx@aux@cite{0}{raschka2019python}
-\abx@aux@segm{0}{0}{raschka2019python}
-\abx@aux@cite{0}{geron2022hands}
-\abx@aux@segm{0}{0}{geron2022hands}
-\abx@aux@cite{0}{mueller2021machine}
-\abx@aux@segm{0}{0}{mueller2021machine}
-\abx@aux@read@bbl@mdfivesum{820C95F6326E7C813CEDE7ED5055B44C}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}Ausblick}{74}{subsection.9.2}\protected@file@percent }
+\newlabel{subsec:outlook}{{9.2}{74}{Ausblick}{subsection.9.2}{}}
+\abx@aux@read@bbl@mdfivesum{DA4DC70B39ECE614F15D1F490EC99568}
+\abx@aux@defaultrefcontext{0}{ws:bildungsserverhamburg}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{ws:bmwk}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{ws:destatis}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{ws:smard}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{ws:bundesregierung}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{meyerburger}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{pic:wikipedia}{anyt/global//global/global}
-\abx@aux@defaultrefcontext{0}{ws:dwdweatherstations}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{ws:fraunhofer}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{faz2023stromnetz}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{geron2022hands}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{ws:leifiphysik}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{pic:googlemaps}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{marks2021young}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{faz2023waermepumpe}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{ws:meteoschweiz}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{mueller2021machine}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{pukhrem2017enhanced}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{raschka2019python}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{ws:scikit}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{ws:tagesschau}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{ws:vitalflux}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{ws:dwd}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{ws:dwdradiation}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{ws:dwdweatherstations}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{faz2023wind}{anyt/global//global/global}
-\gdef \@abspage@last{78}
+\gdef \@abspage@last{79}

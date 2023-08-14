@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{1140.75bp}%
+    \setlength{\unitlength}{1149bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,82 +50,89 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.59631821)%
+  \begin{picture}(1,0.59921671)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{geogebra_cloudcover.pdf}}%
-    \put(0.05193951,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}–0.1\end{tabular}}}}%
-    \put(0.05193951,0.06377383){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}–0.1\end{tabular}}}}%
-    \put(0.05193951,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}–0.1\end{tabular}}}}%
-    \put(0.1808021,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.1\end{tabular}}}}%
-    \put(0.1808021,0.06377383){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.1\end{tabular}}}}%
-    \put(0.1808021,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.1\end{tabular}}}}%
-    \put(0.24391847,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.2\end{tabular}}}}%
-    \put(0.24391847,0.06377383){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.2\end{tabular}}}}%
-    \put(0.24391847,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.2\end{tabular}}}}%
-    \put(0.30703485,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.3\end{tabular}}}}%
-    \put(0.30703485,0.06377383){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.3\end{tabular}}}}%
-    \put(0.30703485,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.3\end{tabular}}}}%
-    \put(0.37015122,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.4\end{tabular}}}}%
-    \put(0.37015122,0.06377383){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.4\end{tabular}}}}%
-    \put(0.37015122,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.4\end{tabular}}}}%
-    \put(0.43326759,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.5\end{tabular}}}}%
-    \put(0.43326759,0.06377383){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.5\end{tabular}}}}%
-    \put(0.43326759,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.5\end{tabular}}}}%
-    \put(0.49638396,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.6\end{tabular}}}}%
-    \put(0.49638396,0.06377383){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.6\end{tabular}}}}%
-    \put(0.49638396,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.6\end{tabular}}}}%
-    \put(0.55950033,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.7\end{tabular}}}}%
-    \put(0.55950033,0.06377383){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.7\end{tabular}}}}%
-    \put(0.55950033,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.7\end{tabular}}}}%
-    \put(0.6226167,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.8\end{tabular}}}}%
-    \put(0.6226167,0.06377383){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.8\end{tabular}}}}%
-    \put(0.6226167,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.8\end{tabular}}}}%
-    \put(0.68639053,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.9\end{tabular}}}}%
-    \put(0.68639053,0.06377383){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.9\end{tabular}}}}%
-    \put(0.68639053,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.9\end{tabular}}}}%
-    \put(0.75345168,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
-    \put(0.75345168,0.06377383){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
-    \put(0.75345168,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
-    \put(0.81262327,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1.1\end{tabular}}}}%
-    \put(0.81262327,0.06377383){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1.1\end{tabular}}}}%
-    \put(0.81262327,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1.1\end{tabular}}}}%
-    \put(0.87573964,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1.2\end{tabular}}}}%
-    \put(0.87573964,0.06377383){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1.2\end{tabular}}}}%
-    \put(0.87573964,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1.2\end{tabular}}}}%
-    \put(0.93885602,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1.3\end{tabular}}}}%
-    \put(0.93885602,0.06377383){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1.3\end{tabular}}}}%
-    \put(0.93885602,0.06377383){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1.3\end{tabular}}}}%
-    \put(0.07495069,0.02629849){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}–0.1\end{tabular}}}}%
-    \put(0.07495069,0.02629849){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}–0.1\end{tabular}}}}%
-    \put(0.07495069,0.02629849){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}–0.1\end{tabular}}}}%
-    \put(0.07889546,0.15253123){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.1\end{tabular}}}}%
-    \put(0.07889546,0.15253123){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.1\end{tabular}}}}%
-    \put(0.07889546,0.15253123){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.1\end{tabular}}}}%
-    \put(0.07889546,0.2156476){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.2\end{tabular}}}}%
-    \put(0.07889546,0.2156476){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.2\end{tabular}}}}%
-    \put(0.07889546,0.2156476){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.2\end{tabular}}}}%
-    \put(0.07889546,0.27876397){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.3\end{tabular}}}}%
-    \put(0.07889546,0.27876397){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.3\end{tabular}}}}%
-    \put(0.07889546,0.27876397){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.3\end{tabular}}}}%
-    \put(0.07889546,0.34188034){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.4\end{tabular}}}}%
-    \put(0.07889546,0.34188034){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.4\end{tabular}}}}%
-    \put(0.07889546,0.34188034){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.4\end{tabular}}}}%
-    \put(0.07889546,0.40499671){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.5\end{tabular}}}}%
-    \put(0.07889546,0.40499671){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.5\end{tabular}}}}%
-    \put(0.07889546,0.40499671){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.5\end{tabular}}}}%
-    \put(0.07889546,0.46877055){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.6\end{tabular}}}}%
-    \put(0.07889546,0.46877055){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.6\end{tabular}}}}%
-    \put(0.07889546,0.46877055){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.6\end{tabular}}}}%
-    \put(0.07889546,0.53188692){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.7\end{tabular}}}}%
-    \put(0.07889546,0.53188692){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.7\end{tabular}}}}%
-    \put(0.07889546,0.53188692){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.7\end{tabular}}}}%
-    \put(0.11045365,0.08086785){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
-    \put(0.1130835,0.08218277){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
-    \put(0.11045365,0.08086785){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.00065274,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}–0.3\end{tabular}}}}%
+    \put(0.00065274,0.05548303){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}–0.3\end{tabular}}}}%
+    \put(0.00065274,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}–0.3\end{tabular}}}}%
+    \put(0.06266319,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}–0.2\end{tabular}}}}%
+    \put(0.06266319,0.05548303){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}–0.2\end{tabular}}}}%
+    \put(0.06266319,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}–0.2\end{tabular}}}}%
+    \put(0.12532637,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}–0.1\end{tabular}}}}%
+    \put(0.12532637,0.05548303){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}–0.1\end{tabular}}}}%
+    \put(0.12532637,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}–0.1\end{tabular}}}}%
+    \put(0.25195822,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.1\end{tabular}}}}%
+    \put(0.25195822,0.05548303){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.1\end{tabular}}}}%
+    \put(0.25195822,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.1\end{tabular}}}}%
+    \put(0.31396867,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.2\end{tabular}}}}%
+    \put(0.31396867,0.05548303){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.2\end{tabular}}}}%
+    \put(0.31396867,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.2\end{tabular}}}}%
+    \put(0.37663185,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.3\end{tabular}}}}%
+    \put(0.37663185,0.05548303){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.3\end{tabular}}}}%
+    \put(0.37663185,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.3\end{tabular}}}}%
+    \put(0.4386423,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.4\end{tabular}}}}%
+    \put(0.4386423,0.05548303){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.4\end{tabular}}}}%
+    \put(0.4386423,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.4\end{tabular}}}}%
+    \put(0.50130548,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.5\end{tabular}}}}%
+    \put(0.50130548,0.05548303){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.5\end{tabular}}}}%
+    \put(0.50130548,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.5\end{tabular}}}}%
+    \put(0.56331593,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.6\end{tabular}}}}%
+    \put(0.56331593,0.05548303){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.6\end{tabular}}}}%
+    \put(0.56331593,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.6\end{tabular}}}}%
+    \put(0.62597911,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.7\end{tabular}}}}%
+    \put(0.62597911,0.05548303){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.7\end{tabular}}}}%
+    \put(0.62597911,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.7\end{tabular}}}}%
+    \put(0.68798956,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.8\end{tabular}}}}%
+    \put(0.68798956,0.05548303){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.8\end{tabular}}}}%
+    \put(0.68798956,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.8\end{tabular}}}}%
+    \put(0.75065274,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.9\end{tabular}}}}%
+    \put(0.75065274,0.05548303){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.9\end{tabular}}}}%
+    \put(0.75065274,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.9\end{tabular}}}}%
+    \put(0.81657963,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0.81657963,0.05548303){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0.81657963,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0.87532637,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1.1\end{tabular}}}}%
+    \put(0.87532637,0.05548303){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1.1\end{tabular}}}}%
+    \put(0.87532637,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1.1\end{tabular}}}}%
+    \put(0.93733681,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1.2\end{tabular}}}}%
+    \put(0.93733681,0.05548303){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1.2\end{tabular}}}}%
+    \put(0.93733681,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1.2\end{tabular}}}}%
+    \put(0.16253264,0.01305483){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}–10\end{tabular}}}}%
+    \put(0.16253264,0.01305483){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}–10\end{tabular}}}}%
+    \put(0.16253264,0.01305483){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}–10\end{tabular}}}}%
+    \put(0.16449086,0.13772846){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.16449086,0.13772846){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.16449086,0.13772846){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.16449086,0.20039164){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}20\end{tabular}}}}%
+    \put(0.16449086,0.20039164){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}20\end{tabular}}}}%
+    \put(0.16449086,0.20039164){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}20\end{tabular}}}}%
+    \put(0.16449086,0.26240209){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}30\end{tabular}}}}%
+    \put(0.16449086,0.26240209){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}30\end{tabular}}}}%
+    \put(0.16449086,0.26240209){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}30\end{tabular}}}}%
+    \put(0.16449086,0.32506527){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}40\end{tabular}}}}%
+    \put(0.16449086,0.32506527){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}40\end{tabular}}}}%
+    \put(0.16449086,0.32506527){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}40\end{tabular}}}}%
+    \put(0.16449086,0.38707572){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}50\end{tabular}}}}%
+    \put(0.16449086,0.38707572){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}50\end{tabular}}}}%
+    \put(0.16449086,0.38707572){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}50\end{tabular}}}}%
+    \put(0.16449086,0.4497389){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}60\end{tabular}}}}%
+    \put(0.16449086,0.4497389){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}60\end{tabular}}}}%
+    \put(0.16449086,0.4497389){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}60\end{tabular}}}}%
+    \put(0.16449086,0.51174935){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}70\end{tabular}}}}%
+    \put(0.16449086,0.51174935){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}70\end{tabular}}}}%
+    \put(0.16449086,0.51174935){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}70\end{tabular}}}}%
+    \put(0.16449086,0.57441253){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}80\end{tabular}}}}%
+    \put(0.16449086,0.57441253){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}80\end{tabular}}}}%
+    \put(0.16449086,0.57441253){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}80\end{tabular}}}}%
+    \put(0.17101828,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.17101828,0.05548303){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.17101828,0.05548303){\color[rgb]{0.14509804,0.14509804,0.14509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{geogebra_cloudcover.pdf}}%
-    \put(0.10519395,0.00854701){\color[rgb]{0.08235294,0.39607843,0.75294118}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}h\end{tabular}}}}%
-    \put(0.10519395,0.00854701){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}h\end{tabular}}}}%
-    \put(0.10519395,0.00854701){\color[rgb]{0.08235294,0.39607843,0.75294118}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}h\end{tabular}}}}%
+    \put(0.17885117,0.00587467){\color[rgb]{0,0.39215686,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}f\end{tabular}}}}%
+    \put(0.17885117,0.00587467){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}f\end{tabular}}}}%
+    \put(0.17885117,0.00587467){\color[rgb]{0,0.39215686,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}f\end{tabular}}}}%
+    \put(0.16985373,0.55230833){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02345419\unitlength}\raggedright \end{minipage}}}%
   \end{picture}%
 \endgroup%

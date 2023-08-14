@@ -248,18 +248,17 @@ class ScikitManager():
         
 
     def validate_cloudcover_quality(self):
-        MAX_THRESHOLD = 100 # max possible number of unique values is 100
-        MAX_SAMPLES = 3000       # MAX_THRESHOLD is maximized to 4000
+        MAX_SAMPLES = 3000       # MAX_THRESHOLD is maximized to 3000
 
         def f(x):
-            c = 0.25 * math.log(15*x +1)
+            c = 25 * math.log(15*x +1)
             print(f"Input value: {x}")
             print(f"Function value: {c}")
             return c
         
         data = self.XY_df['cloudcoverage'].values        
         n_samples = min(len(data), MAX_SAMPLES)
-        min_unique = f(n_samples / MAX_SAMPLES) * MAX_THRESHOLD
+        min_unique = f(n_samples / MAX_SAMPLES)
         uniques = np.unique(data)
         # calculate the variety of cloudcoverage and weight it
         cc_variety_weight = (np.max(uniques) - np.min(uniques)) / 100
@@ -393,7 +392,7 @@ class ScikitManager():
         parameters={
                     # "splitter":["best","random"],
                     "max_depth" : [5,6,7,8,9,11,12,13,15,17],
-                    "min_samples_leaf":[5,7,8,9,10,11,12,13,15,17,20,25,30,35,40,45,50],
+                    "min_samples_leaf":[5,7,8,9,10,11,12,13,15,17,20,25,30,35,40,45,50],               
                     # "min_weight_fraction_leaf":[0.0, 0.1,0.2,0.3],
                     "max_features":[None],
                     "max_leaf_nodes":[24,28,36,40,44,48,96,192,384,768,1536],

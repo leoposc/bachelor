@@ -59,41 +59,56 @@
 \begin{document}
 
 % Titelseite
-\begin{titlepage}
-    \begin{center}
-        \vspace*{1cm}
-        
-        \textbf{\LARGE{Prognose über die Stromerzeugung einer Photovoltaikanlage mittels maschinellem Lernen}}
-        
-        \vspace{0.5cm}
-        \Large{Bachelorarbeit}
-        
-        \vspace{1.5cm}
-        \Large{Vorgelegt von}
-        
-        \vspace{0.5cm}
-        \Large{Leopold Julius Schmid}
-        
-        \vspace{1.5cm}
-        \Large{Matrikelnummer: 79776}
-        
-        \vfill
-        
-        \Large{Fakultät für Elektronik und Informatik}
-        
-        \vspace{0.5cm}
-        \Large{Hochschule Aalen}
-        
-        \vspace{1.5cm}
-        \Large{Datum}
-        
-    \end{center}
-\end{titlepage}
+%\begin{titlepage}
+%    \begin{center}
+%        \vspace*{1cm}
+%        
+%        \textbf{\LARGE{Prognose über die Stromerzeugung einer Photovoltaikanlage mittels maschinellem Lernen}}
+%        
+%        \vspace{0.5cm}
+%        \Large{Bachelorarbeit}
+%        
+%        \vspace{1.5cm}
+%        \Large{Vorgelegt von}
+%        
+%        \vspace{0.5cm}
+%        \Large{Leopold Julius Schmid}
+%        
+%        \vspace{1.5cm}
+%        \Large{Matrikelnummer: 79776}
+%        
+%        \vfill
+%        
+%        \Large{Fakultät für Elektronik und Informatik}
+%        
+%        \vspace{0.5cm}
+%        \Large{Hochschule Aalen}
+%        
+%        \vspace{1.5cm}
+%        \Large{Datum}
+%        
+%    \end{center}
+%\end{titlepage}
 
 
 \newpage
 
 \section*{Erklärung}
+
+Hiermit erkläre ich, dass ich, Leopold Schmid, die vorliegende Arbeit selbstständig und ohne fremde Hilfe verfasst und keine anderen Hilfsmittel als die angegebenen verwendet habe.
+
+Insbesondere versichere ich, dass ich alle wörtlichen und sinngemäßen Übernahmen aus anderen Werken als solche kenntlich gemacht habe. Weiterhin erkläre ich, eine Bachelorarbeit in diesem Studiengebiet erstmalig einzureichen. \\
+\vspace{2\baselineskip}
+  
+Schwäbisch Gmünd, den \today 
+
+\vspace{2\baselineskip}
+
+\parbox{0.6\linewidth}{\dotfill}
+
+\vspace{0.5\baselineskip}
+
+Leopold Julius Schmid
 
 
 \newpage
@@ -105,11 +120,14 @@
 \acro{api}[API]{Application Programming Interface}
 \acro{bmwk}[BMWK]{Bundesministerium für Wirtschaft und Klimaschutz}
 \acro{cart}[CART]{Classification and Regression Trees}
+\acro{dwd}[DWD]{Deutsche Wetterdienst}
 \acro{eeg}[EEG]{Erneuerbare-Energien-Gesetz}
+\acro{fise}[Fraunhofer ISE]{Fraunhofer Institut für Solare Energiesysteme}
 \acro{kwp}[kWp]{Kilowattpeak}
 \acro{nabeg}[NABEG]{Netzausbaubeschleunigungsgesetz}
 \acro{nrel}[NREL]{National Renewable Energy Laboratory}
 \acro{pv}[PV]{Photovoltaik}
+\acro{pvgis}[PVGIS]{Photovoltaic Geographical Information System}
 \acro{stc}[STC]{Standard Test Conditions}
 \end{acronym}
 
@@ -132,7 +150,7 @@ Auf der einen Seite werden die Befürchtungen der Anderen für übertrieben, unw
 
 Andererseits wird gemahnt, die Ernsthaftigkeit der Situation nicht zu unterschätzen. Gewarnt wird, dass die Konsequenzen des Klimawandels irreversibel seien, weswegen Treibhausgase unverzüglich auf ein Minimum reduziert werden müssen. Um Folgen wie das Abschmelzen der Eisschilde und Gletscher, das Aussterben verschiedenster Tierarten und der Anstieg des Meeresspiegels zu verhindern, spielen erneuerbare Energien eine entscheidende Rolle. Im Gegensatz zu fossilen Energieträgern erzeugen die Erneuerbaren keine oder nur geringste Treibhausgasemissionen. Bis 2030 sollen die regenerativen Energien 80\% des Strombedarfs Deutschlands decken \cite{faz2023wind}. Da die Möglichkeiten der Energieerzeugung in Deutschland durch Wasserkraft und Biomasseverbrennung schon heute nahezu ausgeschöpft sind, bilden Solar- und Windenergie einen wichtigen Grundpfeiler, um die Ausbauziele zu erreichen. 
 
-Ebenso komplex wie die Klimamodelle, die die Verstrickungen verschiedenster Phänomene in unserer Natur berücksichtigen sollen, ist allerdings die Transformation unseres Stromnetzes. In einem Netz, welches dafür ausgelegt wurde, dass wenige größere Kraftwerke Strom einspeisen, werden künftig immer mehr kleinere, dezentrale Kraftwerke mitwirken. Als Folge kommen diverse Herausforderungen auf uns zu. Unter anderem verträgt nicht jedes elektronische Bauteil in einem Niederspannungsnetz Rücklaufstrom. (QUELLE?) Allerdings könnte es genau zu einem solchen Rücklaufstrom kommen, wenn in dem Niederspannungsnetz mehr Strom erzeugt als verbraucht wird. Des Weiteren reagiert ein Stromnetz äußerst empfindlich auf Spannungsschwankungen. Auf Grund dessen müssen Netzbetreiber darauf achten, dass genauso viel Strom verbraucht wie erzeugt wird. Solar- und Windenergie zählen zu den fluktuierenden Energieerzeugern, ergo ist die Stromproduktion nur sehr begrenzt regulierbar und somit nicht an die aktuelle Marktnachfrage anpassbar.
+Ebenso komplex wie die Klimamodelle, die die Verstrickungen verschiedenster Phänomene in unserer Natur berücksichtigen sollen, ist allerdings die Transformation unseres Stromnetzes. In einem Netz, welches dafür ausgelegt wurde, dass wenige größere Kraftwerke Strom einspeisen, werden künftig immer mehr kleinere, dezentrale Kraftwerke mitwirken. Als Folge kommen diverse Herausforderungen auf uns zu. Unter anderem verträgt nicht jedes elektronische Bauteil in einem Niederspannungsnetz Rücklaufstrom \cite{pukhrem2017enhanced}. Allerdings könnte es genau zu einem solchen Rücklaufstrom kommen, wenn in dem Niederspannungsnetz mehr Strom erzeugt als verbraucht wird. Des Weiteren reagiert ein Stromnetz äußerst empfindlich auf Spannungsschwankungen. Auf Grund dessen müssen Netzbetreiber darauf achten, dass genauso viel Strom verbraucht wie erzeugt wird. Solar- und Windenergie zählen zu den fluktuierenden Energieerzeugern, ergo ist die Stromproduktion nur sehr begrenzt regulierbar und somit nicht an die aktuelle Marktnachfrage anpassbar.
 
 Die Relevanz der Abschlussarbeit basiert auf der Annahme, dass eine genauere Prognose über die erzeugte Strommenge helfen würde das Stromnetz zu stabilisieren und Netzschwankungen, dass heißt das Risiko eines Brown- oder sogar Black-Outs zu minimieren. Anhand der neu gewonnenen Information könnten kurzfristige Stromimporte beziehungsweise -exporte besser reguliert werden. Ebenso wäre es denkbar, dass man für die Industrie und/ oder Endverbraucher mehr Anreize schafft, ihren Stromverbrauch zu einem gewissen Grad anzupassen, wobei mehr Informationen bezüglich der Verfügbarkeit von Strom gleichfalls hilfreich wäre. Zuletzt könnten starke Abweichungen zwischen der Prognose und der tatsächlich erzeugten Strommenge ein Indiz dafür sein, dass die zugrunde liegende Solaranlage eine Wartung benötigt.
 
@@ -153,9 +171,7 @@ Im gesamten Jahr 2018 betrug die realisierte Stromerzeugung in Deutschland 543.0
 
 Tatsache ist jedoch, dass die Dekarbonisierung durch Elektrifizierung unserer Industrie, des Verkehrs als auch des privaten Sektors stattfinden soll, weshalb mit einer deutlichen Zunahme des Strombedarfes zu rechnen ist. Allem voran kommen hierbei Elektroautos und Wärmepumpen zum Einsatz, für deren Betrieb elektrische Energie eine Grundvoraussetzung ist. 
 
-Die Wärmepumpen führen dazu, dass der Stromverbrauch im Winter deutlich steigen wird. Zwar können diese Aggregate im Sommer ebenfalls zum Kühlen verwendet werden, allerdings ist dabei der Stromverbrauch, zumindest bei einem Teil der Wärmepumpen, signifikant geringer. Nämlich reicht der Erdwärmepumpe eine kleine Umwälzpumpe aus, um die niedrigen Temperaturen aus den Tiefen zu holen und damit das Haus zu kühlen. Der Verdichter, der am meisten Strom verbraucht, wird nur von Luft-Wasser-Wärmepumpen zum Kühlen benötigt \cite{faz2023waermepumpe}.
-
-Bei Erd- beziehungsweise Grundwasserwärmepumpen reicht eine kleinere Umwälzpumpe aus, um die notwendige Wärme. (???) 
+Die Wärmepumpen führen dazu, dass der Stromverbrauch im Winter deutlich steigen wird. Zwar können diese Aggregate im Sommer ebenfalls zum Kühlen verwendet werden, allerdings ist dabei der Stromverbrauch, zumindest bei einem Teil der Wärmepumpen, signifikant geringer. Nämlich reicht der Erdwärmepumpe eine kleine Umwälzpumpe aus, um die niedrigen Temperaturen aus den Tiefen zu holen und damit das Haus zu kühlen. Der Verdichter, der am meisten Strom verbraucht, wird beim Kühlen nur von Luftwärmepumpen zum Kühlen benötigt \cite{faz2023waermepumpe}.
 
 %https://zeitung.faz.net/fas/wert-wohnen/2023-07-16/wie-kriege-ich-mein-haus-kalt/915655.html
 
@@ -165,10 +181,8 @@ Bis 2030 sollen sich 15 Millionen Elektroautos auf den deutschen Straßen fortbe
 
 Schließlich hat sich Deutschland als Ziel gesetzt, bis 2030 65 Prozent weniger Treibhausgase zu emittieren als 1990. Hierzu soll der sich aktuell noch hinter seinen Zielen befindende Verkehrssektor durch eine stärkere Elektrifizierung die gesetzten Vorgaben aufholen.
 
-Um die Klimaneutralität bis 2045 zu erreichen, sollen parallel dazu ab 2024 500.000 neue Wärmepumpen pro Jahr installiert werden \cite{ws:bundesregierung}. Wärmepumpen werden, wie bereits unter \autoref{subsec:energy_need} erwähnt, mit elektrischer Energie betrieben und entziehen der Umweltwärme die Energie, um diese für die Wärmeversorgung von Gebäuden zu verwenden. So kann der Bedarf an fossilen Energieträgern sukzessive heruntergefahren werden.
+Um die Klimaneutralität bis 2045 zu erreichen, sollen parallel dazu ab 2024 500.000 neue Wärmepumpen pro Jahr installiert werden \cite{ws:bundesregierung}. Wärmepumpen werden, wie bereits unter \autoref{subsec:energy_need} erwähnt, mit elektrischer Energie betrieben und entziehen der Umweltwärme die Energie, um diese für die Wärmeversorgung von Gebäuden zu verwenden. So kann der Bedarf an fossilen Energieträgern sukzessive heruntergefahren werden. Das \ac{bmwk} prognostiziert daher für 2030, dass der Bedarf an Strom auf 750 TWh ansteigen wird.
 %https://www.bundesregierung.de/breg-de/aktuelles/kanzler-viessmann-2070096#:~:text=W%C3%A4rmepumpen%20k%C3%B6nnen%20sowohl%20Alt%2D%20als%20auch%20Neubauten%20klimafreundlich%20beheizen.&text=Die%20Bundesregierung%20hat%20sich%20das,weniger%20Treibhausgas%2DEmissionen%20zu%20verursachen.
-
-Das \ac{bmwk} prognostiziert daher für 2030, dass der Bedarf an Strom auf 750 TWh ansteigen wird.
 
 \subsection{Strommix Deutschland}
 
@@ -179,6 +193,8 @@ Laut dem \ac{bmwk} (Stand 1. April 2020) ist Deutschland im Besitz von Stromerze
 \def\svgwidth{450pt}
 \fontsize{7}{10}\selectfont
 \input{assets/Strombedarf_Erzeugung_2022.pdf_tex}
+\captionsetup{justification=raggedleft,singlelinecheck=false,skip=0pt}\caption*{\scriptsize{Quelle: \cite{ws:smard}}}
+\captionsetup{justification=centering,singlelinecheck=false,skip=25pt}
 \caption{Stromerzeugung und -bedarf, Deutschland 2022}
 \label{fig:stromerzeugung_de_2022}
 \end {figure}
@@ -192,7 +208,7 @@ Auf Grund der geographischen Lage liegt Deutschland äußerst zentral in einem i
 
 %https://www.bmwk.de/Redaktion/DE/Dossier/strommarkt-der-zukunft.html#:~:text=Aufgrund%20der%20zunehmenden%20Elektrifizierung%20in,2045%20wurde%20im%20Energiewirtschaftsgesetz%20verankert.
 
-Um das Stromnetz genauer zu betrachten, muss zunächst zwischen Hochspannungsnetzen, Mittelspannungsnetzen und Niederspannungsnetzen differenziert werden. Durch die Umwandlung der Spannung auf 60 bis 220 Kilovolt ist der landesweite Transport in den Hochspannungsnetzen des Stroms signifikant effizienter, da durch die höhere Spannung die Stromstärke gesenkt wird \cite{faz2023stromnetz}. Dies vor dem Hintergrund, dass der Leitungsverlust quadratisch mit der Stromstärke zunimmt. Demnach sind Hochspannungsnetze die notwendigen Autobahnen des Stromnetzes. (QUELLE)
+Um das Stromnetz genauer zu betrachten, muss zunächst zwischen Hochspannungsnetzen, Mittelspannungsnetzen und Niederspannungsnetzen differenziert werden. Durch die Umwandlung der Spannung auf 60 bis 220 Kilovolt ist der landesweite Transport in den Hochspannungsnetzen des Stroms signifikant effizienter, da durch die höhere Spannung die Stromstärke gesenkt wird \cite{faz2023stromnetz}. Dies vor dem Hintergrund, dass der Leitungsverlust quadratisch mit der Stromstärke zunimmt \cite{ws:leifiphysik}. Demnach sind Hochspannungsnetze die notwendigen Autobahnen des Stromnetzes.
 
 Bisher wurden in der öffentliche Debatte insbesondere die großen Stromtrassen thematisiert. Beschwerden, wie Bürgerbeschwerden, dass die Trassen zu nah am eigenen Grundstück wären, führen häufig zu einem schleppenden Ausbau. Keineswegs zu unterschätzen ist jedoch die Wichtigkeit der lokalen Niederspannungsnetze. Die dezentrale Energieerzeugung führt dazu, dass die Energiewende genauso dort stattfinden muss. Leitungen, Trafos und Schaltkästen müssen weiter ausgebaut und erneuert werden. Nicht übertrieben wäre es zu sagen, dass die Energiewende im Verteilernetz stattfindet.
 
@@ -219,6 +235,8 @@ Auf Grund von stark schwankendem Verbrauchs der Privathaushalten sowie weiten Te
 \def\svgwidth{450pt}
 \fontsize{7}{10}\selectfont
 \input{assets/Strombedarf_Erzeugung_Woche.pdf_tex}
+\captionsetup{justification=raggedleft,singlelinecheck=false,skip=0pt}\caption*{\scriptsize{Quelle: \cite{ws:smard}}}
+\captionsetup{justification=centering,singlelinecheck=false,skip=25pt}
 \caption{Realisierte Erzeugung Deutschland im Juli 2022}
 \label{fig:stromerzeugung_de_mai}
 \end {figure}
@@ -272,11 +290,9 @@ Bei der astronomischen Steuerung werden die Solarmodule kontinuierlich zur Sonne
 
 \subsubsection{Sensorisch nachgeführte Photovoltaikanlagen}
 
-Spannender wird es bei der aufwendigeren Technologie, die einen lokal installierten Sensor die optimale Ausrichtung der Solarpanele ermitteln lässt. Der hellste Punkt am Himmel wird durch die Sensorsteuerung wahrgenommen und dementsprechend werden die Sonnenkollektoren ausgerichtet. Der hellste Punkt am Himmel kann sich jedoch sehr schnell ändern, da er von der aktuellen Wolkendecke abhängt. Vor allem bei einer durchwachsenen Wolkendecke lässt sich nur schwer ermitteln, ob die Solarpanelen im Moment von einer Wolke bedeckt werden. 
+Spannender wird es bei der aufwendigeren Technologie, die einen lokal installierten Sensor die optimale Ausrichtung der Solarpanele ermitteln lässt. Der hellste Punkt am Himmel wird durch die Sensorsteuerung wahrgenommen und dementsprechend werden die Sonnenkollektoren ausgerichtet. Der hellste Punkt am Himmel kann sich jedoch sehr schnell ändern, da er von der aktuellen Wolkendecke abhängt. Im kommenden \fullref{subsubsec:clouds} werden die Schwierigkeiten beim Bestimmen der aktuellen Wolkendecke genauer erläutert.
 
-HIER: WOLKENKAMERA ERMÖGLICHT DIES, WEBSITE VERLINKEN
-
-Folglich wird die Ausrichtung der Sonnenkollektoren durch den Sensor kontinuierlich an die aktuellen Gegebenheiten angepasst. Die exakte Wolkensituation unterliegt einer stetigen Veränderung und wird keineswegs durch die Eingabedaten der Realität entsprechend repräsentiert, wodurch Ungenauigkeiten bei der Prognose entstehen können.
+Die Ausrichtung der Sonnenkollektoren wird durch den Sensor kontinuierlich an die aktuellen Gegebenheiten angepasst. Die exakte Wolkensituation unterliegt einer stetigen Veränderung und wird keineswegs durch die dieser Arbeit vorliegenden Eingabedaten der Realität entsprechend repräsentiert, wodurch Ungenauigkeiten bei der Prognose entstehen können.
 
 Die gleiche Problematik besteht auch bei herkömmlichen Solaranlagen, deren Module nicht sensorgesteuert ausgerichtet werden. Insbesondere werden die für dieses Projekt zur Verfügung stehenden Wetterdaten  nicht in dem Intervall aktualisiert, indem sich die Wetterlage in der Wirklichkeit verändert. Da das Ziel dieser Arbeit ist, die gemittelte, erzeugte Strommenge stündlich vorauszusagen, soll uns die kontinuierlich schwankende Leistungsabgabe einer Solaranlage in der weiteren Beurteilung nicht tangieren. 
 
@@ -303,19 +319,21 @@ Verschiedene Wolkentypen wirken sich unterschiedlich auf die Sonneneinstrahlung 
 
 Stratuswolken sind flache, graue Wolken, die den Himmel oft bedecken. Sie bestehen aus Wassertröpfchen und liegen in niedriger Höhe. Stratuswolken blockieren die Sonneneinstrahlung und reduzieren die Helligkeit des Tageslichts erheblich. Sie haben eine kühlende Wirkung, da sie einen großen Teil der Sonnenenergie reflektieren.
 
-Cumuluswolken sind große, weiße, flauschige Wolken mit einer flachen Basis und einer kuppelförmigen Oberseite. Sie treten oft an sonnigen Tagen auf. Cumuluswolken können die Sonneneinstrahlung beeinflussen, indem sie sie teilweise reflektieren und teilweise absorbieren. Dadurch entstehen Schatten und Sonnenflecken auf der Erdoberfläche.
+Cumuluswolken sind große, weiße, flauschige Wolken mit einer flachen Basis und einer kuppelförmigen Oberseite. Sie können die Sonneneinstrahlung beeinflussen, indem sie sie teilweise reflektieren und teilweise absorbieren. Dadurch entstehen Schatten und Sonnenflecken auf der Erdoberfläche.
 
 Cirruswolken sind dünne, faserige Wolken, die in großen Höhen schweben. Sie bestehen aus Eiskristallen und erscheinen oft als Federwolken oder Schleierwolken. Cirruswolken lassen viel Sonnenlicht durch und haben daher eine geringere Auswirkung auf die Sonneneinstrahlung. Sie können jedoch einen Schleier vor der Sonne bilden und das Licht diffus erscheinen lassen.
 
-Nimbostratuswolken sind dichte, graue Wolken, die mit starkem Niederschlag verbunden sind. Sie erstrecken sich über große Gebiete und sind oft mit anhaltendem Regen oder Schneefall verbunden. Nimbostratuswolken blockieren die Sonneneinstrahlung weitgehend und führen zu trüben, düsteren Bedingungen.
+Nimbostratuswolken sind dichte, graue Wolken, die mit starkem Niederschlag verbunden sind. Sie erstrecken sich über große Gebiete und sind oft mit anhaltendem Regen oder Schneefall verbunden. Nimbostratuswolken blockieren die Sonneneinstrahlung weitgehend und führen zu trüben, düsteren Bedingungen \cite{ws:bildungsserverhamburg}.
+
+Vor allem bei einer durchwachsenen Wolkendecke lässt sich nur schwer ermitteln, ob die Solarpanelen im Moment von einer Wolke bedeckt werden. Ein Ansatz, um diese Problematik anzugehen, ist es Wolkenkameras zu installieren. Das \ac{fise} bietet die Dienstleistung an, lokal Kameras zu montieren, die eine höhere Auflösung als Satellitenbilder aufweisen. Folglich können bis zu 15 Minuten im Voraus Aussagen über die zukünftige Wolkensituation am Himmel getätigt werden. Die Kamera, die am Himmel bis zu einer Fläche von $10\ km^2$ aufnehmen kann, ermöglicht eine Auflösung von meist 10 Metern \cite{ws:fraunhofer}. Die Wolkenkameras werden an verschiedenen Punkten des Stromverteilernetzes oder direkt bei den \ac{pv}-Anlagen montiert. Dass eine solch aufwendige Dienstleistung angeboten wird, belegt die Relevanz  einer exakten, kurzfristigen Solarstromprognose für den Strommarkt.
 
 \subsubsection{Relative Luftfeuchtigkeit und Luftdruck}
 
-Im Allgemeinen lässt sich sagen, dass die Teilchen (Wassertröpfchen, Eiskristalle, Staub, Pollen, Meeressalze und Schadstoffe), aus denen die Wolken bestehen, die Sonnenstrahlen reflektieren oder absorbieren. Auf die gleiche Weise können Wasser- und Luftpartikel in der unteren Troposphäre die Strahlung beeinflussen. Folglich ist die gemessene Luftfeuchtigkeit und der Luftdruck ein weiteres Kennzeichen dafür, wie viele Teilchen sich in der Troposphäre befinden. Umso höher die beiden Werte sind, desto größer ist die Wahrscheinlichkeit, dass die Sonneneinstrahlung reflektiert oder absorbiert wird, wodurch wir die Erwartungen an den Stromertrag senken müssen. 
+Im Allgemeinen lässt sich sagen, dass die Teilchen (Wassertröpfchen, Eiskristalle, Staub, Pollen, Meeressalze und Schadstoffe), aus denen die Wolken bestehen, die Sonnenstrahlen reflektieren oder absorbieren. Auf die gleiche Weise können Wasser- und Luftpartikel in der unteren Troposphäre die Strahlung beeinflussen. Folglich ist die gemessene Luftfeuchtigkeit und der Luftdruck ein weiteres Kennzeichen dafür, wie viele Teilchen sich in der Troposphäre befinden. Umso höher die beiden Werte sind, desto größer ist die Wahrscheinlichkeit, dass die Sonneneinstrahlung reflektiert oder absorbiert wird, wodurch der Erwartungswert an den Stromertrag gesenkt werden muss. 
 
 \subsubsection{Temperatur}
 
-Ein weit verbreiteter Glaube ist, dass die Stromproduktion durch Solaranlagen im Hochsommer am höchsten ist. In aller Regel ist dies jedoch nicht der Fall, da die Temperatur eine entscheidende Rolle spielt. Die hohen Temperaturen im Sommer beeinträchtigen den Wirkungsgrad der Solarzellen, welche die Schlüsselkomponente eines \ac{pv}-Systems bilden. Die meisten Hersteller geben einen Temperaturkoeffizienten an, der spezifiziert inwiefern sich der Wirkungsgrad mit steigenden Temperaturen verändert. Gewöhnlich erhöht sich der Widerstand im Stromkreis der Solarzelle mit den höheren Temperaturen, wodurch die Gesamtleistung der Anlage zurückgeht. Folgende Temperaturkoeffizienten sind aus dem Datenblatt der Solarmodule \textit{White} von dem renommierten, deutschen Solarmodulhersteller \textit{Meyer Burger} entnommen: \newline
+Ein weit verbreiteter Glaube ist, dass die Stromproduktion durch Solaranlagen im Hochsommer am höchsten ist. In aller Regel ist dies jedoch nicht der Fall, da die Temperatur eine entscheidende Rolle spielt. Die hohen Temperaturen im Sommer beeinträchtigen den Wirkungsgrad der Solarzellen, welche die Schlüsselkomponente eines \ac{pv}-Systems bilden. Die meisten Hersteller geben einen Temperaturkoeffizienten an, der spezifiziert inwiefern sich der Wirkungsgrad mit steigenden Temperaturen verändert. Gewöhnlich erhöht sich der Widerstand im Stromkreis der Solarzelle mit den höheren Temperaturen, wodurch die Gesamtleistung der Anlage zurückgeht. Folgende Temperaturkoeffizienten sind aus dem Datenblatt der Solarmodule \textit{White} von dem renommierten, schweizerischen Solarmodulhersteller \textit{Meyer Burger} entnommen: \newline
 
 
 \begin{table}[h]
@@ -355,31 +373,41 @@ Die Sonne emittiert Energie in sämtliche Richtungen über den gesamten elektrom
 \centering
 \def\svgwidth{350pt}
 \input{assets/sonneneinstrahlung_deutschland.pdf_tex}
+\captionsetup{justification=raggedleft,singlelinecheck=false,skip=-10pt,margin={0cm, 2cm}}\caption*{\scriptsize{Quelle: \cite{ws:dwdradiation}}}
+\captionsetup{justification=centering,singlelinecheck=false,skip=25pt,margin={0cm, 0cm}}
 \caption{Sonneneinstrahlung Deutschland, Juli 2022}
 \label{fig:sonneneinstrahlung}
 \end {figure}
 
 In \autoref{fig:sonneneinstrahlung} ist eine Karte von Deutschland zu sehen. Dargestellt wird die Monatssumme der Globalstrahlung. Deutlich zu erkennen ist, dass im Süden die Globalstrahlung im Mittel höher ist als im Norden. Folglich kommt die Sonnenstrahlung keineswegs gleichermaßen auf der Erdoberfläche an. Viele Faktoren tragen dazu bei, dass die Sonnenstrahlen unterschiedlich stark an verschiedenen Orten der Erdoberfläche auftreffen. Die Kugelform unseres Planeten ist der Grund, dass je höher der Breitengrad, desto flacher treffen die Sonnenstrahlen die Oberfläche der Erde, wodurch sich diese Strahlen auf eine größere Fläche verteilen. Auf die gleiche Weise wirkt sich die Topografie der Erde aus, wodurch es zu stärkeren, lokalen Unterschieden der Sonneneinstrahlung kommen kann.
 
-Zum flacheren Einstrahlungswinkel in den höheren Breiten kommt hinzu, dass die Sonnenstrahlen eine größere Strecke zurücklegen müssen. Insbesondere auf dem letzten Abschnitt ihrer Reise, der Atmosphäre, kommen immer mehr Hindernisse wie Luftpartikel oder Wassertröpfchen hinzu, die die Strahlen reflektieren oder absorbieren können. Dass die Auswirkungen der Teilchen nicht zu unterschätzen ist, ist allein an der Temperaturabnahme bei zunehmender Höhenlage erkenntlich. Da die Energie der Sonnenstrahlen mit steigender Höhe von immer weniger Teilchen absorbiert werden kann, nimmt die Temperatur im Mittel $6,5 K/ 1 Kilometer$  ab, bis sie Zahlenwerte von unter $-50 ^\circ C$ an der Tropopause erreicht \cite{ws:dwd}.
+Zum flacheren Einstrahlungswinkel in den höheren Breiten kommt hinzu, dass die Sonnenstrahlen eine größere Strecke zurücklegen müssen. Insbesondere auf dem letzten Abschnitt ihrer Reise, der Atmosphäre, kommen immer mehr Hindernisse wie Luftpartikel oder Wassertröpfchen hinzu, die die Strahlen reflektieren oder absorbieren können. Dass die Auswirkungen der Teilchen nicht zu unterschätzen ist, ist allein an der Temperaturabnahme bei zunehmender Höhenlage erkenntlich. Da die Energie der Sonnenstrahlen mit steigender Höhe von immer weniger Teilchen absorbiert werden kann, nimmt die Temperatur im Mittel $6,5 K/ 1\ Kilometer$  ab, bis sie Zahlenwerte von unter $-50 ^\circ C$ an der Tropopause erreicht \cite{ws:dwd}.
 
 %https://www.dwd.de/DE/wetter/thema_des_tages/2020/11/6.html
 
 Die auf der Erde gemessene Globalstrahlung setzt sich aus der Diffusstrahlung und Direktstrahlung zusammen. Unter Diffusstrahlung versteht man jene Strahlung, die auf ihrem Weg von der Sonne zur Erde an anderen Atomen reflektiert und dadurch gestreut wurde. Direktstrahlung hingegen wurde nicht abgelenkt und ist dadurch intensiver und gebündelt. Während die Globalstrahlung schon seit geraumer Zeit protokolliert wird,  vermisst der \textit{Deutsche Wetterdienst} erst seit wenigen Jahren auf die horizontale Ebene bezogene Diffusstrahlung. Aus der Differenz der beiden wird die Direktstrahlung berechnet. 
 
+\subsection{Bestehende Prognosemodelle}
+\label{subsec:existing_predictions}
+
+Die europäische Kommission beschäftigt ein Team, welches sich der Energieeffizienz und erneuerbaren Energien widmet. Die Abteilung entwickelte ein Instrument zur Bestimmung der zu erwartenden Stromproduktion. Das amerikanische nationale Labor für erneuerbare Energien (zu engl. \ac{nrel}) und der \ac{dwd} unterstützen das Projekt namens \ac{pvgis} durch historische Daten als auch satellitengestützem Klimamonitoring.
+Über die Webseite  \url{https://re.jrc.ec.europa.eu/pvg_tools/en/} lässt sich das Prognosemodell abrufen. Nachdem Parameter wie die verwendete \ac{pv}-Technologie, die installierte maximale \ac{pv}-Leistung, den Systemverlust, die Art der Montage, die Neigung und den Azimut angegeben werden, können die Erwartungswerte abgerufen werden. Das Zeitintervall kann auf eine Stunde, Tag oder Monat festgelegt werden. Dass dabei stets Ungenauigkeiten offen bleiben, ist durch die zusätzliche Option eine Datei mit Informationen über den Horizont hochzuladen, belegt.
+
 \newpage
 
 \section{Eigene Fragestellung und methodisches Vorgehen}
 
-Um die zukünftigen Herausforderungen der Energieversorgung zu bewältigen, befasst sich diese Arbeit mit \ac{pv}-Anlagen als fluktuierende Stromerzeuger. Diese sollen möglichst optimal in das bestehende Stromnetz integriert werden. Die zentrale Fragestellung lautet hierbei, wie man präzise den erzeugten Solarstrom prognostizieren kann. Um dieses Ziel zu erreichen, sollen zuerst die entscheidenden Parameter ermittelt werden, die die Stromerzeugung einer Solaranlage beeinflussen. Allerdings liegt der Fokus ebenfalls darauf, dass die Berechnung der Prognose für beliebige \ac{pv}-Anlagen anwendbar ist, indem möglichst wenige spezifische Informationen über die Anlage in die Berechnung einfließen. Selbstverständlich spielen verschiedenste Eigenschaften der Solaranlage eine entscheidende Rolle, jedoch werden diese im Datenmodell nicht berücksichtigt. Schließlich sind diese spezifischen Informationen über die jeweiligen Solaranlagen in der Regel aufwendig zu beschaffen oder nicht in der notwendigen Qualität dokumentiert.
+Um die zukünftigen Herausforderungen der Energieversorgung zu bewältigen, befasst sich diese Arbeit mit \ac{pv}-Anlagen als fluktuierende Stromerzeuger. Diese sollen möglichst optimal in das bestehende Stromnetz integriert werden. Die zentrale Fragestellung lautet hierbei, wie man präzise den erzeugten Solarstrom prognostizieren kann. Um dieses Ziel zu erreichen, sollen zuerst die entscheidenden Parameter ermittelt werden, die die Stromerzeugung einer Solaranlage beeinflussen. Allerdings liegt der Fokus ebenfalls darauf, dass die Berechnung der Prognose für beliebige \ac{pv}-Anlagen anwendbar ist, indem möglichst wenige spezifische Informationen über die Anlage in die Berechnung einfließen. Selbstverständlich spielen verschiedenste Eigenschaften der Solaranlage eine entscheidende Rolle, jedoch werden diese im Datenmodell nicht berücksichtigt. Schließlich sind diese spezifischen Informationen über die jeweiligen Solaranlagen in der Regel aufwendig zu beschaffen oder nicht in der notwendigen Qualität dokumentiert. 
 
-Zudem ermöglichen zunehmende Rechenkapazitäten und kostengünstigere Speichermöglichkeiten, dass für jede einzelne Solaranlage ein eigenes Datenmodell angelegt wird. Somit können die Gegebenheiten der \ac{pv}-Anlage, wie Quantität und Qualität der Solarpanele, vernachlässigt werden. Durch die Trainingsdaten ist das Datenmodell selbstständig in der Lage, die Leistungsfähigkeit der Solaranlage zu beurteilen. Das Modell wird fast ausschließlich von Wetterdaten trainiert, welche von verschiedenen Institutionen flächenmäßig und umfangreich aufgezeichnet werden. Die für das Trainieren des Lernalgorithmus benötigten Wetterdaten werden von der Website \textit{https://www.visualcrossing.com} extrahiert. Die Website bietet einen kostenfreien Zugang zu detaillierten historischen Wetterdaten der letzten 50 Jahre.
+Zudem ermöglichen zunehmende Rechenkapazitäten und kostengünstigere Speichermöglichkeiten, dass für jede einzelne Solaranlage ein eigenes Datenmodell angelegt werden kann. Somit können die Gegebenheiten der \ac{pv}-Anlage, wie Quantität und Qualität der Solarpanele, vernachlässigt werden. Durch die Trainingsdaten ist das Datenmodell selbstständig in der Lage, die Leistungsfähigkeit der Solaranlage zu beurteilen. Das Modell wird fast ausschließlich von Wetterdaten trainiert, welche von verschiedenen Institutionen flächenmäßig und umfangreich aufgezeichnet werden. Die für das Trainieren des Lernalgorithmus benötigten Wetterdaten werden von der Website \textit{https://www.visualcrossing.com} extrahiert. Die Website bietet einen kostenfreien Zugang zu detaillierten historischen Wetterdaten der letzten 50 Jahre.
 
-Das amerikanische nationale Labor für erneuerbare Energien (zu engl. \ac{nrel}), welches im Besitz des amerikanischen Energieministeriums ist, stellt eine groß angelegte Zeitreihen-Datenbank zu Verfügung, die System-Metadaten und Leistungswerte von sowohl experimentellen als auch öffentlichen, kommerziell genutzten Solaranlagen enthält.  Der Datensatz besteht aus einer Sammlung von Dateien, die jedem System zugeordnet sind. Die Metadaten umfassen Informationen über die Einzelheiten der Systemhardware und über den geografischen Standort. Diese Arbeit macht von diesen Datensätzen Gebrauch, um die Realisierbarkeit der eigenen Thesis zu überprüfen. 
+Das \ac{nrel}, welches im Besitz des amerikanischen Energieministeriums ist, stellt eine groß angelegte Zeitreihen-Datenbank zu Verfügung, die Metadaten und Leistungswerte von sowohl experimentellen als auch öffentlichen, kommerziell genutzten Solaranlagen enthält.  Der Datensatz besteht aus einer Sammlung von Dateien, die jedem System zugeordnet sind. Die Metadaten umfassen Informationen über die Einzelheiten der Systemhardware und über den geografischen Standort. Diese Arbeit macht von diesen Datensätzen Gebrauch, um die Realisierbarkeit der eigenen Thesis zu überprüfen.
+
+Der Programmiercode, der für die folgenden Untersuchungen, zum Auslesen von Daten und zur Erstellung von Datenbanken verwendet wird, lässt sich über das öffentliche \textit{Repository https://github.com/leoposc/bachelor} einsehen. Insbesondere die Programmiermuster, die für die Erstellung der Lernalgorithmen und Datenanalyse bekannt sind, stammen aus den drei Büchern \textit{Python machine learning: Machine learning and deep learning with Python, sckikit-learn and TensorFlow 2.} \cite{raschka2019python}, \textit{Hands-on machine learning with Scikit-Learn, Keras and TensorFlow} \cite{geron2022hands} und \textit{Machine learning for dummies} \cite{mueller2021machine}.
 
 Durch die Literaturrecherche sind bereits die relevanten Faktoren eingegrenzt, allerdings ist eine exakte Analyse der Daten unumgänglich. Hierbei soll vor allem beachtet werden, ob die Aufnahme des Merkmals einen solch starken Einfluss auf die Stromerzeugung hat, sodass die zunehmende Komplexität des Modells gerechtfertigt ist. Herausfordernd ist die Frage, ob die Informationen in manchen Merkmalen nicht bereits in anderen Merkmalen enthalten sind. Schließlich korrelieren einige Wetterdaten sehr stark miteinander. Ebenso gilt es zu überprüfen, ob sich die ausgewählten Merkmale auf unterschiedlichen Solaranlagen auf die gleiche Art und Weise auswirken. Um dies zu überprüfen, sollen mehrere Solaranlagen an verschiedenen Standorten ausgesucht und getestet werden.
 
-Sofern es gelingt, sämtliche sich variierende Parameter herauszufinden, die die Solarproduktion beeinträchtigen, ist maschinelles Lernen eine vielversprechende Technologie um die Stromerzeugung zu prognostizieren. Insbesondere ist zu erwarten, dass sich das Spektrum der Trainingsdaten und das Spektrum während der Produktion (Inbetriebnahme) nicht groß voneinander unterscheiden werden.
+Sofern es gelingt, sämtliche sich variierende Parameter herauszufinden, die die Solarproduktion beeinträchtigen, ist maschinelles Lernen eine vielversprechende Technologie um die Stromerzeugung zu prognostizieren. Insbesondere ist zu erwarten, dass sich das Spektrum der Trainingsdaten und das Spektrum während der Inbetriebnahme der \ac{pv}-Anlage nicht groß voneinander unterscheiden werden.
 
 Eine Unvollkommenheit im Datenmodell ist jedoch die Alterung der Solarzellen, welche dazu führt, dass die Leistungsfähigkeit über die Lebenszeit sich reduziert. Mögliche Konsequenzen wären ältere Daten kontinuierlich auszusortieren und das Modell mit den Neusten zu aktualisieren. Es ist davon auszugehen, dass der Alterungsprozess sich nur langsam in den Datensätzen bemerkbar machen wird, weshalb er die Ergebnisse über die kurze Zeitspanne eines Jahres kaum verfälschen sollte.
 
@@ -393,11 +421,10 @@ Die in \autoref{tab:solarsystem_metadata} gelisteten Identifikationsnummern von 
 
 Die \ac{pv}-Anlage mit der Identifikationsnummer $1201$ zählt mit einer installierten Nennleistung von $140,14 \ kW$ zu den größeren Solarstromlösungen. Um dies besser einordnen zu können, sei an dieser Stelle angemerkt, dass sich die Nennleistung von Solaranlagen auf meisten deutschen Einfamilienhäusern zwischen $4 - 10 \ \ac{kwp}$ \footnote{\textit{\ac{kwp}} ist eine Maßeinheit, die die Nennleistung einer \ac{pv}-Anlage unter den standardisierten Testbedingungen betitelt.} beläuft. In \fullref{sec:evaluation} wird die Leistungsfähigkeit des Prognosemodells für die \ac{pv}-Anlage $1201$ analysiert.
 
-
-\begin{table}
+\begin{table}[H]
 \begin{center}
 %\resizebox{\textwidth}{!}{
-\begin{tabular}{| p{1.5cm} | p{1.5cm} | p{1.5cm} | p{2.3cm}  | p{2cm} | p{2.2cm} | p{2cm} |}
+\begin{tabular}{| p{1.4cm} | p{1.3cm} | p{1.4cm} | p{2.1cm}  | p{1.5cm} | p{2.1cm} | p{2.1cm} |}
 \hline
 \ac{pv}-Anlagen ID & Fläche in $m^2$ & Nenn- leistung in $kW$ & Ausrichtung in Grad & Höhen- meter ü. NN & Koordinaten & Befestigung \\ \hline
   10 &  12,06 &   1,12 & 180 & 1792,8 & \ 39° 74' N \newline   105° 17' W & Fixiert \\ \hline
@@ -421,8 +448,6 @@ In der Tabelle sind ebenfalls die Höhenmeter und die Art der Befestigung dokume
 Durch die Höhenlage der Solaranlage lassen sich Rückschlüsse auf die Luftverhältnisse des Standortes ziehen. Schließlich nimmt mit steigender Höhe auf Grund der atmosphärischen Druckabnahme die Menge an Teilchen in der Luft \cite{ws:meteoschweiz}. Am Temperaturabfall und der maximalen Flughöhe von Hubschraubern wird erkenntlich, wie stark die Luftdichte als physikalischer Faktor unseren Alltag beeinflussen kann. Die Temperaturabnahme mit zunehmender Höhe liegt unter anderem an der Druckabnahme, wodurch sich die Teilchen leichter ausbreiten können und somit mehr Wärmeenergie durch die Ausdehnung in Bewegungsenergie umgewandelt wird. Zudem befinden sich weniger Teilchen in der Luft, die die Energie der Sonne absorbieren und somit in Wärme umwandeln können.
 
 %https://www.meteoschweiz.admin.ch/wetter/wetter-und-klima-von-a-bis-z/temperatur/temperaturabnahme-mit-der-hoehe.html#:~:text=Aufsteigende%20warme%20Luft%20k%C3%BChlt%20ab,die%20aufsteigende%20Luft%20immer%20k%C3%BChler.
-
-Die Leistung eines Hubschraubers wird ebenfalls auf Grund verschiedener Faktoren limitiert. Zum einem benötigt der Verbrennungsmotor des Flugkörpers Sauerstoff, um den Sauerstoff effizient verbrennen zu können, zum anderen ist die Luftdichte für den Auftrieb entscheidend. Durch die fallende Luftdichte nimmt ebenfalls die Auftriebskraft des Hubschraubers ab, bis sie schlussendlich nicht mehr groß genug ist, um das Eigengewicht zu tragen.
 
 Im Kontext von \ac{pv}-Anlagen wird die Bedeutung von Luft durch die standardisierten Testbedingungen (zu engl. \ac{stc}) sichtbar, wodurch sich Solarmodule verschiedener Hersteller besser vergleichen lassen sollen. Diese standardisierten Testbedingungen geben vor, dass bei der Messung der Nennleistung die Solaranlage einer Einstrahlung von 1000 Watt pro Quadratmeter, einem Luftmassenverhältnis\footnote{Das Luftmassenverhältnis (AM-Verhältnis) ist ein Begriff, der in der Solarenergie und der atmosphärischen Optik verwendet wird. Es beschreibt, wie viel atmosphärische Masse die Sonnenstrahlen durchlaufen, wenn sie die Erdoberfläche erreichen. Ein Luftmassenverhältnis von 1,5 bedeutet, dass die Sonnenstrahlen 1,5-fach so viel Luftmasse durchlaufen, wie sie es tun würden, wenn die Sonne senkrecht über dem Beobachter steht.} von 1,5 und 25° C ausgesetzt ist.
 
@@ -534,10 +559,10 @@ Insofern muss sowohl die Größe des Datensatzes als auch eine mögliche, unglei
 
 \begin{equation}
 \label{eqn:logarithm}
-h(x)=0.25\ln(15x+1)
+h(x)=25\ln(15x+1)
 \end{equation}
 
-\autoref{fig:geogebra_cloudcover} zeigt die \autoref{eqn:logarithm} als Schaubild. Bei der Funktion handelt es sich um eine Logarithmusfunktion, die um den Wert 1 nach links verschoben wurde. Somit verläuft der Graph durch den Ursprung des Koordinatensystems. Zudem wird sie um den Faktor 15 in $x-$Richtung und den Faktor 0.25 in $y-$Richtung gestaucht.
+\autoref{fig:geogebra_cloudcover} zeigt die \autoref{eqn:logarithm} als Schaubild. Bei der Funktion handelt es sich um eine Logarithmusfunktion, die um den Wert 1 nach links verschoben wurde. Somit verläuft der Graph durch den Ursprung des Koordinatensystems. Zudem wird sie um den Faktor 15 in $x-$Richtung gestaucht und den Faktor 25 in $y-$Richtung gestreckt.
 
 \begin{figure}[h]
 \centering
@@ -547,29 +572,27 @@ h(x)=0.25\ln(15x+1)
 \label{fig:geogebra_cloudcover}
 \end {figure}
 
-Die Logarithmusfunktion dient dazu, einen optimalen Grenzwert für unterschiedlich große Datensätze zu finden. Da die Wahrscheinlichkeit, dass sich gleiche Werte häufen, mit der Anzahl an Daten zunimmt und somit die Anzahl an Unikaten\footnote{Die Anzahl an Unikaten bezeichnet in diesem Kontext die Summe der unterschiedlichen Messwerte im Datensatz.} langsamer steigt, eignet sich die abnehmende, jedoch stets positive Steigung der Logarithmusfunktion, einen optimalen Grenzwert zu finden. Ab 3000 Messwerten wird der Grenzwert für die Mindestanzahl an Unikaten maximal. Sofern dieser Grenzwert nicht unterschritten wird, wird der Datensatz validiert und der Bewölkungsgrad in die Merkmalsmatrix aufgenommen. 
+Die Logarithmusfunktion dient dazu, die Bewertung an unterschiedlich große Datensätze anzupassen. Da die Wahrscheinlichkeit, dass sich gleiche Werte häufen, mit der Anzahl an Daten zunimmt und somit die Anzahl an Unikaten\footnote{Die Anzahl an Unikaten bezeichnet in diesem Kontext die Summe der unterschiedlichen Messwerte im Datensatz.} langsamer steigt, eignet sich die abnehmende, jedoch stets positive Steigung der Logarithmusfunktion, einen optimalen Grenzwert zu finden. Ab 3000 Messwerten soll der Grenzwert für die Mindestanzahl an Unikaten maximal werden. Sofern dieser Grenzwert nicht unterschritten wird, wird der Datensatz validiert und der Bewölkungsgrad in die Merkmalsmatrix aufgenommen. 
 
-Im Programmcode ist ersichtlich, dass die Anzahl an Messdaten \textit{n\_sampes} durch 3000 geteilt und das Ergebnis der Division an die Logarithmusfunktion übergeben wird. Da die Variable \textit{n\_samples} auf 3000 begrenzt ist und \textit{n\_samples} nicht negativ werden kann, führt dies dazu, dass ausschließlich Zahlen zwischen 0 und 1 an die Logarithmusfunktion übergeben werden. Das Ergebnis der zuvor beschriebenen Logarithmusfunktion liegt zwischen 0.0 und 0.6931. Die anschließende Multiplikation mit 100 führt dazu, dass je nach Größe des Datensatzes unterschiedlich viele Unikate in diesem enthalten sein müssen. ab 3000 Messwerten gilt, dass mindestens 69 Unikate von dem Datensatz umfasst werden müssen.
+Im Programmcode ist ersichtlich, dass die Anzahl an Messdaten \textit{n\_sampes} durch 3000 geteilt und das Ergebnis der Division an die Logarithmusfunktion übergeben wird. Da die Variable \textit{n\_samples} auf 3000 begrenzt ist und \textit{n\_samples} nicht negativ werden kann, führt dies dazu, dass ausschließlich Zahlen zwischen 0 und 1 an die Logarithmusfunktion übergeben werden. Das Ergebnis der zuvor beschriebenen Logarithmusfunktion liegt zwischen 0.0 und 69.31. Je nach Größe des Datensatzes unterschiedlich viele Unikate in diesem enthalten sein müssen. ab 3000 Messwerten gilt, dass mindestens 69 Unikate von dem Datensatz umfasst werden müssen.
 
 Wie bereits zuvor erwähnt, gibt es Wetterstandorte, die zum Beispiel unter besonderer Trockenheit leiden. Da die Angabe über den Bewölkungsgrad nicht relativ ist, könnte dies bedeuten, dass für diese Standorte lediglich Messwerte zwischen 0 und 50 Prozent zu verzeichnen sind. Dementsprechend schneiden solche Wetterstandorte automatisch schlechter ab und könnten dadurch möglicherweise zu unrecht als mangelhaft markiert werden. Dieser Missstand kann ausgeglichen werden, indem das Minimum von dem Maximum der Messwerte subtrahiert wird. Eine darauf folgende Division durch 100 führt dazu, dass wir ein Ergebnis zwischen 0 und 1 erhalten. Der erhaltene Wert wird mit der zuvor errechneten Mindestanzahl an Unikaten multipliziert. 
 
-In dem Beispiel, in dem ausschließlich Bewölkungswerte zwischen 0 und 50 Prozent auftreten, führt die Multiplikation mit dem Grenzwert und anschließende Neuzuweisung zu einer Halbierung jenes Grenzwertes. 
+In dem Beispiel, in dem ausschließlich Bewölkungswerte zwischen 0 und 50 Prozent auftreten, führt die Multiplikation mit dem Grenzwert und anschließende Neuzuweisung zu einer Halbierung jenes Grenzwertes. Da nur ein Bruchteil an Unikaten auftreten kann, ist es sinnvoll den Grenzwert ebenfalls mit dieser Bruchzahl zu multiplizieren. 
 
-Sollte das Ergebnis unter dem Grenzwert liegen, so wird der Bewölkungsgrad aus der Merkmalsmatrix entfernt. Um das Ergebnis der Funktion zu evaluieren, wird  die Verteilung als Histogram dargestellt. 
+Sollte das Ergebnis unter dem Grenzwert liegen, so wird der Bewölkungsgrad aus der Merkmalsmatrix entfernt. Um das Ergebnis der Funktion zu evaluieren, wird  die Verteilung als Histogramm dargestellt. 
 
 \begin{lstlisting}[basicstyle=\small,label={lst:validate_cloudcover}, caption={Funktion zur Validierung der Bewölkungsdaten}]
-def validate_cloudcover_quality(self):
-        # max possible number of unique values is 100
-        MAX_THRESHOLD = 100
+def validate_cloudcover_quality(self):        
 	# MAX_THRESHOLD is maximized to 3000
         MAX_SAMPLES = 3000       
         
         def f(x):            
-            return 0.25 * math.log(15*x +1)
+            return 25 * math.log(15*x +1)
         
         data = self.XY_df['cloudcoverage'].values        
         n_samples = min(len(data), MAX_SAMPLES)
-        min_unique = f(n_samples/ MAX_SAMPLES) * MAX_THRESHOLD
+        min_unique = f(n_samples/ MAX_SAMPLES)
         uniques = np.unique(data)
         # calculate the variety of cloudcoverage and weight it
         cc_variety_weight = (np.max(uniques) - np.min(uniques)) / 100
@@ -657,7 +680,7 @@ Sinn und Zweck der Datenvorverarbeitung ist es, die Daten für den jeweiligen Le
 Selbst wenn für ein Entscheidungsbaum die Datenvorverarbeitung nicht zwingend notwendig, ist es dennoch zu empfehlen, Unstimmigkeiten in den Daten zu beseitigen.
 
 Unstimmigkeiten innerhalb des Datensatzes werden als Ausreißer betitelt, da sie nicht zum Muster zwischen ihresgleichen und der Zielvariablen passen. Da solche Ausreißer unausweichlich und in sämtlichen Datensätzen auftauchen können, dürfen diese nicht unbeachtet bleiben. Ein möglicher Grund für etwaige Ausreißer kann ein defektes Bauteil des Solarsystems sein. Zum Beispiel ein Defekt im Wechselrichter könnte dazu führen, dass trotz idealer Wetterbedingungen die erzeugte Wechselspannung ausbleibt. Umso länger das Solarsystem nicht repariert wird und die verringerte Stromproduktion in den Trainingsdatensatz des Modells aufgenommen wird, desto wahrscheinlicher ist es, dass das Prognosemodell den Fehler verinnerlicht und die Kalenderwoche für die übermäßige Abweichung verantwortlich macht.
-???
+
 \subsection{Lernalgorithmus}
 
 Die Konsequenz, dass die Zusammenhänge zwischen den Merkmalen und der Zielvariablen sehr verschieden sein können, ist es ein Modell auszuwählen, das für seine Kontingenz gegenüber der Datenvorverarbeitung bekannt ist. 
@@ -707,22 +730,7 @@ Das Feld \textit{squared\_error} gibt den mittleren quadratischen Fehler, der si
 
 Die Zusammenhänge zwischen den Merkmalen und der Zielvariablen konnten weitestgehend gut nachgebildet werden. So wird die Prognose jedes mal herunter gesetzt, wenn die Sonneneinstrahlung weniger wird. Genauso fällt die Prognose ohne Ausnahme, wenn die Bewölkung oder die Luftfeuchtigkeit zunimmt. 
 
-Wie in \autoref{fig:binary_tree_linthicum} zu erkennen ist, sind die Auswirkungen der Temperatur dem Modell nicht gänzlich vertraut. Fällt die Temperatur unter 3,5° C, so wird die Prognose ebenfalls auf den Wert $4.369\ kW$ herabgesetzt. Bei vereinzelten Knotenpunkten des Entscheidungsbaums ist zu beobachten, dass eine niedrigere Temperatur zu einer geringeren Stromproduktion führt. Die Fehleinschätzung des Entscheidungsbaums ist vor allem dann anzutreffen, wenn der Grenzwert für die Temperatur besonders niedrig ist. Dies zeugt davon, dass die Multikollinearität zwischen Temperatur, Sonneneinstrahlung und Stromproduktion dem Entscheidungsbaum Schwierigkeiten bereitet. Da die Temperatur mit der Sonneneinstrahlung steigt, fehlinterpretiert der Algorithmus den Zusammenhang zwischen Temperatur und Stromproduktion. Da dies allerdings nur bei einem Teil der Knotenpunkte der Fall ist, soll die Temperatur nicht aus der Merkmalsmatrix ausgeschlossen werden. Unter dem Strich werden unter Berücksichtigung der Temperatur in Bezug auf die Prognose des Stromertrags dennoch bessere Ergebnisse erzielt. Dass die Temperatur ein wichtiger Parameter für die Prognose ist, liegt unter anderem daran, dass sie ebenfalls von verschiedenen Faktoren beeinträchtigt wird und somit, trotz der Korrelation zur Sonneneinstrahlung, nicht vernachlässigt werden darf. Zudem ist die Temperatur im Vergleich zur Sonneneinstrahlung viel träger.
-
-Um ein besseres Verständnis für die Gewichtungen der einzelnen Merkmale zu bekommen, wird ein Histogram abgebildet, das die Anzahl der Verwendungen der einzelnen Merkmale bei den \textit{Wenn-Sonst-Anweisungen} darstellt.
-
-\begin{figure}[H]
-\centering
-\fontsize{20}{20}\selectfont
-\def\svgwidth{400pt}
-\input{assets/histogram_feature_quantity.pdf_tex}
-\caption{Verwendung der jeweiligen Merkmale im Entscheidungsbaum}
-\label{fig:histogram_feature_quantity}
-\end{figure}
-
-Anhand der Häufigkeit, in der das Merkmal Sonneneinstrahlung auftritt, lässt sich die enorme Bedeutung für die Prognose der Stromerzeugung erahnen. Insbesondere die Tatsache, dass die Sonneneinstrahlung bei sämtlichen Modellen die Entscheidung für die obersten und somit grundlegendsten \textit{Wenn-Sonst-Anweisungen} bildet, verleiht dem Gewicht der Sonneneinstrahlung weiteren Nachdruck.
-
-
+Wie in \autoref{fig:binary_tree_linthicum} zu erkennen ist, sind die Auswirkungen der Temperatur dem Modell nicht gänzlich vertraut. Fällt die Temperatur unter 3,5° C, so wird die Prognose ebenfalls auf den Wert $4.369\ kW$ herabgesetzt. Bei vereinzelten Knotenpunkten des Entscheidungsbaums ist zu beobachten, dass eine niedrigere Temperatur zu einer geringeren Stromproduktion führt. Die Fehleinschätzung des Entscheidungsbaums ist vor allem dann anzutreffen, wenn der Grenzwert für die Temperatur besonders niedrig ist. Dies zeugt davon, dass die Multikollinearität zwischen Temperatur, Sonneneinstrahlung und Stromproduktion dem Entscheidungsbaum Schwierigkeiten bereitet. Da die Temperatur mit der Sonneneinstrahlung steigt, fehlinterpretiert der Algorithmus den Zusammenhang zwischen Temperatur und Stromproduktion. Da dies allerdings nur bei einem Teil der Knotenpunkte, die die Temperatur zur weiteren Aufteilung der Daten verwenden, der Fall ist, wird die Temperatur nicht aus der Merkmalsmatrix ausgeschlossen. Unter dem Strich werden unter Berücksichtigung der Temperatur in Bezug auf die Prognose des Stromertrags dennoch bessere Ergebnisse erzielt. Dass die Temperatur ein wichtiger Parameter für die Prognose ist, liegt unter anderem daran, dass sie ebenfalls von verschiedenen Faktoren beeinträchtigt wird und somit, trotz der Korrelation zur Sonneneinstrahlung, nicht vernachlässigt werden darf. Zudem ist die Temperatur im Vergleich zur Sonneneinstrahlung deutlich träger.
 
 \subsubsection{Schlussfolgerungen für das Training des Modells}
 \label{subsubsec:conclusion_for_training}
@@ -838,7 +846,6 @@ Maximalanzahl \newline an Blättern & 35, 40, 48, 96, 192, 384, 768, 1536 \\ \hl
   10 & 1392:640  &  1381 & 7 &   96 &  8 & 0.71 & 0.81 \\ \hline
 1199 &  256:115  &  6905 & 5 &   48 & 10 & 0.89 & 0.93 \\ \hline
 1200 & 1750:1750 & 46015 & 8 &   48 & 10 & 0.89 & 0.90 \\ \hline
-1201 &  		 & 		 &   &		&    &      &      \\ \hline
 1220 &  193:207  &  6816 & 5 &   48 &  9 & 0.75 & 0.84 \\ \hline
 1231 & 1055:1055 &  2660 & 8 &   48 &  7 & 0.74 & 0.86 \\ \hline 
 %\multicolumn{8}{|c|}{Keine Aufzeichnungen über die Sonneneinstrahlung vorhanden} \\ \hline
@@ -891,9 +898,6 @@ Mit einem solchem Diagramm lassen sich Auffälligkeiten in Bezug auf die Abweich
 
 Da der Determinierungskoeffizient zwar eine äußerst hilfreiche Methode ist, um die Leistungsfähigkeit des Modells zu bewerten, jedoch auf Grund seiner Einfachheit nur bedingt etwas über die Stärken und Schwächen des Modells verrät, stellen wir die tatsächlichen Prognosewerte und die dazugehörigen Ist-Werte nebeneinander dar. Für die Solaranlage in Linthicum im Bundesstaat Maryland erreichte das Prognosemodell beim Determinierungskoeffizienten, bezogen auf den Testdatensatz, Spitzwerte von bis zu 0.89. Ein Wert von 1 würde bedeuten, dass die Prognosewerte exakt mit den Ist-Werten übereinstimmen. 
 
-\autoref{fig:predictions_linthicum} zeigt, dass an jedem Tag leichte Abweichung zwischen dem Ist- und dem Prognosewert zu verzeichnen sind. Auf der y-Achse ist die erzeugte Strommenge zu sehen, wohingegen die x-Achse das Datum des jeweiligen Tages\footnote{Der Grund für die lückenbehaftete Auflistung der einzelnen Tage liegt daran, dass der Datensatz randomisiert in einen Test- und Trainingsdatensatz aufgeteilt wird, wobei ausschließlich darauf geachtet wurde, dass Werte eines einzelnen Tages beisammen bleiben. Die Tage selbst wurden jedoch absichtlich untereinander gemischt, damit das Modell besser eingelernt werden kann und einen repräsentativen Trainingsdatensatz zur Verfügung hat. Folglich befinden sich die nicht abgebildeten Tage im Trainingsdatensatz.} darstellt. Einbrüche, welche auf Grund schlechterer Wetterbedingungen unausweichlich und normal sind, stimmen bei beiden Graphen überein. Dass die Vorhersagen des Prognosemodells nicht exakt mit den Ist-Werten übereinstimmen ist nicht überraschend noch war es eine Anforderung. Dass jedoch die ungefähre Solarstromproduktion prognostiziert werden kann und die Differenz hauptsächlich durch sehr viele kleine kumulierte Abweichungen verursacht wird, kann als Erfolg gewertet werden und belegt somit die Realisierbarkeit nachweislich.
-
-
 \begin{figure}[H]
 \centering
 \def\svgwidth{400pt}
@@ -902,11 +906,26 @@ Da der Determinierungskoeffizient zwar eine äußerst hilfreiche Methode ist, um
 \label{fig:predictions_linthicum}
 \end {figure}
 
+\autoref{fig:predictions_linthicum} zeigt, dass an jedem Tag leichte Abweichung zwischen dem Ist- und dem Prognosewert zu verzeichnen sind. Auf der y-Achse ist die erzeugte Strommenge zu sehen, wohingegen die x-Achse das Datum des jeweiligen Tages\footnote{Der Grund für die lückenbehaftete Auflistung der einzelnen Tage liegt daran, dass der Datensatz randomisiert in einen Test- und Trainingsdatensatz aufgeteilt wird, wobei ausschließlich darauf geachtet wurde, dass Werte eines einzelnen Tages beisammen bleiben. Die Tage selbst wurden jedoch absichtlich untereinander gemischt, damit das Modell besser eingelernt werden kann und einen repräsentativen Trainingsdatensatz zur Verfügung hat. Folglich befinden sich die nicht abgebildeten Tage im Trainingsdatensatz.} darstellt. Einbrüche, welche auf Grund schlechterer Wetterbedingungen unausweichlich und normal sind, stimmen bei beiden Graphen überein. Dass die Vorhersagen des Prognosemodells nicht exakt mit den Ist-Werten übereinstimmen ist nicht überraschend noch war es eine Anforderung. Dass jedoch die ungefähre Solarstromproduktion prognostiziert werden kann und die Differenz hauptsächlich durch sehr viele kleine kumulierte Abweichungen verursacht wird, kann als Erfolg gewertet werden und belegt somit die Realisierbarkeit nachweislich.
+
 \subsection{Evaluierung einzelner Merkmale}
+
+Um ein besseres Verständnis für die Gewichtungen der einzelnen Merkmale zu bekommen, wird in \autoref{fig:histogram_feature_quantity} ein Histogramm abgebildet, das die Anzahl der Verwendungen der einzelnen Merkmale bei den \textit{Wenn-Sonst-Anweisungen} darstellt.
+
+\begin{figure}[H]
+\centering
+\fontsize{20}{20}\selectfont
+\def\svgwidth{400pt}
+\input{assets/histogram_feature_quantity.pdf_tex}
+\caption{Verwendung der jeweiligen Merkmale im Entscheidungsbaum}
+\label{fig:histogram_feature_quantity}
+\end{figure}
+
+Anhand der Häufigkeit, in der das Merkmal Sonneneinstrahlung auftritt, lässt sich die enorme Bedeutung für die Prognose der Stromerzeugung erahnen. Insbesondere die Tatsache, dass die Sonneneinstrahlung bei sämtlichen Modellen die Entscheidung für die obersten und somit grundlegendsten \textit{Wenn-Sonst-Anweisungen} bildet, verleiht dem Gewicht der Sonneneinstrahlung weiteren Nachdruck.
 
 \subsubsection{Sonneneinstrahlung}
 
-Unumstritten ist die Sonneneinstrahlung das wichtigste Merkmal für das Prognosemodell, um eine akkurate Aussage über die zu erwartende Solarstromproduktion zu treffen. Die Bedeutung von diesem Wetterfaktor wurde bereits in \fullref{subsubsec:decisiontree_structure} erläutert und ist durch die \autoref{fig:histogram_feature_quantity} klar ersichtlich. Ebenso wurde bereits des Öfteren erwähnt, dass die Wetterfaktoren sich gegenseitig untereinander beeinflussen. Dass diese Multikollinearität zwischen den verschieden Merkmalen auch von Nutzen sein kann, wird durch die beiden \ac{pv}-Anlagen mit der Indenfikationsnummer $1244$ und $1257$ bewiesen. In diesem Unterabschnitt sollen die Konsequenzen von unzureichenden Messwerten beziehungsweise Wetterprognosen über die Sonneneinstrahlung betrachtet werden. Denn die Datenbank von \ac{nrel} umfasst für die beiden \ac{pv}-Anlagen Messwerte für das Jahr 2014, allerdings sind für diese Zeitspanne und der jeweiligen Position der Anlage keine Werte über die Sonneneinstrahlung festgehalten. Die \ac{api} der Webseite \textit{wwww.visualcrossing.com} liefert für die Sonneneinstrahlung der beiden Orte Nullwerte. Der \ac{cart}-Algorithmus erkennt, dass hierdurch keine Aufteilung der Datenreihen möglich ist und ignoriert die Sonneneinstrahlung für die Erstellung des Entscheidungsbaums. Folglich wird das Merkmal bei keiner einzigen \textit{Wenn-Sonst-Anweisung} verwendet. Dennoch erzielen die beiden Prognosemodelle einen Determinierungskoeffizienten von bis zu $0.67$. \autoref{fig:predictions_1244} zeigt, dass die Gesamtdifferenz vor allem durch viele, kleinere Abweichungen entsteht. Dabei stellen die kumulierten Abweichungen die Aussagekraft des Modells schlechter dar als sie tatsächlich ist. 
+Unumstritten ist die Sonneneinstrahlung das wichtigste Merkmal für das Prognosemodell, um eine akkurate Aussage über die zu erwartende Solarstromproduktion zu treffen. Des Öfteren wurde bereits erwähnt, dass die Wetterfaktoren sich gegenseitig untereinander beeinflussen. Dass diese Multikollinearität zwischen den verschieden Merkmalen auch von Nutzen sein kann, wird durch die beiden \ac{pv}-Anlagen mit der Indenfikationsnummer $1244$ und $1257$ bewiesen. In diesem Unterabschnitt sollen die Konsequenzen von unzureichenden Messwerten beziehungsweise Wetterprognosen über die Sonneneinstrahlung betrachtet werden. Denn die Datenbank von \ac{nrel} umfasst für die beiden \ac{pv}-Anlagen Messwerte für das Jahr 2014, allerdings sind für diese Zeitspanne und der jeweiligen Position der Anlage keine Werte über die Sonneneinstrahlung festgehalten. Die \ac{api} der Webseite \textit{wwww.visualcrossing.com} liefert für die Sonneneinstrahlung der beiden Orte Nullwerte. Der \ac{cart}-Algorithmus erkennt, dass hierdurch keine Aufteilung der Datenreihen möglich ist und ignoriert die Sonneneinstrahlung für die Erstellung des Entscheidungsbaums. Folglich wird das Merkmal bei keiner einzigen \textit{Wenn-Sonst-Anweisung} verwendet. Dennoch erzielen die beiden Prognosemodelle einen Determinierungskoeffizienten von bis zu $0.67$. \autoref{fig:predictions_1244} zeigt, dass die Gesamtdifferenz vor allem durch viele, kleinere Abweichungen entsteht. Dabei stellen die kumulierten Abweichungen die Aussagekraft des Modells schlechter dar als sie tatsächlich ist. 
 
 Selbst wenn es ohne die Berücksichtigung der Sonneneinstrahlung gelingt, die Stromproduktion annähernd zu prognostizieren, ist es dennoch empfehlenswert sie zu berücksichtigen. Einbrüche in der Stromversorgung werden zwar erkannt, jedoch lässt sich der Wert mit einem Augenmerk auf die Sonnenstrahlung präziser bestimmen.
 
@@ -940,7 +959,7 @@ Anhand des Programmcodes in  \autoref{lst:discrepancies_detection} soll die Funk
 
 Von besonderem Interesse sind jene Messwerte, bei denen der tatsächlich erzeugte Solarstrom signifikant unter dem jeweiligen Prognosewert liegt. Mittels der vektorisierten Division der tatsächlichen Werte durch die entsprechenden Prognosewerte werden größere Abweichungen erkannt. Wichtig ist, dass die tatsächlichen Daten den Dividend und die Prognosedaten den Divisor bilden. Relevant sind die Quotienten, die sich zwischen 0 und 1 befinden. Schließlich besagen sie, dass an diesem Tag weniger Solarstrom als erwartet produziert wurde.
 
-Infolgedessen können Tage als auffällig markiert werden, wenn das Ergebnis der Division des tatsächlich erzeugten Solarstroms durch den Erwartungswert, einen bestimmten Grenzwert unterschreitet. Die Evaluierung von sieben verschiedenen \ac{pv}-Anlagen hat ergeben, dass nicht alle Modelle die gleiche Leistungsfähigkeit aufweisen. Demnach soll die Detektion von Auffälligkeiten in Abhängigkeit der Leistungsfähigkeit des Modells stehen. Die Leistungsfähigkeit eines Modells wird durch den Determinierungskoeffizienten repräsentiert. \autoref{eqn:determinationcoefficient} zeigt, wie der Determinierungskoeffizient berechnet wird.
+Infolgedessen können Tage als auffällig markiert werden, wenn das Ergebnis der Division des tatsächlich erzeugten Solarstroms durch den Erwartungswert, einen bestimmten Grenzwert unterschreitet. Die Evaluierung von sieben verschiedenen \ac{pv}-Anlagen hat ergeben, dass nicht alle Modelle die gleiche Leistungsfähigkeit aufweisen. Demnach soll die Detektion von Auffälligkeiten in Abhängigkeit der Leistungsfähigkeit des Modells stehen. Die Leistungsfähigkeit eines Modells wird durch den Determinierungskoeffizienten repräsentiert. Die Berechnung des Determinierungskoeffizienten wird anahand \autoref{eqn:determinationcoefficient} dargelegt.
 
 \begin{equation}
 \label{eqn:determinationcoefficient}
@@ -1045,7 +1064,7 @@ In dieser Arbeit wurde untersucht, wie maschinelles Lernen dazu beitragen kann, 
 
 Die Ergebnisse dieser Arbeit zeigen, dass die Prognose über die Stromerzeugung einer Photovoltaikanlage nicht nur realisierbar ist, ferner lässt sich die Erstellung von Vorhersage-Modellen für Photovoltaikanlagen mit unterschiedlichen Rahmenparametern automatisieren. Der Mehrwert dieser Arbeit besteht nicht nur darin, dass die Prognose dabei helfen kann, Spannungsschwankungen im Stromnetz zu stabilisieren. Des Weiteren können defekte Photovoltaikanlagen durch die Abweichung zwischen dem prognostizierten und dem tatsächlich erzeugten Solarstrom identifiziert werden.
 
-Verschiedene Solaranlagen haben zwar unbeständige, jedoch nicht grundverschiedene Ergebnisse geliefert. Es ist davon auszugehen, dass die Ursache der Unbeständigkeit in der wechselhaften Qualität der Wetterdaten liegt. Schließlich lässt sich das Wetter über die Schnittstelle der Website \textit{www.visualcrossing.com} für sämtliche Ortschaften abfragen, jedoch ist eine detaillierte flächendeckende Aufzeichnung von einem einzigem Dienstleister als unwahrscheinlich einzustufen\footnote{Zur Kenntnisnahme: Der deutsche Wetterdienst (DWD) ist in Deutschland im Besitz von 83 Wetterstationen \cite{ws:dwdweatherstations}.}. Bedauerlicherweise ist die Entfernung zur nächsten Wetterstation nicht im Datensatz dokumentiert, gleichfalls lassen sich keine Informationen über mögliche Messabweisungen in den Datensätzen des Wetterdienstleisters finden.
+Verschiedene Solaranlagen haben zwar unbeständige, jedoch nicht grundverschiedene Ergebnisse geliefert. Es ist davon auszugehen, dass die Ursache der Unbeständigkeit in der wechselhaften Qualität der Wetterdaten liegt. Schließlich lässt sich das Wetter über die Schnittstelle der Website \textit{www.visualcrossing.com} für sämtliche Ortschaften abfragen, jedoch ist eine detaillierte flächendeckende Aufzeichnung von einem einzigem Dienstleister als unwahrscheinlich einzustufen\footnote{Zur Kenntnisnahme: Der \ac{dwd} ist in Deutschland im Besitz von 83 Wetterstationen \cite{ws:dwdweatherstations}.}. Bedauerlicherweise ist die Entfernung zur nächsten Wetterstation nicht im Datensatz dokumentiert, gleichfalls lassen sich keine Informationen über mögliche Messabweisungen in den Datensätzen des Wetterdienstleisters finden.
 
 %https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsuebersicht.html#:~:text=Wetter%20und%20Klima%20%2D%20Deutscher%20Wetterdienst,83%20Messstationen%20(nach%20Stationsname%20sortiert)
 
@@ -1064,17 +1083,11 @@ In einer Welt, die zunehmend von nachhaltigen Praktiken geprägt wird, hat sich 
 
 Genaue Vorhersagen der Solarenergieproduktion ermöglichen es Netzbetreibern, die Energieverteilung zu planen und zu optimieren. Durch Informationen über den erzeugten Solarstrom können sie Angebot und Nachfrage im Stromnetz effizient ausgleichen und das Risiko von Stromausfällen und Netzstörungen minimieren. Intelligente Netztechnologien können sich in Echtzeit an Schwankungen der Solarleistung anpassen und andere erneuerbare Energiequellen und Speicherlösungen nahtlos integrieren. Diese Zuverlässigkeit und Anpassungsfähigkeit bilden die Grundlage für ein stabileres, widerstandsfähigeres und umweltfreundlicheres Stromnetz.
 
-Eine öffentliche Einrichtung, die für Verbraucher einen Zugang zu Echtzeit-Solarenergieprognosen ermöglicht, verschafft wertvolle Erkenntnisse darüber, zu welcher Zeit mit günstigen Stromtarifen zu rechnen ist. Dieses Wissen ermöglicht es ihnen, ihre energieintensiven Aktivitäten so zu planen, dass sie mit den Spitzenwerten der Solarenergieproduktion übereinstimmen. Dadurch kann die gesamte Gesellschaft ihre Abhängigkeit von konventionellen Energiequellen verringern. Darüber hinaus ermöglicht die Transparenz der Solarenergieprognosen den Verbrauchern, umweltbewusste Entscheidungen zu treffen, was eine Kultur der Nachhaltigkeit fördert und die Akzeptanz von Solarenergielösungen erhöht. Ein simultaner Nutzen für ökologische Nachhaltigkeit und wirtschaftliche Ressourceneffizienz. Schließlich steht die Energie der Sonne in einem nahezu unbegrenzten Maß zur Verfügung, dazu begibt sie sich eigenständig in Form von elektromagnetischen Wellen auf den Weg zur Erdoberfläche. Dementsprechend entstehen anders als bei Gas-, Kohle- oder Atomkraftwerken weder Abbau-, Transport- oder Entsorgungskosten für die reine Energieressource. Schlussendlich werden sich die hohen Investitionskosten rechnen und im Falle einer gleichbleibenden Nachfrage an Strom resultiert die Transformation in einer Senkung der Stromkosten.
+Eine öffentliche Einrichtung, die für Verbraucher einen Zugang zu Echtzeit-Solarenergieprognosen ermöglicht, verschafft wertvolle Erkenntnisse darüber, zu welcher Zeit mit günstigen Stromtarifen zu rechnen ist. Dieses Wissen ermöglicht es ihnen, ihre energieintensiven Aktivitäten so zu planen, dass sie mit den Spitzenwerten der Solarenergieproduktion übereinstimmen. Dadurch kann die gesamte Gesellschaft ihre Abhängigkeit von konventionellen Energiequellen verringern. Darüber hinaus ermöglicht die Transparenz der Solarenergieprognosen den Verbrauchern, umweltbewusste Entscheidungen zu treffen, was eine Kultur der Nachhaltigkeit fördert und die Akzeptanz von Solarenergielösungen erhöht. Ein simultaner Nutzen für ökologische Nachhaltigkeit und wirtschaftliche Ressourceneffizienz. Schließlich steht die Energie der Sonne in einem nahezu unbegrenzten Maß zur Verfügung, dazu begibt sie sich eigenständig in Form von elektromagnetischen Wellen auf den Weg zur Erdoberfläche. Dementsprechend entstehen anders als bei Gas-, Kohle- oder Atomkraftwerken weder Abbau-, Transport- oder Entsorgungskosten für die reine Energieressource. 
 
 Ohne Zweifel verändert Solarenergie die Dynamik des Strommarktes. Dass der Einfluss der Solarenergie auf das Stromnetz berechenbarer wird, hilft sie als zuverlässige Energiequelle anzuerkennen. Dadurch kann das Vertrauen von Investoren gestärkt und Anreize für fortlaufende Investitionen in die Erneuerbaren geschafft werden. Mit der erhöhten Zuverlässigkeit geht eine Steigerung der Wettbewerbsfähigkeit gegenüber fossilen Brennstoffen einher. Dies ist förderlich, um das Herunterfahren klassischer Kraftwerke zu beschleunigen und die Transformation zu umweltfreundlichen Energiequellen zu vollbringen.
 
 Die intelligente Nutzung von Solarenergievorhersagen gestaltet die gesamte Energielandschaft um. Von der Stabilisierung des Stromnetzes bis hin zur Beeinflussung des Verbraucherverhaltens und der Metamorphose des Energiemarktes, Prognosen beleuchten eine Zukunft, in der Nachhaltigkeit und Effizienz Hand in Hand gehen.
-
-\cite{raschka2019python}
-
-\cite{geron2022hands}
-
-\cite{mueller2021machine}
 
 \newpage
 
